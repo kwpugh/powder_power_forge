@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"ABA",
+		"CDC",
+		"ABA"
+	],
+	
+	"key":
+	{
+		"A": { "item": "powder_power:powder_redstone" },
+		"B": { "item": "powder_power:powder_obsidian" },
+		"C": { "item": "powder_power:powder_iron" },
+		"D": { "item": "minecraft:blaze_powder" }
+	},
+	
+	"result": { "item": "powder_power:blend_redium",
+	"count": 4
+	 }
+}

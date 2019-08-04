@@ -1,0 +1,93 @@
+{
+	"item.powder_power.hammer_alchemist": "Alchemist Hamer",
+	"item.powder_power.motar_pestle": "Motar & Pestle",
+	
+	
+	"item.powder_power.powder_iron": "Iron Powder",
+	"item.powder_power.powder_redstone": "Redstone Powder",
+	"item.powder_power.powder_obsidian": "Obsidian Powder",
+	"item.powder_power.blend_redium": "Redium Blend",
+	
+	
+	"item.powder_power.powder_end_pearl": "Ender Powder",
+	"item.powder_power.powder_gold": "Gold Powder",
+	"item.powder_power.powder_lapis": "Lapis Powder",
+	"item.powder_power.blend_lapium": "Lapium Blend",
+	
+
+	"item.powder_power.powder_diamond": "Diamond Powder",
+	"item.powder_power.powder_emerald": "Emerald Powder",	
+	"item.powder_power.blend_gemium": "Gemium Blend",
+	
+		
+	"item.powder_power.blend_trilium": "Trilium Blend",	
+		
+	"item.powder_power.ingot_redium": "Redium Ingot",	
+	"item.powder_power.ingot_lapium": "Lapium Ingot",	
+	"item.powder_power.gem_gemium": "Gemium",	
+	"item.powder_power.ingot_trilium": "Trilium Ingot",	
+	
+	
+	"item.powder_power.armor_redium_head": "Redium Helmet",	
+	"item.powder_power.armor_redium_body": "Redium Chestplate",	
+	"item.powder_power.armor_redium_leggings": "Redium Leggings",	
+	"item.powder_power.armor_redium_boots": "Redium Boots",	
+		
+
+	"item.powder_power.armor_lapium_head": "Lapium Helmet",	
+	"item.powder_power.armor_lapium_body": "Lapium Chestplate",	
+	"item.powder_power.armor_lapium_leggings": "Lapium Leggings",	
+	"item.powder_power.armor_lapium_boots": "Lapium Boots",	
+	
+
+	"item.powder_power.armor_gemium_head": "Gemium Helmet",	
+	"item.powder_power.armor_gemium_body": "Gemium Chestplate",	
+	"item.powder_power.armor_gemium_leggings": "Gemium Leggings",	
+	"item.powder_power.armor_gemium_boots": "Gemium Boots",	
+
+
+	"item.powder_power.armor_trilium_head": "Trilium Helmet",	
+	"item.powder_power.armor_trilium_body": "Trilium Chestplate",	
+	"item.powder_power.armor_trilium_leggings": "Trilium Leggings",	
+	"item.powder_power.armor_trilium_boots": "Trilium Boots",
+		
+	
+	"item.powder_power.sword_redium": "Redium Sword",
+	"item.powder_power.pickaxe_redium": "Redium Pickaxe",
+	"item.powder_power.axe_redium": "Redium Axe",
+	"item.powder_power.shovel_redium": "Redium Shovel",
+	"item.powder_power.paxel_redium": "Redium Paxel",	
+
+
+	"item.powder_power.sword_lapium": "Lapium Sword",
+	"item.powder_power.pickaxe_lapium": "Lapium Pickaxe",
+	"item.powder_power.axe_lapium": "Lapium Axe",
+	"item.powder_power.shovel_lapium": "Lapium Shovel",
+	"item.powder_power.paxel_lapium": "Lapium Paxel",	
+				
+
+	"item.powder_power.sword_gemium": "Gemium Sword",
+	"item.powder_power.pickaxe_gemium": "Gemium Pickaxe",
+	"item.powder_power.axe_gemium": "Gemium Axe",
+	"item.powder_power.shovel_gemium": "Gemium Shovel",	
+	"item.powder_power.paxel_gemium": "Gemium Paxel",				
+
+
+	"item.powder_power.sword_trilium": "Trilium Sword",
+	"item.powder_power.pickaxe_trilium": "Trilium Pickaxe",
+	"item.powder_power.axe_trilium": "Trilium Axe",
+	"item.powder_power.shovel_trilium": "Trilium Shovel",
+	
+	
+	"item.powder_power.token_night_vision": "Night Vision Token",
+	"item.powder_power.token_resistance": "Attack Resistance Token",
+	"item.powder_power.token_speed": "Speed Token",					
+	"item.powder_power.token_fire_resistance": "Fire Resistance Token",
+	"item.powder_power.token_strength": "Strength Token",
+	"item.powder_power.token_absorption": "Absorption Token",
+	"item.powder_power.token_haste": "Haste Token",
+	"item.powder_power.token_jump_boost": "Jump Boost Token",
+				
+				
+	"itemGroup.powder_power": "Powder Power"
+}

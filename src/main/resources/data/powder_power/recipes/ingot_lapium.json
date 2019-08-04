@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "powder_power:blend_lapium"
+  },
+  "result": "powder_power:ingot_lapium",
+  "experience": 0.35,
+  "cookingtime": 200
+}

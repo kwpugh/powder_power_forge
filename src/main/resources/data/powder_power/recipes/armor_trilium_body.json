@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"A A",
+		"AAA",
+		"AAA"
+	],
+	
+	"key":
+	{
+		"A": { "item": "powder_power:ingot_trilium" }
+	},
+	
+	"result": { "item": "powder_power:armor_trilium_body",
+	"count": 1
+	 }
+}

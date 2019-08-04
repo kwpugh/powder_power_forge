@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"ABA",
+		"BCB",
+		"ABA"
+	],
+	
+	"key":
+	{
+		"A": { "item": "powder_power:blend_lapium" },
+		"B": { "item": "powder_power:blend_redium" },
+		"C": { "item": "powder_power:blend_gemium" }
+	},
+	
+	"result": { "item": "powder_power:blend_trilium",
+	"count": 4
+	 }
+}

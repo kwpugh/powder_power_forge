@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "powder_power:blend_trilium"
+  },
+  "result": "powder_power:ingot_trilium",
+  "experience": 0.35,
+  "cookingtime": 200
+}

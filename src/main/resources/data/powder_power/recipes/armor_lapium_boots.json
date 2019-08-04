@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"   ",
+		"A A",
+		"A A"
+	],
+	
+	"key":
+	{
+		"A": { "item": "powder_power:ingot_lapium" }
+	},
+	
+	"result": { "item": "powder_power:armor_lapium_boots",
+	"count": 1
+	 }
+}

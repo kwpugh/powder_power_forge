@@ -1,0 +1,38 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BCA",
+        " D ",
+        " D "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "powder_power:pickaxe_gemium"
+        },
+        
+        "B":
+        {
+            "item": "powder_power:axe_gemium"
+        },
+                
+        "C":
+        {
+            "item": "powder_power:shovel_gemium"
+        },      
+        "D":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+    
+    "result":
+    {
+        "item": "powder_power:paxel_gemium",
+        "count": 1
+    }
+}

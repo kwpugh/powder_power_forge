@@ -1,0 +1,38 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BCA",
+        " D ",
+        " D "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "powder_power:pickaxe_lapium"
+        },
+        
+        "B":
+        {
+            "item": "powder_power:axe_lapium"
+        },
+                
+        "C":
+        {
+            "item": "powder_power:shovel_lapium"
+        },      
+        "D":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+    
+    "result":
+    {
+        "item": "powder_power:paxel_lapium",
+        "count": 1
+    }
+}

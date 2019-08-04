@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"ABA",
+		"CAC",
+		"ABA"
+	],
+	
+	"key":
+	{
+		"A": { "item": "powder_power:powder_obsidian" },
+		"B": { "item": "powder_power:powder_diamond" },
+		"C": { "item": "powder_power:powder_emerald" }
+	},
+	
+	"result": { "item": "powder_power:blend_gemium",
+	"count": 4
+	 }
+}

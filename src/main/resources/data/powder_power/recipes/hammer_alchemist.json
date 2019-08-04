@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		" IL",
+		" SI",
+		"S  "
+	],
+	
+	"key":
+	{
+		"I": { "item": "minecraft:diamond" },
+		"L": { "item": "minecraft:leather" },
+		"S": { "item": "minecraft:stick" }	
+	},
+	
+	"result": { "item": "powder_power:hammer_alchemist" }
+}

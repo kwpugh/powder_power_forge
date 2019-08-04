@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		" B ",
+		"BAB",
+		" B "
+	],
+	
+	"key":
+	{
+		"A": { "item": "minecraft:rabbit_foot" },
+		"B": { "item": "powder_power:blend_gemium" }
+	},
+	
+	"result": { "item": "powder_power:token_jump_boost",
+	"count": 1
+	 }
+}
