@@ -10,19 +10,18 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
-public class TokenFireResistance extends Item
+public class TokenBreathing extends Item
 {
-
-	public TokenFireResistance(Properties properties)
+	public TokenBreathing(Properties properties)
 	{
 		super(properties);
-	}	 
+	}
 	
 	@Override
 	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
 	{
 		super.addInformation(stack, world, list, flag);				
-		list.add(new StringTextComponent(TextFormatting.BLUE + "Provides player with Fire Resistance"));
+		list.add(new StringTextComponent(TextFormatting.BLUE + "Provides player with water breathing"));
 		list.add(new StringTextComponent(TextFormatting.GREEN + "Works while in player's off hand"));
-	}   	
+	} 
 }

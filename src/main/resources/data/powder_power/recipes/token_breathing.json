@@ -10,11 +10,11 @@
 	
 	"key":
 	{
-		"A": { "item": "minecraft:rabbit_foot" },
+		"A": { "item": "minecraft:pufferfish" },
 		"B": { "item": "powder_power:blend_lapium" }
 	},
 	
-	"result": { "item": "powder_power:token_jump_boost",
+	"result": { "item": "powder_power:token_breathing",
 	"count": 1
 	 }
 }

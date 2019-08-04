@@ -10,8 +10,8 @@
 	
 	"key":
 	{
-		"A": { "item": "powder_power:pickaxe_gemium" },
-		"B": { "item": "powder_power:blend_gemium" }
+		"A": { "item": "powder_power:pickaxe_lapium" },
+		"B": { "item": "powder_power:blend_lapium" }
 	},
 	
 	"result": { "item": "powder_power:token_haste",

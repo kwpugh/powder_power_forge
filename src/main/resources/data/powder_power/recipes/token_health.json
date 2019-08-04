@@ -10,11 +10,11 @@
 	
 	"key":
 	{
-		"A": { "item": "minecraft:totem_of_undying" },
+		"A": { "item": "minecraft:nether_star" },
 		"B": { "item": "powder_power:blend_trilium" }
 	},
 	
-	"result": { "item": "powder_power:token_absorption",
+	"result": { "item": "powder_power:token_health",
 	"count": 1
 	 }
 }

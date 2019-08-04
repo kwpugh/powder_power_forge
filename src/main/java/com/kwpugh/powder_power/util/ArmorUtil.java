@@ -28,8 +28,10 @@ public final class ArmorUtil
 		ItemStack legs = player.getItemStackFromSlot(EquipmentSlotType.LEGS);
 	    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);
 	    
+	    ItemStack offHand = player.getItemStackFromSlot(EquipmentSlotType.OFFHAND);
+	    
 	    //Full Set
-    	if(		(head.getItem() == ItemList.armor_lapium_head && 
+    	if(		((head.getItem() == ItemList.armor_lapium_head && 
     			chest.getItem() == ItemList.armor_lapium_body &&
     			legs.getItem() == ItemList.armor_lapium_leggings && 
     			feet.getItem() == ItemList.armor_lapium_boots) ||
@@ -42,7 +44,9 @@ public final class ArmorUtil
 		    	(head.getItem() == ItemList.armor_trilium_head && 
 				chest.getItem() == ItemList.armor_trilium_body &&
 				legs.getItem() == ItemList.armor_trilium_leggings && 
-				feet.getItem() == ItemList.armor_trilium_boots)  )
+				feet.getItem() == ItemList.armor_trilium_boots))  ||
+		    	
+		    	(offHand.getItem() == ItemList.token_breathing)  )
       	{
       		return true;  		
       	}
@@ -57,7 +61,7 @@ public final class ArmorUtil
 		ItemStack legs = player.getItemStackFromSlot(EquipmentSlotType.LEGS);
 	    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);
 	    
-	    //Full Set
+	    //Full Set or token
     	if(		(head.getItem() == ItemList.armor_gemium_head && 
     			chest.getItem() == ItemList.armor_gemium_body &&
     			legs.getItem() == ItemList.armor_gemium_leggings && 
@@ -80,9 +84,11 @@ public final class ArmorUtil
 		ItemStack chest = player.getItemStackFromSlot(EquipmentSlotType.CHEST);
 		ItemStack legs = player.getItemStackFromSlot(EquipmentSlotType.LEGS);
 	    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);
+	    
+	    ItemStack offHand = player.getItemStackFromSlot(EquipmentSlotType.OFFHAND);
     	
-	    //Full Set
-    	if(		(head.getItem() == ItemList.armor_redium_head && 
+	    //Full Set or token
+    	if(		((head.getItem() == ItemList.armor_redium_head && 
     			chest.getItem() == ItemList.armor_redium_body &&
     			legs.getItem() == ItemList.armor_redium_leggings && 
     			feet.getItem() == ItemList.armor_redium_boots) ||
@@ -95,7 +101,9 @@ public final class ArmorUtil
 		    	(head.getItem() == ItemList.armor_trilium_head && 
 				chest.getItem() == ItemList.armor_trilium_body &&
 				legs.getItem() == ItemList.armor_trilium_leggings && 
-				feet.getItem() == ItemList.armor_trilium_boots)    )
+				feet.getItem() == ItemList.armor_trilium_boots))  ||
+		    	
+    			(offHand.getItem() == ItemList.token_fire_resistance) )
       	{
       		return true;  		
       	}

@@ -12,8 +12,10 @@ import com.kwpugh.powder_power.items.paxels.PaxelLapium;
 import com.kwpugh.powder_power.items.paxels.PaxelRedium;
 import com.kwpugh.powder_power.items.paxels.PaxelTrilium;
 import com.kwpugh.powder_power.items.tokens.TokenAbsorption;
+import com.kwpugh.powder_power.items.tokens.TokenBreathing;
 import com.kwpugh.powder_power.items.tokens.TokenFireResistance;
 import com.kwpugh.powder_power.items.tokens.TokenHaste;
+import com.kwpugh.powder_power.items.tokens.TokenHealth;
 import com.kwpugh.powder_power.items.tokens.TokenJumpBoost;
 import com.kwpugh.powder_power.items.tokens.TokenNightVision;
 import com.kwpugh.powder_power.items.tokens.TokenResistance;
@@ -129,12 +131,17 @@ public class ItemInit
 				
 				ItemList.token_night_vision = new TokenNightVision(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_night_vision")),
 				ItemList.token_fire_resistance = new TokenFireResistance(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_fire_resistance")),
-				ItemList.token_resistance = new TokenResistance(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_resistance")),
 				ItemList.token_speed = new TokenSpeed(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_speed")),
-				ItemList.token_strength = new TokenStrength(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_strength")),
-				ItemList.token_absorption = new TokenAbsorption(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_absorption")),
+				
+				ItemList.token_jump_boost = new TokenJumpBoost(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_jump_boost")),
 				ItemList.token_haste = new TokenHaste(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_haste")),
-				ItemList.token_jump_boost = new TokenJumpBoost(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_jump_boost"))
+				ItemList.token_breathing = new TokenBreathing(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_breathing")),
+						
+				ItemList.token_resistance = new TokenResistance(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_resistance")),					
+				ItemList.token_strength = new TokenStrength(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_strength")),
+					
+				ItemList.token_health = new TokenHealth(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_health")),
+				ItemList.token_absorption = new TokenAbsorption(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_absorption"))
 			);		
 			PowderPower.logger.info("Items registered.");
 		}

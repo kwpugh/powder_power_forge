@@ -94,5 +94,7 @@ public class ItemList
 	public static Item token_absorption;
 	public static Item token_haste;
 	public static Item token_jump_boost;
+	public static Item token_health;
+	public static Item token_breathing;
 	
 }
