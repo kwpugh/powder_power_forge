@@ -22,6 +22,7 @@ public class ItemList
 	
 	public static Item powder_diamond;
 	public static Item powder_emerald;
+	public static Item powder_prismarine;
 	public static Item blend_gemium;
 	
 	public static Item blend_trilium;

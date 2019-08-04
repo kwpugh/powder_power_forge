@@ -12,7 +12,6 @@ import net.minecraft.world.World;
 
 public class MotarPestle extends Item
 {
-
 	public MotarPestle(Properties properties)
 	{
 		super(properties);

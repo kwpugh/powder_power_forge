@@ -62,6 +62,7 @@ public class ItemInit
 				
 				ItemList.powder_diamond = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("powder_diamond")),
 				ItemList.powder_emerald = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("powder_emerald")),
+				ItemList.powder_prismarine = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("powder_prismarine")),
 				ItemList.blend_gemium = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("blend_gemium")),
 				
 				

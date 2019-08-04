@@ -4,7 +4,7 @@
 	"pattern":
 	[
 		"ABA",
-		"CAC",
+		"CDC",
 		"ABA"
 	],
 	
@@ -12,7 +12,8 @@
 	{
 		"A": { "item": "powder_power:powder_obsidian" },
 		"B": { "item": "powder_power:powder_diamond" },
-		"C": { "item": "powder_power:powder_emerald" }
+		"C": { "item": "powder_power:powder_emerald" },
+		"D": { "item": "powder_power:powder_prismarine" }
 	},
 	
 	"result": { "item": "powder_power:blend_gemium",

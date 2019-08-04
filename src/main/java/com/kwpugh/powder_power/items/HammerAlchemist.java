@@ -10,7 +10,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.passive.ChickenEntity;
+import net.minecraft.entity.monster.SilverfishEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IItemTier;
@@ -93,17 +93,23 @@ public class HammerAlchemist extends PickaxeItem
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_emerald, 2)));
 	    	 spawnSpecialEffect(world, pos);
 	     }
-
+	     else if(block == Blocks.PRISMARINE || block == Blocks.DARK_PRISMARINE)
+	     {
+	    	 world.removeBlock(pos, false);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_prismarine, 2)));
+	    	 spawnSpecialEffect(world, pos);
+	     }
+	     
 		 return ActionResultType.PASS;
 	}
 	
 	public void spawnSpecialEffect(World world, BlockPos pos)
 	{
-		ChickenEntity chickenEntity = EntityType.CHICKEN.create(world);
-		chickenEntity.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
-        world.addEntity(chickenEntity);
-        chickenEntity.spawnExplosionParticle();
-        chickenEntity.remove();
+		SilverfishEntity dummyEntity = EntityType.SILVERFISH.create(world);
+		dummyEntity.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
+        world.addEntity(dummyEntity);
+        dummyEntity.spawnExplosionParticle();
+        dummyEntity.remove();
 	}
 	
 	@Override
