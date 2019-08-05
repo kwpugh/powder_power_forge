@@ -62,6 +62,7 @@ public class ItemList
 	public static Item pickaxe_redium;
 	public static Item axe_redium;
 	public static Item shovel_redium;
+	public static Item hoe_redium;
 	public static Item paxel_redium;
 	
 	
@@ -69,6 +70,7 @@ public class ItemList
 	public static Item pickaxe_lapium;
 	public static Item axe_lapium;
 	public static Item shovel_lapium;
+	public static Item hoe_lapium;
 	public static Item paxel_lapium;
 	
 	
@@ -76,6 +78,7 @@ public class ItemList
 	public static Item pickaxe_gemium;
 	public static Item axe_gemium;
 	public static Item shovel_gemium;
+	public static Item hoe_gemium;
 	public static Item paxel_gemium;
 
 
@@ -83,6 +86,7 @@ public class ItemList
 	public static Item pickaxe_trilium;
 	public static Item axe_trilium;
 	public static Item shovel_trilium;
+	public static Item hoe_trilium;
 	public static Item paxel_trilium;
 	
 	

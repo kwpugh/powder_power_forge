@@ -27,6 +27,7 @@ import com.kwpugh.powder_power.lists.ToolMaterialList;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.AxeItem;
+import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ShovelItem;
@@ -105,7 +106,8 @@ public class ItemInit
 				ItemList.sword_redium = new SwordItem(ToolMaterialList.redium, 6, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("sword_redium")),
 				ItemList.pickaxe_redium = new PickaxeItem(ToolMaterialList.redium, 1, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("pickaxe_redium")),
 				ItemList.axe_redium = new AxeItem(ToolMaterialList.redium, 1, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("axe_redium")),
-				ItemList.shovel_redium = new ShovelItem(ToolMaterialList.redium, 1, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("shovel_redium")),			
+				ItemList.shovel_redium = new ShovelItem(ToolMaterialList.redium, 1, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("shovel_redium")),
+				ItemList.hoe_redium = new HoeItem(ToolMaterialList.redium, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("hoe_redium")),
 				ItemList.paxel_redium = new PaxelRedium(1, 1.0f, ToolMaterialList.redium, null, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("paxel_redium")),
 				
 				
@@ -113,6 +115,7 @@ public class ItemInit
 				ItemList.pickaxe_lapium = new PickaxeItem(ToolMaterialList.lapium, 1, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("pickaxe_lapium")),
 				ItemList.axe_lapium = new AxeItem(ToolMaterialList.lapium, 1, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("axe_lapium")),
 				ItemList.shovel_lapium = new ShovelItem(ToolMaterialList.lapium, 1, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("shovel_lapium")),
+				ItemList.hoe_lapium = new HoeItem(ToolMaterialList.lapium, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("hoe_lapium")),
 				ItemList.paxel_lapium = new PaxelLapium(1, 1.0f, ToolMaterialList.lapium, null, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("paxel_lapium")),
 				
 				
@@ -120,12 +123,14 @@ public class ItemInit
 				ItemList.pickaxe_gemium = new PickaxeItem(ToolMaterialList.gemium, 1, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("pickaxe_gemium")),
 				ItemList.axe_gemium = new AxeItem(ToolMaterialList.gemium, 1, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("axe_gemium")),
 				ItemList.shovel_gemium = new ShovelItem(ToolMaterialList.gemium, 1, 2.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("shovel_gemium")),
+				ItemList.hoe_gemium = new HoeItem(ToolMaterialList.gemium, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("hoe_gemium")),
 				ItemList.paxel_gemium = new PaxelGemium(1, 1.0f, ToolMaterialList.gemium, null, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("paxel_gemium")),
 				
 				ItemList.sword_trilium = new SwordItem(ToolMaterialList.trilium, 10, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("sword_trilium")),
 				ItemList.pickaxe_trilium = new PickaxeItem(ToolMaterialList.trilium, 1, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("pickaxe_trilium")),
 				ItemList.axe_trilium = new AxeItem(ToolMaterialList.trilium, 1, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("axe_trilium")),
 				ItemList.shovel_trilium = new ShovelItem(ToolMaterialList.trilium, 1, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("shovel_trilium")),
+				ItemList.hoe_trilium = new HoeItem(ToolMaterialList.trilium, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("hoe_trilium")),
 				ItemList.paxel_trilium = new PaxelTrilium(1, 1.0f, ToolMaterialList.trilium, null, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("paxel_trilium")),
 						
 				
