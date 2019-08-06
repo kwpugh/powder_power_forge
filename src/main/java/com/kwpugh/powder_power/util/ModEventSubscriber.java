@@ -16,7 +16,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
 @EventBusSubscriber(modid = PowderPower.modid, bus = EventBusSubscriber.Bus.FORGE )
 public final class ModEventSubscriber
-{	
+{
     @SubscribeEvent(receiveCanceled = true, priority= EventPriority.HIGHEST)
     public static void onLivingHurtEvent(LivingAttackEvent event)
     {
@@ -43,44 +43,28 @@ public final class ModEventSubscriber
             //Drowning
             if ((event.getSource() == DamageSource.DROWN) &&
                     ArmorUtil.isPlayerGotWaterBreathing(player))
-                {
-                    if (event.isCancelable()) event.setCanceled(true);
-                } 
+            {
+            	if (event.isCancelable()) event.setCanceled(true);
+            }
         } 
     }
  	
-	
-
+    
 //    @SubscribeEvent(receiveCanceled = true, priority= EventPriority.HIGHEST)
 //    public void onPlayerTickEvent(@Nonnull TickEvent.PlayerTickEvent event)
 //    {
 //        PlayerEntity player = event.player;
 //        
-//        if (player == null) return;
-//        
-//        ItemStack head = player.getItemStackFromSlot(EquipmentSlotType.HEAD);
-//		ItemStack chest = player.getItemStackFromSlot(EquipmentSlotType.CHEST);
-//		ItemStack legs = player.getItemStackFromSlot(EquipmentSlotType.LEGS);
-//	    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);	
-//	    
-//	    //Full Set
-//    	if(head.getItem() == ItemList.armor_trilium_head && 
-//    			chest.getItem() == ItemList.armor_trilium_body &&
-//    			legs.getItem() == ItemList.armor_trilium_leggings && 
-//    			feet.getItem() == ItemList.armor_trilium_boots)
-//    	{	
-//			int currentDim = player.dimension.getId();
-//		
-//			if(currentDim == 0)
-//	    	{
-//	       		player.abilities.allowFlying = true;
-//	    	}
-//	       	else
-//	       	{
-//	       		player.abilities.allowFlying = false;
-//	       		player.abilities.isFlying = false;
-//	       	}
-//    	}	
-//    }
-		
+//		int currentDim = player.dimension.getId();
+//	
+//		if( (currentDim == 0) && (ArmorUtil.isFlyingArmor(player))  )
+//    	{
+//       		player.abilities.allowFlying = true;
+//    	}
+//       	else
+//       	{
+//       		player.abilities.allowFlying = false;
+//       		player.abilities.isFlying = false;
+//       	}
+//    }	
 } 
