@@ -95,6 +95,8 @@
 	"item.powder_power.token_jump_boost": "Jump Boost Token",
 	"item.powder_power.token_health": "Health Token",
 	"item.powder_power.token_breathing": "Breathing Token",
+	"item.powder_power.token_curing": "Curing Token",
+	"item.powder_power.token_flight": "Flight Token",
 				
 				
 	"itemGroup.powder_power": "Powder Power"

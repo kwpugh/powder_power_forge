@@ -20,7 +20,6 @@ public final class ArmorUtil
     public static <T> T _null() {
         return null;
     }
-    
     public static boolean isPlayerGotWaterBreathing(PlayerEntity player)
     { 
     	ItemStack head = player.getItemStackFromSlot(EquipmentSlotType.HEAD);
@@ -109,5 +108,17 @@ public final class ArmorUtil
       	}
       		
         return false;
-    } 
+    }
+    
+//    public static boolean isPlayerGotFlight(PlayerEntity player)
+//    {	    
+//	    ItemStack offHand = player.getItemStackFromSlot(EquipmentSlotType.OFFHAND);
+//    	
+//    	if(offHand.getItem() == ItemList.token_flight)    
+//      	{
+//      		return true;  		
+//      	}
+//      		
+//        return false;
+//    }
 } 
