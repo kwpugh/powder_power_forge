@@ -48,8 +48,7 @@ public final class ModEventSubscriber
             	if (event.isCancelable()) event.setCanceled(true);
             }
         } 
-    }
-    
+    }    
 
 //    @SubscribeEvent
 //    public static void onTickPlayerEvent(TickEvent.PlayerTickEvent event)
@@ -59,7 +58,8 @@ public final class ModEventSubscriber
 //        {
 //            event.player.abilities.allowFlying = true;
 //        }
-//        else
+//        
+//        if(!ArmorUtil.isPlayerGotFlight(player))
 //        {
 //            if(event.player.abilities.isFlying)
 //            {

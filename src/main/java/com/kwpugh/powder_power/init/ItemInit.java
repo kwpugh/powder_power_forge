@@ -48,7 +48,7 @@ public class ItemInit
 		{
 			event.getRegistry().registerAll
 			(				
-				ItemList.hammer_alchemist = new HammerAlchemist(ToolMaterialList.gemium, 0, 0, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("hammer_alchemist")),
+				ItemList.hammer_alchemist = new HammerAlchemist(ToolMaterialList.gemium, 1, 1, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("hammer_alchemist")),
 				ItemList.motar_pestle = new MotarPestle(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("motar_pestle")),
 				
 				
@@ -149,7 +149,6 @@ public class ItemInit
 					
 				ItemList.token_health = new TokenHealth(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_health")),
 				ItemList.token_absorption = new TokenAbsorption(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_absorption"))
-				//ItemList.token_flight = new TokenFlight(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_flight"))
 			);		
 			PowderPower.logger.info("Items registered.");
 		}
