@@ -12,12 +12,12 @@ import net.minecraft.util.SoundEvent;
 public enum ArmorMaterialList implements IArmorMaterial
 {
 	//Armor order: helmet, leggings, chestplate, boots
-	redium("armor_redium", 150, new int[] {3, 6, 7, 3}, 15, ItemList.ingot_redium, "entity.chicken.ambient", 1.0f),
-	lapium("armor_lapium", 150, new int[] {3, 6, 7, 3}, 15, ItemList.ingot_lapium, "entity.cat.ambient", 1.0f),
-	gemium("armor_gemium", 300, new int[] {4, 7, 9, 4}, 20, ItemList.gem_gemium, "entity.elder_guardian.ambient", 1.5f),
-	trilium("armor_trilium", 400, new int[] {6, 9, 12, 6}, 25, ItemList.ingot_trilium, "entity.ender_dragon.growl", 2.0f);
+	redium("armor_redium", 50, new int[] {3, 6, 8, 3}, 15, ItemList.ingot_redium, "entity.chicken.ambient", 1.0f),
+	lapium("armor_lapium", 50, new int[] {3, 6, 8, 3}, 15, ItemList.ingot_lapium, "entity.cat.ambient", 1.0f),
+	gemium("armor_gemium", 60, new int[] {4, 7, 9, 4}, 20, ItemList.gem_gemium, "entity.elder_guardian.ambient", 1.5f),
+	trilium("armor_trilium", 70, new int[] {5, 8, 10, 5}, 25, ItemList.ingot_trilium, "entity.ender_dragon.growl", 2.0f);
 	
-	private static final int[] max_damage_array = new int[]{8, 10, 12, 8};
+	private static final int[] max_damage_array = new int[]{13, 15, 16, 11};
 	private String name, equipSound;
 	private int durability, enchantability;
 	private Item repairItem;
