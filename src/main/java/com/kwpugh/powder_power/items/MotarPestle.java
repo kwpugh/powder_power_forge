@@ -17,6 +17,18 @@ public class MotarPestle extends Item
 		super(properties);
 	}
 
+    @Override
+    public boolean hasContainerItem(ItemStack stack)
+    {
+        return true;
+    }
+
+    @Override
+    public ItemStack getContainerItem(ItemStack stack)
+    {
+        return stack.copy();
+    }
+    
 	@Override
 	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
 	{
