@@ -97,6 +97,8 @@
 	"item.powder_power.token_breathing": "Breathing Token",
 	"item.powder_power.token_curing": "Curing Token",
 	"item.powder_power.token_flight": "Flight Token",
+	"item.powder_power.token_dolphin": "Dolphin Token",
+	"item.powder_power.token_conduit_power": "Conduit Power Token",
 				
 				
 	"itemGroup.powder_power": "Powder Power"

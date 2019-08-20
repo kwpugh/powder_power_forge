@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		" C ",
+		"BAB",
+		" D "
+	],
+	
+	"key":
+	{
+		"A": { "item": "minecraft:conduit" },
+		"B": { "item": "powder_power:blend_trilium" },
+		"C": { "item": "powder_power:token_breathing" },
+		"D": { "item": "powder_power:token_night_vision" }
+	},
+	
+	"result": { "item": "powder_power:token_conduit_power",
+	"count": 1
+	 }
+}

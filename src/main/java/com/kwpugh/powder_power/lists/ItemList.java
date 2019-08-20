@@ -102,5 +102,7 @@ public class ItemList
 	public static Item token_breathing;
 	public static Item token_curing;
 	public static Item token_flight;
+	public static Item token_dolphin;
+	public static Item token_conduit_power;
 	
 }
