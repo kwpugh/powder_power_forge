@@ -1,11 +1,13 @@
 package com.kwpugh.powder_power.lists;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 public class ItemList 
 {
 	public static Item motar_pestle;
 	public static Item hammer_alchemist;
+	public static Item pickaxe_obsidian;
 	
 	
 	public static Item powder_iron;
@@ -27,11 +29,17 @@ public class ItemList
 	
 	public static Item blend_trilium;
 	
-	
+	public static Item ingot_obsidian;
 	public static Item ingot_redium;
 	public static Item ingot_lapium;
 	public static Item gem_gemium;
 	public static Item ingot_trilium;
+	
+	
+	public static Item block_redium;
+	public static Item block_lapium;
+	public static Item block_gemium;
+	public static Item block_trilium;
 	
 	
 	public static Item armor_redium_head;

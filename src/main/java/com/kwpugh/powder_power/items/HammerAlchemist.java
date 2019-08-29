@@ -54,7 +54,7 @@ public class HammerAlchemist extends PickaxeItem
 	     if(block == Blocks.REDSTONE_ORE)
 	     {
 	    	 world.removeBlock(pos, false);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_redstone, 2))); 
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_redstone, 3))); 
 	    	 spawnSpecialEffect(world, pos);    	 
 	     }
 	     else if(block == Blocks.IRON_ORE)
@@ -72,7 +72,7 @@ public class HammerAlchemist extends PickaxeItem
 	     else if(block == Blocks.LAPIS_ORE)
 	     {
 	    	 world.removeBlock(pos, false);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_lapis, 2)));
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_lapis, 3)));
 	    	 spawnSpecialEffect(world, pos);
 	     }
 	     else if(block == Blocks.GOLD_ORE)

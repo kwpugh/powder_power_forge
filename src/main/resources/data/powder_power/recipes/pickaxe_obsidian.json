@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"CAA",
+		" B ",
+		" B "
+	],
+	
+	"key":
+	{
+		"A": { "item": "powder_power:ingot_obsidian" },
+		"B": { "item": "minecraft:stick" },
+		"C": { "item": "minecraft:diamond" }
+	},
+	
+	"result": { "item": "powder_power:pickaxe_obsidian",
+	"count": 1
+	 }
+}

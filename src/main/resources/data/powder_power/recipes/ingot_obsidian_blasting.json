@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "powder_power:powder_obsidian"
+  },
+  "result": "powder_power:ingot_obsidian",
+  "experience": 0.35,
+  "cookingtime": 200
+}

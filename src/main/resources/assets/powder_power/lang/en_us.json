@@ -1,6 +1,7 @@
 {
 	"item.powder_power.hammer_alchemist": "Alchemist Hamer",
 	"item.powder_power.motar_pestle": "Motar & Pestle",
+	"item.powder_power.pickaxe_obsidian": "Diamond-Tipped Obsidian Pickaxe",
 	
 	
 	"item.powder_power.powder_iron": "Iron Powder",
@@ -22,13 +23,26 @@
 	
 		
 	"item.powder_power.blend_trilium": "Trilium Blend",	
-		
+	
+	"item.powder_power.ingot_obsidian": "Obsidian Ingot",	
 	"item.powder_power.ingot_redium": "Redium Ingot",	
 	"item.powder_power.ingot_lapium": "Lapium Ingot",	
 	"item.powder_power.gem_gemium": "Gemium",	
 	"item.powder_power.ingot_trilium": "Trilium Ingot",	
 	
 	
+	"block.powder_power.block_redium": "Redium Block",
+	"item.powder_power.block_redium": "Redium Block",
+	
+	"block.powder_power.block_lapium": "Lapium Block",
+	"item.powder_power.block_lapium": "Lapium Block",
+	
+	"block.powder_power.block_gemium": "Gemium Block",
+	"item.powder_power.block_gemium": "Gemium Block",
+	
+	"block.powder_power.block_trilium": "Trilium Block",
+	"item.powder_power.block_trilium": "Trilium Block",
+		
 	"item.powder_power.armor_redium_head": "Redium Helmet",	
 	"item.powder_power.armor_redium_body": "Redium Chestplate",	
 	"item.powder_power.armor_redium_leggings": "Redium Leggings",	
