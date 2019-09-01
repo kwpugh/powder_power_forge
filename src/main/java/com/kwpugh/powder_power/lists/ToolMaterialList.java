@@ -8,10 +8,10 @@ import net.minecraft.item.crafting.Ingredient;
 
 public enum ToolMaterialList implements IItemTier
 {
-	redium(1.0f, 4.0f, 2000, 3, 20, ItemList.ingot_redium),
-	lapium(1.0f, 4.0f, 2000, 3, 20, ItemList.ingot_lapium),
-	gemium(1.0f, 4.0f, 4000, 4, 25, ItemList.gem_gemium),
-	trilium(1.0f, 4.0f, 8000, 5, 30, ItemList.ingot_trilium);
+	redium(1.0f, 8.0f, 2000, 3, 15, ItemList.ingot_redium),
+	lapium(1.0f, 8.0f, 2000, 3, 15, ItemList.ingot_lapium),
+	gemium(1.0f, 9.0f, 4000, 4, 20, ItemList.gem_gemium),
+	trilium(1.0f, 9.5f, 8000, 5, 25, ItemList.ingot_trilium);
 	
 	private float attackDamage, efficiency;
 	private int durability, harvestLevel, enchantability;
