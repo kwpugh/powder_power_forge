@@ -1,6 +1,5 @@
 package com.kwpugh.powder_power.lists;
 
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 public class ItemList 
@@ -8,11 +7,15 @@ public class ItemList
 	public static Item motar_pestle;
 	public static Item hammer_alchemist;
 	public static Item pickaxe_obsidian;
+	public static Item pickaxe_prismarine;
 	
-	
+	public static Item powder_wood;
+	public static Item powder_stone;
 	public static Item powder_iron;
 	public static Item powder_redstone;
 	public static Item powder_obsidian;
+	public static Item powder_nether_quartz;
+	public static Item powder_purpur;
 	public static Item blend_redium;
 	
 	
@@ -30,6 +33,7 @@ public class ItemList
 	public static Item blend_trilium;
 	
 	public static Item ingot_obsidian;
+	public static Item ingot_prismarine;
 	public static Item ingot_redium;
 	public static Item ingot_lapium;
 	public static Item gem_gemium;

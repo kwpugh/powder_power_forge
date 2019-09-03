@@ -53,63 +53,66 @@ public class HammerAlchemist extends PickaxeItem
 	      
 	     if(block == Blocks.REDSTONE_ORE)
 	     {
-	    	 world.removeBlock(pos, false);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_redstone, 3))); 
-	    	 spawnSpecialEffect(world, pos);    	 
+	    	 world.destroyBlock(pos, false);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_redstone, 3)));   	 
 	     }
 	     else if(block == Blocks.IRON_ORE)
 	     {
-	    	 world.removeBlock(pos, false);
+	    	 world.destroyBlock(pos, false);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_iron, 2)));
-	    	 spawnSpecialEffect(world, pos);
 	     }
 	     else if(block == Blocks.OBSIDIAN)
 	     {
-	    	 world.removeBlock(pos, false);
+	    	 world.destroyBlock(pos, false);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_obsidian, 2)));
-	    	 spawnSpecialEffect(world, pos);
 	     }
 	     else if(block == Blocks.LAPIS_ORE)
 	     {
-	    	 world.removeBlock(pos, false);
+	    	 world.destroyBlock(pos, false);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_lapis, 3)));
-	    	 spawnSpecialEffect(world, pos);
 	     }
 	     else if(block == Blocks.GOLD_ORE)
 	     {
-	    	 world.removeBlock(pos, false);
+	    	 world.destroyBlock(pos, false);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_gold, 2)));
-	    	 spawnSpecialEffect(world, pos);
 	     }
 	     else if(block == Blocks.DIAMOND_ORE)
 	     {
-	    	 world.removeBlock(pos, false);
+	    	 world.destroyBlock(pos, false);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_diamond, 2)));  
-	    	 spawnSpecialEffect(world, pos);
 	     }
 	     else if(block == Blocks.EMERALD_ORE)
 	     {
 	    	 world.removeBlock(pos, false);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_emerald, 2)));
-	    	 spawnSpecialEffect(world, pos);
 	     }
 	     else if(block == Blocks.PRISMARINE || block == Blocks.DARK_PRISMARINE)
 	     {
-	    	 world.removeBlock(pos, false);
+	    	 world.destroyBlock(pos, false);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_prismarine, 2)));
-	    	 spawnSpecialEffect(world, pos);
+	     }
+	     else if(block == Blocks.NETHER_QUARTZ_ORE)
+	     {
+	    	 world.destroyBlock(pos, false);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_nether_quartz, 2)));
+	     }
+	     else if(block == Blocks.PURPUR_BLOCK || block == Blocks.PURPUR_PILLAR)
+	     {
+	    	 world.destroyBlock(pos, false);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_purpur, 2)));
+	     }
+	     else if(block == Blocks.STONE)
+	     {
+	    	 world.destroyBlock(pos, false);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_stone, 2)));
+	     }
+	     else if(block == Blocks.OAK_LOG)
+	     {
+	    	 world.destroyBlock(pos, false);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_wood, 2)));
 	     }
 	     
 		 return ActionResultType.PASS;
-	}
-	
-	public void spawnSpecialEffect(World world, BlockPos pos)
-	{
-		SilverfishEntity dummyEntity = EntityType.SILVERFISH.create(world);
-		dummyEntity.setLocationAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
-        world.addEntity(dummyEntity);
-        dummyEntity.spawnExplosionParticle();
-        dummyEntity.remove();
 	}
 	
 	@Override

@@ -55,11 +55,15 @@ public class ItemInit
 				ItemList.hammer_alchemist = new HammerAlchemist(ToolMaterialList.redium, 1, -3, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("hammer_alchemist")),
 				ItemList.motar_pestle = new MotarPestle(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("motar_pestle")),
 				ItemList.pickaxe_obsidian = new PickaxeItem(ToolMaterialList.redium, 1, -3.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("pickaxe_obsidian")),
+				ItemList.pickaxe_prismarine = new PickaxeItem(ToolMaterialList.redium, 1, -3.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("pickaxe_prismarine")),
 						
-				
+				ItemList.powder_wood = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("powder_wood")),
+				ItemList.powder_stone = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("powder_stone")),
 				ItemList.powder_iron = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("powder_iron")),	
 				ItemList.powder_redstone = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("powder_redstone")),
 				ItemList.powder_obsidian = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("powder_obsidian")),
+				ItemList.powder_nether_quartz = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("powder_nether_quartz")),
+				ItemList.powder_purpur = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("powder_purpur")),
 				ItemList.blend_redium = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("blend_redium")),
 				
 				
@@ -77,6 +81,8 @@ public class ItemInit
 				ItemList.blend_trilium = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("blend_trilium")),
 				
 				ItemList.ingot_obsidian = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("ingot_obsidian")),
+				ItemList.ingot_prismarine = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("ingot_prismarine")),
+						
 				ItemList.ingot_redium = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("ingot_redium")),
 				ItemList.ingot_lapium = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("ingot_lapium")),
 				ItemList.gem_gemium = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("gem_gemium")),

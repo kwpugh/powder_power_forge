@@ -2,11 +2,15 @@
 	"item.powder_power.hammer_alchemist": "Alchemist Hammer",
 	"item.powder_power.motar_pestle": "Mortar & Pestle",
 	"item.powder_power.pickaxe_obsidian": "Diamond-Tipped Obsidian Pickaxe",
+	"item.powder_power.pickaxe_prismarine": "Emerald-Tipped Prismarine Pickaxe",
 	
-	
+	"item.powder_power.powder_wood": "Wood Powder",
+	"item.powder_power.powder_stone": "Stone Powder",
 	"item.powder_power.powder_iron": "Iron Powder",
 	"item.powder_power.powder_redstone": "Redstone Powder",
 	"item.powder_power.powder_obsidian": "Obsidian Powder",
+	"item.powder_power.powder_nether_quartz": "Nether Quartz Powder",
+	"item.powder_power.powder_purpur": "Purpur Powder",
 	"item.powder_power.blend_redium": "Redium Blend",
 	
 	
@@ -24,7 +28,8 @@
 		
 	"item.powder_power.blend_trilium": "Trilium Blend",	
 	
-	"item.powder_power.ingot_obsidian": "Obsidian Ingot",	
+	"item.powder_power.ingot_obsidian": "Obsidian Ingot",
+	"item.powder_power.ingot_prismarine": "Prismarine Ingot",	
 	"item.powder_power.ingot_redium": "Redium Ingot",	
 	"item.powder_power.ingot_lapium": "Lapium Ingot",	
 	"item.powder_power.gem_gemium": "Gemium",	

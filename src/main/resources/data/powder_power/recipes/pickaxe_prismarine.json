@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"CAA",
+		" B ",
+		" B "
+	],
+	
+	"key":
+	{
+		"A": { "item": "powder_power:ingot_prismarine" },
+		"B": { "item": "minecraft:stick" },
+		"C": { "item": "minecraft:emerald" }
+	},
+	
+	"result": { "item": "powder_power:pickaxe_prismarine",
+	"count": 1
+	 }
+}
