@@ -8,9 +8,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.monster.SilverfishEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IItemTier;
@@ -110,6 +108,11 @@ public class HammerAlchemist extends PickaxeItem
 	     {
 	    	 world.destroyBlock(pos, false);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_wood, 2)));
+	     }
+	     else if(block == Blocks.MAGMA_BLOCK)
+	     {
+	    	 world.destroyBlock(pos, false);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.BLAZE_POWDER, 1)));
 	     }
 	     
 		 return ActionResultType.PASS;

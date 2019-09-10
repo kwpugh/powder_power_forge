@@ -46,7 +46,7 @@ public class ArmorLapium extends ArmorItem
 		    if(head.getItem() == ItemList.armor_lapium_head)
 			{
 				int newfoodlevel = 0;
-				float newsatlevel = 0.0F;
+				float newsatlevel = 0.1F;
 				SpecialAbilities.giveRegenffect(world, player, stack, newfoodlevel, newsatlevel);			
 			}
 			else
