@@ -51,71 +51,71 @@ public class HammerAlchemist extends PickaxeItem
 	      
 	     if(block == Blocks.REDSTONE_ORE)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_redstone, 3)));   	 
 	     }
 	     else if(block == Blocks.IRON_ORE)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_iron, 2)));
 	     }
 	     else if(block == Blocks.OBSIDIAN)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_obsidian, 2)));
 	     }
 	     else if(block == Blocks.LAPIS_ORE)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_lapis, 3)));
 	     }
 	     else if(block == Blocks.GOLD_ORE)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_gold, 2)));
 	     }
 	     else if(block == Blocks.DIAMOND_ORE)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_diamond, 2)));  
 	     }
 	     else if(block == Blocks.EMERALD_ORE)
 	     {
-	    	 world.removeBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_emerald, 2)));
 	     }
 	     else if(block == Blocks.PRISMARINE || block == Blocks.DARK_PRISMARINE)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_prismarine, 2)));
 	     }
 	     else if(block == Blocks.NETHER_QUARTZ_ORE)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_nether_quartz, 2)));
 	     }
 	     else if(block == Blocks.PURPUR_BLOCK || block == Blocks.PURPUR_PILLAR)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_purpur, 2)));
 	     }
 	     else if(block == Blocks.STONE)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_stone, 2)));
 	     }
 	     else if(block == Blocks.OAK_LOG)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_wood, 2)));
 	     }
 	     else if(block == Blocks.MAGMA_BLOCK)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.BLAZE_POWDER, 1)));
 	     }
 	     
-		 return ActionResultType.PASS;
+		 return ActionResultType.SUCCESS;
 	}
 	
 	@Override
