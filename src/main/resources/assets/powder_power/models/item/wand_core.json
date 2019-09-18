@@ -2,6 +2,6 @@
     "parent": "item/handheld",
     "textures": 
     {
-        "layer0": "powder_power:item/axe_lapium"
+        "layer0": "powder_power:item/wand_core"
     }
 }

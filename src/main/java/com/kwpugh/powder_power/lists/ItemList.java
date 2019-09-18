@@ -6,6 +6,9 @@ public class ItemList
 {
 	public static Item motar_pestle;
 	public static Item hammer_alchemist;
+	public static Item wand_core;
+	public static Item wand_alchemist;
+	
 	public static Item pickaxe_obsidian;
 	public static Item pickaxe_prismarine;
 	

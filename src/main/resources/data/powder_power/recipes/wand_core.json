@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"   ",
+		" A ",
+		"A  "
+	],
+	
+	"key":
+	{
+		"A": { "item": "powder_power:ingot_lapium" }
+	},
+	
+	"result": { "item": "powder_power:wand_core",
+	"count": 1
+	 }
+}

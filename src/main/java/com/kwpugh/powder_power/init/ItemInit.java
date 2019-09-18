@@ -3,6 +3,7 @@ package com.kwpugh.powder_power.init;
 import com.kwpugh.powder_power.PowderPower;
 import com.kwpugh.powder_power.items.HammerAlchemist;
 import com.kwpugh.powder_power.items.MotarPestle;
+import com.kwpugh.powder_power.items.WandAlchemist;
 import com.kwpugh.powder_power.items.armor.ArmorGemium;
 import com.kwpugh.powder_power.items.armor.ArmorLapium;
 import com.kwpugh.powder_power.items.armor.ArmorRedium;
@@ -54,6 +55,9 @@ public class ItemInit
 			(				
 				ItemList.hammer_alchemist = new HammerAlchemist(ToolMaterialList.redium, 1, -3, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("hammer_alchemist")),
 				ItemList.motar_pestle = new MotarPestle(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("motar_pestle")),
+				ItemList.wand_core = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("wand_core")),
+				ItemList.wand_alchemist = new WandAlchemist(ToolMaterialList.redium, 1, -3, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("wand_alchemist")),
+						
 				ItemList.pickaxe_obsidian = new PickaxeItem(ToolMaterialList.redium, 1, -3.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("pickaxe_obsidian")),
 				ItemList.pickaxe_prismarine = new PickaxeItem(ToolMaterialList.redium, 1, -3.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("pickaxe_prismarine")),
 						

@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"  B",
+		" A ",
+		"A  "
+	],
+	
+	"key":
+	{
+		"A": { "item": "powder_power:wand_core" },
+		"B": { "item": "powder_power:gem_gemium" }
+	},
+	"result": { "item": "powder_power:wand_alchemist",
+	"count": 1
+	 }
+}
+
+
+
+
