@@ -44,7 +44,7 @@ public class ArmorTrilium extends ArmorItem
 	    	}	
 		    
 		    //Helmet
-		    if(head.getItem() == ItemList.armor_lapium_head)
+		    if(head.getItem() == ItemList.armor_trilium_head)
 			{
 				int newfoodlevel = 1;
 				float newsatlevel = 0.5F;
@@ -56,7 +56,7 @@ public class ArmorTrilium extends ArmorItem
 			}
 		    
 		    //Chestplate
-		    if(chest.getItem() == ItemList.armor_lapium_body)
+		    if(chest.getItem() == ItemList.armor_trilium_body)
 			{
 		 		if(player.isInWater())
 		 		{
@@ -65,7 +65,7 @@ public class ArmorTrilium extends ArmorItem
 			}
 		    
 		    //Leggings - No Fall Damage moved to ArmorUtil as event
-		    if(legs.getItem() == ItemList.armor_lapium_leggings)
+		    if(legs.getItem() == ItemList.armor_trilium_leggings)
 			{
 		    	//something
 			}
@@ -75,7 +75,7 @@ public class ArmorTrilium extends ArmorItem
 			}
 		    
 		    //Boots
-		    if(feet.getItem() == ItemList.armor_lapium_boots)
+		    if(feet.getItem() == ItemList.armor_trilium_boots)
 			{
 		    	//something
 			}
@@ -95,7 +95,7 @@ public class ArmorTrilium extends ArmorItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.ingot_lapium;
+		return repair.getItem() == ItemList.ingot_trilium;
 	}
 	
     @Override

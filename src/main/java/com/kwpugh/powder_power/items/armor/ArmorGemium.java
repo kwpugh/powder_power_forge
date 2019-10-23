@@ -44,7 +44,7 @@ public class ArmorGemium extends ArmorItem
 	    	}	
 		    
 		    //Helmet
-		    if(head.getItem() == ItemList.armor_lapium_head)
+		    if(head.getItem() == ItemList.armor_gemium_head)
 			{
 				int newfoodlevel = 1;
 				float newsatlevel = 0.3F;
@@ -56,13 +56,13 @@ public class ArmorGemium extends ArmorItem
 			}
 		    
 		    //Chestplate
-		    if(chest.getItem() == ItemList.armor_lapium_body)
+		    if(chest.getItem() == ItemList.armor_gemium_body)
 			{
 		    	//something
 			}
 		    
 		    //Leggings
-		    if(legs.getItem() == ItemList.armor_lapium_leggings)
+		    if(legs.getItem() == ItemList.armor_gemium_leggings)
 			{
 		    	//something
 			}
@@ -72,7 +72,7 @@ public class ArmorGemium extends ArmorItem
 			}
 		    
 		    //Boots
-		    if(feet.getItem() == ItemList.armor_lapium_boots)
+		    if(feet.getItem() == ItemList.armor_gemium_boots)
 			{
 		    	//something
 			}
@@ -92,7 +92,7 @@ public class ArmorGemium extends ArmorItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.ingot_lapium;
+		return repair.getItem() == ItemList.gem_gemium;
 	}
 	
     @Override
