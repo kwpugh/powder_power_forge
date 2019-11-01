@@ -109,6 +109,12 @@ public class WandAlchemist extends PickaxeItem
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.BLACK_SHULKER_BOX, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
+	     else if(block == Blocks.BOOKSHELF)
+	     {
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.BOOKSHELF, 1)));
+	    	 return ActionResultType.SUCCESS;
+	     }
 	     
 		 return ActionResultType.PASS;
 	}
