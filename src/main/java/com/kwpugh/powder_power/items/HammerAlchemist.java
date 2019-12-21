@@ -49,7 +49,7 @@ public class HammerAlchemist extends PickaxeItem
 	         });
 	     }
 	      
-	     if(block == Blocks.REDSTONE_ORE && !player.isSneaking())
+	     if(block == Blocks.REDSTONE_ORE && !player.isCrouching())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_redstone, 3))); 
@@ -67,7 +67,7 @@ public class HammerAlchemist extends PickaxeItem
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_obsidian, 2)));
 	    	 return ActionResultType.SUCCESS;
 	     }
-	     else if(block == Blocks.LAPIS_ORE && !player.isSneaking())
+	     else if(block == Blocks.LAPIS_ORE && !player.isCrouching())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_lapis, 3)));
@@ -79,13 +79,13 @@ public class HammerAlchemist extends PickaxeItem
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_gold, 2)));
 	    	 return ActionResultType.SUCCESS;
 	     }
-	     else if(block == Blocks.DIAMOND_ORE && !player.isSneaking())
+	     else if(block == Blocks.DIAMOND_ORE && !player.isCrouching())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_diamond, 2))); 
 	    	 return ActionResultType.SUCCESS;
 	     }
-	     else if(block == Blocks.EMERALD_ORE && !player.isSneaking())
+	     else if(block == Blocks.EMERALD_ORE && !player.isCrouching())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_emerald, 2)));
@@ -127,31 +127,31 @@ public class HammerAlchemist extends PickaxeItem
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.BLAZE_POWDER, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
-	     else if(block == Blocks.DIAMOND_ORE && player.isSneaking())
+	     else if(block == Blocks.DIAMOND_ORE && player.isCrouching())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.DIAMOND_ORE, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }	   
-	     else if(block == Blocks.EMERALD_ORE && player.isSneaking())
+	     else if(block == Blocks.EMERALD_ORE && player.isCrouching())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.EMERALD_ORE, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
-	     else if(block == Blocks.LAPIS_ORE && player.isSneaking())
+	     else if(block == Blocks.LAPIS_ORE && player.isCrouching())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.LAPIS_ORE, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
-	     else if(block == Blocks.REDSTONE_ORE && player.isSneaking())
+	     else if(block == Blocks.REDSTONE_ORE && player.isCrouching())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.REDSTONE_ORE, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
-	     else if(block == Blocks.COAL_ORE && player.isSneaking())
+	     else if(block == Blocks.COAL_ORE && player.isCrouching())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.COAL_ORE, 1)));
