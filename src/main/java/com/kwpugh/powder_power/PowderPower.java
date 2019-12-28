@@ -24,7 +24,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 @Mod("powder_power")
 public class PowderPower
 {
-
 	public static final String modid = "powder_power";
 	public static final Logger logger = LogManager.getLogger(modid);	
 	public static final ItemGroup powder_power = new GroupPowderPower();
