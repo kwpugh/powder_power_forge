@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"AA ",
+		"AA ",
+		"   "
+	],
+	
+	"key":
+	{
+		"A": { "item": "powder_power:powder_obsidian" }
+	},
+	
+	"result": { "item": "minecraft:obsidian",
+	"count": 1
+	 }
+}

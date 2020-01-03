@@ -27,15 +27,32 @@ public class TokenStrength extends Item
 		super(properties);
 	}
 
+//	public void inventoryTick(ItemStack stack, World world, Entity entity, int itemSlot, boolean isSelected)
+//	{		
+//		if(entity instanceof PlayerEntity && !world.isRemote && EnableUtil.isEnabled(stack))
+//		{
+//			PlayerEntity player = (PlayerEntity)entity;
+//	
+//			player.addPotionEffect(new EffectInstance(Effects.STRENGTH, 260,2, false, false));
+//		}
+//	}	
+
+	
 	public void inventoryTick(ItemStack stack, World world, Entity entity, int itemSlot, boolean isSelected)
 	{		
 		if(entity instanceof PlayerEntity && !world.isRemote && EnableUtil.isEnabled(stack))
 		{
 			PlayerEntity player = (PlayerEntity)entity;
-	
-			player.addPotionEffect(new EffectInstance(Effects.STRENGTH, 260,2, false, false));
+			
+			if (player.ticksExisted % 180 == 0)
+			{
+				player.addPotionEffect(new EffectInstance(Effects.STRENGTH, 260,3, false, false));
+			}  		
 		}
 	}	
+	
+	
+
 
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand)

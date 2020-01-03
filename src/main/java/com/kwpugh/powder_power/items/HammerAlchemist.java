@@ -103,7 +103,7 @@ public class HammerAlchemist extends PickaxeItem
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_nether_quartz, 2)));
 	    	 return ActionResultType.SUCCESS;
 	     }
-	     else if(block == Blocks.PURPUR_BLOCK || block == Blocks.PURPUR_PILLAR)
+	     else if(block == Blocks.PURPUR_PILLAR)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_purpur, 2)));

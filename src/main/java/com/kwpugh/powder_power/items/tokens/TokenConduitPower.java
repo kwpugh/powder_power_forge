@@ -33,7 +33,10 @@ public class TokenConduitPower extends Item
 		{
 			PlayerEntity player = (PlayerEntity)entity;
 	
-			player.addPotionEffect(new EffectInstance(Effects.CONDUIT_POWER, 260, 1, false, false));
+			if (player.ticksExisted % 180 == 0)
+			{
+				player.addPotionEffect(new EffectInstance(Effects.CONDUIT_POWER, 260, 2, false, false));
+			} 	
 		}
 	}	
 
