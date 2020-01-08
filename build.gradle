@@ -13,11 +13,25 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '3.1.3'
+version = '3.1.8'
 group = 'com.kwpugh.powder_power' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'PowderPower-1.15.1'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
+
+
+repositories {
+    maven {
+        url = "https://maven.theillusivec4.top/"
+    }
+}
+
+dependencies {
+    runtimeOnly fg.deobf("top.theillusivec4.curios:curios:FORGE-1.15.1-2.0-beta")
+    compileOnly fg.deobf("top.theillusivec4.curios:curios:FORGE-1.15.1-2.0-beta:api")
+}
+
+
 
 minecraft {
     // The mappings can be changed at any time, and must be in the following format.
@@ -89,7 +103,7 @@ dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.15.1-30.0.19'
+    minecraft 'net.minecraftforge:forge:1.15.1-30.0.35'
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"

@@ -5,6 +5,8 @@ import javax.annotation.Nonnull;
 import com.kwpugh.powder_power.lists.ItemList;
 
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.EnderChestInventory;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
 
@@ -26,9 +28,7 @@ public final class ArmorUtil
 		ItemStack chest = player.getItemStackFromSlot(EquipmentSlotType.CHEST);
 		ItemStack legs = player.getItemStackFromSlot(EquipmentSlotType.LEGS);
 	    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);
-	    
-	    ItemStack offHand = player.getItemStackFromSlot(EquipmentSlotType.OFFHAND);
-	    
+		
 	    //Full Set
     	if(		((head.getItem() == ItemList.armor_lapium_head && 
     			chest.getItem() == ItemList.armor_lapium_body &&
@@ -43,9 +43,7 @@ public final class ArmorUtil
 		    	(head.getItem() == ItemList.armor_trilium_head && 
 				chest.getItem() == ItemList.armor_trilium_body &&
 				legs.getItem() == ItemList.armor_trilium_leggings && 
-				feet.getItem() == ItemList.armor_trilium_boots))  ||
-		    	
-		    	(offHand.getItem() == ItemList.token_breathing)  )
+				feet.getItem() == ItemList.armor_trilium_boots))   )
       	{
       		return true;  		
       	}
@@ -60,6 +58,11 @@ public final class ArmorUtil
 		ItemStack legs = player.getItemStackFromSlot(EquipmentSlotType.LEGS);
 	    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);
 	    
+	    ItemStack offHand = player.getItemStackFromSlot(EquipmentSlotType.OFFHAND);
+	    
+		PlayerInventory inv2 = player.inventory;
+		EnderChestInventory end_inv2 = player.getInventoryEnderChest();
+			
 	    //Full Set or token
     	if(		(head.getItem() == ItemList.armor_gemium_head && 
     			chest.getItem() == ItemList.armor_gemium_body &&
@@ -69,12 +72,43 @@ public final class ArmorUtil
     			(head.getItem() == ItemList.armor_trilium_head && 
 				chest.getItem() == ItemList.armor_trilium_body &&
 				legs.getItem() == ItemList.armor_trilium_leggings && 
-				feet.getItem() == ItemList.armor_trilium_boots)  )
-      	{
-      		return true;  		
-      	}
-      		
-        return false;
+				feet.getItem() == ItemList.armor_trilium_boots) ||
+    			
+    			(offHand.getItem() == ItemList.token_no_fall	)   )
+	      	{
+	      		return true;  		
+	      	}
+	      	
+    		//Checks player enderchest
+			for (int slot = 0; slot < end_inv2.getSizeInventory(); slot++)
+			{
+				ItemStack stack = end_inv2.getStackInSlot(slot);
+				if (stack.getItem() == ItemList.token_no_fall)
+				{	
+					return true;
+				}
+			}
+			
+			//Checks player main inventory
+			for (int slot = 0; slot < inv2.getSizeInventory(); slot++)
+			{
+				ItemStack stack = inv2.getStackInSlot(slot);
+				if (stack.getItem() == ItemList.token_no_fall)
+				{	
+					return true;
+				}
+			}
+			
+			//Checks Curios slots
+			if (SupportMods.CURIOS.isLoaded())
+		    {
+				if (UtilCurios.findItem(ItemList.token_no_fall, player) != ItemStack.EMPTY)
+				{
+					return true;
+			    }
+		    } 
+			
+	        return false;
     } 
     
     public static boolean isPlayerGotFireProtection(PlayerEntity player)
@@ -85,8 +119,11 @@ public final class ArmorUtil
 	    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);
 	    
 	    ItemStack offHand = player.getItemStackFromSlot(EquipmentSlotType.OFFHAND);
-    	
-	    //Full Set or token
+
+	    PlayerInventory inv3 = player.inventory;
+	    EnderChestInventory end_inv3 = player.getInventoryEnderChest();
+	    
+	    //Full armor or Token
     	if(		((head.getItem() == ItemList.armor_redium_head && 
     			chest.getItem() == ItemList.armor_redium_body &&
     			legs.getItem() == ItemList.armor_redium_leggings && 
@@ -103,22 +140,36 @@ public final class ArmorUtil
 				feet.getItem() == ItemList.armor_trilium_boots))  ||
 		    	
     			(offHand.getItem() == ItemList.token_fire_resistance) )
-      	{
-      		return true;  		
-      	}
+	      	{
+	      		return true;  		
+	      	}
+	    	
+			for (int slot = 0; slot < end_inv3.getSizeInventory(); slot++)
+			{
+				ItemStack stack = end_inv3.getStackInSlot(slot);
+				if (stack.getItem() == ItemList.token_fire_resistance)
+				{	
+					return true;
+				}
+			}
+		
+			for (int slot = 0; slot < inv3.getSizeInventory(); slot++)
+			{
+				ItemStack stack = inv3.getStackInSlot(slot);
+				if (stack.getItem() == ItemList.token_fire_resistance)
+				{	
+					return true;
+				}
+			}
+			
+			if (SupportMods.CURIOS.isLoaded())
+		    {
+				if (UtilCurios.findItem(ItemList.token_fire_resistance, player) != ItemStack.EMPTY)
+				{
+					return true;
+			    }
+		    }
       		
         return false;
     }
-    
-//    public static boolean isPlayerGotFlight(PlayerEntity player)
-//    {	    
-//	    ItemStack offHand = player.getItemStackFromSlot(EquipmentSlotType.OFFHAND);
-//    	
-//    	if(offHand.getItem() == ItemList.token_flight)    
-//      	{
-//      		return true;  		
-//      	}
-//      		
-//        return false;
-//    }
 } 

@@ -10,10 +10,10 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
-public class TokenFireResistance extends Item
+public class TokenNoFall extends Item
 {
 
-	public TokenFireResistance(Properties properties)
+	public TokenNoFall(Properties properties)
 	{
 		super(properties);
 	}	 
@@ -22,7 +22,7 @@ public class TokenFireResistance extends Item
 	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
 	{
 		super.addInformation(stack, world, list, flag);				
-		list.add(new StringTextComponent(TextFormatting.BLUE + "Provides player with Fire Resistance"));
+		list.add(new StringTextComponent(TextFormatting.BLUE + "Provides player with No Fall Damage"));
 		list.add(new StringTextComponent(TextFormatting.GREEN + "Works while in player inventory or enderchest"));
 	}   	
 }

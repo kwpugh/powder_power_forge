@@ -4,7 +4,6 @@ import com.kwpugh.powder_power.PowderPower;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.DamageSource;
-import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -48,24 +47,5 @@ public final class ModEventSubscriber
             	if (event.isCancelable()) event.setCanceled(true);
             }
         } 
-    }    
-
-//    @SubscribeEvent
-//    public static void onTickPlayerEvent(TickEvent.PlayerTickEvent event)
-//    {
-//        PlayerEntity player = (PlayerEntity) event.player;
-//        if(ArmorUtil.isPlayerGotFlight(player))
-//        {
-//            event.player.abilities.allowFlying = true;
-//        }
-//        
-//        if(!ArmorUtil.isPlayerGotFlight(player))
-//        {
-//            if(event.player.abilities.isFlying)
-//            {
-//                event.player.abilities.isFlying = event.player.abilities.isCreativeMode ? true : false;
-//                event.player.abilities.allowFlying = event.player.abilities.isCreativeMode ? true : false;
-//            }
-//        }
-//    }	
+    }
 } 

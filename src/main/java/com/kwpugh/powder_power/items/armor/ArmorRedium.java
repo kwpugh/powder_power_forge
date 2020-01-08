@@ -57,10 +57,7 @@ public class ArmorRedium extends ArmorItem
 		    //Chestplate
 		    if(chest.getItem() == ItemList.armor_redium_body)
 			{
-		 		if(player.isInWater())
-		 		{
-		 			//something
-		 		}
+		    	//something?
 			}
 		   
 		    //Leggings

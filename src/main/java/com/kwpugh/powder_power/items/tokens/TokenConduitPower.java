@@ -3,14 +3,13 @@ package com.kwpugh.powder_power.items.tokens;
 import java.util.List;
 
 import com.kwpugh.powder_power.util.EnableUtil;
+import com.kwpugh.powder_power.util.SpecialAbilities;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
@@ -33,10 +32,7 @@ public class TokenConduitPower extends Item
 		{
 			PlayerEntity player = (PlayerEntity)entity;
 	
-			if (player.ticksExisted % 180 == 0)
-			{
-				player.addPotionEffect(new EffectInstance(Effects.CONDUIT_POWER, 260, 2, false, false));
-			} 	
+			SpecialAbilities.giveConduitEffect(world, player, stack);
 		}
 	}	
 

@@ -22,9 +22,11 @@ import com.kwpugh.powder_power.items.tokens.TokenHaste;
 import com.kwpugh.powder_power.items.tokens.TokenHealth;
 import com.kwpugh.powder_power.items.tokens.TokenJumpBoost;
 import com.kwpugh.powder_power.items.tokens.TokenNightVision;
+import com.kwpugh.powder_power.items.tokens.TokenNoFall;
 import com.kwpugh.powder_power.items.tokens.TokenResistance;
 import com.kwpugh.powder_power.items.tokens.TokenSpeed;
 import com.kwpugh.powder_power.items.tokens.TokenStrength;
+import com.kwpugh.powder_power.items.tools.SwordRedium;
 import com.kwpugh.powder_power.lists.ArmorMaterialList;
 import com.kwpugh.powder_power.lists.BlockList;
 import com.kwpugh.powder_power.lists.ItemList;
@@ -124,7 +126,7 @@ public class ItemInit
 				ItemList.armor_trilium_boots = new ArmorTrilium(ArmorMaterialList.trilium, EquipmentSlotType.FEET, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("armor_trilium_boots")),
 
 				
-				ItemList.sword_redium = new SwordItem(ToolMaterialList.redium, 6, -2.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("sword_redium")),
+				ItemList.sword_redium = new SwordRedium(ToolMaterialList.redium, 6, -2.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("sword_redium")),
 				ItemList.pickaxe_redium = new PickaxeItem(ToolMaterialList.redium, 3, -2.7f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("pickaxe_redium")),
 				ItemList.axe_redium = new AxeItem(ToolMaterialList.redium, 7, -3.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("axe_redium")),
 				ItemList.shovel_redium = new ShovelItem(ToolMaterialList.redium, 4, -3.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("shovel_redium")),
@@ -158,7 +160,8 @@ public class ItemInit
 				ItemList.token_night_vision = new TokenNightVision(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_night_vision")),
 				ItemList.token_fire_resistance = new TokenFireResistance(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_fire_resistance")),
 				ItemList.token_speed = new TokenSpeed(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_speed")),
-				
+				ItemList.token_no_fall = new TokenNoFall(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_no_fall")),
+						
 				ItemList.token_jump_boost = new TokenJumpBoost(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_jump_boost")),
 				ItemList.token_haste = new TokenHaste(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_haste")),
 				ItemList.token_breathing = new TokenBreathing(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_breathing")),

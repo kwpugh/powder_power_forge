@@ -8,6 +8,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -71,6 +72,12 @@ public class WandAlchemist extends PickaxeItem
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PURPUR_BLOCK, 1)));
+	    	 return ActionResultType.SUCCESS;
+	     }
+	     else if(block == Blocks.NETHERRACK)
+	     {
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.MAGMA_BLOCK, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.LAPIS_BLOCK)

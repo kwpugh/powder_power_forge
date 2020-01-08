@@ -41,6 +41,7 @@ public class ArmorTrilium extends ArmorItem
 	    	{
 				player.removeActivePotionEffect(Effects.POISON);
 				player.removeActivePotionEffect(Effects.WITHER);
+				player.removeActivePotionEffect(Effects.LEVITATION);
 	    	}	
 		    
 		    //Helmet
@@ -58,16 +59,13 @@ public class ArmorTrilium extends ArmorItem
 		    //Chestplate
 		    if(chest.getItem() == ItemList.armor_trilium_body)
 			{
-		 		if(player.isInWater())
-		 		{
-		 			//SpecialAbilities.giveBreathing(world, player, chest);
-		 		}
+		    	//Something
 			}
 		    
-		    //Leggings - No Fall Damage moved to ArmorUtil as event
+		    //Leggings
 		    if(legs.getItem() == ItemList.armor_trilium_leggings)
 			{
-		    	//something
+		    	SpecialAbilities.giveDolphinEffect(world, player, stack);
 			}
 			else
 			{
@@ -104,6 +102,6 @@ public class ArmorTrilium extends ArmorItem
 		super.addInformation(stack, world, list, flag);				
 		list.add(new StringTextComponent(TextFormatting.BLUE + "Full suit bonus: Water breathing, fire protection,"));
 		list.add(new StringTextComponent(TextFormatting.BLUE + "poison and wither protection, no fall damage,"));
-		list.add(new StringTextComponent(TextFormatting.BLUE + "and moderate health regeneration"));
+		list.add(new StringTextComponent(TextFormatting.BLUE + "Dolphin's Grace, and moderate health regeneration"));
 	}
 }

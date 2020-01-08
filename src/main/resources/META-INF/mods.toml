@@ -8,7 +8,7 @@ authors="kwpugh" #optional
 
 [[mods]] #mandatory
 modId="powder_power" #mandatory
-version="3.1.3" #mandatory
+version="3.1.8" #mandatory
 displayName="Powder Power" #mandatory
 description='''
 Powder alchemy comes to Minecraft

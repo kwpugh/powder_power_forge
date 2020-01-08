@@ -11,9 +11,11 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolItem;
+import net.minecraft.potion.Effects;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
@@ -53,15 +55,16 @@ public class PaxelRedium extends ToolItem
 			Properties builder)
 	{
 		super(attackDamageIn, attackSpeedIn, tier, EFFECTIVE_ON, builder);
-	
 	}
 
-	public boolean canHarvestBlock(BlockState blockIn) {
+	public boolean canHarvestBlock(BlockState blockIn)
+	{
 		int i = this.getTier().getHarvestLevel();
 		return i >= blockIn.getHarvestLevel();
 	}
-
-	public float getDestroySpeed(ItemStack stack, BlockState state) {
+		
+	public float getDestroySpeed(ItemStack stack, BlockState state)
+	{
 		Material material = state.getMaterial();
 		return material != Material.IRON && material != Material.ANVIL && material != Material.ROCK
 				&& material != Material.WOOD && material != Material.PLANTS ? super.getDestroySpeed(stack, state)
@@ -78,6 +81,16 @@ public class PaxelRedium extends ToolItem
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
 		return repair.getItem() == ItemList.ingot_redium;
+	}
+	
+	@Override
+	public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker)
+	{
+		if (!target.isPotionActive(Effects.FIRE_RESISTANCE))
+		{
+			target.setFire(3);
+		}
+		return super.hitEntity(stack, target, attacker);
 	}
 	
 	@Override

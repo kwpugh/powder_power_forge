@@ -57,13 +57,10 @@ public class ArmorLapium extends ArmorItem
 		    //Chestplate
 		    if(chest.getItem() == ItemList.armor_lapium_body)
 			{
-		 		if(player.isInWater())
-		 		{
-		 			//SpecialAbilities.giveBreathing(world, player, chest);
-		 		}
+		    	//something
 			}
 		    
-		    //Leggings - No Fall Damage moved to ArmorUtil as event
+		    //Leggings
 		    if(legs.getItem() == ItemList.armor_lapium_leggings)
 			{
 		    	//something

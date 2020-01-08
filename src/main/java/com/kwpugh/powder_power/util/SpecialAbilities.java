@@ -52,10 +52,22 @@ public class SpecialAbilities
 		player.setAir(300);
     	return;
 	}
+
+	//Gives player Conduit Effect
+	public static void giveDolphinEffect(World world, PlayerEntity player, ItemStack itemstack)
+	{
+		if (player.ticksExisted % 180 == 0 && player.isInWater())
+		{
+			player.addPotionEffect(new EffectInstance(Effects.DOLPHINS_GRACE, 260, 0, false, false));
+		} 
+	}
 	
 	//Gives player Conduit Effect
 	public static void giveConduitEffect(World world, PlayerEntity player, ItemStack itemstack)
 	{
-		player.addPotionEffect(new EffectInstance(Effects.CONDUIT_POWER, 260, 0, false, false));
+		if (player.ticksExisted % 180 == 0 && player.isInWater())
+		{
+			player.addPotionEffect(new EffectInstance(Effects.CONDUIT_POWER, 260, 2, false, false));
+		} 
 	}
 }
