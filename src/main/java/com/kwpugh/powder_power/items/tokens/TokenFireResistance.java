@@ -23,6 +23,7 @@ public class TokenFireResistance extends Item
 	{
 		super.addInformation(stack, world, list, flag);				
 		list.add(new StringTextComponent(TextFormatting.BLUE + "Provides player with Fire Resistance"));
-		list.add(new StringTextComponent(TextFormatting.GREEN + "Works while in player inventory or enderchest"));
+		list.add(new StringTextComponent(TextFormatting.GREEN + "Works while in player's inventory or "));
+		list.add(new StringTextComponent(TextFormatting.GREEN + "player's enderchest "));
 	}   	
 }

@@ -32,10 +32,23 @@ public class SpecialAbilities
     	return;
 	}
 		
-	//Set player yellow hearts to max on tick update
+	//SLowly increases yellow hearts on tick update
 	public static void giveExtraHearts(World world, LivingEntity player, ItemStack itemstack)
 	{
-		player.setAbsorptionAmount(20);
+		float current = player.getAbsorptionAmount();
+		
+		if(player.getHealth() < 20)
+		{
+			return;
+		}
+		
+		if(current < 20)
+		{
+			if (player.ticksExisted % 180 == 0)
+			{
+				player.setAbsorptionAmount(current + 1.0F);
+			} 	
+		}
     	return;
 	}
 

@@ -21,20 +21,12 @@ public class TokenBreathing extends Item
 		super(properties);
 	}
 	
-	public void inventoryTick(ItemStack stack, World world, Entity entity, int itemSlot, boolean isSelected)
-	{		
-		if(entity instanceof PlayerEntity && !world.isRemote)
-		{
-			PlayerEntity player = (PlayerEntity)entity;
-			SpecialAbilities.giveBreathing(world, player, stack);
-		}
-	}
-	
 	@Override
 	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
 	{
 		super.addInformation(stack, world, list, flag);				
 		list.add(new StringTextComponent(TextFormatting.BLUE + "Provides player with water breathing"));
-		list.add(new StringTextComponent(TextFormatting.GREEN + "Works while in player's inventory"));
+		list.add(new StringTextComponent(TextFormatting.GREEN + "Works while in player's inventory or "));
+		list.add(new StringTextComponent(TextFormatting.GREEN + "player's enderchest "));
 	} 
 }

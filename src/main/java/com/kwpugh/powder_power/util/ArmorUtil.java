@@ -47,6 +47,38 @@ public final class ArmorUtil
       	{
       		return true;  		
       	}
+    	
+    	PlayerInventory inv2 = player.inventory;
+		EnderChestInventory end_inv2 = player.getInventoryEnderChest();
+		
+		//Checks player enderchest
+		for (int slot = 0; slot < end_inv2.getSizeInventory(); slot++)
+		{
+			ItemStack stack = end_inv2.getStackInSlot(slot);
+			if (stack.getItem() == ItemList.token_breathing)
+			{	
+				return true;
+			}
+		}
+		
+		//Checks player main inventory
+		for (int slot = 0; slot < inv2.getSizeInventory(); slot++)
+		{
+			ItemStack stack = inv2.getStackInSlot(slot);
+			if (stack.getItem() == ItemList.token_breathing)
+			{	
+				return true;
+			}
+		}
+		
+		//Checks Curios slots
+		if (SupportMods.CURIOS.isLoaded())
+	    {
+			if (UtilCurios.findItem(ItemList.token_breathing, player) != ItemStack.EMPTY)
+			{
+				return true;
+		    }
+	    } 
       		
         return false;
     } 

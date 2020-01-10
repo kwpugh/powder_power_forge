@@ -37,25 +37,26 @@ public class TokenDolphin extends Item
 	}	
 
 	@Override
-  public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand)
-  {
+	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand)
+	{
 		ItemStack stack = player.getHeldItem(hand);
 		
-      if(!world.isRemote && player.isCrouching())
-      {
-          EnableUtil.changeEnabled(player, hand);
-          player.sendMessage(new StringTextComponent("Dolphin's Grace ability active: " + EnableUtil.isEnabled(stack)));
-          return new ActionResult<ItemStack>(ActionResultType.SUCCESS, player.getHeldItem(hand));
-      }
-      return super.onItemRightClick(world, player, hand);
+		if(!world.isRemote && player.isCrouching())
+		{
+			EnableUtil.changeEnabled(player, hand);
+			player.sendMessage(new StringTextComponent("Dolphin's Grace ability active: " + EnableUtil.isEnabled(stack)));
+			return new ActionResult<ItemStack>(ActionResultType.SUCCESS, player.getHeldItem(hand));
+		}
+		return super.onItemRightClick(world, player, hand);
   }
 
-  @Override
+	@Override
 	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
 	{
 		super.addInformation(stack, world, list, flag);				
 		list.add(new StringTextComponent(TextFormatting.BLUE + "Provides player with Dolphin's Grace"));
 		list.add(new StringTextComponent(TextFormatting.RED + "Dolphin's Grace ability active: " + EnableUtil.isEnabled(stack)));
 		list.add(new StringTextComponent(TextFormatting.GREEN + "Sneak right-click to toggle on/off"));
+		list.add(new StringTextComponent(TextFormatting.GREEN + "Works while in player's inventory"));
 	}  
 }
