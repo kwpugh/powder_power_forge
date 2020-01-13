@@ -1,0 +1,6 @@
+{
+    "parent": "powder_power:item/bow_redium",
+    "textures": {
+        "layer0": "powder_power:item/bow_redium_pulling_1"
+    }
+}

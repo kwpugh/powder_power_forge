@@ -26,6 +26,7 @@ import com.kwpugh.powder_power.items.tokens.TokenNoFall;
 import com.kwpugh.powder_power.items.tokens.TokenResistance;
 import com.kwpugh.powder_power.items.tokens.TokenSpeed;
 import com.kwpugh.powder_power.items.tokens.TokenStrength;
+import com.kwpugh.powder_power.items.tools.BowRedium;
 import com.kwpugh.powder_power.items.tools.SwordRedium;
 import com.kwpugh.powder_power.lists.ArmorMaterialList;
 import com.kwpugh.powder_power.lists.BlockList;
@@ -132,7 +133,8 @@ public class ItemInit
 				ItemList.shovel_redium = new ShovelItem(ToolMaterialList.redium, 4, -3.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("shovel_redium")),
 				ItemList.hoe_redium = new HoeItem(ToolMaterialList.redium, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("hoe_redium")),
 				ItemList.paxel_redium = new PaxelRedium(3, -3.0f, ToolMaterialList.redium, null, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("paxel_redium")),
-				
+				ItemList.bow_redium = new BowRedium((new Item.Properties()).maxStackSize(1).group(PowderPower.powder_power).maxDamage(2000)).setRegistryName(location("bow_redium")),
+						
 				
 				ItemList.sword_lapium = new SwordItem(ToolMaterialList.lapium, 6, -2.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("sword_lapium")),
 				ItemList.pickaxe_lapium = new PickaxeItem(ToolMaterialList.lapium, 3, -2.7f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("pickaxe_lapium")),
@@ -140,7 +142,8 @@ public class ItemInit
 				ItemList.shovel_lapium = new ShovelItem(ToolMaterialList.lapium, 4, -3.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("shovel_lapium")),
 				ItemList.hoe_lapium = new HoeItem(ToolMaterialList.lapium, 1.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("hoe_lapium")),
 				ItemList.paxel_lapium = new PaxelLapium(3, -3.0f, ToolMaterialList.lapium, null, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("paxel_lapium")),
-				
+				ItemList.bow_lapium = new BowRedium((new Item.Properties()).maxStackSize(1).group(PowderPower.powder_power).maxDamage(2000)).setRegistryName(location("bow_lapium")),
+						
 				
 				ItemList.sword_gemium = new SwordItem(ToolMaterialList.gemium, 8, -1.5f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("sword_gemium")),
 				ItemList.pickaxe_gemium = new PickaxeItem(ToolMaterialList.gemium, 3, -2.5f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("pickaxe_gemium")),

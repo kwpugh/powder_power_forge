@@ -79,7 +79,8 @@
 	"item.powder_power.axe_redium": "Redium Axe",
 	"item.powder_power.shovel_redium": "Redium Shovel",
 	"item.powder_power.hoe_redium": "Redium Hoe",
-	"item.powder_power.paxel_redium": "Redium Paxel",	
+	"item.powder_power.paxel_redium": "Redium Paxel",
+	"item.powder_power.bow_redium": "Redium Bow",	
 
 
 	"item.powder_power.sword_lapium": "Lapium Sword",
@@ -88,6 +89,7 @@
 	"item.powder_power.shovel_lapium": "Lapium Shovel",
 	"item.powder_power.hoe_lapium": "Lapium Hoe",
 	"item.powder_power.paxel_lapium": "Lapium Paxel",	
+	"item.powder_power.bow_lapium": "Lapium Bow",
 				
 
 	"item.powder_power.sword_gemium": "Gemium Sword",

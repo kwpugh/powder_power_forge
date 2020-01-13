@@ -79,6 +79,7 @@ public class ItemList
 	public static Item shovel_redium;
 	public static Item hoe_redium;
 	public static Item paxel_redium;
+	public static Item bow_redium;
 	
 	
 	public static Item sword_lapium;
@@ -87,6 +88,7 @@ public class ItemList
 	public static Item shovel_lapium;
 	public static Item hoe_lapium;
 	public static Item paxel_lapium;
+	public static Item bow_lapium;
 	
 	
 	public static Item sword_gemium;
