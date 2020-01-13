@@ -8,7 +8,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -53,49 +52,57 @@ public class WandAlchemist extends PickaxeItem
 	     if(block == Blocks.COBBLESTONE)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.NETHERRACK, 1))); 
+	    	 world.setBlockState(pos, Blocks.NETHERRACK.getDefaultState(), 3);
+	    	 //world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.NETHERRACK, 1))); 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.DIORITE)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.END_STONE, 1)));
+	    	 world.setBlockState(pos, Blocks.END_STONE.getDefaultState(), 3);
+	    	 //world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.END_STONE, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.BROWN_MUSHROOM_BLOCK || block == Blocks.RED_MUSHROOM_BLOCK)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.NETHER_WART_BLOCK, 1)));
+	    	 world.setBlockState(pos, Blocks.NETHER_WART_BLOCK.getDefaultState(), 3);
+	    	 //world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.NETHER_WART_BLOCK, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.GRANITE)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PURPUR_BLOCK, 1)));
+	    	 world.setBlockState(pos, Blocks.PURPUR_BLOCK.getDefaultState(), 3);
+	    	 //world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PURPUR_BLOCK, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.NETHERRACK)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.MAGMA_BLOCK, 1)));
+	    	 world.setBlockState(pos, Blocks.MAGMA_BLOCK.getDefaultState(), 3);
+	    	 //world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.MAGMA_BLOCK, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.LAPIS_BLOCK)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.QUARTZ_BLOCK, 1)));
+	    	 world.setBlockState(pos, Blocks.QUARTZ_BLOCK.getDefaultState(), 3);
+	    	 //world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.QUARTZ_BLOCK, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.SAND || block == Blocks.RED_SAND)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.SOUL_SAND, 1)));
+	    	 world.setBlockState(pos, Blocks.SOUL_SAND.getDefaultState(), 3);
+	    	 //world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.SOUL_SAND, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.REDSTONE_BLOCK)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.GLOWSTONE, 1)));
+	    	 world.setBlockState(pos, Blocks.GLOWSTONE.getDefaultState(), 3);
+	    	 //world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.GLOWSTONE, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.DIAMOND_BLOCK)
@@ -125,7 +132,7 @@ public class WandAlchemist extends PickaxeItem
 	     
 		 return ActionResultType.PASS;
 	}
-	
+	   
 	@Override
 	public boolean isBookEnchantable(ItemStack stack, ItemStack book)
 	{
