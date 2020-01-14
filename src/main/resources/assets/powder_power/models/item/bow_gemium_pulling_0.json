@@ -1,0 +1,6 @@
+{
+    "parent": "powder_power:item/bow_gemium",
+    "textures": {
+        "layer0": "powder_power:item/bow_gemium_pulling_0"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "powder_power:item/bow_trilium",
+    "textures": {
+        "layer0": "powder_power:item/bow_trilium_pulling_2"
+    }
+}

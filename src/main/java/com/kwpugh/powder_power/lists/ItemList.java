@@ -97,6 +97,7 @@ public class ItemList
 	public static Item shovel_gemium;
 	public static Item hoe_gemium;
 	public static Item paxel_gemium;
+	public static Item bow_gemium;
 
 
 	public static Item sword_trilium;
@@ -105,6 +106,7 @@ public class ItemList
 	public static Item shovel_trilium;
 	public static Item hoe_trilium;
 	public static Item paxel_trilium;
+	public static Item bow_trilium;
 	
 	
 	public static Item token_night_vision;

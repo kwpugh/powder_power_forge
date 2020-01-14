@@ -28,9 +28,9 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
-public class BowRedium extends BowItem
+public class BowCustom extends BowItem
 {
-   public BowRedium(Item.Properties builder)
+   public BowCustom(Item.Properties builder)
    {
       super(builder);
       this.addPropertyOverride(new ResourceLocation("pull"), (p_210310_0_, p_210310_1_, p_210310_2_) -> {
