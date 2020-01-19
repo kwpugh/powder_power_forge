@@ -1,5 +1,6 @@
 package com.kwpugh.powder_power.lists;
 
+import com.kwpugh.powder_power.util.PowderPowerConfig;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
@@ -8,10 +9,11 @@ import net.minecraft.item.crafting.Ingredient;
 
 public enum ToolMaterialList implements IItemTier
 {
-	redium(1.0f, 8.0f, 2000, 3, 15, ItemList.ingot_redium),
-	lapium(1.0f, 8.0f, 2000, 3, 15, ItemList.ingot_lapium),
-	gemium(1.0f, 9.0f, 4000, 4, 20, ItemList.gem_gemium),
-	trilium(1.0f, 9.5f, 8000, 5, 25, ItemList.ingot_trilium);
+	redium(1.0f, 8.0f, 1800, 3, 15, ItemList.ingot_redium),
+	lapium(1.0f, 8.0f, 1800, 3, 15, ItemList.ingot_lapium),
+	gemium(1.0f, 9.0f, 2200, 4, 20, ItemList.gem_gemium),
+	//trilium(1.0f, 9.5f, 3600, 5, 25, ItemList.ingot_trilium);
+	trilium(PowderPowerConfig.trilium_attack_damage.get(), 9.0F, PowderPowerConfig.trilium_durability.get(), PowderPowerConfig.trilium_harvest_level.get(), PowderPowerConfig.trilium_enchantability.get(), ItemList.ingot_trilium);
 	
 	private float attackDamage, efficiency;
 	private int durability, harvestLevel, enchantability;

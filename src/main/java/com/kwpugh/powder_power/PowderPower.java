@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.kwpugh.powder_power.groups.GroupPowderPower;
+import com.kwpugh.powder_power.util.Config;
 import com.kwpugh.powder_power.util.SupportMods;
 
 import net.minecraft.block.Block;
@@ -14,13 +15,16 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLPaths;
 import top.theillusivec4.curios.api.CuriosAPI;
 import top.theillusivec4.curios.api.imc.CurioIMCMessage;
 
@@ -33,10 +37,14 @@ public class PowderPower
 
     public PowderPower()
     {
+    	ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Config.config);
+    	
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        
+        Config.loadConfig(Config.config, FMLPaths.CONFIGDIR.get().resolve("powder_power.toml").toString());
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -44,13 +52,13 @@ public class PowderPower
     private void setup(final FMLCommonSetupEvent event)
     {
 
-        logger.info("PowderPower completed preinit");
+        logger.info("PowderPower completed setup");
     }
 
     private void doClientStuff(final FMLClientSetupEvent event)
     {
 
-    	logger.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
+    	logger.info("PowderPower got game settings {}", event.getMinecraftSupplier().get().gameSettings);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
@@ -67,7 +75,7 @@ public class PowderPower
     private void processIMC(final InterModProcessEvent event)
     {
 
-    	logger.info("Got IMC {}", event.getIMCStream().
+    	logger.info("PowderPower got IMC {}", event.getIMCStream().
                 map(m->m.getMessageSupplier().get()).
                 collect(Collectors.toList()));
     }

@@ -28,7 +28,7 @@ public class BlockInit
 				BlockList.block_trilium = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0f, 3.0f).lightValue(1).sound(SoundType.METAL)).setRegistryName(location("block_trilium"))
 				
 			);
-			PowderPower.logger.info("Blocks registered.");			
+			PowderPower.logger.info("PowderPower blocks registered.");			
 		}
 	}
 	
