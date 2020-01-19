@@ -157,6 +157,18 @@ public class HammerAlchemist extends PickaxeItem
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.COAL_ORE, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
+	     else if(block == Blocks.GRASS_BLOCK && player.isCrouching())
+	     {
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.GRASS_BLOCK, 1)));
+	    	 return ActionResultType.SUCCESS;
+	     }
+	     else if(block == Blocks.PODZOL && player.isCrouching())
+	     {
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PODZOL, 1)));
+	    	 return ActionResultType.SUCCESS;
+	     }
 	     
 		 return ActionResultType.PASS;
 	}

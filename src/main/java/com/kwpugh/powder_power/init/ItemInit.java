@@ -32,7 +32,6 @@ import com.kwpugh.powder_power.lists.ArmorMaterialList;
 import com.kwpugh.powder_power.lists.BlockList;
 import com.kwpugh.powder_power.lists.ItemList;
 import com.kwpugh.powder_power.lists.ToolMaterialList;
-import com.kwpugh.powder_power.util.PowderPowerConfig;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.AxeItem;
