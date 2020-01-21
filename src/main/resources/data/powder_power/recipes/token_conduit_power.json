@@ -11,7 +11,7 @@
 	"key":
 	{
 		"A": { "item": "minecraft:conduit" },
-		"B": { "item": "powder_power:blend_trilium" },
+		"B": { "item": "powder_power:blend_gemium" },
 		"C": { "item": "powder_power:token_breathing" },
 		"D": { "item": "powder_power:token_night_vision" }
 	},

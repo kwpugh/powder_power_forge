@@ -2,11 +2,7 @@ package com.kwpugh.powder_power.items.tokens;
 
 import java.util.List;
 
-import com.kwpugh.powder_power.util.SpecialAbilities;
-
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.ITextComponent;

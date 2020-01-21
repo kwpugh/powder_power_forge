@@ -3,15 +3,16 @@
 	
 	"pattern":
 	[
-		" B ",
-		"BAB",
-		" B "
+		" A ",
+		"CBC",
+		" C "
 	],
 	
 	"key":
 	{
-		"A": { "item": "minecraft:milk_bucket" },
-		"B": { "item": "powder_power:blend_gemium" }
+		"A": { "item": "powder_power:token_health" },
+		"B": { "item": "minecraft:milk_bucket" },
+		"C": { "item": "powder_power:blend_trilium" }
 	},
 	
 	"result": { "item": "powder_power:token_curing",

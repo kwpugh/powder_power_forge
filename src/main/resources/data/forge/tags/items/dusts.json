@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
+    "#forge:dusts/wood",
+    "#forge:dusts/redstone",
+    "#forge:dusts/obsidian",
+    "#forge:dusts/quartz",
+    "#forge:dusts/lapis_lazuli",
+    "#forge:dusts/emerald",
     "#forge:dusts/gold",
     "#forge:dusts/iron",
     "#forge:dusts/diamond"

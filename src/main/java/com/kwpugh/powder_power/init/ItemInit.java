@@ -180,11 +180,11 @@ public class ItemInit
 						
 				ItemList.token_resistance = new TokenResistance(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_resistance")),					
 				ItemList.token_strength = new TokenStrength(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_strength")),
-				ItemList.token_curing = new TokenCuring(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_curing")),
-				
 				ItemList.token_dolphin = new TokenDolphin(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_dolphin")),
 				ItemList.token_conduit_power = new TokenConduitPower(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_conduit_power")),
-				ItemList.token_health = new TokenHealth(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_health")),	
+				
+				ItemList.token_health = new TokenHealth(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_health")),
+				ItemList.token_curing = new TokenCuring(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_curing")),	
 				ItemList.token_absorption = new TokenAbsorption(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_absorption"))
 			);		
 			PowderPower.logger.info("PowderPower items registered.");

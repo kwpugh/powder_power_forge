@@ -17,7 +17,7 @@ public enum ArmorMaterialList implements IArmorMaterial
 	lapium("armor_lapium", 38, new int[] {3, 6, 8, 3}, 15, ItemList.ingot_lapium, "entity.cat.purreow", 2.0f),
 	gemium("armor_gemium", 47, new int[] {4, 7, 9, 4}, 20, ItemList.gem_gemium, "entity.elder_guardian.ambient", 2.25f),
 	//trilium("armor_trilium", 56, new int[] {5, 8, 10, 5}, 25, ItemList.ingot_trilium, "entity.ender_dragon.growl", 2.5f);
-	trilium("trilium", PowderPowerConfig.trilium_armor_durability.get(), new int[] {PowderPowerConfig.trilium_boots_armor.get(), PowderPowerConfig.trilium_leggings_armor.get(), PowderPowerConfig.trilium_chestplate_armor.get(), PowderPowerConfig.trilium_helmet_armor.get()}, PowderPowerConfig.trilium_enchantability.get(), ItemList.ingot_trilium, "item.armor.equip_diamond", PowderPowerConfig.trilium_armor_toughness.get());
+	trilium("armor_trilium", PowderPowerConfig.trilium_armor_durability.get(), new int[] {PowderPowerConfig.trilium_boots_armor.get(), PowderPowerConfig.trilium_leggings_armor.get(), PowderPowerConfig.trilium_chestplate_armor.get(), PowderPowerConfig.trilium_helmet_armor.get()}, PowderPowerConfig.trilium_enchantability.get(), ItemList.ingot_trilium, "item.armor.entity.ender_dragon.growl", PowderPowerConfig.trilium_armor_toughness.get());
 	
 	private static final int[] max_damage_array = new int[]{13, 15, 16, 11};
 	private String name, equipSound;
