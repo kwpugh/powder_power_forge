@@ -8,7 +8,7 @@ authors="kwpugh" #optional
 
 [[mods]] #mandatory
 modId="powder_power" #mandatory
-version="3.1.15" #mandatory
+version="3.1.20" #mandatory
 displayName="Powder Power" #mandatory
 description='''
 Powder alchemy comes to Minecraft
@@ -27,6 +27,6 @@ Powder alchemy comes to Minecraft
 [[dependencies.powder_power]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.1]"
+    versionRange="[1.15.1, 1.15.2]"
     ordering="NONE"
     side="BOTH"
