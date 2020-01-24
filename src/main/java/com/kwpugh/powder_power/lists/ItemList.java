@@ -114,6 +114,7 @@ public class ItemList
 	public static Item token_speed;
 	public static Item token_no_fall;
 	public static Item token_fire_resistance;
+	public static Item token_sunshine;
 	public static Item token_strength;
 	public static Item token_absorption;
 	public static Item token_haste;

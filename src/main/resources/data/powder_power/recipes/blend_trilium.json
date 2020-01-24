@@ -3,9 +3,9 @@
 	
 	"pattern":
 	[
-		"ABA",
-		"BCB",
-		"ABA"
+		"BCA",
+		"CCC",
+		"ACB"
 	],
 	
 	"key":
