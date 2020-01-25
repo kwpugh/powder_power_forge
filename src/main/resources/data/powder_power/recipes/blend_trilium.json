@@ -4,7 +4,7 @@
 	"pattern":
 	[
 		"BCA",
-		"CCC",
+		"CDC",
 		"ACB"
 	],
 	
@@ -12,7 +12,8 @@
 	{
 		"A": { "item": "powder_power:blend_lapium" },
 		"B": { "item": "powder_power:blend_redium" },
-		"C": { "item": "powder_power:blend_gemium" }
+		"C": { "item": "powder_power:blend_gemium" },
+		"D": { "item": "powder_power:powder_end_pearl" }
 	},
 	
 	"result": { "item": "powder_power:blend_trilium",

@@ -13,7 +13,7 @@
 		"A": { "item": "powder_power:powder_lapis" },
 		"B": { "item": "powder_power:powder_obsidian" },
 		"C": { "item": "powder_power:powder_gold" },
-		"D": { "item": "powder_power:powder_end_pearl" }
+		"D": { "item": "powder_power:powder_nether_quartz" }
 	},
 	
 	"result": { "item": "powder_power:blend_lapium",
