@@ -81,7 +81,7 @@
 	"item.powder_power.hoe_redium": "Redium Hoe",
 	"item.powder_power.paxel_redium": "Redium Paxel",
 	"item.powder_power.bow_redium": "Redium Bow",	
-
+	"item.powder_power.hammer_redium": "Redium Hammer",
 
 	"item.powder_power.sword_lapium": "Lapium Sword",
 	"item.powder_power.pickaxe_lapium": "Lapium Pickaxe",
@@ -90,6 +90,7 @@
 	"item.powder_power.hoe_lapium": "Lapium Hoe",
 	"item.powder_power.paxel_lapium": "Lapium Paxel",	
 	"item.powder_power.bow_lapium": "Lapium Bow",
+	"item.powder_power.hammer_lapium": "Lapium Hammer",
 				
 
 	"item.powder_power.sword_gemium": "Gemium Sword",
@@ -99,6 +100,7 @@
 	"item.powder_power.hoe_gemium": "Gemium Hoe",
 	"item.powder_power.paxel_gemium": "Gemium Paxel",				
 	"item.powder_power.bow_gemium": "Gemium Bow",
+	"item.powder_power.hammer_gemium": "Gemium Hammer",
 
 
 	"item.powder_power.sword_trilium": "Trilium Sword",
@@ -108,6 +110,7 @@
 	"item.powder_power.hoe_trilium": "Trilium Hoe",
 	"item.powder_power.paxel_trilium": "Trilium Paxel",
 	"item.powder_power.bow_trilium": "Trilium Bow",
+	"item.powder_power.hammer_trilium": "Trilium Hammer",
 	
 	
 	"item.powder_power.token_night_vision": "Night Vision Token",

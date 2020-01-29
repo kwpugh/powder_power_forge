@@ -80,6 +80,7 @@ public class ItemList
 	public static Item hoe_redium;
 	public static Item paxel_redium;
 	public static Item bow_redium;
+	public static Item hammer_redium;
 	
 	
 	public static Item sword_lapium;
@@ -89,6 +90,7 @@ public class ItemList
 	public static Item hoe_lapium;
 	public static Item paxel_lapium;
 	public static Item bow_lapium;
+	public static Item hammer_lapium;
 	
 	
 	public static Item sword_gemium;
@@ -98,6 +100,7 @@ public class ItemList
 	public static Item hoe_gemium;
 	public static Item paxel_gemium;
 	public static Item bow_gemium;
+	public static Item hammer_gemium;
 
 
 	public static Item sword_trilium;
@@ -107,6 +110,7 @@ public class ItemList
 	public static Item hoe_trilium;
 	public static Item paxel_trilium;
 	public static Item bow_trilium;
+	public static Item hammer_trilium;
 	
 	
 	public static Item token_night_vision;
