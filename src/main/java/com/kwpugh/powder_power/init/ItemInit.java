@@ -173,7 +173,7 @@ public class ItemInit
 //				ItemList.hoe_trilium = new HoeItem(ToolMaterialList.trilium, 2.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("hoe_trilium")),
 //				ItemList.paxel_trilium = new PaxelTrilium(7, -2.6f, ToolMaterialList.trilium, null, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("paxel_trilium")),
 		
-				//Damage values set to 0 and handled by the config, speed values are hard-coded here
+				//Damage values set to minimum and handled by the config, speed values are hard-coded here
 				ItemList.sword_trilium = new SwordItem(ToolMaterialList.trilium, 0, -2.1f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("sword_trilium")),			
 				ItemList.bow_trilium = new BowCustom((new Item.Properties()).maxStackSize(1).group(PowderPower.powder_power).maxDamage(8000)).setRegistryName(location("bow_trilium")),
 				ItemList.pickaxe_trilium = new PickaxeItem(ToolMaterialList.trilium, -5, -2.5f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("pickaxe_trilium")),
