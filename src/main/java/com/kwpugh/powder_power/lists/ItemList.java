@@ -81,6 +81,7 @@ public class ItemList
 	public static Item paxel_redium;
 	public static Item bow_redium;
 	public static Item hammer_redium;
+	public static Item excavator_redium;
 	
 	
 	public static Item sword_lapium;
@@ -91,6 +92,7 @@ public class ItemList
 	public static Item paxel_lapium;
 	public static Item bow_lapium;
 	public static Item hammer_lapium;
+	public static Item excavator_lapium;
 	
 	
 	public static Item sword_gemium;
@@ -101,6 +103,7 @@ public class ItemList
 	public static Item paxel_gemium;
 	public static Item bow_gemium;
 	public static Item hammer_gemium;
+	public static Item excavator_gemium;
 
 
 	public static Item sword_trilium;
@@ -111,6 +114,7 @@ public class ItemList
 	public static Item paxel_trilium;
 	public static Item bow_trilium;
 	public static Item hammer_trilium;
+	public static Item excavator_trilium;
 	
 	
 	public static Item token_night_vision;
@@ -127,6 +131,5 @@ public class ItemList
 	public static Item token_breathing;
 	public static Item token_curing;
 	public static Item token_dolphin;
-	public static Item token_conduit_power;
-	
+	public static Item token_conduit_power;	
 }
