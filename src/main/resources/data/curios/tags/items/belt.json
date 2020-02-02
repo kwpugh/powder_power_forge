@@ -13,6 +13,7 @@
    "powder_power:token_speed", 
    "powder_power:token_conduit_power", 
    "powder_power:token_breathing",
+    "powder_power:token_good_omen",
    "powder_power:token_fire_resistance",
    "powder_power:token_no_fall"]
 }

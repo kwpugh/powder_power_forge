@@ -11,6 +11,8 @@ public class ItemList
 	
 	public static Item pickaxe_obsidian;
 	public static Item pickaxe_prismarine;
+	public static Item dagger_prismarine;
+	public static Item hatchet_obsidian;
 	
 	public static Item powder_wood;
 	public static Item powder_stone;
@@ -132,4 +134,5 @@ public class ItemList
 	public static Item token_curing;
 	public static Item token_dolphin;
 	public static Item token_conduit_power;	
+	public static Item token_good_omen;
 }

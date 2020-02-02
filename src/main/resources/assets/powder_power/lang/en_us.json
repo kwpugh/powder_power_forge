@@ -3,8 +3,11 @@
 	"item.powder_power.motar_pestle": "Mortar & Pestle",
 	"item.powder_power.wand_core": "Wand Core",
 	"item.powder_power.wand_alchemist": "Alchemist Wand",
+	
 	"item.powder_power.pickaxe_obsidian": "Diamond-Tipped Obsidian Pickaxe",
 	"item.powder_power.pickaxe_prismarine": "Emerald-Tipped Prismarine Pickaxe",
+	"item.powder_power.dagger_prismarine": "Prismarine Dagger",
+	"item.powder_power.hatchet_obsidian": "Obsidian Hatchet",
 	
 	"item.powder_power.powder_wood": "Wood Powder",
 	"item.powder_power.powder_stone": "Stone Powder",
@@ -133,6 +136,7 @@
 	"item.powder_power.token_flight": "Flight Token",
 	"item.powder_power.token_dolphin": "Dolphin Token",
 	"item.powder_power.token_conduit_power": "Conduit Power Token",
+	"item.powder_power.token_good_omen": "Good Omen Token",
 				
 				
 	"itemGroup.powder_power": "Powder Power"

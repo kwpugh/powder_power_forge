@@ -26,6 +26,7 @@ import com.kwpugh.powder_power.items.tokens.TokenConduitPower;
 import com.kwpugh.powder_power.items.tokens.TokenCuring;
 import com.kwpugh.powder_power.items.tokens.TokenDolphin;
 import com.kwpugh.powder_power.items.tokens.TokenFireResistance;
+import com.kwpugh.powder_power.items.tokens.TokenGoodOmen;
 import com.kwpugh.powder_power.items.tokens.TokenHaste;
 import com.kwpugh.powder_power.items.tokens.TokenHealth;
 import com.kwpugh.powder_power.items.tokens.TokenJumpBoost;
@@ -73,9 +74,10 @@ public class ItemInit
 				ItemList.wand_core = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("wand_core")),
 				ItemList.wand_alchemist = new WandAlchemist(ToolMaterialList.redium, 1, -3, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("wand_alchemist")),
 						
-				ItemList.pickaxe_obsidian = new PickaxeItem(ToolMaterialList.redium, 1, -3.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("pickaxe_obsidian")),
-				ItemList.pickaxe_prismarine = new PickaxeItem(ToolMaterialList.redium, 1, -3.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("pickaxe_prismarine")),
-					
+				ItemList.pickaxe_obsidian = new PickaxeItem(ToolMaterialList.obsidian, 3, -3.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("pickaxe_obsidian")),
+				ItemList.pickaxe_prismarine = new PickaxeItem(ToolMaterialList.prismarine, 3, -3.0f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("pickaxe_prismarine")),
+				ItemList.dagger_prismarine = new SwordItem(ToolMaterialList.prismarine, 4, -2.5f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("dagger_prismarine")),
+				ItemList.hatchet_obsidian = new AxeItem(ToolMaterialList.obsidian, 6, -2.1f, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("hatchet_obsidian")),		
 				
 				
 				ItemList.powder_wood = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("powder_wood")),
@@ -194,6 +196,7 @@ public class ItemInit
 				ItemList.token_haste = new TokenHaste(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_haste")),
 				ItemList.token_sunshine = new TokenSunshine(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_sunshine")),
 				ItemList.token_breathing = new TokenBreathing(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_breathing")),
+				ItemList.token_good_omen = new TokenGoodOmen(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_good_omen")),
 						
 				ItemList.token_resistance = new TokenResistance(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_resistance")),					
 				ItemList.token_strength = new TokenStrength(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_strength")),
