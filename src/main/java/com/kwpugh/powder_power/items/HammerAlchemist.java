@@ -2,6 +2,8 @@ package com.kwpugh.powder_power.items;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import com.kwpugh.powder_power.lists.ItemList;
 
 import net.minecraft.block.Block;
@@ -19,9 +21,11 @@ import net.minecraft.item.PickaxeItem;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class HammerAlchemist extends PickaxeItem
 {
@@ -184,13 +188,12 @@ public class HammerAlchemist extends PickaxeItem
 	{
 		return repair.getItem() == Items.DIAMOND;
 	}
-	
-	@Override
-	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
-	{
-		super.addInformation(stack, world, list, flag);				
-		list.add(new StringTextComponent(TextFormatting.GREEN + "Transforms many blocks into powders"));
-		list.add(new StringTextComponent(TextFormatting.BLUE + "Right-click on block to use"));
 
-	} 
+	@OnlyIn(Dist.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+	{
+		super.addInformation(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslationTextComponent("item.powder_power.hammer_alchemist.line1").applyTextStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.powder_power.hammer_alchemist.line2").applyTextStyle(TextFormatting.AQUA)));
+	}
 }

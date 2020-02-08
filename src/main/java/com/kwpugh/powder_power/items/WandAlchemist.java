@@ -2,6 +2,8 @@ package com.kwpugh.powder_power.items;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import com.kwpugh.powder_power.lists.ItemList;
 
 import net.minecraft.block.Block;
@@ -19,9 +21,11 @@ import net.minecraft.item.PickaxeItem;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class WandAlchemist extends PickaxeItem
 {
@@ -53,56 +57,48 @@ public class WandAlchemist extends PickaxeItem
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.setBlockState(pos, Blocks.NETHERRACK.getDefaultState(), 3);
-	    	 //world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.NETHERRACK, 1))); 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.DIORITE)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.setBlockState(pos, Blocks.END_STONE.getDefaultState(), 3);
-	    	 //world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.END_STONE, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.BROWN_MUSHROOM_BLOCK || block == Blocks.RED_MUSHROOM_BLOCK)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.setBlockState(pos, Blocks.NETHER_WART_BLOCK.getDefaultState(), 3);
-	    	 //world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.NETHER_WART_BLOCK, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.GRANITE)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.setBlockState(pos, Blocks.PURPUR_BLOCK.getDefaultState(), 3);
-	    	 //world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PURPUR_BLOCK, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.NETHERRACK)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.setBlockState(pos, Blocks.MAGMA_BLOCK.getDefaultState(), 3);
-	    	 //world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.MAGMA_BLOCK, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.LAPIS_BLOCK)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.setBlockState(pos, Blocks.QUARTZ_BLOCK.getDefaultState(), 3);
-	    	 //world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.QUARTZ_BLOCK, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.SAND || block == Blocks.RED_SAND)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.setBlockState(pos, Blocks.SOUL_SAND.getDefaultState(), 3);
-	    	 //world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.SOUL_SAND, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.REDSTONE_BLOCK)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.setBlockState(pos, Blocks.GLOWSTONE.getDefaultState(), 3);
-	    	 //world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.GLOWSTONE, 1)));
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.DIAMOND_BLOCK)
@@ -145,12 +141,11 @@ public class WandAlchemist extends PickaxeItem
 		return repair.getItem() == ItemList.gem_gemium;
 	}
 	
-	@Override
-	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
+	@OnlyIn(Dist.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
-		super.addInformation(stack, world, list, flag);				
-		list.add(new StringTextComponent(TextFormatting.GREEN + "Transforms many Overworld blocks into resources from the Nether and End"));
-		list.add(new StringTextComponent(TextFormatting.BLUE + "Right-click on block to use"));
-
-	} 
+		super.addInformation(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslationTextComponent("item.powder_power.wand_alchemist.line1").applyTextStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.powder_power.wand_alchemist.line2").applyTextStyle(TextFormatting.AQUA)));
+	}
 }

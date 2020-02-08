@@ -1,8 +1,17 @@
 {
 	"item.powder_power.hammer_alchemist": "Alchemist Hammer",
+	"item.powder_power.hammer_alchemist.line1": "Transforms many blocks into powders",
+	"item.powder_power.hammer_alchemist.line2": "Right-click on block to use",
+	
 	"item.powder_power.motar_pestle": "Mortar & Pestle",
+	"item.powder_power.motar_pestle.line1": "Allows for crushing certain items into powders",
+	"item.powder_power.motar_pestle.line2": "Use in a crafting table",
+	
 	"item.powder_power.wand_core": "Wand Core",
+	
 	"item.powder_power.wand_alchemist": "Alchemist Wand",
+	"item.powder_power.wand_alchemist.line1": "Transforms many Overworld blocks into resources from the Nether and End",
+	"item.powder_power.wand_alchemist.line2": "Right-click on block to use",
 	
 	"item.powder_power.pickaxe_obsidian": "Diamond-Tipped Obsidian Pickaxe",
 	"item.powder_power.pickaxe_prismarine": "Emerald-Tipped Prismarine Pickaxe",
@@ -54,30 +63,43 @@
 	"item.powder_power.block_trilium": "Trilium Block",
 		
 	"item.powder_power.armor_redium_head": "Redium Helmet",	
+	"item.powder_power.armor_redium_full.line1": "Full suit bonus: Fire and Wither protection",	
 	"item.powder_power.armor_redium_body": "Redium Chestplate",	
 	"item.powder_power.armor_redium_leggings": "Redium Leggings",	
 	"item.powder_power.armor_redium_boots": "Redium Boots",	
 		
 
+	"item.powder_power.armor_lapium_full.line1": "Full suit bonus: Water breathing and poison protection",	
 	"item.powder_power.armor_lapium_head": "Lapium Helmet",	
 	"item.powder_power.armor_lapium_body": "Lapium Chestplate",	
 	"item.powder_power.armor_lapium_leggings": "Lapium Leggings",	
 	"item.powder_power.armor_lapium_boots": "Lapium Boots",	
 	
 
+	"item.powder_power.armor_gemium_full.line1": "Full suit bonus: Water breathing, fire protection,",
+	"item.powder_power.armor_gemium_full.line2": "poison and wither protection, no fall damage,",
+	"item.powder_power.armor_gemium_full.line3": "and mild health regeneration",
 	"item.powder_power.armor_gemium_head": "Gemium Helmet",	
 	"item.powder_power.armor_gemium_body": "Gemium Chestplate",	
 	"item.powder_power.armor_gemium_leggings": "Gemium Leggings",	
 	"item.powder_power.armor_gemium_boots": "Gemium Boots",	
 
 
+	"item.powder_power.armor_trilium_full.line1": "Full suit bonus: Water breathing, fire protection,",
+	"item.powder_power.armor_trilium_full.line2": "poison and wither protection, no fall damage,",
+	"item.powder_power.armor_trilium_full.line3": "Dolphin's Grace, and moderate health regeneration",
 	"item.powder_power.armor_trilium_head": "Trilium Helmet",	
 	"item.powder_power.armor_trilium_body": "Trilium Chestplate",	
 	"item.powder_power.armor_trilium_leggings": "Trilium Leggings",	
 	"item.powder_power.armor_trilium_boots": "Trilium Boots",
 		
+	"item.powder_power.excavator.line1": "A shovel that breaks blocks in a 3x3 area",
+	"item.powder_power.hammer.line1": "A hammer that breaks blocks in a 3x3 area",
+	"item.powder_power.paxel.line1": "Combines pickaxe, axe, and shovel",
+	"item.powder_power.bow.line1": "A more durable bow",
 	
 	"item.powder_power.sword_redium": "Redium Sword",
+	"item.powder_power.sword_redium.line1": "A firey sword indeed",
 	"item.powder_power.pickaxe_redium": "Redium Pickaxe",
 	"item.powder_power.axe_redium": "Redium Axe",
 	"item.powder_power.shovel_redium": "Redium Shovel",
@@ -120,23 +142,65 @@
 	"item.powder_power.excavator_trilium": "Trilium Excavator",
 	
 	
+	"item.powder_power.token.general1": "Works while in player inventory",
+	"item.powder_power.token.general2": "Sneak right-click to toggle on/off",
+	"item.powder_power.token.general3": "Right-click to use",
+	
 	"item.powder_power.token_night_vision": "Night Vision Token",
+	"item.powder_power.token_night_vision.line1": "Provides player with Night Vision",
+	"item.powder_power.token_night_vision.line2": "Night vision ability active: %s",
+	
 	"item.powder_power.token_resistance": "Attack Resistance Token",
+	"item.powder_power.token_resistance.line1": "Provides player with extra attack damage resistance",
+	"item.powder_power.token_resistance.line2": "Resistance ability active: %s",
+	
 	"item.powder_power.token_speed": "Speed Token",
-	"item.powder_power.token_no_fall": "No Fall Damage Token",					
+	"item.powder_power.token_speed.line1": "Provides player with extra speed",
+	"item.powder_power.token_speed.line2": "Speed ability active: %s",
+	
+	"item.powder_power.token_no_fall": "No Fall Damage Token",
+	"item.powder_power.token_no_fall.line1": "Provides player with No Fall Damage",					
+	
 	"item.powder_power.token_fire_resistance": "Fire Resistance Token",
+	"item.powder_power.token_fire_resistance.line1": "Provides player with Fire Resistance",
+	
 	"item.powder_power.token_sunshine": "Sunshine Token",
+	"item.powder_power.token_sunshine.line1": "Brings back the sun during a rain storm",
+	
 	"item.powder_power.token_strength": "Strength Token",
+	"item.powder_power.token_strength.line1": "Provides player with extra strength",
+	"item.powder_power.token_strength.line2": "Strength ability active: %s",
+	
 	"item.powder_power.token_absorption": "Absorption Token",
+	"item.powder_power.token_absorption.line1": "Provides player with extra absorption hearts",
+	
 	"item.powder_power.token_haste": "Haste Token",
+	"item.powder_power.token_haste.line1": "Provides player with Haste",
+	"item.powder_power.token_haste.line2": "Haste ability active: %s",
+	
 	"item.powder_power.token_jump_boost": "Jump Boost Token",
+	"item.powder_power.token_jump_boost.line1": "Provides player with Jump Boost",
+	"item.powder_power.token_jump_boost.line2": "Jump Boost ability active: %s",
+	
 	"item.powder_power.token_health": "Health Token",
+	"item.powder_power.token_health.line1": "Provides player with moderate health regen",
+	
 	"item.powder_power.token_breathing": "Breathing Token",
+	"item.powder_power.token_breathing.line1": "Provides player with water breathing",
+	
 	"item.powder_power.token_curing": "Curing Token",
-	"item.powder_power.token_flight": "Flight Token",
+	"item.powder_power.token_curing.line1": "Provides curing of most negative potion effects",
+	
 	"item.powder_power.token_dolphin": "Dolphin Token",
+	"item.powder_power.token_dolphin.line1": "Provides player with Dolphin's Grace",
+	"item.powder_power.token_dolphin.line2": "Dolphin's Grace ability active: %s",
+	
 	"item.powder_power.token_conduit_power": "Conduit Power Token",
+	"item.powder_power.token_conduit_power.line1": "Provides player with Conduit Power",
+	"item.powder_power.token_conduit_power.line2": "Conduit Power ability active: %s",
+	
 	"item.powder_power.token_good_omen": "Good Omen Token",
+	"item.powder_power.token_good_omen.line1": "Dispels the taint of Bad Omen",
 				
 				
 	"itemGroup.powder_power": "Powder Power"

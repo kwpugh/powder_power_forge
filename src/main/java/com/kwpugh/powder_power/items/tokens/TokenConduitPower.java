@@ -2,6 +2,8 @@ package com.kwpugh.powder_power.items.tokens;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import com.kwpugh.powder_power.util.EnableUtil;
 import com.kwpugh.powder_power.util.SpecialAbilities;
 
@@ -16,7 +18,10 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class TokenConduitPower extends Item
 {
@@ -37,25 +42,25 @@ public class TokenConduitPower extends Item
 	}	
 
 	@Override
-  public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand)
-  {
+	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand)
+	{
 		ItemStack stack = player.getHeldItem(hand);
 		
-      if(!world.isRemote && player.isCrouching())
-      {
-          EnableUtil.changeEnabled(player, hand);
-          player.sendMessage(new StringTextComponent("Conduit Power ability active: " + EnableUtil.isEnabled(stack)));
-          return new ActionResult<ItemStack>(ActionResultType.SUCCESS, player.getHeldItem(hand));
-      }
-      return super.onItemRightClick(world, player, hand);
-  }
-
-  @Override
-	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
+		if(!world.isRemote && player.isCrouching())
+		{
+			EnableUtil.changeEnabled(player, hand);
+			player.sendMessage(new TranslationTextComponent("item.powder_power.token_conduit_power.line2", EnableUtil.isEnabled(stack)).applyTextStyle(TextFormatting.BOLD));
+			return new ActionResult<ItemStack>(ActionResultType.SUCCESS, player.getHeldItem(hand));
+		}
+		return super.onItemRightClick(world, player, hand);
+	}
+  
+	@OnlyIn(Dist.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
-		super.addInformation(stack, world, list, flag);				
-		list.add(new StringTextComponent(TextFormatting.BLUE + "Provides player with Conduit Power"));
-		list.add(new StringTextComponent(TextFormatting.RED + "Conduit Power ability active: " + EnableUtil.isEnabled(stack)));
-		list.add(new StringTextComponent(TextFormatting.GREEN + "Sneak right-click to toggle on/off"));
-	}  
+		super.addInformation(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslationTextComponent("item.powder_power.token_conduit_power.line1").applyTextStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.powder_power.token_conduit_power.line2", EnableUtil.isEnabled(stack)).applyTextStyle(TextFormatting.RED)));
+		tooltip.add((new TranslationTextComponent("item.powder_power.token.general2").applyTextStyle(TextFormatting.AQUA)));
+	}
 }

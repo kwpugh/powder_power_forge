@@ -2,6 +2,8 @@ package com.kwpugh.powder_power.items.armor;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import com.kwpugh.powder_power.lists.ItemList;
 import com.kwpugh.powder_power.util.SpecialAbilities;
 
@@ -13,9 +15,11 @@ import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ArmorTrilium extends ArmorItem
 {
@@ -96,12 +100,13 @@ public class ArmorTrilium extends ArmorItem
 		return repair.getItem() == ItemList.ingot_trilium;
 	}
 	
-    @Override
-	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
+	@OnlyIn(Dist.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
-		super.addInformation(stack, world, list, flag);				
-		list.add(new StringTextComponent(TextFormatting.BLUE + "Full suit bonus: Water breathing, fire protection,"));
-		list.add(new StringTextComponent(TextFormatting.BLUE + "poison and wither protection, no fall damage,"));
-		list.add(new StringTextComponent(TextFormatting.BLUE + "Dolphin's Grace, and moderate health regeneration"));
+		super.addInformation(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslationTextComponent("item.powder_power.armor_trilium_full.line1").applyTextStyle(TextFormatting.GREEN)));	
+		tooltip.add((new TranslationTextComponent("item.powder_power.armor_trilium_full.line2").applyTextStyle(TextFormatting.GREEN)));	
+		tooltip.add((new TranslationTextComponent("item.powder_power.armor_trilium_full.line3").applyTextStyle(TextFormatting.GREEN)));	
+		
 	}
 }
