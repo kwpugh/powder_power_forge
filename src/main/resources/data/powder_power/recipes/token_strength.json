@@ -10,8 +10,8 @@
 	
 	"key":
 	{
-		"A": { "item": "powder_power:sword_gemium" },
-		"B": { "item": "powder_power:blend_gemium" }
+		"A": { "item": "powder_power:sword_trilium" },
+		"B": { "item": "powder_power:blend_trilium" }
 	},
 	
 	"result": { "item": "powder_power:token_strength",
