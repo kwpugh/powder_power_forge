@@ -49,7 +49,7 @@ public class SwordRedium extends SwordItem
 		}
 		return super.hitEntity(stack, target, attacker);
 	}
-	
+	   
 	@Override
 	public boolean isBookEnchantable(ItemStack stack, ItemStack book)
 	{

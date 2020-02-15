@@ -163,12 +163,12 @@ public class BowCustom extends BowItem
 
       if (!playerIn.abilities.isCreativeMode && !flag)
       {
-         return ActionResult.func_226251_d_(itemstack);
+         return ActionResult.resultSuccess(itemstack);
       }
       else
       {
          playerIn.setActiveHand(handIn);
-         return ActionResult.func_226249_b_(itemstack);
+         return ActionResult.resultFail(itemstack);
       }
    }
 

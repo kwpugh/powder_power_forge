@@ -9,10 +9,8 @@ import com.kwpugh.powder_power.groups.GroupPowderPower;
 import com.kwpugh.powder_power.util.Config;
 import com.kwpugh.powder_power.util.SupportMods;
 
-import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -35,7 +33,6 @@ public class PowderPower
 
     public PowderPower()
     {
-    	//ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Config.config);
     	Config.loadConfig(Config.config, FMLPaths.CONFIGDIR.get().resolve("powder_power.toml").toString());
     	
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -82,16 +79,5 @@ public class PowderPower
     {
 
     	logger.info("PowderPower server events completed");
-    }
-
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents
-    {
-        @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
-        {
-
-        	logger.info("PowderPower blocks registered");
-        }
     }
 }

@@ -67,8 +67,7 @@ public class ItemInit
 			event.getRegistry().registerAll
 			(				
 				ItemList.hammer_alchemist = new HammerAlchemist(ToolMaterialList.redium, 1, -3, new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("hammer_alchemist")),
-				ItemList.motar_pestle = new MotarPestle(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("motar_pestle")),
-				
+				ItemList.motar_pestle = new MotarPestle(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("motar_pestle")),			
 				
 				
 				ItemList.wand_core = new Item(new Item.Properties().group(PowderPower.powder_power)).setRegistryName(location("wand_core")),

@@ -21,12 +21,10 @@ public class BlockInit
 		{
 			event.getRegistry().registerAll
 			(
-
 				BlockList.block_redium = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0f, 3.0f).lightValue(1).sound(SoundType.METAL)).setRegistryName(location("block_redium")),
 				BlockList.block_lapium = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0f, 3.0f).lightValue(1).sound(SoundType.METAL)).setRegistryName(location("block_lapium")),
 				BlockList.block_gemium = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0f, 3.0f).lightValue(1).sound(SoundType.METAL)).setRegistryName(location("block_gemium")),
-				BlockList.block_trilium = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0f, 3.0f).lightValue(1).sound(SoundType.METAL)).setRegistryName(location("block_trilium"))
-				
+				BlockList.block_trilium = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0f, 3.0f).lightValue(1).sound(SoundType.METAL)).setRegistryName(location("block_trilium"))	
 			);
 			PowderPower.logger.info("PowderPower blocks registered.");			
 		}
