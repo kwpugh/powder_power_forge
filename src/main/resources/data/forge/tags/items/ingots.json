@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:ingots/obsidian",
+    "#forge:ingots/prismarine",
+    "#forge:ingots/redium",
+    "#forge:ingots/lapium",
+    "#forge:ingots/gemium",
+    "#forge:ingots/trilium"
+  ]
+}
