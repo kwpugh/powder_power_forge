@@ -2,7 +2,9 @@
 	"item.powder_power.hammer_alchemist": "Alchemist Hammer",
 	"item.powder_power.hammer_alchemist.line1": "Transforms many blocks into powders",
 	"item.powder_power.hammer_alchemist.line2": "Right-click on block to use",
-	
+	"item.powder_power.hammer_alchemist.line3": "The Alchemist Hammer is used to obtain the various powders needed to make Redium, Lapium, Gemium, and Trilium Blends.",
+	"item.powder_power.hammer_alchemist.line4": "You can obtain the obsidian, quartz, redstone, lapis, coal, iron, gold, diamond, emerald, etc. powders by right-clicking the cooresponding ore/block with the Alchemist Hammer.",
+	"item.powder_power.hammer_alchemist.line5": "Redium, Lapium, Gemium, and Trilium are made from the aforementioned powders and the recipes are listed in JEI",
 	"item.powder_power.motar_pestle": "Mortar & Pestle",
 	"item.powder_power.motar_pestle.line1": "Allows for crushing certain items into powders",
 	"item.powder_power.motar_pestle.line2": "Use in a crafting table",
@@ -12,6 +14,19 @@
 	"item.powder_power.wand_alchemist": "Alchemist Wand",
 	"item.powder_power.wand_alchemist.line1": "Transforms many Overworld blocks into resources from the Nether and End",
 	"item.powder_power.wand_alchemist.line2": "Right-click on block to use",
+	"item.powder_power.wand_alchemist.line3": "The Alchemist Wand is used to transform various Overworld blocks into blocks normally found in the Nether and the End.  Right-click a block with the Wand to transform the block based on the following list.",
+	"item.powder_power.wand_alchemist.line4": "Cobble -> Netherrack",
+	"item.powder_power.wand_alchemist.line5": "Sand -> Soul Sand",
+	"item.powder_power.wand_alchemist.line6": "Redstone Block -> Glowstone",
+	"item.powder_power.wand_alchemist.line7": "Lapis Block -> Quartz Block",
+	"item.powder_power.wand_alchemist.line8": "Diamond Block -> Ghast Tear",
+	"item.powder_power.wand_alchemist.line9": "Mushroom Block -> Nether Wart Block",
+	"item.powder_power.wand_alchemist.line10": "Diorite -> End Stone",
+	"item.powder_power.wand_alchemist.line11": "Granite -> Purpur Block",
+	"item.powder_power.wand_alchemist.line12": "Emerald Block -> End Rod",
+	"item.powder_power.wand_alchemist.line13": "Enderchest -> Black Shukerbox",
+
+	
 	
 	"item.powder_power.pickaxe_obsidian": "Diamond-Tipped Obsidian Pickaxe",
 	"item.powder_power.pickaxe_prismarine": "Emerald-Tipped Prismarine Pickaxe",
