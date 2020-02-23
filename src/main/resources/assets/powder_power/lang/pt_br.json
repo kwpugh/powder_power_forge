@@ -1,0 +1,220 @@
+{
+	"item.powder_power.hammer_alchemist": "Martelo do Alquimista",
+	"item.powder_power.hammer_alchemist.line1": "Transforma muitos blocos em pó",
+	"item.powder_power.hammer_alchemist.line2": "Botão-direito em um bloco para usar",
+	"item.powder_power.hammer_alchemist.line3": "O Martelo do Alquimista é usado para obter os vários pós necessários para fazer misturas de Redio, Lapio, Gemio e Trilio.",
+	"item.powder_power.hammer_alchemist.line4": "Botão-direito em um bloco com o Alquimista do Martelo para obter os pó correspondente (Obsidiana, Quartzo, Redstone, Lápis-Lazúli, Carvão, Ferro, Ouro, Diamante, Esmeralda, etc.)",
+	"item.powder_power.hammer_alchemist.line5": "Redio, Lapio, Gemio e Trilio são feitos a partir dos pós mencionados e as receitas estão listadas no mod JEI",
+	"item.powder_power.motar_pestle": "Almofariz e Pilão",
+	"item.powder_power.motar_pestle.line1": "Permite triturar certos itens em pó",
+	"item.powder_power.motar_pestle.line2": "Use em uma Bancada de Trabalho",
+	
+	"item.powder_power.wand_core": "Núcleo da Varinha",
+	
+	"item.powder_power.wand_alchemist": "Varinha do Alquimista",
+	"item.powder_power.wand_alchemist.line1": "Transforma muitos blocos do Overworld em recursos do Nether e do End",
+	"item.powder_power.wand_alchemist.line2": "Botão-direito em um bloco para usar",
+	"item.powder_power.wand_alchemist.line3": "A Varinha do Alquimista é usada para transformar vários blocos do Overworld em blocos normalmente encontrados no Nether e no End. Botão-direito em um bloco com a Varinha para transformar o bloco com base na lista a seguir.",
+	"item.powder_power.wand_alchemist.line4": "Pedregulho -> Netherrack",
+	"item.powder_power.wand_alchemist.line5": "Areia -> Areia das Almas",
+	"item.powder_power.wand_alchemist.line6": "Bloco de Redstone -> Pedra Luminosa",
+	"item.powder_power.wand_alchemist.line7": "Bloco de Lápis-Lazúli -> Bloco de Quartzo",
+	"item.powder_power.wand_alchemist.line8": "Bloco de Diamante -> Lágima de Ghast",
+	"item.powder_power.wand_alchemist.line9": "Mushroom Block -> Bloco de Fungos do Nether",
+	"item.powder_power.wand_alchemist.line10": "Diorito -> Pedra do End",
+	"item.powder_power.wand_alchemist.line11": "Granito -> Bloco de Púrpura",
+	"item.powder_power.wand_alchemist.line12": "Bloco de Esmeralda -> Lâmpada do End",
+	"item.powder_power.wand_alchemist.line13": "Baú do Ender -> Caixa de Shuker Preta",
+	
+	"item.powder_power.pickaxe_obsidian": "Picareta de Obsidiana com Ponta de Diamantes",
+	"item.powder_power.pickaxe_prismarine": "Picareta de Prismarino com Ponta de Esmeralda",
+	"item.powder_power.dagger_prismarine": "Adaga de Prismarino",
+	"item.powder_power.hatchet_obsidian": "Machado de Obsidiana",
+	
+	"item.powder_power.powder_wood": "Pó de Madeira",
+	"item.powder_power.powder_stone": "Pó de Pedra",
+	"item.powder_power.powder_iron": "Pó de Ferro",
+	"item.powder_power.powder_redstone": "Pó de Redstone",
+	"item.powder_power.powder_obsidian": "Pó de Obsidiana",
+	"item.powder_power.powder_nether_quartz": "Pó de Quartzo do Nether",
+	"item.powder_power.powder_purpur": "Pó de Púrpura",
+	"item.powder_power.blend_redium": "Mistura de Redio",
+	
+	
+	"item.powder_power.powder_end_pearl": "Pó de Ender",
+	"item.powder_power.powder_gold": "Pó de Ouro",
+	"item.powder_power.powder_lapis": "Pó de Lápis-Lazúli",
+	"item.powder_power.blend_lapium": "Mistura de Lapio",
+	
+
+	"item.powder_power.powder_diamond": "Pó de Diamante",
+	"item.powder_power.powder_emerald": "Pó de Esmeralda",
+	"item.powder_power.powder_prismarine": "Prismarine Pó",	
+	"item.powder_power.blend_gemium": "Mistura de Gemio",
+	
+		
+	"item.powder_power.blend_trilium": "Mistura de Trilio",	
+	
+	"item.powder_power.ingot_obsidian": "Barra de Obsidiana",
+	"item.powder_power.ingot_prismarine": "Barra de Prismarino",	
+	"item.powder_power.ingot_redium": "Barra de Redio",	
+	"item.powder_power.ingot_lapium": "Barra de Lapio",	
+	"item.powder_power.gem_gemium": "Barra de Gemio",	
+	"item.powder_power.ingot_trilium": "Barra de Trilio",	
+	
+	
+	"block.powder_power.block_redium": "Bloco de Redio",
+	"item.powder_power.block_redium": "Bloco de Redio",
+	
+	"block.powder_power.block_lapium": "Bloco de Lapio",
+	"item.powder_power.block_lapium": "Bloco de Lapio",
+	
+	"block.powder_power.block_gemium": "Bloco de Gemio",
+	"item.powder_power.block_gemium": "Bloco de Gemio",
+	
+	"block.powder_power.block_trilium": "Bloco de Trilio",
+	"item.powder_power.block_trilium": "Bloco de Trilio",
+		
+	"item.powder_power.armor_redium_head": "Capacete de Redio",	
+	"item.powder_power.armor_redium_full.line1": "Bônus de armadura completa: Proteção contra o fogo e contra a decomposição",	
+	"item.powder_power.armor_redium_body": "Peitoral de Redio",	
+	"item.powder_power.armor_redium_leggings": "Calças de Redio",	
+	"item.powder_power.armor_redium_boots": "Botas de Redio",	
+		
+
+	"item.powder_power.armor_lapium_full.line1": "Bônus de armadura completa: Respiração aquatica e proteção contra o veneno",	
+	"item.powder_power.armor_lapium_head": "Capacete de Lapio",	
+	"item.powder_power.armor_lapium_body": "Peitoral de Lapio",	
+	"item.powder_power.armor_lapium_leggings": "Calças de Lapio",	
+	"item.powder_power.armor_lapium_boots": "Botas de Lapio",	
+	
+
+	"item.powder_power.armor_gemium_full.line1": "Bônus de armadura completa: Respiração aquatica, proteção contra o fogo,",
+	"item.powder_power.armor_gemium_full.line2": "contra o veneno e contra a decomposição, previne dano de queda,",
+	"item.powder_power.armor_gemium_full.line3": "e uma leve regeneração",
+	"item.powder_power.armor_gemium_head": "Capacete de Gemio",	
+	"item.powder_power.armor_gemium_body": "Peitoral de Gemio",	
+	"item.powder_power.armor_gemium_leggings": "Calças de Gemio",	
+	"item.powder_power.armor_gemium_boots": "Botas de Gemio",	
+
+
+	"item.powder_power.armor_trilium_full.line1": "Bônus de armadura completa: Respiração aquatica, proteção contra o fogo,",
+	"item.powder_power.armor_trilium_full.line2": "contra o veneno e contra a decomposição, previne dano de queda,",
+	"item.powder_power.armor_trilium_full.line3": "Graça dos Golfinhos, e uma moderada de regeneração",
+	"item.powder_power.armor_trilium_head": "Capacete de Trilio",	
+	"item.powder_power.armor_trilium_body": "Peitoral de Trilio",	
+	"item.powder_power.armor_trilium_leggings": "Calças de Trilio",	
+	"item.powder_power.armor_trilium_boots": "Botas de Trilio",
+		
+	"item.powder_power.excavator.line1": "Uma pá que quebra blocos em uma área 3x3",
+	"item.powder_power.hammer.line1": "Um martelo que quebra blocos em uma área 3x3",
+	"item.powder_power.paxel.line1": "Combina picareta, machado e pá",
+	"item.powder_power.bow.line1": "Um arco mais resistente",
+	
+	"item.powder_power.sword_redium": "Espada de Redio",
+	"item.powder_power.sword_redium.line1": "A firey sword indeed",
+	"item.powder_power.pickaxe_redium": "Picareta de Redio",
+	"item.powder_power.axe_redium": "Machado de Redio",
+	"item.powder_power.shovel_redium": "Pá de Redio",
+	"item.powder_power.hoe_redium": "Enxada de Redio",
+	"item.powder_power.paxel_redium": "Chibanca de Redio",
+	"item.powder_power.bow_redium": "Arco de Redio",	
+	"item.powder_power.hammer_redium": "Martelo de Redio",
+	"item.powder_power.excavator_redium": "Excavador de Redio",
+
+	"item.powder_power.sword_lapium": "Espada de Lapio",
+	"item.powder_power.pickaxe_lapium": "Picareta de Lapio",
+	"item.powder_power.axe_lapium": "Machado de Lapio",
+	"item.powder_power.shovel_lapium": "Pá de Lapio",
+	"item.powder_power.hoe_lapium": "Enxada de Lapio",
+	"item.powder_power.paxel_lapium": "Chibanca de Lapio",	
+	"item.powder_power.bow_lapium": "Arco de Lapio",
+	"item.powder_power.hammer_lapium": "Martelo de Lapio",
+	"item.powder_power.excavator_lapium": "Excavador de Lapio",
+				
+
+	"item.powder_power.sword_gemium": "Espada de Gemio",
+	"item.powder_power.pickaxe_gemium": "Picareta de Gemio",
+	"item.powder_power.axe_gemium": "Machado de Gemio",
+	"item.powder_power.shovel_gemium": "Pá de Gemio",	
+	"item.powder_power.hoe_gemium": "Enxada de Gemio",
+	"item.powder_power.paxel_gemium": "Chibanca de Gemio",				
+	"item.powder_power.bow_gemium": "Arco de Gemio",
+	"item.powder_power.hammer_gemium": "Martelo de Gemio",
+	"item.powder_power.excavator_gemium": "Excavador de Gemio",
+
+
+	"item.powder_power.sword_trilium": "Espada de Trilio",
+	"item.powder_power.pickaxe_trilium": "Picareta de Trilio",
+	"item.powder_power.axe_trilium": "Machado de Trilio",
+	"item.powder_power.shovel_trilium": "Pá de Trilio",
+	"item.powder_power.hoe_trilium": "Enxada de Trilio",
+	"item.powder_power.paxel_trilium": "Chibanca de Trilio",
+	"item.powder_power.bow_trilium": "Arco de Trilio",
+	"item.powder_power.hammer_trilium": "Martelo de Trilio",
+	"item.powder_power.excavator_trilium": "Excavador de Trilio",
+	
+	
+	"item.powder_power.token.general1": "Funciona enquanto estiver no inventário do jogador",
+	"item.powder_power.token.general2": "Esgueirar-se + Botão-Direito para ativar/desativar",
+	"item.powder_power.token.general3": "Botão-Direito para usar",
+	
+	"item.powder_power.token_night_vision": "Insígnia da Visão Noturna",
+	"item.powder_power.token_night_vision.line1": "Fornece visão noturna ao jogador",
+	"item.powder_power.token_night_vision.line2": "Ativação da habilidade de visão noturna: %s",
+	
+	"item.powder_power.token_resistance": "Insígnia de Resistência ao Ataque",
+	"item.powder_power.token_resistance.line1": "Proporciona ao jogador resistência extra a ataques",
+	"item.powder_power.token_resistance.line2": "Ativação da habilidade de Resistência ao Ataque: %s",
+	
+	"item.powder_power.token_speed": "Insígnia da Velocidade",
+	"item.powder_power.token_speed.line1": "Fornece velocidade extra ao jogador",
+	"item.powder_power.token_speed.line2": "Ativação da habilidade de Velocidade: %s",
+	
+	"item.powder_power.token_no_fall": "Insígnia de Reistencia a Queda",
+	"item.powder_power.token_no_fall.line1": "Fornece ao jogador imunidade ao dano por queda",					
+	
+	"item.powder_power.token_fire_resistance": "Insígnia de Reistencia ao Fogo",
+	"item.powder_power.token_fire_resistance.line1": "Fornece resistência ao fogo ao jogador",
+	
+	"item.powder_power.token_sunshine": "Insígnia do Raio de Sol",
+	"item.powder_power.token_sunshine.line1": "Traz de volta o sol durante uma tempestade",
+	
+	"item.powder_power.token_strength": "Insígnia da Força",
+	"item.powder_power.token_strength.line1": "Fornece força extra ao jogador",
+	"item.powder_power.token_strength.line2": "Ativação da habilidade de Força: %s",
+	
+	"item.powder_power.token_absorption": "Insígnia da Absorção",
+	"item.powder_power.token_absorption.line1": "Fornece ao jogador corações extras de absorção",
+	
+	"item.powder_power.token_haste": "Insígnia da Pressa",
+	"item.powder_power.token_haste.line1": "Fornece ao jogador Pressa",
+	"item.powder_power.token_haste.line2": "Ativação da habilidade de pressa: %s",
+	
+	"item.powder_power.token_jump_boost": "Insígnia do Supersalto",
+	"item.powder_power.token_jump_boost.line1": "Fornece ao jogador Supersalto",
+	"item.powder_power.token_jump_boost.line2": "Ativação da habilidade de supersalto: %s",
+	
+	"item.powder_power.token_health": "Insígnia da Vida",
+	"item.powder_power.token_health.line1": "Fornece ao jogador uma regeneração de vida moderada",
+	
+	"item.powder_power.token_breathing": "Insígnia da Respiração",
+	"item.powder_power.token_breathing.line1": "Fornece ao jogador respiração aquática",
+	
+	"item.powder_power.token_curing": "Insígnia da Cura",
+	"item.powder_power.token_curing.line1": "Fornece cura para a maioria dos efeitos negativos da poção",
+	
+	"item.powder_power.token_dolphin": "Insígnia do Golfonho",
+	"item.powder_power.token_dolphin.line1": "Fornece ao jogador a graça do golfinho",
+	"item.powder_power.token_dolphin.line2": "Ativação da habilidade de graça do golfinho: %s",
+	
+	"item.powder_power.token_conduit_power": "Insígnia dp Proteção do Mar",
+	"item.powder_power.token_conduit_power.line1": "Fornece ao jogador Proteção do Mar",
+	"item.powder_power.token_conduit_power.line2": "Ativação da habilidade de proteção do mar: %s",
+	
+	"item.powder_power.token_good_omen": "Insígnia do Bom Presságio",
+	"item.powder_power.token_good_omen.line1": "Dissipa o maldição de mal presságio",
+				
+				
+	"itemGroup.powder_power": "Powder Power [Poder em Pó]"
+}
