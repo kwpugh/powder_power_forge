@@ -135,4 +135,5 @@ public class ItemList
 	public static Item token_dolphin;
 	public static Item token_conduit_power;	
 	public static Item token_good_omen;
+	public static Item token_affliction;
 }

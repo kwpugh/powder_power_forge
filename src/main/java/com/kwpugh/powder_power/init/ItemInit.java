@@ -21,6 +21,7 @@ import com.kwpugh.powder_power.items.paxels.PaxelLapium;
 import com.kwpugh.powder_power.items.paxels.PaxelRedium;
 import com.kwpugh.powder_power.items.paxels.PaxelTrilium;
 import com.kwpugh.powder_power.items.tokens.TokenAbsorption;
+import com.kwpugh.powder_power.items.tokens.TokenAffliction;
 import com.kwpugh.powder_power.items.tokens.TokenBreathing;
 import com.kwpugh.powder_power.items.tokens.TokenConduitPower;
 import com.kwpugh.powder_power.items.tokens.TokenCuring;
@@ -200,8 +201,9 @@ public class ItemInit
 				ItemList.token_resistance = new TokenResistance(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_resistance")),						
 				ItemList.token_dolphin = new TokenDolphin(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_dolphin")),
 				ItemList.token_conduit_power = new TokenConduitPower(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_conduit_power")),
-				
 				ItemList.token_strength = new TokenStrength(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_strength")),
+				
+				ItemList.token_affliction = new TokenAffliction(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_affliction")),
 				ItemList.token_health = new TokenHealth(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_health")),
 				ItemList.token_curing = new TokenCuring(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_curing")),	
 				ItemList.token_absorption = new TokenAbsorption(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)).setRegistryName(location("token_absorption"))

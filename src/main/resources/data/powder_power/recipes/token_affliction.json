@@ -1,0 +1,24 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"AFC",
+		"FEF",
+		"DFB"
+	],
+	
+	"key":
+	{
+		"A": { "item": "minecraft:fermented_spider_eye" },
+		"B": { "item": "minecraft:glistering_melon_slice" },
+		"C": { "item": "minecraft:nether_wart" },
+		"D": { "item": "minecraft:gunpowder" },
+		"E": { "item": "minecraft:golden_carrot" },
+		"F": { "item": "powder_power:blend_trilium" }
+	},
+	
+	"result": { "item": "powder_power:token_affliction",
+	"count": 1
+	 }
+}

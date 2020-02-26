@@ -216,7 +216,9 @@
 	
 	"item.powder_power.token_good_omen": "Good Omen Token",
 	"item.powder_power.token_good_omen.line1": "Dispels the taint of Bad Omen",
-				
+
+	"item.powder_power.token_affliction": "Affliction Token",
+	"item.powder_power.token_affliction.line1": "Inflicts great harm on to your foes",				
 				
 	"itemGroup.powder_power": "Powder Power"
 }

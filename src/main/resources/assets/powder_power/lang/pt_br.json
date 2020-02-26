@@ -214,7 +214,9 @@
 	
 	"item.powder_power.token_good_omen": "Insígnia do Bom Presságio",
 	"item.powder_power.token_good_omen.line1": "Dissipa o maldição de mal presságio",
-				
+	
+	"item.powder_power.token_affliction": "Affliction Token",
+	"item.powder_power.token_affliction.line1": "Affliction of great harm on to your foes",				
 				
 	"itemGroup.powder_power": "Powder Power [Poder em Pó]"
 }
