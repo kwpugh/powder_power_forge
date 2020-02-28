@@ -9,6 +9,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.boss.WitherEntity;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
+import net.minecraft.entity.merchant.villager.VillagerEntity;
+import net.minecraft.entity.merchant.villager.WanderingTraderEntity;
 import net.minecraft.entity.monster.ElderGuardianEntity;
 import net.minecraft.entity.monster.EvokerEntity;
 import net.minecraft.entity.monster.GuardianEntity;
@@ -82,6 +84,8 @@ public class TokenAffliction extends Item
 		{
 			// Exclude these mobs
 			if (entitymob instanceof AnimalEntity ||
+					entitymob instanceof VillagerEntity ||
+					entitymob instanceof WanderingTraderEntity ||
 					entitymob instanceof ElderGuardianEntity ||
 					entitymob instanceof EvokerEntity ||
 					entitymob instanceof GuardianEntity ||

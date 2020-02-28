@@ -1,6 +1,6 @@
 modLoader="javafml" #mandatory
 
-loaderVersion="[30,)" #mandatory (24 is current forge version)
+loaderVersion="[31,)" #mandatory (24 is current forge version)
 
 credits="Thanks to Udemy for great Java courses." #optional
 
@@ -8,7 +8,7 @@ authors="kwpugh" #optional
 
 [[mods]] #mandatory
 modId="powder_power" #mandatory
-version="3.1.37" #mandatory
+version="3.1.38" #mandatory
 displayName="Powder Power" #mandatory
 description='''
 Powder alchemy comes to Minecraft
@@ -18,7 +18,7 @@ Powder alchemy comes to Minecraft
 [[dependencies.powder_power]] #optional
     modId="forge" #mandatory
     mandatory=true #mandatory
-    versionRange="[30,)" #mandatory
+    versionRange="[31,)" #mandatory
     ordering="NONE"
     side="BOTH"
 
@@ -27,6 +27,6 @@ Powder alchemy comes to Minecraft
 [[dependencies.powder_power]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.1, 1.15.2]"
+    versionRange="[1.15.2]"
     ordering="NONE"
     side="BOTH"
