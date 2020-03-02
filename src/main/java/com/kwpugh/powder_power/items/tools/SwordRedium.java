@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.powder_power.lists.ItemList;
+import com.kwpugh.powder_power.init.ItemInit;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
@@ -59,7 +59,7 @@ public class SwordRedium extends SwordItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.ingot_redium;
+		return repair.getItem() == ItemInit.INGOT_REDIUM.get();
 	}
 	
 	@OnlyIn(Dist.CLIENT)

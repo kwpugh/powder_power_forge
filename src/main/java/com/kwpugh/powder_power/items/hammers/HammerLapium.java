@@ -7,7 +7,7 @@ import javax.annotation.Nullable;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
-import com.kwpugh.powder_power.lists.ItemList;
+import com.kwpugh.powder_power.init.ItemInit;
 import com.kwpugh.powder_power.util.HammerUtil;
 
 import net.minecraft.block.Block;
@@ -139,7 +139,7 @@ public class HammerLapium extends PickaxeItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.ingot_redium;
+		return repair.getItem() == ItemInit.INGOT_LAPIUM.get();
 	}
 	
 	@OnlyIn(Dist.CLIENT)

@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.powder_power.lists.ItemList;
+import com.kwpugh.powder_power.init.ItemInit;
 import com.kwpugh.powder_power.util.SpecialAbilities;
 
 import net.minecraft.client.util.ITooltipFlag;
@@ -38,17 +38,17 @@ public class ArmorGemium extends ArmorItem
 		    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);
 		    
 		    //Full Set
-	    	if(head.getItem() == ItemList.armor_gemium_head && 
-	    			chest.getItem() == ItemList.armor_gemium_body && 
-	    			legs.getItem() == ItemList.armor_gemium_leggings && 
-	    			feet.getItem() == ItemList.armor_gemium_boots)
+	    	if(head.getItem() == ItemInit.ARMOR_GEMIUM_HEAD.get() && 
+	    			chest.getItem() == ItemInit.ARMOR_GEMIUM_BODY.get() && 
+	    			legs.getItem() == ItemInit.ARMOR_GEMIUM_LEGGINGS.get() && 
+	    			feet.getItem() == ItemInit.ARMOR_GEMIUM_BOOTS.get())
 	    	{
 				player.removeActivePotionEffect(Effects.POISON);
 				player.removeActivePotionEffect(Effects.WITHER);
 	    	}	
 		    
 		    //Helmet
-		    if(head.getItem() == ItemList.armor_gemium_head)
+		    if(head.getItem() == ItemInit.ARMOR_GEMIUM_HEAD.get())
 			{
 				int newfoodlevel = 1;
 				float newsatlevel = 0.3F;
@@ -60,13 +60,13 @@ public class ArmorGemium extends ArmorItem
 			}
 		    
 		    //Chestplate
-		    if(chest.getItem() == ItemList.armor_gemium_body)
+		    if(chest.getItem() == ItemInit.ARMOR_GEMIUM_BODY.get())
 			{
 		    	//something
 			}
 		    
 		    //Leggings
-		    if(legs.getItem() == ItemList.armor_gemium_leggings)
+		    if(legs.getItem() == ItemInit.ARMOR_GEMIUM_LEGGINGS.get())
 			{
 		    	//something
 			}
@@ -76,7 +76,7 @@ public class ArmorGemium extends ArmorItem
 			}
 		    
 		    //Boots
-		    if(feet.getItem() == ItemList.armor_gemium_boots)
+		    if(feet.getItem() == ItemInit.ARMOR_GEMIUM_BOOTS.get())
 			{
 		    	//something
 			}
@@ -96,7 +96,7 @@ public class ArmorGemium extends ArmorItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.gem_gemium;
+		return repair.getItem() == ItemInit.GEM_GEMIUM.get();
 	}
 	
 	@OnlyIn(Dist.CLIENT)

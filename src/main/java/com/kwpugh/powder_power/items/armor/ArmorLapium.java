@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.powder_power.lists.ItemList;
+import com.kwpugh.powder_power.init.ItemInit;
 import com.kwpugh.powder_power.util.SpecialAbilities;
 
 import net.minecraft.client.util.ITooltipFlag;
@@ -38,16 +38,16 @@ public class ArmorLapium extends ArmorItem
 		    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);
 		    
 		    //Full Set
-	    	if(head.getItem() == ItemList.armor_lapium_head && 
-	    			chest.getItem() == ItemList.armor_lapium_body && 
-	    			legs.getItem() == ItemList.armor_lapium_leggings && 
-	    			feet.getItem() == ItemList.armor_lapium_boots)
+	    	if(head.getItem() == ItemInit.ARMOR_LAPIUM_HEAD.get() && 
+	    			chest.getItem() == ItemInit.ARMOR_LAPIUM_BODY.get() && 
+	    			legs.getItem() == ItemInit.ARMOR_LAPIUM_LEGGINGS.get() && 
+	    			feet.getItem() == ItemInit.ARMOR_LAPIUM_BOOTS.get())
 	    	{
 				player.removeActivePotionEffect(Effects.POISON);
 	    	}	
 		    
 		    //Helmet
-		    if(head.getItem() == ItemList.armor_lapium_head)
+		    if(head.getItem() == ItemInit.ARMOR_LAPIUM_HEAD.get())
 			{
 				int newfoodlevel = 0;
 				float newsatlevel = 0.1F;
@@ -59,13 +59,13 @@ public class ArmorLapium extends ArmorItem
 			}
 		    
 		    //Chestplate
-		    if(chest.getItem() == ItemList.armor_lapium_body)
+		    if(chest.getItem() == ItemInit.ARMOR_LAPIUM_BODY.get())
 			{
 		    	//something
 			}
 		    
 		    //Leggings
-		    if(legs.getItem() == ItemList.armor_lapium_leggings)
+		    if(legs.getItem() == ItemInit.ARMOR_LAPIUM_LEGGINGS.get())
 			{
 		    	//something
 			}
@@ -75,7 +75,7 @@ public class ArmorLapium extends ArmorItem
 			}
 		    
 		    //Boots
-		    if(feet.getItem() == ItemList.armor_lapium_boots)
+		    if(feet.getItem() == ItemInit.ARMOR_LAPIUM_BOOTS.get())
 			{
 		    	//something
 			}
@@ -95,7 +95,7 @@ public class ArmorLapium extends ArmorItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.ingot_lapium;
+		return repair.getItem() == ItemInit.INGOT_LAPIUM.get();
 	}
 	
 	@OnlyIn(Dist.CLIENT)

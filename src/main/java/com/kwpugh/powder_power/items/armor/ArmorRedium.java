@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.powder_power.lists.ItemList;
+import com.kwpugh.powder_power.init.ItemInit;
 import com.kwpugh.powder_power.util.SpecialAbilities;
 
 import net.minecraft.client.util.ITooltipFlag;
@@ -38,16 +38,16 @@ public class ArmorRedium extends ArmorItem
 		    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);
 		    
 		    //Full Set
-	    	if(head.getItem() == ItemList.armor_redium_head && 
-	    			chest.getItem() == ItemList.armor_redium_body && 
-	    			legs.getItem() == ItemList.armor_redium_leggings && 
-	    			feet.getItem() == ItemList.armor_redium_boots)
+	    	if(head.getItem() == ItemInit.ARMOR_REDIUM_HEAD.get() && 
+	    			chest.getItem() == ItemInit.ARMOR_REDIUM_BODY.get() && 
+	    			legs.getItem() == ItemInit.ARMOR_REDIUM_LEGGINGS.get() && 
+	    			feet.getItem() == ItemInit.ARMOR_REDIUM_BOOTS.get())
 	    	{
 				player.removeActivePotionEffect(Effects.WITHER);
 	    	}	
 		    
 		    //Helmet
-		    if(head.getItem() == ItemList.armor_redium_head)
+		    if(head.getItem() == ItemInit.ARMOR_REDIUM_HEAD.get())
 			{
 				int newfoodlevel = 0;
 				float newsatlevel = 0.1F;
@@ -59,13 +59,13 @@ public class ArmorRedium extends ArmorItem
 			}
 		    
 		    //Chestplate
-		    if(chest.getItem() == ItemList.armor_redium_body)
+		    if(chest.getItem() == ItemInit.ARMOR_REDIUM_BODY.get())
 			{
 		    	//something?
 			}
 		   
 		    //Leggings
-		    if(legs.getItem() == ItemList.armor_redium_leggings)
+		    if(legs.getItem() == ItemInit.ARMOR_REDIUM_LEGGINGS.get())
 			{
 				//something
 			}
@@ -75,7 +75,7 @@ public class ArmorRedium extends ArmorItem
 			}
 		    
 		    //Boots
-		    if(feet.getItem() == ItemList.armor_redium_boots)
+		    if(feet.getItem() == ItemInit.ARMOR_REDIUM_BOOTS.get())
 			{
 		    	//something
 			}
@@ -95,7 +95,7 @@ public class ArmorRedium extends ArmorItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.ingot_redium;
+		return repair.getItem() == ItemInit.INGOT_REDIUM.get();
 	}
 	
 	@OnlyIn(Dist.CLIENT)

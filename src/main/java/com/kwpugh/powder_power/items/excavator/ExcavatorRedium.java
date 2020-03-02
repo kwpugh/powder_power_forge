@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
+import com.kwpugh.powder_power.init.ItemInit;
 import com.kwpugh.powder_power.util.HammerUtil;
 
 import net.minecraft.block.Block;
@@ -75,7 +76,7 @@ public class ExcavatorRedium extends ShovelItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == com.kwpugh.powder_power.lists.ItemList.ingot_redium;
+		return repair.getItem() == ItemInit.INGOT_REDIUM.get();
 	}
 	
 	@OnlyIn(Dist.CLIENT)

@@ -1,33 +1,47 @@
 package com.kwpugh.powder_power.lists;
 
+import java.util.function.Supplier;
+
+import com.kwpugh.powder_power.init.ItemInit;
 import com.kwpugh.powder_power.util.PowderPowerConfig;
+
 import net.minecraft.item.IItemTier;
-import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
-
-
+import net.minecraft.util.LazyValue;
 
 public enum ToolMaterialList implements IItemTier
 {
-	prismarine(1.0f, 4.0f, 725, 3, 8, ItemList.ingot_prismarine),
-	obsidian(1.0f, 4.0f, 825, 3, 8, ItemList.ingot_obsidian),
-	redium(1.0f, 8.0f, 1800, 3, 15, ItemList.ingot_redium),
-	lapium(1.0f, 8.0f, 1800, 3, 15, ItemList.ingot_lapium),
-	gemium(1.0f, 9.0f, 2200, 4, 20, ItemList.gem_gemium),
-	trilium(PowderPowerConfig.trilium_attack_damage.get(), 9.0F, PowderPowerConfig.trilium_durability.get(), PowderPowerConfig.trilium_harvest_level.get(), PowderPowerConfig.trilium_enchantability.get(), ItemList.ingot_trilium);
+	PRISMARINE(1.0f, 4.0f, 725, 3, 8, () -> {
+		return Ingredient.fromItems(ItemInit.INGOT_PRISMARINE.get());
+	}),
+	OBSIDIAN(1.0f, 4.0f, 825, 3, 8, () -> {
+		return Ingredient.fromItems(ItemInit.INGOT_OBSIDIAN.get());
+	}),
+	REDIUM(1.0f, 8.0f, 1800, 3, 15, () -> {
+		return Ingredient.fromItems(ItemInit.INGOT_REDIUM.get());
+	}),
+	LAPIUM(1.0f, 8.0f, 1800, 3, 15, () -> {
+		return Ingredient.fromItems(ItemInit.INGOT_LAPIUM.get());
+	}),
+	GEMIUM(1.0f, 9.0f, 2200, 4, 20, () -> {
+		return Ingredient.fromItems(ItemInit.GEM_GEMIUM.get());
+	}),
+	TRILIUM(PowderPowerConfig.trilium_attack_damage.get(), 9.0F, PowderPowerConfig.trilium_durability.get(), PowderPowerConfig.trilium_harvest_level.get(), PowderPowerConfig.trilium_enchantability.get(), () -> {
+		return Ingredient.fromItems(ItemInit.INGOT_TRILIUM.get());
+	});
 	
 	private float attackDamage, efficiency;
 	private int durability, harvestLevel, enchantability;
-	private Item repairMaterial;
+	final LazyValue<Ingredient> repairMaterial;
 	
-	private ToolMaterialList(float attackDamage, float efficiency, int durability, int harvestLevel, int enchantability, Item repairMaterial) 
+	private ToolMaterialList(float attackDamage, float efficiency, int durability, int harvestLevel, int enchantability, Supplier<Ingredient> repairMaterial) 
 	{
 		this.attackDamage = attackDamage;
 		this.efficiency = efficiency;
 		this.durability = durability;
 		this.harvestLevel = harvestLevel;
 		this.enchantability = enchantability;
-		this.repairMaterial = repairMaterial;
+		this.repairMaterial = new LazyValue<>(repairMaterial);
 	}
 
 	@Override
@@ -63,6 +77,6 @@ public enum ToolMaterialList implements IItemTier
 	@Override
 	public Ingredient getRepairMaterial() 
 	{
-		return Ingredient.fromItems(this.repairMaterial);
+		return this.repairMaterial.getValue();
 	}
 }

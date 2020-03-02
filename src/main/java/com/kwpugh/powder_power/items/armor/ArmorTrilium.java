@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.powder_power.lists.ItemList;
+import com.kwpugh.powder_power.init.ItemInit;
 import com.kwpugh.powder_power.util.SpecialAbilities;
 
 import net.minecraft.client.util.ITooltipFlag;
@@ -38,10 +38,10 @@ public class ArmorTrilium extends ArmorItem
 		    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);
 		    
 		    //Full Set
-	    	if(head.getItem() == ItemList.armor_trilium_head && 
-	    			chest.getItem() == ItemList.armor_trilium_body && 
-	    			legs.getItem() == ItemList.armor_trilium_leggings && 
-	    			feet.getItem() == ItemList.armor_trilium_boots)
+	    	if(head.getItem() == ItemInit.ARMOR_TRILIUM_HEAD.get() && 
+	    			chest.getItem() == ItemInit.ARMOR_TRILUM_BODY.get() && 
+	    			legs.getItem() == ItemInit.ARMOR_TRILIUM_LEGGINGS.get() && 
+	    			feet.getItem() == ItemInit.ARMOR_TRILIUM_BOOTS.get())
 	    	{
 				player.removeActivePotionEffect(Effects.POISON);
 				player.removeActivePotionEffect(Effects.WITHER);
@@ -49,7 +49,7 @@ public class ArmorTrilium extends ArmorItem
 	    	}	
 		    
 		    //Helmet
-		    if(head.getItem() == ItemList.armor_trilium_head)
+		    if(head.getItem() == ItemInit.ARMOR_TRILIUM_HEAD.get())
 			{
 				int newfoodlevel = 1;
 				float newsatlevel = 0.5F;
@@ -61,13 +61,13 @@ public class ArmorTrilium extends ArmorItem
 			}
 		    
 		    //Chestplate
-		    if(chest.getItem() == ItemList.armor_trilium_body)
+		    if(chest.getItem() == ItemInit.ARMOR_TRILUM_BODY.get())
 			{
 		    	//Something
 			}
 		    
 		    //Leggings
-		    if(legs.getItem() == ItemList.armor_trilium_leggings)
+		    if(legs.getItem() == ItemInit.ARMOR_TRILIUM_LEGGINGS.get())
 			{
 		    	SpecialAbilities.giveDolphinEffect(world, player, stack);
 			}
@@ -77,7 +77,7 @@ public class ArmorTrilium extends ArmorItem
 			}
 		    
 		    //Boots
-		    if(feet.getItem() == ItemList.armor_trilium_boots)
+		    if(feet.getItem() == ItemInit.ARMOR_TRILIUM_BOOTS.get())
 			{
 		    	//something
 			}
@@ -97,7 +97,7 @@ public class ArmorTrilium extends ArmorItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.ingot_trilium;
+		return repair.getItem() == ItemInit.INGOT_TRILIUM.get();
 	}
 	
 	@OnlyIn(Dist.CLIENT)

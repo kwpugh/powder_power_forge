@@ -6,6 +6,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.kwpugh.powder_power.groups.GroupPowderPower;
+import com.kwpugh.powder_power.init.BlockInit;
+import com.kwpugh.powder_power.init.ItemInit;
 import com.kwpugh.powder_power.util.Config;
 import com.kwpugh.powder_power.util.SupportMods;
 
@@ -35,10 +37,13 @@ public class PowderPower
     {
     	Config.loadConfig(Config.config, FMLPaths.CONFIGDIR.get().resolve("powder_power.toml").toString());
     	
+    	BlockInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+    	ItemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+    	
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -49,7 +54,7 @@ public class PowderPower
         logger.info("PowderPower completed setup");
     }
 
-    private void doClientStuff(final FMLClientSetupEvent event)
+    private void clientSetup(final FMLClientSetupEvent event)
     {
 
     	logger.info("PowderPower got game settings {}", event.getMinecraftSupplier().get().gameSettings);

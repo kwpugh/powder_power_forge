@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.powder_power.lists.ItemList;
+import com.kwpugh.powder_power.init.ItemInit;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -45,132 +45,205 @@ public class HammerAlchemist extends PickaxeItem
 		 BlockState state = world.getBlockState(pos);
 		 Block block = state.getBlock();
 		 ItemStack stack = context.getItem();
-		 
-	     if (!world.isRemote && state.getBlockHardness(world, pos) != 0.0F)
-		 {
-	    	 stack.damageItem(1, player, (p_220038_0_) -> {
-	         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-	         });
-	     }
-	      
-	     if(block == Blocks.REDSTONE_ORE && !player.isCrouching())
+
+	     if(block == Blocks.REDSTONE_ORE && !player.isShiftKeyDown())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_redstone, 3))); 
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_REDSTONE.get(), 3)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.IRON_ORE)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_iron, 2)));
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_IRON.get(), 2)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.OBSIDIAN)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_obsidian, 2)));
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_OBSIDIAN.get(), 2)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
-	     else if(block == Blocks.LAPIS_ORE && !player.isCrouching())
+	     else if(block == Blocks.LAPIS_ORE && !player.isShiftKeyDown())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_lapis, 3)));
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_LAPIS.get(), 3)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.GOLD_ORE)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_gold, 2)));
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_GOLD.get(), 2)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
-	     else if(block == Blocks.DIAMOND_ORE && !player.isCrouching())
+	     else if(block == Blocks.DIAMOND_ORE && !player.isShiftKeyDown())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_diamond, 2))); 
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_DIAMOND.get(), 2))); 
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
-	     else if(block == Blocks.EMERALD_ORE && !player.isCrouching())
+	     else if(block == Blocks.EMERALD_ORE && !player.isShiftKeyDown())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_emerald, 2)));
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_EMERALD.get(), 2)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.PRISMARINE || block == Blocks.DARK_PRISMARINE)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_prismarine, 2)));
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_PRISMARINE.get(), 2)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.NETHER_QUARTZ_ORE)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_nether_quartz, 2)));
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_NETHER_QUARTZ.get(), 2)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.PURPUR_PILLAR)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_purpur, 2)));
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_PURPUR.get(), 2)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.STONE)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_stone, 2)));
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_STONE.get(), 2)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.OAK_LOG)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_wood, 2)));
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_WOOD.get(), 2)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     else if(block == Blocks.MAGMA_BLOCK)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.BLAZE_POWDER, 1)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
-	     else if(block == Blocks.DIAMOND_ORE && player.isCrouching())
+	     else if(block == Blocks.DIAMOND_ORE && player.isShiftKeyDown())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.DIAMOND_ORE, 1)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }	   
-	     else if(block == Blocks.EMERALD_ORE && player.isCrouching())
+	     else if(block == Blocks.EMERALD_ORE && player.isShiftKeyDown())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.EMERALD_ORE, 1)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
-	     else if(block == Blocks.LAPIS_ORE && player.isCrouching())
+	     else if(block == Blocks.LAPIS_ORE && player.isShiftKeyDown())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.LAPIS_ORE, 1)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
-	     else if(block == Blocks.REDSTONE_ORE && player.isCrouching())
+	     else if(block == Blocks.REDSTONE_ORE && player.isShiftKeyDown())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.REDSTONE_ORE, 1)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
-	     else if(block == Blocks.COAL_ORE && player.isCrouching())
+	     else if(block == Blocks.COAL_ORE && player.isShiftKeyDown())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.COAL_ORE, 1)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
-	     else if(block == Blocks.GRASS_BLOCK && player.isCrouching())
+	     else if(block == Blocks.GRASS_BLOCK && player.isShiftKeyDown())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.GRASS_BLOCK, 1)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
-	     else if(block == Blocks.PODZOL && player.isCrouching())
+	     else if(block == Blocks.PODZOL && player.isShiftKeyDown())
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PODZOL, 1)));
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     

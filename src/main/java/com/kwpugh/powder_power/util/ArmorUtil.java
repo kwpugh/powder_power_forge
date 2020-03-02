@@ -2,7 +2,7 @@ package com.kwpugh.powder_power.util;
 
 import javax.annotation.Nonnull;
 
-import com.kwpugh.powder_power.lists.ItemList;
+import com.kwpugh.powder_power.init.ItemInit;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -30,20 +30,20 @@ public final class ArmorUtil
 	    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);
 		
 	    //Full Set
-    	if(		((head.getItem() == ItemList.armor_lapium_head && 
-    			chest.getItem() == ItemList.armor_lapium_body &&
-    			legs.getItem() == ItemList.armor_lapium_leggings && 
-    			feet.getItem() == ItemList.armor_lapium_boots) ||
+    	if(		((head.getItem() == ItemInit.ARMOR_LAPIUM_HEAD.get() && 
+    			chest.getItem() == ItemInit.ARMOR_LAPIUM_BODY.get() && 
+    			legs.getItem() == ItemInit.ARMOR_LAPIUM_LEGGINGS.get() && 
+    			feet.getItem() == ItemInit.ARMOR_LAPIUM_BOOTS.get()) ||
     	
-		    	(head.getItem() == ItemList.armor_gemium_head && 
-				chest.getItem() == ItemList.armor_gemium_body &&
-				legs.getItem() == ItemList.armor_gemium_leggings && 
-				feet.getItem() == ItemList.armor_gemium_boots) ||
+    			(head.getItem() == ItemInit.ARMOR_GEMIUM_HEAD.get() && 
+    			chest.getItem() == ItemInit.ARMOR_GEMIUM_BODY.get() && 
+    			legs.getItem() == ItemInit.ARMOR_GEMIUM_LEGGINGS.get() && 
+    			feet.getItem() == ItemInit.ARMOR_GEMIUM_BOOTS.get())  ||
 		    	
-		    	(head.getItem() == ItemList.armor_trilium_head && 
-				chest.getItem() == ItemList.armor_trilium_body &&
-				legs.getItem() == ItemList.armor_trilium_leggings && 
-				feet.getItem() == ItemList.armor_trilium_boots))   )
+    			(head.getItem() == ItemInit.ARMOR_TRILIUM_HEAD.get() && 
+    			chest.getItem() == ItemInit.ARMOR_TRILUM_BODY.get() && 
+    			legs.getItem() == ItemInit.ARMOR_TRILIUM_LEGGINGS.get() && 
+    			feet.getItem() == ItemInit.ARMOR_TRILIUM_BOOTS.get()))     )
       	{
       		return true;  		
       	}
@@ -55,7 +55,7 @@ public final class ArmorUtil
 		for (int slot = 0; slot < end_inv2.getSizeInventory(); slot++)
 		{
 			ItemStack stack = end_inv2.getStackInSlot(slot);
-			if (stack.getItem() == ItemList.token_breathing)
+			if (stack.getItem() == ItemInit.TOKEN_BREATHING.get())
 			{	
 				return true;
 			}
@@ -65,7 +65,7 @@ public final class ArmorUtil
 		for (int slot = 0; slot < inv2.getSizeInventory(); slot++)
 		{
 			ItemStack stack = inv2.getStackInSlot(slot);
-			if (stack.getItem() == ItemList.token_breathing)
+			if (stack.getItem() == ItemInit.TOKEN_BREATHING.get())
 			{	
 				return true;
 			}
@@ -74,7 +74,7 @@ public final class ArmorUtil
 		//Checks Curios slots
 		if (SupportMods.CURIOS.isLoaded())
 	    {
-			if (UtilCurios.findItem(ItemList.token_breathing, player) != ItemStack.EMPTY)
+			if (UtilCurios.findItem(ItemInit.TOKEN_BREATHING.get(), player) != ItemStack.EMPTY)
 			{
 				return true;
 		    }
@@ -96,17 +96,17 @@ public final class ArmorUtil
 		EnderChestInventory end_inv2 = player.getInventoryEnderChest();
 			
 	    //Full Set or token
-    	if(		(head.getItem() == ItemList.armor_gemium_head && 
-    			chest.getItem() == ItemList.armor_gemium_body &&
-    			legs.getItem() == ItemList.armor_gemium_leggings && 
-    			feet.getItem() == ItemList.armor_gemium_boots) ||
+    	if(		(head.getItem() == ItemInit.ARMOR_GEMIUM_HEAD.get() && 
+    			chest.getItem() == ItemInit.ARMOR_GEMIUM_BODY.get() && 
+    			legs.getItem() == ItemInit.ARMOR_GEMIUM_LEGGINGS.get() && 
+    			feet.getItem() == ItemInit.ARMOR_GEMIUM_BOOTS.get()) ||
     			
-    			(head.getItem() == ItemList.armor_trilium_head && 
-				chest.getItem() == ItemList.armor_trilium_body &&
-				legs.getItem() == ItemList.armor_trilium_leggings && 
-				feet.getItem() == ItemList.armor_trilium_boots) ||
+    			(head.getItem() == ItemInit.ARMOR_TRILIUM_HEAD.get() && 
+    			chest.getItem() == ItemInit.ARMOR_TRILUM_BODY.get() && 
+    			legs.getItem() == ItemInit.ARMOR_TRILIUM_LEGGINGS.get() && 
+    			feet.getItem() == ItemInit.ARMOR_TRILIUM_BOOTS.get()) ||
     			
-    			(offHand.getItem() == ItemList.token_no_fall	)   )
+    			(offHand.getItem() == ItemInit.TOKEN_NO_FALL.get()	)   )
 	      	{
 	      		return true;  		
 	      	}
@@ -115,7 +115,7 @@ public final class ArmorUtil
 			for (int slot = 0; slot < end_inv2.getSizeInventory(); slot++)
 			{
 				ItemStack stack = end_inv2.getStackInSlot(slot);
-				if (stack.getItem() == ItemList.token_no_fall)
+				if (stack.getItem() == ItemInit.TOKEN_NO_FALL.get())
 				{	
 					return true;
 				}
@@ -125,7 +125,7 @@ public final class ArmorUtil
 			for (int slot = 0; slot < inv2.getSizeInventory(); slot++)
 			{
 				ItemStack stack = inv2.getStackInSlot(slot);
-				if (stack.getItem() == ItemList.token_no_fall)
+				if (stack.getItem() == ItemInit.TOKEN_NO_FALL.get())
 				{	
 					return true;
 				}
@@ -134,7 +134,7 @@ public final class ArmorUtil
 			//Checks Curios slots
 			if (SupportMods.CURIOS.isLoaded())
 		    {
-				if (UtilCurios.findItem(ItemList.token_no_fall, player) != ItemStack.EMPTY)
+				if (UtilCurios.findItem(ItemInit.TOKEN_NO_FALL.get(), player) != ItemStack.EMPTY)
 				{
 					return true;
 			    }
@@ -156,22 +156,22 @@ public final class ArmorUtil
 	    EnderChestInventory end_inv3 = player.getInventoryEnderChest();
 	    
 	    //Full armor or Token
-    	if(		((head.getItem() == ItemList.armor_redium_head && 
-    			chest.getItem() == ItemList.armor_redium_body &&
-    			legs.getItem() == ItemList.armor_redium_leggings && 
-    			feet.getItem() == ItemList.armor_redium_boots) ||
+    	if(		((head.getItem() == ItemInit.ARMOR_REDIUM_HEAD.get() && 
+    			chest.getItem() == ItemInit.ARMOR_REDIUM_BODY.get() && 
+    			legs.getItem() == ItemInit.ARMOR_REDIUM_LEGGINGS.get() && 
+    			feet.getItem() == ItemInit.ARMOR_REDIUM_BOOTS.get()) ||
     			
-		    	(head.getItem() == ItemList.armor_gemium_head && 
-				chest.getItem() == ItemList.armor_gemium_body &&
-				legs.getItem() == ItemList.armor_gemium_leggings && 
-				feet.getItem() == ItemList.armor_gemium_boots) ||
+    			(head.getItem() == ItemInit.ARMOR_GEMIUM_HEAD.get() && 
+    			chest.getItem() == ItemInit.ARMOR_GEMIUM_BODY.get() && 
+    			legs.getItem() == ItemInit.ARMOR_GEMIUM_LEGGINGS.get() && 
+    			feet.getItem() == ItemInit.ARMOR_GEMIUM_BOOTS.get()) ||
 		    	
-		    	(head.getItem() == ItemList.armor_trilium_head && 
-				chest.getItem() == ItemList.armor_trilium_body &&
-				legs.getItem() == ItemList.armor_trilium_leggings && 
-				feet.getItem() == ItemList.armor_trilium_boots))  ||
+    			(head.getItem() == ItemInit.ARMOR_TRILIUM_HEAD.get() && 
+    			chest.getItem() == ItemInit.ARMOR_TRILUM_BODY.get() && 
+    			legs.getItem() == ItemInit.ARMOR_TRILIUM_LEGGINGS.get() && 
+    			feet.getItem() == ItemInit.ARMOR_TRILIUM_BOOTS.get()))  ||
 		    	
-    			(offHand.getItem() == ItemList.token_fire_resistance) )
+    			(offHand.getItem() == ItemInit.TOKEN_FIRE_RESISTANCE.get()) )
 	      	{
 	      		return true;  		
 	      	}
@@ -179,7 +179,7 @@ public final class ArmorUtil
 			for (int slot = 0; slot < end_inv3.getSizeInventory(); slot++)
 			{
 				ItemStack stack = end_inv3.getStackInSlot(slot);
-				if (stack.getItem() == ItemList.token_fire_resistance)
+				if (stack.getItem() == ItemInit.TOKEN_FIRE_RESISTANCE.get())
 				{	
 					return true;
 				}
@@ -188,7 +188,7 @@ public final class ArmorUtil
 			for (int slot = 0; slot < inv3.getSizeInventory(); slot++)
 			{
 				ItemStack stack = inv3.getStackInSlot(slot);
-				if (stack.getItem() == ItemList.token_fire_resistance)
+				if (stack.getItem() == ItemInit.TOKEN_FIRE_RESISTANCE.get())
 				{	
 					return true;
 				}
@@ -196,7 +196,7 @@ public final class ArmorUtil
 			
 			if (SupportMods.CURIOS.isLoaded())
 		    {
-				if (UtilCurios.findItem(ItemList.token_fire_resistance, player) != ItemStack.EMPTY)
+				if (UtilCurios.findItem(ItemInit.TOKEN_FIRE_RESISTANCE.get(), player) != ItemStack.EMPTY)
 				{
 					return true;
 			    }
