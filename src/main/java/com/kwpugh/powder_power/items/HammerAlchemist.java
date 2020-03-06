@@ -37,6 +37,240 @@ public class HammerAlchemist extends PickaxeItem
 	}
 
 	@Override
+	  public boolean canHarvestBlock(BlockState blockIn)
+	  {
+	      return true;
+	   }
+	  
+	
+	
+//	public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving)
+//	{
+//		Block block = state.getBlock();	
+//		String blockForgeTags = block.getTags().toString(); 
+//		PlayerEntity player = PlayerEntity(entityLiving);
+//		
+//		if (!worldIn.isRemote)
+//		{
+//			//Powders
+//			if(blockForgeTags.contains("forge:ores/diamond"))
+//			{
+//				stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//					p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//					});
+//        
+//				worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_DIAMOND.get(), 2)));  
+//			}
+//			
+//			 if(blockForgeTags.contains("forge:ores/emerald"))
+//			 {
+//					stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//						p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//						});
+//		        
+//					worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_EMERALD.get(), 2))); 
+//			 }
+//			
+//			if(blockForgeTags.contains("forge:ores/lapis"))
+//			{
+//		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//		        	});
+//		        
+//		        worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_LAPIS.get(), 2)));  		         	 
+//			}
+//			
+//			if(blockForgeTags.contains("forge:ores/redstone"))
+//			{
+//		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//		        	});
+//		        
+//		        worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_REDSTONE.get(), 2)));  		         	 
+//			}
+//
+//			if(blockForgeTags.contains("forge:ores/iron"))  
+//			{
+//				stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//					p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//					});
+//	        
+//				worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_IRON.get(), 2))); 
+//			}
+//		
+//			 if(blockForgeTags.contains("forge:ores/gold"))
+//			 {
+//					stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//						p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//						});
+//		        
+//					worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_GOLD.get(), 2))); 
+//			 }	
+//			
+//			 if(block == Blocks.OBSIDIAN)
+//		     {
+//					stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//						p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//						});
+//					state.canHarvestBlock(worldIn, pos, player);
+//					worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_OBSIDIAN.get(), 2))); 
+//		     }
+//			
+//		     if(block == Blocks.PRISMARINE || block == Blocks.DARK_PRISMARINE)
+//		     {
+//					stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//						p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//						});
+//		        
+//					worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_PRISMARINE.get(), 2))); 
+//		     }
+//		     
+//		     if(block == Blocks.NETHER_QUARTZ_ORE)
+//		     {
+//					stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//						p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//						});
+//		        
+//					worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_NETHER_QUARTZ.get(), 2))); 
+//		     }
+//		     
+//		     if(block == Blocks.PURPUR_PILLAR)
+//		     {
+//					stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//						p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//						});
+//		        
+//					worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_PURPUR.get(), 2))); 
+//		     }
+//			 
+//		     if(block == Blocks.STONE)
+//		     {
+//		 		stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//					p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//					});
+//	        
+//				worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_STONE.get(), 2))); 
+//		     }
+//		     
+//		     if(block == Blocks.OAK_LOG)
+//		     {
+//		 		stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//					p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//					});
+//	        
+//				worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_WOOD.get(), 2))); 
+//		     }
+//		     
+//		     if(block == Blocks.MAGMA_BLOCK)
+//		     {
+//		 		stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//					p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//					});
+//		 		
+//				worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.BLAZE_POWDER, 2))); 
+//		     }
+//		    	 
+//		    	 
+//		    	 
+//			
+//			
+//			
+//			 //Silk Touch-like effect
+//		     if(blockForgeTags.contains("forge:ores/diamond") && !player.isShiftKeyDown())
+//		     {
+//					stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//						p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//						});
+//		        
+//					worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.DIAMOND_ORE, 1))); 
+//		     }
+//		     
+//		     if(blockForgeTags.contains("forge:ores/emerald") && !player.isShiftKeyDown())
+//		     {
+//					stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//						p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//						});
+//		        
+//					worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.EMERALD_ORE, 1))); 
+//		     }			
+//			
+//		     else if(blockForgeTags.contains("forge:ores/lapis") && !player.isShiftKeyDown())
+//		     {
+//		 		stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//					p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//					});
+//	        
+//				worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.LAPIS_ORE, 1))); 
+//		     }
+//		     
+//		     else if(blockForgeTags.contains("forge:ores/redstone") && !player.isShiftKeyDown())
+//		     {
+//		 		stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//					p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//					});
+//	        
+//				worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.REDSTONE_ORE, 1))); 
+//		     }
+//		     
+//		     if(blockForgeTags.contains("forge:ores/coal") && player.isShiftKeyDown())
+//		     {
+//			 		stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//						p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//						});
+//		        
+//					worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.COAL_ORE, 1))); 
+//		     }
+//		     
+//		     if(block == Blocks.GRASS_BLOCK && player.isShiftKeyDown())
+//		     {
+//			 		stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//						p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//						});
+//		        
+//					worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.GRASS_BLOCK, 1))); 
+//		     }
+//		     
+//		     if(block == Blocks.PODZOL && player.isShiftKeyDown())
+//		     {
+//			 		stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//						p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//						});
+//		        
+//					worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PODZOL, 1))); 
+//		     }
+//		    	 
+//		    	 
+//
+//		     
+//		     
+//			//Damage the tool if used to break anything else
+//			if(		 !(block == Blocks.REDSTONE_ORE) ||
+//					 !(block == Blocks.LAPIS_ORE) ||
+//					 !(blockForgeTags.contains("forge:ores/iron")) || 
+//					 !(blockForgeTags.contains("forge:ores/gold")) || 
+//					 !(blockForgeTags.contains("forge:ores/diamond")) ||
+//					 !(blockForgeTags.contains("forge:ores/emerald"))            ) 
+//			 {
+//					stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+//						p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+//						}); 
+//			 }
+//			
+//		}
+//		
+//		
+//		
+//		
+//		
+//		
+//		return true;
+//	}
+	
+	
+	
+	
+
+	@Override
 	public ActionResultType onItemUse(ItemUseContext context)
 	{
 		 World world = context.getWorld();

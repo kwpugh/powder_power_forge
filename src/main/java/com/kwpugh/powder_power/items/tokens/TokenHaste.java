@@ -25,7 +25,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class TokenHaste extends Item
 {
-
 	public TokenHaste(Properties properties)
 	{
 		super(properties);
@@ -48,16 +47,17 @@ public class TokenHaste extends Item
 	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand)
 	{
 		ItemStack stack = player.getHeldItem(hand);
-	
-		if(!world.isRemote && player.isCrouching())
+
+		if(!world.isRemote && player.isShiftKeyDown())
 		{
 			EnableUtil.changeEnabled(player, hand);
 			player.sendMessage((new TranslationTextComponent("item.powder_power.token_haste.line2", EnableUtil.isEnabled(stack)).applyTextStyle(TextFormatting.BOLD)));
 			return new ActionResult<ItemStack>(ActionResultType.SUCCESS, player.getHeldItem(hand));
 		}
+		
 		return super.onItemRightClick(world, player, hand);
 	}
-  
+
 	@OnlyIn(Dist.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{

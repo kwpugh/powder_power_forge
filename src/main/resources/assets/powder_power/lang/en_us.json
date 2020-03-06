@@ -161,6 +161,15 @@
 	"item.powder_power.token.general2": "Sneak right-click to toggle on/off",
 	"item.powder_power.token.general3": "Right-click to use",
 	
+	"item.powder_power.token_healing": "Healing Token",
+	"item.powder_power.token_healing.line1": "A onetime use possible life-saver",
+	"item.powder_power.token_healing.line2": "You have been renewed.",
+	
+	"item.powder_power.token_trash": "Trash Token",
+	"item.powder_power.token_trash.line1": "A handy token that provides a trash chest",
+	"item.powder_power.token_trash.line2": "NOTE: Anything you put in the trash is gone forever!",
+	"item.powder_power.token_trash.line3": "TRASH!!!!!",
+	
 	"item.powder_power.token_night_vision": "Night Vision Token",
 	"item.powder_power.token_night_vision.line1": "Provides player with Night Vision",
 	"item.powder_power.token_night_vision.line2": "Night vision ability active: %s",
