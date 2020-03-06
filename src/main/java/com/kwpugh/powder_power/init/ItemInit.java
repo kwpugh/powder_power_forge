@@ -42,6 +42,7 @@ import com.kwpugh.powder_power.items.tokens.TokenSunshine;
 import com.kwpugh.powder_power.items.tokens.TokenTrash;
 import com.kwpugh.powder_power.items.tools.BowCustom;
 import com.kwpugh.powder_power.items.tools.SwordRedium;
+import com.kwpugh.powder_power.items.tools.TreeAxeCustom;
 import com.kwpugh.powder_power.lists.ArmorMaterialList;
 import com.kwpugh.powder_power.lists.ToolMaterialList;
 
@@ -135,6 +136,7 @@ public class ItemInit
 	public static final RegistryObject<Item> BOW_TRILIUM = ITEMS.register("bow_trilium", () -> new BowCustom(new Item.Properties().maxStackSize(1).maxDamage(4000).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> PICKAXE_TRILIUM = ITEMS.register("pickaxe_trilium", () -> new PickaxeItem(ToolMaterialList.TRILIUM, 3, -2.6f, new Item.Properties().group(PowderPower.powder_power)));	
 	public static final RegistryObject<Item> AXE_TRILIUM = ITEMS.register("axe_trilium", () -> new AxeItem(ToolMaterialList.TRILIUM, 7, -2.7f, new Item.Properties().group(PowderPower.powder_power)));	
+	public static final RegistryObject<Item> TREE_AXE_TRILIUM = ITEMS.register("tree_axe_trilium", () -> new TreeAxeCustom(ToolMaterialList.TRILIUM, 7, -2.7f, new Item.Properties().group(PowderPower.powder_power)));	
 	public static final RegistryObject<Item> SHOVEL_TRILIUM = ITEMS.register("shovel_trilium", () -> new ShovelItem(ToolMaterialList.TRILIUM, 4, -3.0f, new Item.Properties().group(PowderPower.powder_power)));	
 	public static final RegistryObject<Item> HOE_TRILIUM = ITEMS.register("hoe_trilium", () -> new HoeItem(ToolMaterialList.TRILIUM, 1.5f, new Item.Properties().group(PowderPower.powder_power)));	
 	public static final RegistryObject<Item> PAXEL_TRILIUM = ITEMS.register("paxel_trilium", () -> new PaxelTrilium(7, -2.7f, ToolMaterialList.TRILIUM, null, new Item.Properties().group(PowderPower.powder_power)));	
