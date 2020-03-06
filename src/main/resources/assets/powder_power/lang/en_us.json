@@ -161,6 +161,9 @@
 	"item.powder_power.token.general2": "Sneak right-click to toggle on/off",
 	"item.powder_power.token.general3": "Right-click to use",
 	
+	"item.powder_power.token_dragon": "Dragon Token",
+	"item.powder_power.token_dragon.line1": "Provides unlimited flight",
+	
 	"item.powder_power.token_healing": "Healing Token",
 	"item.powder_power.token_healing.line1": "A onetime use possible life-saver",
 	"item.powder_power.token_healing.line2": "You have been renewed.",

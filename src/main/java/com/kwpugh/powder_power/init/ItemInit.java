@@ -26,6 +26,7 @@ import com.kwpugh.powder_power.items.tokens.TokenBreathing;
 import com.kwpugh.powder_power.items.tokens.TokenConduitPower;
 import com.kwpugh.powder_power.items.tokens.TokenCuring;
 import com.kwpugh.powder_power.items.tokens.TokenDolphin;
+import com.kwpugh.powder_power.items.tokens.TokenDragon;
 import com.kwpugh.powder_power.items.tokens.TokenFireResistance;
 import com.kwpugh.powder_power.items.tokens.TokenGoodOmen;
 import com.kwpugh.powder_power.items.tokens.TokenHaste;
@@ -183,4 +184,5 @@ public class ItemInit
 	public static final RegistryObject<Item> TOKEN_HEALTH = ITEMS.register("token_health", () -> new TokenHealth(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_CURING = ITEMS.register("token_curing", () -> new TokenCuring(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_ABSORPTION = ITEMS.register("token_absorption", () -> new TokenAbsorption(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> TOKEN_DRAGON = ITEMS.register("token_dragon", () -> new TokenDragon(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 }
