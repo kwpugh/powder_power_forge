@@ -12,9 +12,6 @@ import net.minecraft.util.LazyValue;
 
 public enum ToolMaterialList implements IItemTier
 {
-	BAD_DIAMOND(1.0f, 20.0f, 416, 0, 30, () -> {
-		return Ingredient.fromItems(Items.DIAMOND);
-	}),
 	PRISMARINE(1.0f, 4.0f, 725, 3, 8, () -> {
 		return Ingredient.fromItems(ItemInit.INGOT_PRISMARINE.get());
 	}),

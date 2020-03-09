@@ -62,7 +62,7 @@ public class ItemInit
 {
 	public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, PowderPower.modid);
 	
-	public static final RegistryObject<Item> HAMMER_ALCHEMIST = ITEMS.register("hammer_alchemist", () -> new HammerAlchemist(ToolMaterialList.BAD_DIAMOND, 1, -3, new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HAMMER_ALCHEMIST = ITEMS.register("hammer_alchemist", () -> new HammerAlchemist(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> MOTAR_PESTLE = ITEMS.register("motar_pestle", () -> new MotarPestle(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> WAND_CORE = ITEMS.register("wand_core", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> WAND_ALCHEMIST = ITEMS.register("wand_alchemist", () -> new WandAlchemist(ToolMaterialList.REDIUM, 1, -3, new Item.Properties().group(PowderPower.powder_power)));
