@@ -2,6 +2,6 @@
     "parent": "item/generated",
     "textures": 
     {
-        "layer0": "powder_power:item/powder_stone"
+        "layer0": "powder_power:item/powder_ghast_tear"
     }
 }

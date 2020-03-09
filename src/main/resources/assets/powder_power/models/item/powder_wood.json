@@ -1,7 +1,0 @@
-{
-    "parent": "item/generated",
-    "textures": 
-    {
-        "layer0": "powder_power:item/powder_wood"
-    }
-}

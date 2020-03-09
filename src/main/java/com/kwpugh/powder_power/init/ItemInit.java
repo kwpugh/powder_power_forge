@@ -62,10 +62,10 @@ public class ItemInit
 {
 	public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, PowderPower.modid);
 	
-	public static final RegistryObject<Item> HAMMER_ALCHEMIST = ITEMS.register("hammer_alchemist", () -> new HammerAlchemist(new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HAMMER_ALCHEMIST = ITEMS.register("hammer_alchemist", () -> new HammerAlchemist(new Item.Properties().maxDamage(501).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> MOTAR_PESTLE = ITEMS.register("motar_pestle", () -> new MotarPestle(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> WAND_CORE = ITEMS.register("wand_core", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> WAND_ALCHEMIST = ITEMS.register("wand_alchemist", () -> new WandAlchemist(ToolMaterialList.REDIUM, 1, -3, new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> WAND_ALCHEMIST = ITEMS.register("wand_alchemist", () -> new WandAlchemist(new Item.Properties().maxDamage(355).group(PowderPower.powder_power)));
 	
 	public static final RegistryObject<Item> PICKAXE_OBSIDIAN = ITEMS.register("pickaxe_obsidian", () -> new PickaxeItem(ToolMaterialList.OBSIDIAN, 3, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> PICKAXE_PRISMARINE = ITEMS.register("pickaxe_prismarine", () -> new PickaxeItem(ToolMaterialList.PRISMARINE, 3, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
@@ -79,21 +79,21 @@ public class ItemInit
 	public static final RegistryObject<Item> GEM_GEMIUM = ITEMS.register("gem_gemium", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> INGOT_TRILIUM = ITEMS.register("ingot_trilium", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	
-	public static final RegistryObject<Item> POWDER_WOOD = ITEMS.register("powder_wood", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> POWDER_STONE = ITEMS.register("powder_stone", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> POWDER_IRON = ITEMS.register("powder_iron", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> POWDER_REDSTONE = ITEMS.register("powder_redstone", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> POWDER_OBSIDIAN = ITEMS.register("powder_obsidian", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> POWDER_NETHER_QUARTZ = ITEMS.register("powder_nether_quartz", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> POWDER_PURPUR = ITEMS.register("powder_purpur", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> BLEND_REDIUM = ITEMS.register("blend_redium", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> POWDER_END_PEARL = ITEMS.register("powder_end_pearl", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> POWDER_LAPIS = ITEMS.register("powder_lapis", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));	
+	public static final RegistryObject<Item> POWDER_IRON = ITEMS.register("powder_iron", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> POWDER_GOLD = ITEMS.register("powder_gold", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> POWDER_LAPIS = ITEMS.register("powder_lapis", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> BLEND_LAPIUM = ITEMS.register("blend_lapium", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> POWDER_END_PEARL = ITEMS.register("powder_end_pearl", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> POWDER_DIAMOND = ITEMS.register("powder_diamond", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> POWDER_EMERALD = ITEMS.register("powder_emerald", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> POWDER_PRISMARINE = ITEMS.register("powder_prismarine", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> POWDER_OBSIDIAN = ITEMS.register("powder_obsidian", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> POWDER_NETHER_QUARTZ = ITEMS.register("powder_nether_quartz", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> POWDER_GHAST_TEAR = ITEMS.register("powder_ghast_tear", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));	
+	public static final RegistryObject<Item> POWDER_PURPUR = ITEMS.register("powder_purpur", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
+	
+	public static final RegistryObject<Item> BLEND_REDIUM = ITEMS.register("blend_redium", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));	
+	public static final RegistryObject<Item> BLEND_LAPIUM = ITEMS.register("blend_lapium", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> BLEND_GEMIUM = ITEMS.register("blend_gemium", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> BLEND_TRILIUM = ITEMS.register("blend_trilium", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	
