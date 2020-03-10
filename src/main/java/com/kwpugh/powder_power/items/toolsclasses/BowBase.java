@@ -1,4 +1,4 @@
-package com.kwpugh.powder_power.items.tools;
+package com.kwpugh.powder_power.items.toolsclasses;
 
 import java.util.List;
 import java.util.function.Predicate;

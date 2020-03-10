@@ -1,4 +1,4 @@
-package com.kwpugh.powder_power.items.tools;
+package com.kwpugh.powder_power.items.toolsclasses;
 
 
 import java.util.List;
@@ -27,6 +27,11 @@ import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+
+/*
+ * This is the base class for all types of Hammers
+ * 
+ */
 
 public class HammerBase extends PickaxeItem
 {
@@ -110,7 +115,7 @@ public class HammerBase extends PickaxeItem
 	{
 		super(tier, attackDamageIn, attackSpeedIn, builder);
 	}
- 
+
     public boolean onBlockDestroyed(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity entity)
     {
         stack.attemptDamageItem(1, random, null);

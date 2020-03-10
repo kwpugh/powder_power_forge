@@ -1,7 +1,7 @@
 package com.kwpugh.powder_power.items.excavator;
 
 import com.kwpugh.powder_power.init.ItemInit;
-import com.kwpugh.powder_power.items.tools.ExcavatorBase;
+import com.kwpugh.powder_power.items.toolsclasses.ExcavatorBase;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;

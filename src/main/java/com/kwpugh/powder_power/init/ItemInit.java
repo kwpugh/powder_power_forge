@@ -40,9 +40,9 @@ import com.kwpugh.powder_power.items.tokens.TokenSpeed;
 import com.kwpugh.powder_power.items.tokens.TokenStrength;
 import com.kwpugh.powder_power.items.tokens.TokenSunshine;
 import com.kwpugh.powder_power.items.tokens.TokenTrash;
-import com.kwpugh.powder_power.items.tools.BowBase;
-import com.kwpugh.powder_power.items.tools.SwordRedium;
-import com.kwpugh.powder_power.items.tools.TreeAxeCustom;
+import com.kwpugh.powder_power.items.toolsclasses.BowBase;
+import com.kwpugh.powder_power.items.toolsclasses.SwordRedium;
+import com.kwpugh.powder_power.items.toolsclasses.TreeAxeCustom;
 import com.kwpugh.powder_power.lists.ArmorMaterialList;
 import com.kwpugh.powder_power.lists.ToolMaterialList;
 
