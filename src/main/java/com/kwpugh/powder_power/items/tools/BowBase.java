@@ -32,9 +32,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class BowCustom extends BowItem
+public class BowBase extends BowItem
 {
-   public BowCustom(Item.Properties builder)
+   public BowBase(Item.Properties builder)
    {
       super(builder);
       this.addPropertyOverride(new ResourceLocation("pull"), (p_210310_0_, p_210310_1_, p_210310_2_) -> {
