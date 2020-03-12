@@ -27,10 +27,13 @@ public class TokenDragon extends Item
 	}
 
     @Override
-    public ICapabilityProvider initCapabilities(final ItemStack stack, CompoundNBT unused) {
-        if (CuriosModCheck.CURIOS.isLoaded()) {
+    public ICapabilityProvider initCapabilities(final ItemStack stack, CompoundNBT unused)
+    {
+        if (CuriosModCheck.CURIOS.isLoaded())
+        {
             return DragonTokenCurios.initCapabilities();
         }
+        
         return super.initCapabilities(stack, unused);
     }
     

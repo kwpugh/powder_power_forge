@@ -19,7 +19,7 @@ import top.theillusivec4.curios.api.capability.CuriosCapability;
 import top.theillusivec4.curios.api.capability.ICurio;
 
 /*
- * Adapted for AngelRing mod
+ * Adapted from AngelRing mod
  * by: DenisMasterHerobrine
  * 
  * All credit goes to that author
@@ -111,8 +111,8 @@ public class DragonTokenCurios
         };
     }
 
-    public static boolean isRingInCuriosSlot(ItemStack angelRing, LivingEntity player)
+    public static boolean isRingInCuriosSlot(ItemStack token, LivingEntity player)
     {
-        return CuriosAPI.getCurioEquipped(angelRing.getItem(), player).isPresent();
+        return CuriosAPI.getCurioEquipped(token.getItem(), player).isPresent();
     }
 }
