@@ -22,15 +22,23 @@ public class MotarPestle extends Item
 	}
 
     @Override
+    public ItemStack getContainerItem(ItemStack stackIn)
+    {	
+    	ItemStack stack = stackIn.copy();
+    	stack.setDamage(getDamage(stack) + 1);
+
+    	if(stack.getDamage() >= stack.getMaxDamage())
+    	{
+    		stack.shrink(1);
+    	}
+    	
+        return stack;
+    }	
+    
+    @Override
     public boolean hasContainerItem(ItemStack stack)
     {
         return true;
-    }
-
-    @Override
-    public ItemStack getContainerItem(ItemStack stack)
-    {
-        return stack.copy();
     }
     
 	@OnlyIn(Dist.CLIENT)

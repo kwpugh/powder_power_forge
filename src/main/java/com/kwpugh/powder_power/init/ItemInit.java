@@ -62,10 +62,10 @@ public class ItemInit
 {
 	public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, PowderPower.modid);
 	
-	public static final RegistryObject<Item> HAMMER_ALCHEMIST = ITEMS.register("hammer_alchemist", () -> new HammerAlchemist(new Item.Properties().maxDamage(501).group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> MOTAR_PESTLE = ITEMS.register("motar_pestle", () -> new MotarPestle(new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HAMMER_ALCHEMIST = ITEMS.register("hammer_alchemist", () -> new HammerAlchemist(new Item.Properties().maxDamage(128).group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> MOTAR_PESTLE = ITEMS.register("motar_pestle", () -> new MotarPestle(new Item.Properties().maxDamage(256).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> WAND_CORE = ITEMS.register("wand_core", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> WAND_ALCHEMIST = ITEMS.register("wand_alchemist", () -> new WandAlchemist(new Item.Properties().maxDamage(355).group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> WAND_ALCHEMIST = ITEMS.register("wand_alchemist", () -> new WandAlchemist(new Item.Properties().maxDamage(128).group(PowderPower.powder_power)));
 	
 	public static final RegistryObject<Item> PICKAXE_OBSIDIAN = ITEMS.register("pickaxe_obsidian", () -> new PickaxeItem(ToolMaterialList.OBSIDIAN, 3, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> PICKAXE_PRISMARINE = ITEMS.register("pickaxe_prismarine", () -> new PickaxeItem(ToolMaterialList.PRISMARINE, 3, -3.0f, new Item.Properties().group(PowderPower.powder_power)));

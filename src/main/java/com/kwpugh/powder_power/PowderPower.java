@@ -9,7 +9,7 @@ import com.kwpugh.powder_power.groups.GroupPowderPower;
 import com.kwpugh.powder_power.init.BlockInit;
 import com.kwpugh.powder_power.init.ItemInit;
 import com.kwpugh.powder_power.util.Config;
-import com.kwpugh.powder_power.util.SupportMods;
+import com.kwpugh.powder_power.util.CuriosModCheck;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
@@ -65,7 +65,7 @@ public class PowderPower
 
         InterModComms.sendTo("powder_power", "helloworld", () -> { logger.info("Hello world from PowderPower"); return "Hello world";});
         
-        if (SupportMods.CURIOS.isLoaded())
+        if (CuriosModCheck.CURIOS.isLoaded())
         {
         	InterModComms.sendTo("curios", CuriosAPI.IMC.REGISTER_TYPE, () -> new CurioIMCMessage("belt").setSize(2));
         }  

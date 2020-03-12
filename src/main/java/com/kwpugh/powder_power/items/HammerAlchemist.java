@@ -30,10 +30,15 @@ public class HammerAlchemist extends Item
 
     @Override
     public ItemStack getContainerItem(ItemStack stackIn)
-    {
+    {	
     	ItemStack stack = stackIn.copy();
     	stack.setDamage(getDamage(stack) + 1);
 
+    	if(stack.getDamage() >= stack.getMaxDamage())
+    	{
+    		stack.shrink(1);
+    	}
+    	
         return stack;
     }
 
