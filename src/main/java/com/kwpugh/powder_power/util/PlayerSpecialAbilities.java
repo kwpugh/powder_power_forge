@@ -9,7 +9,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
 @EventBusSubscriber
-public class SpecialAbilities
+public class PlayerSpecialAbilities
 {	
 	//Set player health to max on tick update
 	public static void giveHealthEffect(World world, PlayerEntity player, ItemStack itemstack)

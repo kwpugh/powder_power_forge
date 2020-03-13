@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.powder_power.util.SpecialAbilities;
+import com.kwpugh.powder_power.util.PlayerSpecialAbilities;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
@@ -31,7 +31,7 @@ public class TokenHealth extends Item
 		{
 			PlayerEntity player = (PlayerEntity)entity;
 	
-			SpecialAbilities.giveRegenffect(world, player, stack, 1, 0.05F);
+			PlayerSpecialAbilities.giveRegenffect(world, player, stack, 1, 0.05F);
 		}
 	}
 	

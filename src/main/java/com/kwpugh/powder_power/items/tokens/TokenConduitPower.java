@@ -5,7 +5,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import com.kwpugh.powder_power.util.EnableUtil;
-import com.kwpugh.powder_power.util.SpecialAbilities;
+import com.kwpugh.powder_power.util.PlayerSpecialAbilities;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
@@ -36,7 +36,7 @@ public class TokenConduitPower extends Item
 		{
 			PlayerEntity player = (PlayerEntity)entity;
 	
-			SpecialAbilities.giveConduitEffect(world, player, stack);
+			PlayerSpecialAbilities.giveConduitEffect(world, player, stack);
 		}
 	}	
 

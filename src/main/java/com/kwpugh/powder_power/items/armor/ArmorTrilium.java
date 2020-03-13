@@ -5,7 +5,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import com.kwpugh.powder_power.init.ItemInit;
-import com.kwpugh.powder_power.util.SpecialAbilities;
+import com.kwpugh.powder_power.util.PlayerSpecialAbilities;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
@@ -53,7 +53,7 @@ public class ArmorTrilium extends ArmorItem
 			{
 				int newfoodlevel = 1;
 				float newsatlevel = 0.5F;
-				SpecialAbilities.giveRegenffect(world, player, stack, newfoodlevel, newsatlevel);			
+				PlayerSpecialAbilities.giveRegenffect(world, player, stack, newfoodlevel, newsatlevel);			
 			}
 			else
 			{
@@ -69,7 +69,7 @@ public class ArmorTrilium extends ArmorItem
 		    //Leggings
 		    if(legs.getItem() == ItemInit.ARMOR_TRILIUM_LEGGINGS.get())
 			{
-		    	SpecialAbilities.giveDolphinEffect(world, player, stack);
+		    	PlayerSpecialAbilities.giveDolphinEffect(world, player, stack);
 			}
 			else
 			{

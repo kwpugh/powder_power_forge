@@ -5,7 +5,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import com.kwpugh.powder_power.util.EnableUtil;
-import com.kwpugh.powder_power.util.SpecialAbilities;
+import com.kwpugh.powder_power.util.PlayerSpecialAbilities;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
@@ -36,7 +36,7 @@ public class TokenDolphin extends Item
 		{
 			PlayerEntity player = (PlayerEntity)entity;
 	
-			SpecialAbilities.giveDolphinEffect(world, player, stack);
+			PlayerSpecialAbilities.giveDolphinEffect(world, player, stack);
 		}
 	}	
 

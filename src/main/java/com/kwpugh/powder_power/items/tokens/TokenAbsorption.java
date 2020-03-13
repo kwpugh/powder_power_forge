@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.powder_power.util.SpecialAbilities;
+import com.kwpugh.powder_power.util.PlayerSpecialAbilities;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
@@ -30,7 +30,7 @@ public class TokenAbsorption extends Item
 		if(entity instanceof PlayerEntity && !world.isRemote)
 		{
 			PlayerEntity player = (PlayerEntity)entity;
-			SpecialAbilities.giveExtraHearts(world, player, stack);
+			PlayerSpecialAbilities.giveExtraHearts(world, player, stack);
 		}
 	}	
 
