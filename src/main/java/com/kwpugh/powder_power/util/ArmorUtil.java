@@ -74,7 +74,7 @@ public final class ArmorUtil
 		//Checks Curios slots
 		if (CuriosModCheck.CURIOS.isLoaded())
 	    {
-			if (UtilCurios.findItem(ItemInit.TOKEN_BREATHING.get(), player) != ItemStack.EMPTY)
+			if (CuriosUtil.findItem(ItemInit.TOKEN_BREATHING.get(), player) != ItemStack.EMPTY)
 			{
 				return true;
 		    }
@@ -134,7 +134,7 @@ public final class ArmorUtil
 			//Checks Curios slots
 			if (CuriosModCheck.CURIOS.isLoaded())
 		    {
-				if (UtilCurios.findItem(ItemInit.TOKEN_NO_FALL.get(), player) != ItemStack.EMPTY)
+				if (CuriosUtil.findItem(ItemInit.TOKEN_NO_FALL.get(), player) != ItemStack.EMPTY)
 				{
 					return true;
 			    }
@@ -196,7 +196,7 @@ public final class ArmorUtil
 			
 			if (CuriosModCheck.CURIOS.isLoaded())
 		    {
-				if (UtilCurios.findItem(ItemInit.TOKEN_FIRE_RESISTANCE.get(), player) != ItemStack.EMPTY)
+				if (CuriosUtil.findItem(ItemInit.TOKEN_FIRE_RESISTANCE.get(), player) != ItemStack.EMPTY)
 				{
 					return true;
 			    }
