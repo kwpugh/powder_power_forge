@@ -26,7 +26,7 @@ public final class ModEventSubscriber
 
             //Fall Damage
             if ((event.getSource() == DamageSource.FALL) &&
-                ArmorUtil.isPlayerGotFallProtection(player))
+                PlayerEquipUtil.isPlayerGotFallProtection(player))
             {
                 if (event.isCancelable()) event.setCanceled(true);
             } 
@@ -35,14 +35,14 @@ public final class ModEventSubscriber
             if (((event.getSource() == DamageSource.IN_FIRE) ||
             		(event.getSource() == DamageSource.ON_FIRE) || 
             		(event.getSource() == DamageSource.LAVA)) && 
-            		ArmorUtil.isPlayerGotFireProtection(player))
+            		PlayerEquipUtil.isPlayerGotFireProtection(player))
             {
                 if (event.isCancelable()) event.setCanceled(true);
             }
             
             //Drowning
             if ((event.getSource() == DamageSource.DROWN) &&
-                    ArmorUtil.isPlayerGotWaterBreathing(player))
+                    PlayerEquipUtil.isPlayerGotWaterBreathing(player))
             {
             	if (event.isCancelable()) event.setCanceled(true);
             }

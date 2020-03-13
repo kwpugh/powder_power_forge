@@ -25,7 +25,7 @@ import top.theillusivec4.curios.api.capability.ICurio;
  * All credit goes to that author
  */
 
-public class DragonTokenCurios
+public class CuriosDragonToken
 {
     public static ICapabilityProvider initCapabilities()
     {

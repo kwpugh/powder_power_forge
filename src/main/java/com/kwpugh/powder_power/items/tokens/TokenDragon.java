@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.powder_power.util.DragonTokenCurios;
+import com.kwpugh.powder_power.util.CuriosDragonToken;
 import com.kwpugh.powder_power.util.CuriosModCheck;
 
 import net.minecraft.client.util.ITooltipFlag;
@@ -31,7 +31,7 @@ public class TokenDragon extends Item
     {
         if (CuriosModCheck.CURIOS.isLoaded())
         {
-            return DragonTokenCurios.initCapabilities();
+            return CuriosDragonToken.initCapabilities();
         }
         
         return super.initCapabilities(stack, unused);

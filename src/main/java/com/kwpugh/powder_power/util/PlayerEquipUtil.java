@@ -15,7 +15,7 @@ import net.minecraft.item.ItemStack;
  * 
  */
 
-public final class ArmorUtil
+public final class PlayerEquipUtil
 {
     @Nonnull
     @SuppressWarnings("ConstantConditions")
