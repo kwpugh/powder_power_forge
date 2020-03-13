@@ -11,7 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 @JeiPlugin
-public class JEIDescriptions implements IModPlugin
+public class JEIInfoPages implements IModPlugin
 {
 	static ResourceLocation plugin = new ResourceLocation(PowderPower.modid, "plugin");
 
