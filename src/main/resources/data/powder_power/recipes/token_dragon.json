@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"BCB",
+		"DAD",
+		"BCB"
+	],
+	
+	"key":
+	{
+		"A": { "item": "minecraft:dragon_egg" },
+		"B": { "item": "powder_power:blend_trilium" },
+		"C": { "item": "minecraft:dragon_head" },
+		"D": { "item": "minecraft:elytra" }
+	},
+	
+	"result": { "item": "powder_power:token_dragon",
+	"count": 1
+	 }
+}

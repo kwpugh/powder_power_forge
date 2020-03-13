@@ -33,7 +33,7 @@ public class TokenAbsorption extends Item
 			PlayerSpecialAbilities.giveExtraHearts(world, player, stack);
 		}
 	}	
-
+    
 	@OnlyIn(Dist.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
