@@ -54,10 +54,10 @@ public class HammerUtil
         BlockState state = world.getBlockState(pos);
         
         boolean isEffective = (effectiveOn.contains(state.getBlock()) || effectiveMaterials.contains(state.getMaterial()));
-        
+        boolean isWithinHarvestLevel = player.getHeldItemMainhand().canHarvestBlock(state);  //added to ensure each block in the breaking is harvestable with this tool material
         boolean witherImmune = BlockTags.WITHER_IMMUNE.contains(state.getBlock());
         
-        if(isEffective && !witherImmune)	
+        if(isEffective && !witherImmune && isWithinHarvestLevel)	
         {
         	world.destroyBlock(pos, false);  //true or false?
 	    	Block.spawnDrops(state, world, pos, null, player, player.getHeldItemMainhand());
