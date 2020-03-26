@@ -51,13 +51,13 @@ public class PowderPower
     private void setup(final FMLCommonSetupEvent event)
     {
 
-        logger.info("PowderPower completed setup");
+        logger.info("PowderPower common setup");
     }
 
     private void clientSetup(final FMLClientSetupEvent event)
     {
 
-    	logger.info("PowderPower got game settings {}", event.getMinecraftSupplier().get().gameSettings);
+    	logger.info("PowderPower client setup", event.getMinecraftSupplier().get().gameSettings);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
@@ -74,7 +74,7 @@ public class PowderPower
     private void processIMC(final InterModProcessEvent event)
     {
 
-    	logger.info("PowderPower got IMC {}", event.getIMCStream().
+    	logger.info("PowderPower IMC {}", event.getIMCStream().
                 map(m->m.getMessageSupplier().get()).
                 collect(Collectors.toList()));
     }
@@ -83,6 +83,6 @@ public class PowderPower
     public void onServerStarting(FMLServerStartingEvent event)
     {
 
-    	logger.info("PowderPower server events completed");
+    	logger.info("PowderPower server starting");
     }
 }

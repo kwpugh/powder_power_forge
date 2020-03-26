@@ -91,6 +91,7 @@ public class ItemInit
 	public static final RegistryObject<Item> POWDER_NETHER_QUARTZ = ITEMS.register("powder_nether_quartz", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> POWDER_GHAST_TEAR = ITEMS.register("powder_ghast_tear", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));	
 	public static final RegistryObject<Item> POWDER_PURPUR = ITEMS.register("powder_purpur", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> POWDER_WOOD = ITEMS.register("powder_wood", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	
 	public static final RegistryObject<Item> BLEND_REDIUM = ITEMS.register("blend_redium", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));	
 	public static final RegistryObject<Item> BLEND_LAPIUM = ITEMS.register("blend_lapium", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
