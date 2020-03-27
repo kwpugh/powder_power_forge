@@ -1,0 +1,239 @@
+{
+	"item.powder_power.hammer_alchemist": "炼金锤",
+	"item.powder_power.hammer_alchemist.line1": "可把许多材料转换成粉末",
+	"item.powder_power.hammer_alchemist.line2": "在工作台中和方块或物品一起使用",
+	"item.powder_power.hammer_alchemist.jei.line1": "炼金锤用于制作红晶素,蓝晶素,绿晶素,和三素合金所需要的各种粉末",
+	"item.powder_power.hammer_alchemist.jei.line2": "你可以获得黑曜石,石英,红石,青金石,铁,金,钻石,绿宝石,海晶石等粉末.用炼金锤将矿石/块加工成粉末",
+	"item.powder_power.hammer_alchemist.jei.line3": "制作红晶素,蓝晶素,绿晶素和三素合金的粉末和配方均在JEI中列出",
+	"item.powder_power.motar_pestle": "研钵 & 研杵",
+	"item.powder_power.motar_pestle.line1": "可以将多个物品磨成粉",
+	"item.powder_power.motar_pestle.line2": "用于工作台",
+	
+	"item.powder_power.wand_core": "魔杖核心",
+	
+	"item.powder_power.wand_alchemist": "炼金魔杖",
+	"item.powder_power.wand_alchemist.line1": "可将多个世界的方块转换成资源",
+	"item.powder_power.wand_alchemist.line2": "在工作台中和方块或物品一起使用",
+	"item.powder_power.wand_alchemist.jei.line1": "炼金魔杖可将多个世界的方块转换成平常可以在地狱和末地找到的方块。和方块一起在工作台合成，可转换的方块如下",
+	"item.powder_power.wand_alchemist.jei.line2": "圆石 -> 地狱岩",
+	"item.powder_power.wand_alchemist.jei.line3": "沙子 -> 灵魂沙",
+	"item.powder_power.wand_alchemist.jei.line4": "红石块 -> 荧石",
+	"item.powder_power.wand_alchemist.jei.line5": "青金石块 -> 石英块",
+	"item.powder_power.wand_alchemist.jei.line6": "钻石块 -> 恶魂之泪",
+	"item.powder_power.wand_alchemist.jei.line7": "绿宝石块 -> 海晶灯",
+	"item.powder_power.wand_alchemist.jei.line8": "蘑菇方块 -> 地狱疣块",
+	"item.powder_power.wand_alchemist.jei.line9": "闪长岩 -> 末地石",
+	"item.powder_power.wand_alchemist.jei.line10": "花岗岩 -> 紫珀块",
+	"item.powder_power.wand_alchemist.jei.line11": "金块 -> 末地烛",
+	"item.powder_power.wand_alchemist.jei.line12": "末影箱 -> 黑色潜影盒",
+
+	
+	
+	"item.powder_power.pickaxe_obsidian": "钻石-镶嵌 黑曜石稿",
+	"item.powder_power.pickaxe_prismarine": "绿宝石-镶嵌 海晶石稿",
+	"item.powder_power.dagger_prismarine": "海晶石匕首",
+	"item.powder_power.hatchet_obsidian": "黑曜石手斧",
+	
+	"item.powder_power.powder_wood": "木头粉末",
+	"item.powder_power.powder_ghast_tear": "恶魂之泪粉末",
+	"item.powder_power.powder_iron": "铁粉末",
+	"item.powder_power.powder_redstone": "红石粉末",
+	"item.powder_power.powder_obsidian": "黑曜石粉末",
+	"item.powder_power.powder_nether_quartz": "下界石英粉末",
+	"item.powder_power.powder_purpur": "紫珀粉末",
+	"item.powder_power.blend_redium": "红晶素混合物",
+	
+	
+	"item.powder_power.powder_end_pearl": "末影粉末",
+	"item.powder_power.powder_gold": "金粉末",
+	"item.powder_power.powder_lapis": "青金石粉末",
+	"item.powder_power.blend_lapium": "蓝晶素混合物",
+	
+
+	"item.powder_power.powder_diamond": "钻石粉末",
+	"item.powder_power.powder_emerald": "绿宝石粉末",
+	"item.powder_power.powder_prismarine": "海晶石粉末",
+	"item.powder_power.blend_gemium": "绿晶素混合物",
+	
+		
+	"item.powder_power.blend_trilium": "三素合金混合物",
+	
+	"item.powder_power.ingot_obsidian": "黑曜石锭",
+	"item.powder_power.ingot_prismarine": "海晶石锭",
+	"item.powder_power.ingot_redium": "红晶素锭",
+	"item.powder_power.ingot_lapium": "蓝晶素锭",
+	"item.powder_power.gem_gemium": "绿晶素宝石",
+	"item.powder_power.ingot_trilium": "三素合金",
+	
+	
+	"block.powder_power.block_redium": "红晶素块",
+	"item.powder_power.block_redium": "红晶素块",
+	
+	"block.powder_power.block_lapium": "蓝晶素块",
+	"item.powder_power.block_lapium": "蓝晶素块",
+	
+	"block.powder_power.block_gemium": "绿晶素块",
+	"item.powder_power.block_gemium": "绿晶素块",
+	
+	"block.powder_power.block_trilium": "三素合金块",
+	"item.powder_power.block_trilium": "三素合金块",
+		
+	"item.powder_power.armor_redium_head": "红晶素头盔",	
+	"item.powder_power.armor_redium_full.line1": "全套效果: 火焰保护/凋零保护",	
+	"item.powder_power.armor_redium_body": "红晶素胸甲",
+	"item.powder_power.armor_redium_leggings": "红晶素护腿",
+	"item.powder_power.armor_redium_boots": "红晶素靴子",
+		
+
+	"item.powder_power.armor_lapium_full.line1": "全套效果: 水下呼吸/剧毒保护",	
+	"item.powder_power.armor_lapium_head": "蓝晶素锭头盔",	
+	"item.powder_power.armor_lapium_body": "蓝晶素锭胸甲",	
+	"item.powder_power.armor_lapium_leggings": "蓝晶素锭护腿",	
+	"item.powder_power.armor_lapium_boots": "蓝晶素锭靴子",	
+	
+
+	"item.powder_power.armor_gemium_full.line1": "全套效果: 水下呼吸/火焰保护,",
+	"item.powder_power.armor_gemium_full.line2": "剧毒/凋零保护,免疫摔落伤害,",
+	"item.powder_power.armor_gemium_full.line3": "缓慢的生命回复",
+	"item.powder_power.armor_gemium_head": "绿晶素头盔",
+	"item.powder_power.armor_gemium_body": "绿晶素胸甲",
+	"item.powder_power.armor_gemium_leggings": "绿晶素护腿",
+	"item.powder_power.armor_gemium_boots": "绿晶素靴子",
+
+
+	"item.powder_power.armor_trilium_full.line1": "全套效果: 水下呼吸/火焰保护,",
+	"item.powder_power.armor_trilium_full.line2": "剧毒/凋零保护,免疫摔落伤害,",
+	"item.powder_power.armor_trilium_full.line3": "海豚的恩典,中等的生命回复",
+	"item.powder_power.armor_trilium_head": "三素合金头盔",	
+	"item.powder_power.armor_trilium_body": "三素合金胸甲",	
+	"item.powder_power.armor_trilium_leggings": "三素合金护腿",	
+	"item.powder_power.armor_trilium_boots": "三素合金靴子",
+		
+	"item.powder_power.excavator.line1": "一个可挖掘3x3区域的铲子",
+	"item.powder_power.hammer.line1": "一个可挖掘3x3区域的锤子",
+	"item.powder_power.paxel.line1": "结合稿,斧,铲的功能",
+	"item.powder_power.bow.line1": "更多耐久的弓",
+	
+	"item.powder_power.sword_redium": "红晶素剑",
+	"item.powder_power.sword_redium.line1": "一把火热的剑",
+	"item.powder_power.pickaxe_redium": "红晶素镐",
+	"item.powder_power.axe_redium": "红晶素斧",
+	"item.powder_power.shovel_redium": "红晶素铲",
+	"item.powder_power.hoe_redium": "红晶素锄",
+	"item.powder_power.paxel_redium": "红晶素镐尖斧",
+	"item.powder_power.bow_redium": "红晶素弓",	
+	"item.powder_power.hammer_redium": "红晶素锤",
+	"item.powder_power.excavator_redium": "红晶素开掘铲",
+
+	"item.powder_power.sword_lapium": "蓝晶素剑",
+	"item.powder_power.pickaxe_lapium": "蓝晶素镐",
+	"item.powder_power.axe_lapium": "蓝晶素斧",
+	"item.powder_power.shovel_lapium": "蓝晶素铲",
+	"item.powder_power.hoe_lapium": "蓝晶素锄",
+	"item.powder_power.paxel_lapium": "蓝晶素镐尖斧",	
+	"item.powder_power.bow_lapium": "蓝晶素弓",
+	"item.powder_power.hammer_lapium": "蓝晶素锤",
+	"item.powder_power.excavator_lapium": "蓝晶素开掘铲",
+				
+
+	"item.powder_power.sword_gemium": "绿晶素剑",
+	"item.powder_power.pickaxe_gemium": "绿晶素镐",
+	"item.powder_power.axe_gemium": "绿晶素斧",
+	"item.powder_power.shovel_gemium": "绿晶素铲",	
+	"item.powder_power.hoe_gemium": "绿晶素锄",
+	"item.powder_power.paxel_gemium": "绿晶素镐尖斧",				
+	"item.powder_power.bow_gemium": "绿晶素弓",
+	"item.powder_power.hammer_gemium": "绿晶素锤",
+	"item.powder_power.excavator_gemium": "绿晶素开掘铲",
+
+
+	"item.powder_power.sword_trilium": "三素合金剑",
+	"item.powder_power.pickaxe_trilium": "三素合金镐",
+	"item.powder_power.axe_trilium": "三素合金斧",
+	"item.powder_power.tree_axe_trilium": "三素合金树斧",
+	"item.powder_power.tree_axe_trilium.line1": "可砍伐整棵树",
+	"item.powder_power.shovel_trilium": "三素合金铲",
+	"item.powder_power.hoe_trilium": "三素合金锄",
+	"item.powder_power.paxel_trilium": "三素合金镐尖斧",
+	"item.powder_power.bow_trilium": "三素合金弓",
+	"item.powder_power.hammer_trilium": "三素合金锤",
+	"item.powder_power.excavator_trilium": "三素合金开掘铲",
+	
+	
+	"item.powder_power.token.general1": "在玩家背包内生效",
+	"item.powder_power.token.general2": "Shift+鼠标右键打开/关闭",
+	"item.powder_power.token.general3": "右键点击使用",
+	
+	"item.powder_power.token_dragon": "龙之印记",
+	"item.powder_power.token_dragon.line1": "给予无限的飞行",
+	
+	"item.powder_power.token_healing": "治疗印记",
+	"item.powder_power.token_healing.line1": "一次性使用的续命印记..",
+	"item.powder_power.token_healing.line2": "你已经获得新生",
+	
+	"item.powder_power.token_trash": "垃圾桶印记",
+	"item.powder_power.token_trash.line1": "提供一个方便的垃圾桶",
+	"item.powder_power.token_trash.line2": "注意:你放进垃圾桶任何东西都将永远消失！",
+	"item.powder_power.token_trash.line3": "垃圾!!!!!",
+	
+	"item.powder_power.token_night_vision": "夜视印记",
+	"item.powder_power.token_night_vision.line1": "为玩家提供夜视能力",
+	"item.powder_power.token_night_vision.line2": "夜视能力激活: %s",
+	
+	"item.powder_power.token_resistance": "攻击/抗性印记",
+	"item.powder_power.token_resistance.line1": "为玩家提供额外攻击伤害和抗性提升",
+	"item.powder_power.token_resistance.line2": "抗性提升激活: %s",
+	
+	"item.powder_power.token_speed": "速度印记",
+	"item.powder_power.token_speed.line1": "为玩家提供额外速度",
+	"item.powder_power.token_speed.line2": "速度提升激活: %s",
+	
+	"item.powder_power.token_no_fall": "免疫摔落伤害印记",
+	"item.powder_power.token_no_fall.line1": "为玩家提供免疫摔落伤害的能力",					
+	
+	"item.powder_power.token_fire_resistance": "火焰保护印记",
+	"item.powder_power.token_fire_resistance.line1": "为玩家提供火焰保护的能力",
+	
+	"item.powder_power.token_sunshine": "阳光印记",
+	"item.powder_power.token_sunshine.line1": "可把雨天转换为晴天",
+	
+	"item.powder_power.token_strength": "力量印记",
+	"item.powder_power.token_strength.line1": "为玩家提供额外的力量",
+	"item.powder_power.token_strength.line2": "力量提升激活: %s",
+	
+	"item.powder_power.token_absorption": "伤害吸收印记",
+	"item.powder_power.token_absorption.line1": "为玩家提供额外的伤害吸收心",
+	
+	"item.powder_power.token_haste": "急迫印记",
+	"item.powder_power.token_haste.line1": "为玩家提供急迫",
+	"item.powder_power.token_haste.line2": "急迫提升激活: %s",
+	
+	"item.powder_power.token_jump_boost": "跳跃提升印记",
+	"item.powder_power.token_jump_boost.line1": "为玩家提供跳跃提升",
+	"item.powder_power.token_jump_boost.line2": "跳跃提升激活: %s",
+	
+	"item.powder_power.token_health": "生命印记",
+	"item.powder_power.token_health.line1": "为玩家提供中等的生命回复",
+	
+	"item.powder_power.token_breathing": "水下呼吸印记",
+	"item.powder_power.token_breathing.line1": "为玩家提供水下呼吸",
+	
+	"item.powder_power.token_curing": "净化印记",
+	"item.powder_power.token_curing.line1": "为玩家净化负面药水效果",
+	
+	"item.powder_power.token_dolphin": "海豚印记",
+	"item.powder_power.token_dolphin.line1": "为玩家提供海豚的恩典",
+	"item.powder_power.token_dolphin.line2": "海豚的恩典激活: %s",
+	
+	"item.powder_power.token_conduit_power": "潮涌能量印记",
+	"item.powder_power.token_conduit_power.line1": "为玩家提供潮涌能量",
+	"item.powder_power.token_conduit_power.line2": "潮涌能量激活: %s",
+	
+	"item.powder_power.token_good_omen": "好运印记",
+	"item.powder_power.token_good_omen.line1": "消除你的霉运",
+
+	"item.powder_power.token_affliction": "折磨印记",
+	"item.powder_power.token_affliction.line1": "对你的敌人造成巨额伤害",				
+				
+	"itemGroup.powder_power": "粉末力量"
+}
