@@ -22,6 +22,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.IItemTier;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ToolItem;
@@ -85,11 +86,14 @@ public class PaxelBase extends ToolItem
 	public static final Map<Block, BlockState> SHOVEL_LOOKUP = Maps.newHashMap(ImmutableMap.of(Blocks.GRASS_BLOCK, Blocks.GRASS_PATH.getDefaultState()));
 	
 	public PaxelBase(float attackDamageIn, float attackSpeedIn, IItemTier tier, Set<Block> effectiveBlocksIn,
-			Properties builder)
+			Item.Properties builder)
 	{
-		super(attackDamageIn, attackSpeedIn, tier, EFFECTIVE_ON, builder);	
+		super(attackDamageIn, attackSpeedIn, tier, EFFECTIVE_ON, 
+				builder.addToolType(net.minecraftforge.common.ToolType.AXE, tier.getHarvestLevel())
+				.addToolType(net.minecraftforge.common.ToolType.PICKAXE, tier.getHarvestLevel())
+				.addToolType(net.minecraftforge.common.ToolType.SHOVEL, tier.getHarvestLevel()));	
 	}
-
+	 
 	public boolean canHarvestBlock(BlockState blockIn) {
 		int i = this.getTier().getHarvestLevel();
 		return i >= blockIn.getHarvestLevel();

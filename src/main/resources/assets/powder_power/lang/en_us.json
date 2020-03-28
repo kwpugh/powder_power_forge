@@ -171,6 +171,8 @@
 	"item.powder_power.token_healing.line1": "A onetime use possible life-saver",
 	"item.powder_power.token_healing.line2": "You have been renewed.",
 	
+	"item.powder_power.token_greater_healing": "Greater Healing Token",
+	
 	"item.powder_power.token_trash": "Trash Token",
 	"item.powder_power.token_trash.line1": "A handy token that provides a trash chest",
 	"item.powder_power.token_trash.line2": "NOTE: Anything you put in the trash is gone forever!",
@@ -183,6 +185,8 @@
 	"item.powder_power.token_resistance": "Attack Resistance Token",
 	"item.powder_power.token_resistance.line1": "Provides player with extra attack damage resistance",
 	"item.powder_power.token_resistance.line2": "Resistance ability active: %s",
+	
+	"item.powder_power.token_greater_resistance": "Greater Attack Resistance Token",
 	
 	"item.powder_power.token_speed": "Speed Token",
 	"item.powder_power.token_speed.line1": "Provides player with extra speed",
@@ -201,12 +205,16 @@
 	"item.powder_power.token_strength.line1": "Provides player with extra strength",
 	"item.powder_power.token_strength.line2": "Strength ability active: %s",
 	
+	"item.powder_power.token_greater_strength": "Greater Strength Token",
+	
 	"item.powder_power.token_absorption": "Absorption Token",
 	"item.powder_power.token_absorption.line1": "Provides player with extra absorption hearts",
 	
+	"item.powder_power.token_greater_absorption": "Absorption Token",
+	
 	"item.powder_power.token_haste": "Haste Token",
-	"item.powder_power.token_haste.line1": "Provides player with Haste",
-	"item.powder_power.token_haste.line2": "Haste ability active: %s",
+	"item.powder_power.token_haste.line1": "Provides player with faster breaking speed",
+	"item.powder_power.token_haste.line2": "Works while in player inventory",
 	
 	"item.powder_power.token_jump_boost": "Jump Boost Token",
 	"item.powder_power.token_jump_boost.line1": "Provides player with Jump Boost",

@@ -2,17 +2,18 @@ package com.kwpugh.powder_power.util;
 
 import com.kwpugh.powder_power.PowderPower;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-
-/*
- * Inspired and adapted from Sinhika's code in NetherRocks
- * 
- */
 
 @EventBusSubscriber(modid = PowderPower.modid, bus = EventBusSubscriber.Bus.FORGE )
 public final class ModEventSubscriber
@@ -47,5 +48,33 @@ public final class ModEventSubscriber
             	if (event.isCancelable()) event.setCanceled(true);
             }
         } 
+    }
+    
+    @SubscribeEvent
+    public static void breakingBlockSpeed(PlayerEvent.BreakSpeed event)
+    {
+        PlayerEntity player = event.getPlayer();
+        ItemStack stack = player.getHeldItemMainhand(); 
+        BlockPos pos = event.getPos();
+        Block block = event.getState().getBlock();
+        
+        if (player != null && !(player instanceof FakePlayer) && !player.isCreative())
+        {    
+        	if(PlayerEquipUtil.isPlayerGotHasteToken(player))
+        	{
+        		if(net.minecraftforge.common.ForgeHooks.canToolHarvestBlock(event.getPlayer().world, pos, stack))
+        		{
+        			if(block == Blocks.OBSIDIAN)
+        			{
+        				event.setNewSpeed(PowderPowerConfig.haste_token_break_speed.get() * 8);
+        			}
+        			else
+        			{
+        				event.setNewSpeed(PowderPowerConfig.haste_token_break_speed.get());
+        			}
+						
+        		}
+        	}
+        }
     }
 } 

@@ -23,9 +23,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class TokenStrength extends Item
+public class TokenGreaterStrength extends Item
 {
-	public TokenStrength(Properties properties)
+	public TokenGreaterStrength(Properties properties)
 	{
 		super(properties);
 	}
@@ -38,7 +38,7 @@ public class TokenStrength extends Item
 			
 			if (player.ticksExisted % 180 == 0)
 			{
-				player.addPotionEffect(new EffectInstance(Effects.STRENGTH, 260,0, false, false));
+				player.addPotionEffect(new EffectInstance(Effects.STRENGTH, 260, 1, false, false));
 			}  		
 		}
 	}	

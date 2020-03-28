@@ -1,5 +1,4 @@
 package com.kwpugh.powder_power.items.tokens;
-
 import java.util.List;
 
 import javax.annotation.Nullable;
@@ -18,10 +17,10 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class TokenHealing extends Item
+public class TokenGreaterHealing extends Item
 {
 
-	public TokenHealing(Properties properties)
+	public TokenGreaterHealing(Properties properties)
 	{
 		super(properties);
 	}
@@ -32,9 +31,11 @@ public class TokenHealing extends Item
 		
 		if (!world.isRemote)
 		{
-	        player.setHealth(player.getMaxHealth());
+			player.setHealth(player.getMaxHealth());
 	        player.getFoodStats().setFoodLevel(20);
-
+	        player.getFoodStats().setFoodSaturationLevel(20.0F);
+	        player.extinguish();
+	        player.clearActivePotions();
 	        player.sendMessage((new TranslationTextComponent("item.powder_power.token_healing.line2").applyTextStyle(TextFormatting.BOLD)));
 	        
 	        if (!player.abilities.isCreativeMode) {

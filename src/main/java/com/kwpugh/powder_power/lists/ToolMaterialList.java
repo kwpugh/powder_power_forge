@@ -6,7 +6,6 @@ import com.kwpugh.powder_power.init.ItemInit;
 import com.kwpugh.powder_power.util.PowderPowerConfig;
 
 import net.minecraft.item.IItemTier;
-import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
 

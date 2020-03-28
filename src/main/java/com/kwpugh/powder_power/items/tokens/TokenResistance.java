@@ -38,7 +38,7 @@ public class TokenResistance extends Item
 	
 			if (player.ticksExisted % 180 == 0)
 			{
-				player.addPotionEffect(new EffectInstance(Effects.RESISTANCE, 260, 2, false, false));
+				player.addPotionEffect(new EffectInstance(Effects.RESISTANCE, 260, 0, false, false));
 			} 
 		}
 	}	

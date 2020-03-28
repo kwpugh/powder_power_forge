@@ -23,23 +23,23 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class TokenStrength extends Item
+public class TokenGreaterResistance extends Item
 {
-	public TokenStrength(Properties properties)
+	public TokenGreaterResistance(Properties properties)
 	{
 		super(properties);
 	}
-	
+
 	public void inventoryTick(ItemStack stack, World world, Entity entity, int itemSlot, boolean isSelected)
 	{		
 		if(entity instanceof PlayerEntity && !world.isRemote && EnableUtil.isEnabled(stack))
 		{
 			PlayerEntity player = (PlayerEntity)entity;
-			
+	
 			if (player.ticksExisted % 180 == 0)
 			{
-				player.addPotionEffect(new EffectInstance(Effects.STRENGTH, 260,0, false, false));
-			}  		
+				player.addPotionEffect(new EffectInstance(Effects.RESISTANCE, 260, 1, false, false));
+			} 
 		}
 	}	
 
@@ -51,18 +51,18 @@ public class TokenStrength extends Item
 		if(!world.isRemote && player.isCrouching())
 		{
 			EnableUtil.changeEnabled(player, hand);
-			player.sendMessage((new TranslationTextComponent("item.powder_power.token_strength.line2", EnableUtil.isEnabled(stack)).applyTextStyle(TextFormatting.BOLD)));
+			player.sendMessage((new TranslationTextComponent("item.powder_power.token_resistance.line2", EnableUtil.isEnabled(stack)).applyTextStyle(TextFormatting.BOLD)));
 			return new ActionResult<ItemStack>(ActionResultType.SUCCESS, player.getHeldItem(hand));
 		}
 		return super.onItemRightClick(world, player, hand);
-	}
+	} 
 	
 	@OnlyIn(Dist.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.powder_power.token_strength.line1").applyTextStyle(TextFormatting.GREEN)));
-		tooltip.add((new TranslationTextComponent("item.powder_power.token_strength.line2", EnableUtil.isEnabled(stack)).applyTextStyle(TextFormatting.RED)));
+		tooltip.add((new TranslationTextComponent("item.powder_power.token_resistance.line1").applyTextStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.powder_power.token_resistance.line2", EnableUtil.isEnabled(stack)).applyTextStyle(TextFormatting.RED)));
 		tooltip.add((new TranslationTextComponent("item.powder_power.token.general2").applyTextStyle(TextFormatting.AQUA)));
 	}
 }

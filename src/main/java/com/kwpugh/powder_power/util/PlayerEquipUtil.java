@@ -204,4 +204,41 @@ public final class PlayerEquipUtil
       		
         return false;
     }
+    
+    public static boolean isPlayerGotHasteToken(PlayerEntity player)
+    { 	    
+		PlayerInventory inv2 = player.inventory;
+		EnderChestInventory end_inv2 = player.getInventoryEnderChest();
+	
+		//Checks player enderchest
+		for (int slot = 0; slot < end_inv2.getSizeInventory(); slot++)
+		{
+			ItemStack stack = end_inv2.getStackInSlot(slot);
+			if (stack.getItem() == ItemInit.TOKEN_HASTE.get())
+			{	
+				return true;
+			}
+		}
+		
+		//Checks player main inventory
+		for (int slot = 0; slot < inv2.getSizeInventory(); slot++)
+		{
+			ItemStack stack = inv2.getStackInSlot(slot);
+			if (stack.getItem() == ItemInit.TOKEN_HASTE.get())
+			{	
+				return true;
+			}
+		}
+		
+		//Checks Curios slots
+		if (CuriosModCheck.CURIOS.isLoaded())
+	    {
+			if (CuriosUtil.findItem(ItemInit.TOKEN_HASTE.get(), player) != ItemStack.EMPTY)
+			{
+				return true;
+		    }
+	    } 
+		
+        return false;
+    } 
 } 

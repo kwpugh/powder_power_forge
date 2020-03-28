@@ -162,6 +162,20 @@
 	"item.powder_power.token.general2": "Esgueirar-se + Botão-Direito para ativar/desativar",
 	"item.powder_power.token.general3": "Botão-Direito para usar",
 	
+	"item.powder_power.token_dragon": "Dragon Token",
+	"item.powder_power.token_dragon.line1": "Provides unlimited flight",
+	
+	"item.powder_power.token_healing": "Healing Token",
+	"item.powder_power.token_healing.line1": "A onetime use possible life-saver",
+	"item.powder_power.token_healing.line2": "You have been renewed.",
+	
+	"item.powder_power.token_greater_healing": "Greater Healing Token",
+	
+	"item.powder_power.token_trash": "Trash Token",
+	"item.powder_power.token_trash.line1": "A handy token that provides a trash chest",
+	"item.powder_power.token_trash.line2": "NOTE: Anything you put in the trash is gone forever!",
+	"item.powder_power.token_trash.line3": "TRASH!!!!!",
+	
 	"item.powder_power.token_night_vision": "Insígnia da Visão Noturna",
 	"item.powder_power.token_night_vision.line1": "Fornece visão noturna ao jogador",
 	"item.powder_power.token_night_vision.line2": "Ativação da habilidade de visão noturna: %s",
@@ -169,6 +183,8 @@
 	"item.powder_power.token_resistance": "Insígnia de Resistência ao Ataque",
 	"item.powder_power.token_resistance.line1": "Proporciona ao jogador resistência extra a ataques",
 	"item.powder_power.token_resistance.line2": "Ativação da habilidade de Resistência ao Ataque: %s",
+	
+	"item.powder_power.token_greater_resistance": "Greater Attack Resistance Token",
 	
 	"item.powder_power.token_speed": "Insígnia da Velocidade",
 	"item.powder_power.token_speed.line1": "Fornece velocidade extra ao jogador",
@@ -187,12 +203,16 @@
 	"item.powder_power.token_strength.line1": "Fornece força extra ao jogador",
 	"item.powder_power.token_strength.line2": "Ativação da habilidade de Força: %s",
 	
+	"item.powder_power.token_greater_strength": "Greater Strength Token",
+	
 	"item.powder_power.token_absorption": "Insígnia da Absorção",
 	"item.powder_power.token_absorption.line1": "Fornece ao jogador corações extras de absorção",
 	
+	"item.powder_power.token_greater_absorption": "Absorption Token",
+	
 	"item.powder_power.token_haste": "Insígnia da Pressa",
-	"item.powder_power.token_haste.line1": "Fornece ao jogador Pressa",
-	"item.powder_power.token_haste.line2": "Ativação da habilidade de pressa: %s",
+	"item.powder_power.token_haste.line1": "Provides player with faster breaking speed",
+	"item.powder_power.token_haste.line2": "Works while in player inventory",
 	
 	"item.powder_power.token_jump_boost": "Insígnia do Supersalto",
 	"item.powder_power.token_jump_boost.line1": "Fornece ao jogador Supersalto",

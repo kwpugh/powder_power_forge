@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"BAB",
+		"ABA",
+		"BBB"
+	],
+	
+	"key":
+	{
+		"A": { "item": "powder_power:token_resistance" },
+		"B": { "item": "powder_power:blend_trilium" }
+	},
+	
+	"result": { "item": "powder_power:token_greater_resistance",
+	"count": 1
+	 }
+}

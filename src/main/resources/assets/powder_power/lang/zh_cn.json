@@ -171,6 +171,8 @@
 	"item.powder_power.token_healing.line1": "一次性使用的续命印记..",
 	"item.powder_power.token_healing.line2": "你已经获得新生",
 	
+	"item.powder_power.token_greater_healing": "Greater Healing Token",
+		
 	"item.powder_power.token_trash": "垃圾桶印记",
 	"item.powder_power.token_trash.line1": "提供一个方便的垃圾桶",
 	"item.powder_power.token_trash.line2": "注意:你放进垃圾桶任何东西都将永远消失！",
@@ -183,6 +185,8 @@
 	"item.powder_power.token_resistance": "攻击/抗性印记",
 	"item.powder_power.token_resistance.line1": "为玩家提供额外攻击伤害和抗性提升",
 	"item.powder_power.token_resistance.line2": "抗性提升激活: %s",
+	
+	"item.powder_power.token_greater_resistance": "Greater Attack Resistance Token",
 	
 	"item.powder_power.token_speed": "速度印记",
 	"item.powder_power.token_speed.line1": "为玩家提供额外速度",
@@ -201,12 +205,16 @@
 	"item.powder_power.token_strength.line1": "为玩家提供额外的力量",
 	"item.powder_power.token_strength.line2": "力量提升激活: %s",
 	
+	"item.powder_power.token_greater_strength": "Greater Strength Token",
+	
 	"item.powder_power.token_absorption": "伤害吸收印记",
 	"item.powder_power.token_absorption.line1": "为玩家提供额外的伤害吸收心",
 	
+	"item.powder_power.token_greater_absorption": "Absorption Token",
+	
 	"item.powder_power.token_haste": "急迫印记",
-	"item.powder_power.token_haste.line1": "为玩家提供急迫",
-	"item.powder_power.token_haste.line2": "急迫提升激活: %s",
+	"item.powder_power.token_haste.line1": "Provides player with faster breaking speed",
+	"item.powder_power.token_haste.line2": "Works while in player inventory",
 	
 	"item.powder_power.token_jump_boost": "跳跃提升印记",
 	"item.powder_power.token_jump_boost.line1": "为玩家提供跳跃提升",

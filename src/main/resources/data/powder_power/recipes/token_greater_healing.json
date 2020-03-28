@@ -10,11 +10,11 @@
 	
 	"key":
 	{
-		"A": { "item": "minecraft:totem_of_undying" },
+		"A": { "item": "powder_power:token_healing" },
 		"B": { "item": "powder_power:blend_gemium" }
 	},
 	
-	"result": { "item": "powder_power:token_absorption",
+	"result": { "item": "powder_power:token_greater_healing",
 	"count": 1
 	 }
 }

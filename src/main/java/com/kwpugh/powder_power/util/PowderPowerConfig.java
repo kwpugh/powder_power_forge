@@ -17,6 +17,8 @@ public class PowderPowerConfig
 	public static ForgeConfigSpec.IntValue trilium_leggings_armor;
 	public static ForgeConfigSpec.IntValue trilium_boots_armor;
 	
+	public static ForgeConfigSpec.IntValue haste_token_break_speed;
+	
 	public static ForgeConfigSpec.Builder server_output;
 	
 	
@@ -68,5 +70,13 @@ public class PowderPowerConfig
 		trilium_boots_armor = server
 				.comment("Trilium Boots Armor Value")
 				.defineInRange("armor_values.trilium_boots_armor_protection", 5, 0, 8);	
+		
+		
+		
+		server_output = server.comment("Token Settings");
+		
+		haste_token_break_speed = server
+				.comment("Haste Token block break speed")
+				.defineInRange("token_settings.haste_token_break_speed", 30, 10, 100);	
 	}
 }
