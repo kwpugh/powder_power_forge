@@ -21,7 +21,7 @@ public class TokenNoFall extends Item
 	{
 		super(properties);
 	}	  	
-	
+	  
 	@OnlyIn(Dist.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{

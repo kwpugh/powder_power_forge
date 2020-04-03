@@ -21,7 +21,7 @@ public class HammerAlchemist extends Item
 	{
 		super(properties);
 	}
-
+	
 	@Override
     public boolean hasContainerItem(ItemStack stack)
     {

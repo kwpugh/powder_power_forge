@@ -50,19 +50,16 @@ public class PowderPower
 
     private void setup(final FMLCommonSetupEvent event)
     {
-
         logger.info("PowderPower common setup");
     }
 
     private void clientSetup(final FMLClientSetupEvent event)
     {
-
     	logger.info("PowderPower client setup", event.getMinecraftSupplier().get().gameSettings);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
     {
-
         InterModComms.sendTo("powder_power", "helloworld", () -> { logger.info("Hello world from PowderPower"); return "Hello world";});
         
         if (CuriosModCheck.CURIOS.isLoaded())
@@ -73,7 +70,6 @@ public class PowderPower
 
     private void processIMC(final InterModProcessEvent event)
     {
-
     	logger.info("PowderPower IMC {}", event.getIMCStream().
                 map(m->m.getMessageSupplier().get()).
                 collect(Collectors.toList()));
@@ -82,7 +78,6 @@ public class PowderPower
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event)
     {
-
-    	logger.info("PowderPower server starting");
+    	logger.info("PowderPower server setup");
     }
 }
