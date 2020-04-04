@@ -4,14 +4,20 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import com.kwpugh.powder_power.init.ItemInit;
+
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
@@ -36,6 +42,23 @@ public class TokenHealing extends Item
 	        player.getFoodStats().setFoodLevel(20);
 
 	        player.sendMessage((new TranslationTextComponent("item.powder_power.token_healing.line2").applyTextStyle(TextFormatting.BOLD)));
+	        
+	        double chance = random.nextDouble();
+	    	
+	        if(chance <= .10)
+	        {
+		        ItemStack gift = null;
+		        gift = new ItemStack(ItemInit.SWORD_REDIUM.get());
+		        gift.setCount(1);
+		        gift.addEnchantment(Enchantments.SHARPNESS, 5);
+		        gift.addEnchantment(Enchantments.SWEEPING, 5);
+		        gift.addEnchantment(Enchantments.LOOTING, 5);
+		        gift.setDisplayName(new StringTextComponent("Redium Vengeance"));
+		        gift.getOrCreateTag().putBoolean("Unbreakable", true);
+		        
+		        BlockPos playerPos = player.getPosition();
+				player.world.addEntity(new ItemEntity(player.world, playerPos.getX(), playerPos.getY(), playerPos.getZ(), gift));	        	
+	        }
 	        
 	        if (!player.abilities.isCreativeMode) {
 	           stack.shrink(1);
