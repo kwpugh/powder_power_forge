@@ -46,7 +46,7 @@ public class TokenGreaterHealing extends Item
 	        
 	        double chance = random.nextDouble();
 	
-	        if(chance <= .10)
+	        if(chance <= .05)
 	        {
 		        ItemStack gift = null;
 		        gift = new ItemStack(ItemInit.SWORD_GEMIUM.get());
@@ -55,7 +55,7 @@ public class TokenGreaterHealing extends Item
 		        gift.addEnchantment(Enchantments.SWEEPING, 10);
 		        gift.addEnchantment(Enchantments.LOOTING, 10);
 		        gift.setDisplayName(new StringTextComponent("Gemium Vengeance"));
-		        gift.getOrCreateTag().putBoolean("Unbreakable", true);
+		        //gift.getOrCreateTag().putBoolean("Unbreakable", true);
 		        
 		        BlockPos playerPos = player.getPosition();
 				player.world.addEntity(new ItemEntity(player.world, playerPos.getX(), playerPos.getY(), playerPos.getZ(), gift));	        	

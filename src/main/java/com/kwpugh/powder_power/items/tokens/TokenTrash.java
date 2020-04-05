@@ -26,7 +26,7 @@ public class TokenTrash extends Item
 	{
 		super(properties);
 	}
-
+	
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand)
 	{

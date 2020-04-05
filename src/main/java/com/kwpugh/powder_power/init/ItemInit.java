@@ -44,6 +44,7 @@ import com.kwpugh.powder_power.items.tokens.TokenSpeed;
 import com.kwpugh.powder_power.items.tokens.TokenStrength;
 import com.kwpugh.powder_power.items.tokens.TokenSunshine;
 import com.kwpugh.powder_power.items.tokens.TokenTrash;
+import com.kwpugh.powder_power.items.tokens.TokenUnseen;
 import com.kwpugh.powder_power.items.toolsclasses.BowBase;
 import com.kwpugh.powder_power.items.toolsclasses.SwordRedium;
 import com.kwpugh.powder_power.items.toolsclasses.TreeAxeCustom;
@@ -180,6 +181,7 @@ public class ItemInit
 	public static final RegistryObject<Item> TOKEN_HASTE = ITEMS.register("token_haste", () -> new TokenHaste(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_BREATHING = ITEMS.register("token_breathing", () -> new TokenBreathing(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_GOOD_OMEN = ITEMS.register("token_good_omen", () -> new TokenGoodOmen(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> TOKEN_UNSEEN = ITEMS.register("token_unseen", () -> new TokenUnseen(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_GREATER_HEALING = ITEMS.register("token_greater_healing", () -> new TokenGreaterHealing(new Item.Properties().maxDamage(1).group(PowderPower.powder_power)));
 	
 	public static final RegistryObject<Item> TOKEN_SUNSHINE = ITEMS.register("token_sunshine", () -> new TokenSunshine(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));

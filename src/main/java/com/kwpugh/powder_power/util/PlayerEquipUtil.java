@@ -6,19 +6,13 @@ import com.kwpugh.powder_power.init.ItemInit;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.EnderChestInventory;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
-
-/*
- * Inspired and adapted from Sinhika's code in NetherRocks
- * 
- */
 
 public final class PlayerEquipUtil
 {
     @Nonnull
-    @SuppressWarnings("ConstantConditions")
+    //@SuppressWarnings("ConstantConditions")
     public static <T> T _null() {
         return null;
     }
@@ -49,17 +43,6 @@ public final class PlayerEquipUtil
       	}
     	
     	PlayerInventory inv2 = player.inventory;
-		EnderChestInventory end_inv2 = player.getInventoryEnderChest();
-		
-		//Checks player enderchest
-		for (int slot = 0; slot < end_inv2.getSizeInventory(); slot++)
-		{
-			ItemStack stack = end_inv2.getStackInSlot(slot);
-			if (stack.getItem() == ItemInit.TOKEN_BREATHING.get())
-			{	
-				return true;
-			}
-		}
 		
 		//Checks player main inventory
 		for (int slot = 0; slot < inv2.getSizeInventory(); slot++)
@@ -93,7 +76,6 @@ public final class PlayerEquipUtil
 	    ItemStack offHand = player.getItemStackFromSlot(EquipmentSlotType.OFFHAND);
 	    
 		PlayerInventory inv2 = player.inventory;
-		EnderChestInventory end_inv2 = player.getInventoryEnderChest();
 			
 	    //Full Set or token
     	if(		(head.getItem() == ItemInit.ARMOR_GEMIUM_HEAD.get() && 
@@ -110,16 +92,6 @@ public final class PlayerEquipUtil
 	      	{
 	      		return true;  		
 	      	}
-	      	
-    		//Checks player enderchest
-			for (int slot = 0; slot < end_inv2.getSizeInventory(); slot++)
-			{
-				ItemStack stack = end_inv2.getStackInSlot(slot);
-				if (stack.getItem() == ItemInit.TOKEN_NO_FALL.get())
-				{	
-					return true;
-				}
-			}
 			
 			//Checks player main inventory
 			for (int slot = 0; slot < inv2.getSizeInventory(); slot++)
@@ -153,7 +125,6 @@ public final class PlayerEquipUtil
 	    ItemStack offHand = player.getItemStackFromSlot(EquipmentSlotType.OFFHAND);
 
 	    PlayerInventory inv3 = player.inventory;
-	    EnderChestInventory end_inv3 = player.getInventoryEnderChest();
 	    
 	    //Full armor or Token
     	if(		((head.getItem() == ItemInit.ARMOR_REDIUM_HEAD.get() && 
@@ -175,15 +146,6 @@ public final class PlayerEquipUtil
 	      	{
 	      		return true;  		
 	      	}
-	    	
-			for (int slot = 0; slot < end_inv3.getSizeInventory(); slot++)
-			{
-				ItemStack stack = end_inv3.getStackInSlot(slot);
-				if (stack.getItem() == ItemInit.TOKEN_FIRE_RESISTANCE.get())
-				{	
-					return true;
-				}
-			}
 		
 			for (int slot = 0; slot < inv3.getSizeInventory(); slot++)
 			{
@@ -208,17 +170,6 @@ public final class PlayerEquipUtil
     public static boolean isPlayerGotHasteToken(PlayerEntity player)
     { 	    
 		PlayerInventory inv2 = player.inventory;
-		EnderChestInventory end_inv2 = player.getInventoryEnderChest();
-	
-		//Checks player enderchest
-		for (int slot = 0; slot < end_inv2.getSizeInventory(); slot++)
-		{
-			ItemStack stack = end_inv2.getStackInSlot(slot);
-			if (stack.getItem() == ItemInit.TOKEN_HASTE.get())
-			{	
-				return true;
-			}
-		}
 		
 		//Checks player main inventory
 		for (int slot = 0; slot < inv2.getSizeInventory(); slot++)
@@ -241,4 +192,43 @@ public final class PlayerEquipUtil
 		
         return false;
     } 
+    
+    public static boolean isPlayerGotUnseenToken(PlayerEntity player)
+    { 	    
+		PlayerInventory inv2 = player.inventory;
+		
+		//Checks player main inventory
+		for (int slot = 0; slot < inv2.getSizeInventory(); slot++)
+		{
+			ItemStack stack = inv2.getStackInSlot(slot);
+			if (stack.getItem() == ItemInit.TOKEN_UNSEEN.get())
+			{	
+				return true;
+			}
+		}
+		
+		//Checks Curios slots
+		if (CuriosModCheck.CURIOS.isLoaded())
+	    {
+			if (CuriosUtil.findItem(ItemInit.TOKEN_UNSEEN.get(), player) != ItemStack.EMPTY)
+			{
+				return true;
+		    }
+	    } 
+		
+        return false;
+    } 
+    
+    public static boolean isPlayerGotUnseenTokenInHand(PlayerEntity player)
+    { 	    
+    	ItemStack mainHand = player.getHeldItemMainhand();
+    	ItemStack offHand = player.getHeldItemOffhand();
+    	
+    	if(mainHand.getItem() == ItemInit.TOKEN_UNSEEN.get() && offHand.isEmpty())
+      	{
+      		return true;  		
+      	} 
+		
+        return false;
+    }
 } 

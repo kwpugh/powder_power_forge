@@ -45,7 +45,7 @@ public class TokenHealing extends Item
 	        
 	        double chance = random.nextDouble();
 	    	
-	        if(chance <= .10)
+	        if(chance <= .05)
 	        {
 		        ItemStack gift = null;
 		        gift = new ItemStack(ItemInit.SWORD_REDIUM.get());
@@ -54,7 +54,7 @@ public class TokenHealing extends Item
 		        gift.addEnchantment(Enchantments.SWEEPING, 5);
 		        gift.addEnchantment(Enchantments.LOOTING, 5);
 		        gift.setDisplayName(new StringTextComponent("Redium Vengeance"));
-		        gift.getOrCreateTag().putBoolean("Unbreakable", true);
+		        //gift.getOrCreateTag().putBoolean("Unbreakable", true);
 		        
 		        BlockPos playerPos = player.getPosition();
 				player.world.addEntity(new ItemEntity(player.world, playerPos.getX(), playerPos.getY(), playerPos.getZ(), gift));	        	

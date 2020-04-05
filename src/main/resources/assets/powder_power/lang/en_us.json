@@ -173,6 +173,9 @@
 	
 	"item.powder_power.token_greater_healing": "Greater Healing Token",
 	
+	"item.powder_power.token_unseen": "Unseen Token",
+	"item.powder_power.token_unseen.line1": "Makes the holder unseen to Phantoms",
+	
 	"item.powder_power.token_trash": "Trash Token",
 	"item.powder_power.token_trash.line1": "A handy token that provides a trash chest",
 	"item.powder_power.token_trash.line2": "NOTE: Anything you put in the trash is gone forever!",

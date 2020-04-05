@@ -2,6 +2,7 @@
   "replace": "false",
   "values": ["powder_power:token_night_vision", 
   "powder_power:token_absorption", 
+  "powder_power:token_unseen", 
   "powder_power:token_strength", 
   "powder_power:token_health", 
   "powder_power:token_absorption",
