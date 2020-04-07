@@ -16,7 +16,7 @@ public class PaxelLapium extends PaxelBase
 	{
 		super(attackDamageIn, attackSpeedIn, tier, EFFECTIVE_ON, builder);	
 	}
-
+	 
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
