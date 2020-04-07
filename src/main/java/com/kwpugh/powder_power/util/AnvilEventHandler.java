@@ -5,6 +5,7 @@ import com.kwpugh.powder_power.init.ItemInit;
 
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraftforge.event.AnvilUpdateEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -49,7 +50,18 @@ public class AnvilEventHandler
 			ItemStack output = new ItemStack(ItemInit.DAGGER_PRISMARINE.get());
 			output.addEnchantment(Enchantments.SHARPNESS, 3);
 			output.addEnchantment(Enchantments.LOOTING, 3);
-			output.setDisplayName(new StringTextComponent("Improved Prismarine Dagger"));
+			output.setDisplayName(new StringTextComponent("Deadly Prismarine Dagger"));
+			event.setCost(10);
+			event.setOutput(output);
+		}
+		
+		if(left.getItem().equals(Items.DIAMOND_SWORD) && right.getItem().equals(ItemInit.BLEND_REDIUM.get()))
+		{			
+			ItemStack output = new ItemStack(Items.DIAMOND_SWORD);
+			output.addEnchantment(Enchantments.FIRE_ASPECT, 1);
+			output.addEnchantment(Enchantments.SHARPNESS, 4);
+			output.addEnchantment(Enchantments.LOOTING, 4);
+			output.setDisplayName(new StringTextComponent("Deadly Diamond Sword"));
 			event.setCost(10);
 			event.setOutput(output);
 		}

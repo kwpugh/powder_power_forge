@@ -161,7 +161,7 @@
 	
 	
 	"item.powder_power.token.general1": "Works while in player inventory",
-	"item.powder_power.token.general2": "Sneak right-click to toggle on/off",
+	"item.powder_power.token.general2": "Shift + right-click to toggle on/off",
 	"item.powder_power.token.general3": "Right-click to use",
 	
 	"item.powder_power.token_dragon": "Dragon Token",
@@ -213,7 +213,7 @@
 	"item.powder_power.token_absorption": "Absorption Token",
 	"item.powder_power.token_absorption.line1": "Provides player with extra absorption hearts",
 	
-	"item.powder_power.token_greater_absorption": "Absorption Token",
+	"item.powder_power.token_greater_absorption": "Greater Absorption Token",
 	
 	"item.powder_power.token_haste": "Haste Token",
 	"item.powder_power.token_haste.line1": "Provides player with faster breaking speed",

@@ -45,7 +45,7 @@ public class TokenDolphin extends Item
 	{
 		ItemStack stack = player.getHeldItem(hand);
 		
-		if(!world.isRemote && player.isCrouching())
+		if(!world.isRemote && player.isShiftKeyDown())
 		{
 			EnableUtil.changeEnabled(player, hand);
 			player.sendMessage(new TranslationTextComponent("item.powder_power.token_dolphin.line2", EnableUtil.isEnabled(stack)).applyTextStyle(TextFormatting.BOLD));

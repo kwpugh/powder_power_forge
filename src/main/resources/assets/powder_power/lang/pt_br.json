@@ -159,7 +159,7 @@
 	
 	
 	"item.powder_power.token.general1": "Funciona enquanto estiver no inventário do jogador",
-	"item.powder_power.token.general2": "Esgueirar-se + Botão-Direito para ativar/desativar",
+	"item.powder_power.token.general2": "Shift + right-click to toggle on/off",
 	"item.powder_power.token.general3": "Botão-Direito para usar",
 	
 	"item.powder_power.token_dragon": "Dragon Token",
@@ -211,7 +211,7 @@
 	"item.powder_power.token_absorption": "Insígnia da Absorção",
 	"item.powder_power.token_absorption.line1": "Fornece ao jogador corações extras de absorção",
 	
-	"item.powder_power.token_greater_absorption": "Absorption Token",
+	"item.powder_power.token_greater_absorption": "Greater Absorption Token",
 	
 	"item.powder_power.token_haste": "Insígnia da Pressa",
 	"item.powder_power.token_haste.line1": "Provides player with faster breaking speed",
