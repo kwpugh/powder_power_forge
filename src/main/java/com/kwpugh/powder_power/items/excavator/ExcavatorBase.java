@@ -1,4 +1,4 @@
-package com.kwpugh.powder_power.items.toolsclasses;
+package com.kwpugh.powder_power.items.excavator;
 
 
 import java.util.List;
@@ -8,7 +8,6 @@ import javax.annotation.Nullable;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
-import com.kwpugh.powder_power.util.ExcavatorUtil;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

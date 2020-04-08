@@ -1,4 +1,4 @@
-package com.kwpugh.powder_power.items.toolsclasses;
+package com.kwpugh.powder_power.items.toolbaseclasses;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.PickaxeItem;

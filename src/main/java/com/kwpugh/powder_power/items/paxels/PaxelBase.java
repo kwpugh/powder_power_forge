@@ -1,4 +1,4 @@
-package com.kwpugh.powder_power.items.toolsclasses;
+package com.kwpugh.powder_power.items.paxels;
 
 
 import java.util.List;

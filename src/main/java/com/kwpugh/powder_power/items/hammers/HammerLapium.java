@@ -1,7 +1,6 @@
 package com.kwpugh.powder_power.items.hammers;
 
 import com.kwpugh.powder_power.init.ItemInit;
-import com.kwpugh.powder_power.items.toolsclasses.HammerBase;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;

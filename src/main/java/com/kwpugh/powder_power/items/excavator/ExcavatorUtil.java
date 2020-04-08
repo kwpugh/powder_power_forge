@@ -1,4 +1,4 @@
-package com.kwpugh.powder_power.util;
+package com.kwpugh.powder_power.items.excavator;
 
 import java.util.Random;
 import java.util.Set;
@@ -17,7 +17,7 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-public class HammerUtil
+public class ExcavatorUtil
 {
     public static final Random random = new Random();
 
@@ -47,19 +47,17 @@ public class HammerUtil
             }
         }
     }
-
+    
     public static void attemptBreak(World world, BlockPos pos, PlayerEntity player, Set<Block> effectiveOn, Set<Material> effectiveMaterials)
     {
 
         BlockState state = world.getBlockState(pos);
-        
         boolean isEffective = (effectiveOn.contains(state.getBlock()) || effectiveMaterials.contains(state.getMaterial()));
-        boolean isWithinHarvestLevel = player.getHeldItemMainhand().canHarvestBlock(state);  //added to ensure each block in the breaking is harvestable with this tool material
         boolean witherImmune = BlockTags.WITHER_IMMUNE.contains(state.getBlock());
         
-        if(isEffective && !witherImmune && isWithinHarvestLevel)	
+        if(isEffective && !witherImmune)	
         {
-        	world.destroyBlock(pos, false);  //true or false?
+        	world.destroyBlock(pos, false);  
 	    	Block.spawnDrops(state, world, pos, null, player, player.getHeldItemMainhand());
         }
     }

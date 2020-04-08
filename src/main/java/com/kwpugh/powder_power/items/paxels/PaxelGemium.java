@@ -3,7 +3,6 @@ package com.kwpugh.powder_power.items.paxels;
 import java.util.Set;
 
 import com.kwpugh.powder_power.init.ItemInit;
-import com.kwpugh.powder_power.items.toolsclasses.PaxelBase;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.IItemTier;
