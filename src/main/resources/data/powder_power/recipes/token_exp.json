@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"ABA",
+		"BAB",
+		"ABA"
+	],
+	
+	"key":
+	{
+		"A": { "item": "minecraft:experience_bottle" },
+		"B": { "item": "powder_power:blend_redium" }
+	},
+	
+	"result": { "item": "powder_power:token_exp",
+	"count": 1
+	 }
+}
