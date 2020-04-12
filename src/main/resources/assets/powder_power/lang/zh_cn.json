@@ -161,8 +161,11 @@
 	
 	
 	"item.powder_power.token.general1": "在玩家背包内生效",
-	"item.powder_power.token.general2": "Shift + right-click to toggle on/off",
+	"item.powder_power.token.general2": "Shift+右击切换开/关",
 	"item.powder_power.token.general3": "右键点击使用",
+	
+	"item.powder_power.token_exp": "Experience Token",
+	"item.powder_power.token_exp.line1": "Provides extra XP drops when killing mobs and mining ores",
 	
 	"item.powder_power.token_dragon": "龙之印记",
 	"item.powder_power.token_dragon.line1": "给予无限的飞行",
@@ -213,7 +216,7 @@
 	"item.powder_power.token_absorption": "伤害吸收印记",
 	"item.powder_power.token_absorption.line1": "为玩家提供额外的伤害吸收心",
 	
-	"item.powder_power.token_greater_absorption": "Greater Absorption Token",
+	"item.powder_power.token_greater_absorption": "高级伤害吸收印记",
 	
 	"item.powder_power.token_haste": "急迫印记",
 	"item.powder_power.token_haste.line1": "为玩家提供突破性的速度",

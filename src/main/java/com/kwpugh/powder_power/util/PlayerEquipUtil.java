@@ -192,6 +192,32 @@ public final class PlayerEquipUtil
 		
         return false;
     } 
+
+    public static boolean isPlayerGotExpToken(PlayerEntity player)
+    { 	    
+		PlayerInventory inv2 = player.inventory;
+		
+		//Checks player main inventory
+		for (int slot = 0; slot < inv2.getSizeInventory(); slot++)
+		{
+			ItemStack stack = inv2.getStackInSlot(slot);
+			if (stack.getItem() == ItemInit.TOKEN_EXP.get())
+			{	
+				return true;
+			}
+		}
+		
+		//Checks Curios slots
+		if (CuriosModCheck.CURIOS.isLoaded())
+	    {
+			if (CuriosUtil.findItem(ItemInit.TOKEN_EXP.get(), player) != ItemStack.EMPTY)
+			{
+				return true;
+		    }
+	    } 
+		
+        return false;
+    } 
     
     public static boolean isPlayerGotUnseenToken(PlayerEntity player)
     { 	    
@@ -218,7 +244,7 @@ public final class PlayerEquipUtil
 		
         return false;
     } 
-    
+ 
     public static boolean isPlayerGotUnseenTokenInHand(PlayerEntity player)
     { 	    
     	ItemStack mainHand = player.getHeldItemMainhand();

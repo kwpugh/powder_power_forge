@@ -19,6 +19,9 @@ public class PowderPowerConfig
 	
 	public static ForgeConfigSpec.IntValue haste_token_break_speed;
 	
+	public static ForgeConfigSpec.IntValue exp_token_mining_value;
+	public static ForgeConfigSpec.IntValue exp_token_killing_value;
+	
 	public static ForgeConfigSpec.Builder server_output;
 	
 	
@@ -78,5 +81,13 @@ public class PowderPowerConfig
 		haste_token_break_speed = server
 				.comment("Haste Token block break speed")
 				.defineInRange("token_settings.haste_token_break_speed", 30, 10, 100);	
+		
+		exp_token_mining_value = server
+				.comment("Experience Token value for mining ores")
+				.defineInRange("token_settings.exp_token_mining_value", 7, 0, 100);	
+		
+		exp_token_killing_value = server
+				.comment("Experience Token value for killing mobs")
+				.defineInRange("token_settings.exp_token_killing_value", 4, 0, 100);	
 	}
 }
