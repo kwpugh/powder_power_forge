@@ -34,18 +34,18 @@ public class TokenGreaterHealing extends Item
 	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand)
 	{	
 		ItemStack stack = player.getHeldItem(hand);
-		
+
 		if (!world.isRemote)
 		{
-			player.setHealth(player.getMaxHealth());
-	        player.getFoodStats().setFoodLevel(20);
-	        player.getFoodStats().setFoodSaturationLevel(20.0F);
+	        player.setHealth(player.getMaxHealth());
+	        player.getFoodStats().addStats(20, 20);
 	        player.extinguish();
 	        player.clearActivePotions();
+
 	        player.sendMessage((new TranslationTextComponent("item.powder_power.token_healing.line2").applyTextStyle(TextFormatting.BOLD)));
 	        
 	        double chance = random.nextDouble();
-	
+	    	
 	        if(chance <= .05)
 	        {
 		        ItemStack gift = null;
@@ -55,7 +55,6 @@ public class TokenGreaterHealing extends Item
 		        gift.addEnchantment(Enchantments.SWEEPING, 10);
 		        gift.addEnchantment(Enchantments.LOOTING, 10);
 		        gift.setDisplayName(new StringTextComponent("Gemium Vengeance"));
-		        //gift.getOrCreateTag().putBoolean("Unbreakable", true);
 		        
 		        BlockPos playerPos = player.getPosition();
 				player.world.addEntity(new ItemEntity(player.world, playerPos.getX(), playerPos.getY(), playerPos.getZ(), gift));	        	
@@ -65,7 +64,7 @@ public class TokenGreaterHealing extends Item
 	           stack.shrink(1);
 	        }
 		}
-        
+
         return new ActionResult<ItemStack>(ActionResultType.SUCCESS, stack);
 	}
 	

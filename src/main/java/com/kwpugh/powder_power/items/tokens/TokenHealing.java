@@ -54,7 +54,6 @@ public class TokenHealing extends Item
 		        gift.addEnchantment(Enchantments.SWEEPING, 5);
 		        gift.addEnchantment(Enchantments.LOOTING, 5);
 		        gift.setDisplayName(new StringTextComponent("Redium Vengeance"));
-		        //gift.getOrCreateTag().putBoolean("Unbreakable", true);
 		        
 		        BlockPos playerPos = player.getPosition();
 				player.world.addEntity(new ItemEntity(player.world, playerPos.getX(), playerPos.getY(), playerPos.getZ(), gift));	        	
