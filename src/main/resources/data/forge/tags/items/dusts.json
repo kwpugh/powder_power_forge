@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+    "#forge:dusts/redium",
+    "#forge:dusts/lapium",
+    "#forge:dusts/gemium",
+    "#forge:dusts/trilium",
     "#forge:dusts/wood",
     "#forge:dusts/redstone",
     "#forge:dusts/obsidian",
