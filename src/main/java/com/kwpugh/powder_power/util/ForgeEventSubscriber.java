@@ -21,7 +21,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
 @EventBusSubscriber(modid = PowderPower.modid, bus = EventBusSubscriber.Bus.FORGE )
-public final class ModEventSubscriber
+public final class ForgeEventSubscriber
 {
 	static int miningExp = PowderPowerConfig.exp_token_mining_value.get();
 	static int killingExp = PowderPowerConfig.exp_token_killing_value.get();
