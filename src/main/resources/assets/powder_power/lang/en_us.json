@@ -161,7 +161,7 @@
 	
 	
 	"item.powder_power.token.general1": "Works while in player inventory",
-	"item.powder_power.token.general2": "Shift + right-click to toggle on/off",
+	"item.powder_power.token.general2": "Sneak + right-click to toggle on/off",
 	"item.powder_power.token.general3": "Right-click to use",
 	
 	"item.powder_power.token_exp": "Experience Token",

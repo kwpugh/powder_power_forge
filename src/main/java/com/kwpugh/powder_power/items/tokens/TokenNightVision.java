@@ -49,7 +49,7 @@ public class TokenNightVision extends Item
 	{
 		ItemStack stack = player.getHeldItem(hand);
 		
-		if(!world.isRemote && player.isShiftKeyDown())
+		if(!world.isRemote && player.isSneaking())
 		{
 			EnableUtil.changeEnabled(player, hand);
 			player.sendMessage((new TranslationTextComponent("item.powder_power.token_night_vision.line2", EnableUtil.isEnabled(stack)).applyTextStyle(TextFormatting.BOLD)));
