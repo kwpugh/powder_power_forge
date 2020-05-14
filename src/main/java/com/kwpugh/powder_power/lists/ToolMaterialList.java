@@ -11,10 +11,10 @@ import net.minecraft.util.LazyValue;
 
 public enum ToolMaterialList implements IItemTier
 {
-	PRISMARINE(1.0f, 4.0f, 725, 3, 8, () -> {
+	PRISMARINE(1.0f, 3.0f, 725, 3, 8, () -> {
 		return Ingredient.fromItems(ItemInit.INGOT_PRISMARINE.get());
 	}),
-	OBSIDIAN(1.0f, 4.0f, 825, 3, 8, () -> {
+	OBSIDIAN(1.0f, 3.0f, 825, 3, 8, () -> {
 		return Ingredient.fromItems(ItemInit.INGOT_OBSIDIAN.get());
 	}),
 	REDIUM(1.0f, 8.0f, 1800, 3, 15, () -> {

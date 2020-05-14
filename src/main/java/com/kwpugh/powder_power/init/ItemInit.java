@@ -75,8 +75,10 @@ public class ItemInit
 	
 	public static final RegistryObject<Item> PICKAXE_OBSIDIAN = ITEMS.register("pickaxe_obsidian", () -> new PickaxeItem(ToolMaterialList.OBSIDIAN, 3, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> PICKAXE_PRISMARINE = ITEMS.register("pickaxe_prismarine", () -> new PickaxeItem(ToolMaterialList.PRISMARINE, 3, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> DAGGER_PRISMARINE = ITEMS.register("dagger_prismarine", () -> new SwordItem(ToolMaterialList.PRISMARINE, 4, -2.5f, new Item.Properties().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HATCHET_OBSIDIAN = ITEMS.register("hatchet_obsidian", () -> new AxeItem(ToolMaterialList.OBSIDIAN, 6, -2.1f, new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> DAGGER_PRISMARINE = ITEMS.register("dagger_prismarine", () -> new SwordItem(ToolMaterialList.PRISMARINE, 4, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HATCHET_OBSIDIAN = ITEMS.register("hatchet_obsidian", () -> new AxeItem(ToolMaterialList.OBSIDIAN, 6, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> SHOVEL_OBSIDIAN = ITEMS.register("shovel_obsidian", () -> new ShovelItem(ToolMaterialList.OBSIDIAN, 2, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> SHOVEL_PRISMARINE = ITEMS.register("shovel_prismarine", () -> new ShovelItem(ToolMaterialList.PRISMARINE, 2, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
 	
 	public static final RegistryObject<Item> INGOT_OBSIDIAN = ITEMS.register("ingot_obsidian", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> INGOT_PRISMARINE = ITEMS.register("ingot_prismarine", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
