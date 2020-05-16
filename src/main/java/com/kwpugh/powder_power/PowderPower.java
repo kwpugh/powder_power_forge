@@ -30,16 +30,16 @@ import top.theillusivec4.curios.api.imc.CurioIMCMessage;
 public class PowderPower
 {
 	public static final String modid = "powder_power";
-	public static final Logger logger = LogManager.getLogger(modid);	
+	public static final Logger logger = LogManager.getLogger(modid);
 	public static final ItemGroup powder_power = new GroupPowderPower();
 
     public PowderPower()
     {
     	Config.loadConfig(Config.config, FMLPaths.CONFIGDIR.get().resolve("powder_power.toml").toString());
-    	
+
     	BlockInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     	ItemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-    	
+
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
@@ -55,17 +55,17 @@ public class PowderPower
 
     private void clientSetup(final FMLClientSetupEvent event)
     {
-    	logger.info("PowderPower client setup", event.getMinecraftSupplier().get().gameSettings);
+    	logger.info("PowderPower client setup");
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
     {
         InterModComms.sendTo("powder_power", "helloworld", () -> { logger.info("Hello world from PowderPower"); return "Hello world";});
-        
+
         if (CuriosModCheck.CURIOS.isLoaded())
         {
         	InterModComms.sendTo("curios", CuriosAPI.IMC.REGISTER_TYPE, () -> new CurioIMCMessage("belt").setSize(2));
-        }  
+        }
     }
 
     private void processIMC(final InterModProcessEvent event)
