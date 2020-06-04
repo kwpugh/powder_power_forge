@@ -26,6 +26,7 @@ import net.minecraftforge.fml.loading.FMLPaths;
 import top.theillusivec4.curios.api.CuriosAPI;
 import top.theillusivec4.curios.api.imc.CurioIMCMessage;
 
+
 @Mod("powder_power")
 public class PowderPower
 {
