@@ -26,7 +26,7 @@ public class TokenNoFall extends Item
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.powder_power.token_no_fall.line1").applyTextStyle(TextFormatting.GREEN)));
-		tooltip.add((new TranslationTextComponent("item.powder_power.token.general1").applyTextStyle(TextFormatting.AQUA)));	
+		tooltip.add((new TranslationTextComponent("item.powder_power.token_no_fall.line1").mergeStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.powder_power.token.general1").mergeStyle(TextFormatting.AQUA)));	
 	}
 }

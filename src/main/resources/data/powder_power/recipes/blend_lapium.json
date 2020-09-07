@@ -12,7 +12,7 @@
 	{
 		"A": { "item": "powder_power:powder_lapis" },
 		"B": { "item": "powder_power:powder_obsidian" },
-		"C": { "item": "powder_power:powder_gold" },
+		"C": { "tag": "forge:dusts/gold" },
 		"D": { "item": "powder_power:powder_nether_quartz" }
 	},
 	

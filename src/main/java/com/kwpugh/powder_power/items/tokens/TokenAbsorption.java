@@ -38,7 +38,7 @@ public class TokenAbsorption extends Item
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.powder_power.token_absorption.line1").applyTextStyle(TextFormatting.GREEN)));
-		tooltip.add((new TranslationTextComponent("item.powder_power.token.general1").applyTextStyle(TextFormatting.AQUA)));	
+		tooltip.add((new TranslationTextComponent("item.powder_power.token_absorption.line1").mergeStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.powder_power.token.general1").mergeStyle(TextFormatting.AQUA)));	
 	}
 }

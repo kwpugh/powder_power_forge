@@ -37,7 +37,7 @@ public class TokenSunshine extends Item
 			{
 				if(world.getWorldInfo().isRaining())
 				{
-					world.getWorldInfo().setRainTime(1);
+					world.getWorldInfo().setRaining(false); //used to be setRainTime(1)
 				}
 			}
         }
@@ -48,8 +48,8 @@ public class TokenSunshine extends Item
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.powder_power.token_sunshine.line1").applyTextStyle(TextFormatting.GREEN)));
-		tooltip.add((new TranslationTextComponent("item.powder_power.token.general3").applyTextStyle(TextFormatting.AQUA)));	
+		tooltip.add((new TranslationTextComponent("item.powder_power.token_sunshine.line1").mergeStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.powder_power.token.general3").mergeStyle(TextFormatting.AQUA)));	
 	}
 
 }

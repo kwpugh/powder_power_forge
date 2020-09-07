@@ -41,7 +41,7 @@ public class TokenHealing extends Item
 	        player.setHealth(player.getMaxHealth());
 	        player.getFoodStats().setFoodLevel(20);
 
-	        player.sendMessage((new TranslationTextComponent("item.powder_power.token_healing.line2").applyTextStyle(TextFormatting.BOLD)));
+	        player.sendStatusMessage((new TranslationTextComponent("item.powder_power.token_healing.line2").mergeStyle(TextFormatting.BOLD)), true);
 	        
 	        double chance = random.nextDouble();
 	    	
@@ -71,6 +71,6 @@ public class TokenHealing extends Item
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.powder_power.token_healing.line1").applyTextStyle(TextFormatting.GREEN)));	
+		tooltip.add((new TranslationTextComponent("item.powder_power.token_healing.line1").mergeStyle(TextFormatting.GREEN)));	
 	}
 }

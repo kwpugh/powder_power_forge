@@ -52,7 +52,7 @@ public class TokenNightVision extends Item
 		if(!world.isRemote && player.isSneaking())
 		{
 			EnableUtil.changeEnabled(player, hand);
-			player.sendMessage((new TranslationTextComponent("item.powder_power.token_night_vision.line2", EnableUtil.isEnabled(stack)).applyTextStyle(TextFormatting.BOLD)));
+			player.sendStatusMessage((new TranslationTextComponent("item.powder_power.token_night_vision.line2", EnableUtil.isEnabled(stack)).mergeStyle(TextFormatting.BOLD)), true);
 			return new ActionResult<ItemStack>(ActionResultType.SUCCESS, player.getHeldItem(hand));
 		}
 		return super.onItemRightClick(world, player, hand);
@@ -62,8 +62,8 @@ public class TokenNightVision extends Item
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.powder_power.token_night_vision.line1").applyTextStyle(TextFormatting.GREEN)));
-		tooltip.add((new TranslationTextComponent("item.powder_power.token_night_vision.line2", EnableUtil.isEnabled(stack)).applyTextStyle(TextFormatting.RED)));
-		tooltip.add((new TranslationTextComponent("item.powder_power.token.general2").applyTextStyle(TextFormatting.AQUA)));
+		tooltip.add((new TranslationTextComponent("item.powder_power.token_night_vision.line1").mergeStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.powder_power.token_night_vision.line2", EnableUtil.isEnabled(stack)).mergeStyle(TextFormatting.RED)));
+		tooltip.add((new TranslationTextComponent("item.powder_power.token.general2").mergeStyle(TextFormatting.AQUA)));
 	}
 }

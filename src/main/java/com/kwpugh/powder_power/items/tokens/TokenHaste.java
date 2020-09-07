@@ -25,7 +25,7 @@ public class TokenHaste extends Item
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.powder_power.token_haste.line1").applyTextStyle(TextFormatting.GREEN)));
-		tooltip.add((new TranslationTextComponent("item.powder_power.token_haste.line2").applyTextStyle(TextFormatting.RED)));
+		tooltip.add((new TranslationTextComponent("item.powder_power.token_haste.line1").mergeStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.powder_power.token_haste.line2").mergeStyle(TextFormatting.RED)));
 	}
 }

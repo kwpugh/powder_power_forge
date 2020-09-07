@@ -11,8 +11,8 @@
 	"key":
 	{
 		"A": { "item": "powder_power:powder_obsidian" },
-		"B": { "item": "powder_power:powder_diamond" },
-		"C": { "item": "powder_power:powder_emerald" },
+		"B": { "tag": "forge:dusts/diamond" },
+		"C": { "tag": "forge:dusts/emerald" },
 		"D": { "item": "powder_power:powder_prismarine" }
 	},
 	

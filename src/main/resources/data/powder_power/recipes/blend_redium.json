@@ -12,7 +12,7 @@
 	{
 		"A": { "item": "powder_power:powder_redstone" },
 		"B": { "item": "powder_power:powder_obsidian" },
-		"C": { "item": "powder_power:powder_iron" },
+		"C": {  "tag": "forge:dusts/iron" },
 		"D": { "item": "minecraft:blaze_powder" }
 	},
 	

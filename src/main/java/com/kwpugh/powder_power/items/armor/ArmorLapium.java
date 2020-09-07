@@ -102,6 +102,6 @@ public class ArmorLapium extends ArmorItem
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.powder_power.armor_lapium_full.line1").applyTextStyle(TextFormatting.GREEN)));	
+		tooltip.add((new TranslationTextComponent("item.powder_power.armor_lapium_full.line1").mergeStyle(TextFormatting.GREEN)));	
 	}
 }

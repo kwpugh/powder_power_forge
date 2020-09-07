@@ -55,13 +55,13 @@ public final class PlayerEquipUtil
 		}
 		
 		//Checks Curios slots
-		if (CuriosModCheck.CURIOS.isLoaded())
-	    {
-			if (CuriosUtil.findItem(ItemInit.TOKEN_BREATHING.get(), player) != ItemStack.EMPTY)
-			{
-				return true;
-		    }
-	    } 
+//		if (CuriosModCheck.CURIOS.isLoaded())
+//	    {
+//			if (CuriosUtil.findItem(ItemInit.TOKEN_BREATHING.get(), player) != ItemStack.EMPTY)
+//			{
+//				return true;
+//		    }
+//	    } 
       		
         return false;
     } 
@@ -104,13 +104,13 @@ public final class PlayerEquipUtil
 			}
 			
 			//Checks Curios slots
-			if (CuriosModCheck.CURIOS.isLoaded())
-		    {
-				if (CuriosUtil.findItem(ItemInit.TOKEN_NO_FALL.get(), player) != ItemStack.EMPTY)
-				{
-					return true;
-			    }
-		    } 
+//			if (CuriosModCheck.CURIOS.isLoaded())
+//		    {
+//				if (CuriosUtil.findItem(ItemInit.TOKEN_NO_FALL.get(), player) != ItemStack.EMPTY)
+//				{
+//					return true;
+//			    }
+//		    } 
 			
 	        return false;
     } 
@@ -156,13 +156,13 @@ public final class PlayerEquipUtil
 				}
 			}
 			
-			if (CuriosModCheck.CURIOS.isLoaded())
-		    {
-				if (CuriosUtil.findItem(ItemInit.TOKEN_FIRE_RESISTANCE.get(), player) != ItemStack.EMPTY)
-				{
-					return true;
-			    }
-		    }
+//			if (CuriosModCheck.CURIOS.isLoaded())
+//		    {
+//				if (CuriosUtil.findItem(ItemInit.TOKEN_FIRE_RESISTANCE.get(), player) != ItemStack.EMPTY)
+//				{
+//					return true;
+//			    }
+//		    }
       		
         return false;
     }
@@ -182,13 +182,13 @@ public final class PlayerEquipUtil
 		}
 		
 		//Checks Curios slots
-		if (CuriosModCheck.CURIOS.isLoaded())
-	    {
-			if (CuriosUtil.findItem(ItemInit.TOKEN_HASTE.get(), player) != ItemStack.EMPTY)
-			{
-				return true;
-		    }
-	    } 
+//		if (CuriosModCheck.CURIOS.isLoaded())
+//	    {
+//			if (CuriosUtil.findItem(ItemInit.TOKEN_HASTE.get(), player) != ItemStack.EMPTY)
+//			{
+//				return true;
+//		    }
+//	    } 
 		
         return false;
     } 
@@ -208,13 +208,13 @@ public final class PlayerEquipUtil
 		}
 		
 		//Checks Curios slots
-		if (CuriosModCheck.CURIOS.isLoaded())
-	    {
-			if (CuriosUtil.findItem(ItemInit.TOKEN_EXP.get(), player) != ItemStack.EMPTY)
-			{
-				return true;
-		    }
-	    } 
+//		if (CuriosModCheck.CURIOS.isLoaded())
+//	    {
+//			if (CuriosUtil.findItem(ItemInit.TOKEN_EXP.get(), player) != ItemStack.EMPTY)
+//			{
+//				return true;
+//		    }
+//	    } 
 		
         return false;
     } 
@@ -234,13 +234,13 @@ public final class PlayerEquipUtil
 		}
 		
 		//Checks Curios slots
-		if (CuriosModCheck.CURIOS.isLoaded())
-	    {
-			if (CuriosUtil.findItem(ItemInit.TOKEN_UNSEEN.get(), player) != ItemStack.EMPTY)
-			{
-				return true;
-		    }
-	    } 
+//		if (CuriosModCheck.CURIOS.isLoaded())
+//	    {
+//			if (CuriosUtil.findItem(ItemInit.TOKEN_UNSEEN.get(), player) != ItemStack.EMPTY)
+//			{
+//				return true;
+//		    }
+//	    } 
 		
         return false;
     } 

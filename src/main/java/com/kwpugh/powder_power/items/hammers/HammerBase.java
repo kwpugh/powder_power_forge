@@ -65,6 +65,6 @@ public class HammerBase extends PickaxeItem
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.powder_power.hammer.line1").applyTextStyle(TextFormatting.GREEN)));			
+		tooltip.add((new TranslationTextComponent("item.powder_power.hammer.line1").mergeStyle(TextFormatting.GREEN)));			
 	}
 }

@@ -42,7 +42,7 @@ public class TokenGreaterHealing extends Item
 	        player.extinguish();
 	        player.clearActivePotions();
 
-	        player.sendMessage((new TranslationTextComponent("item.powder_power.token_healing.line2").applyTextStyle(TextFormatting.BOLD)));
+	        player.sendStatusMessage((new TranslationTextComponent("item.powder_power.token_healing.line2").mergeStyle(TextFormatting.BOLD)), true);
 	        
 	        double chance = random.nextDouble();
 	    	
@@ -72,6 +72,6 @@ public class TokenGreaterHealing extends Item
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.powder_power.token_healing.line1").applyTextStyle(TextFormatting.GREEN)));	
+		tooltip.add((new TranslationTextComponent("item.powder_power.token_healing.line1").mergeStyle(TextFormatting.GREEN)));	
 	}
 }

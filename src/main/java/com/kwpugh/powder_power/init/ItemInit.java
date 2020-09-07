@@ -26,7 +26,6 @@ import com.kwpugh.powder_power.items.tokens.TokenBreathing;
 import com.kwpugh.powder_power.items.tokens.TokenConduitPower;
 import com.kwpugh.powder_power.items.tokens.TokenCuring;
 import com.kwpugh.powder_power.items.tokens.TokenDolphin;
-import com.kwpugh.powder_power.items.tokens.TokenDragon;
 import com.kwpugh.powder_power.items.tokens.TokenExp;
 import com.kwpugh.powder_power.items.tokens.TokenFireResistance;
 import com.kwpugh.powder_power.items.tokens.TokenGoodOmen;
@@ -66,7 +65,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ItemInit
 {
-	public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, PowderPower.modid);
+	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, PowderPower.modid);
 
 	public static final RegistryObject<Item> HAMMER_ALCHEMIST = ITEMS.register("hammer_alchemist", () -> new HammerAlchemist(new Item.Properties().maxDamage(128).setNoRepair().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> MOTAR_PESTLE = ITEMS.register("motar_pestle", () -> new MotarPestle(new Item.Properties().maxDamage(256).setNoRepair().group(PowderPower.powder_power)));
@@ -116,7 +115,7 @@ public class ItemInit
 	public static final RegistryObject<Item> PICKAXE_REDIUM = ITEMS.register("pickaxe_redium", () -> new PickaxeItem(ToolMaterialList.REDIUM, 3, -2.7f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> AXE_REDIUM = ITEMS.register("axe_redium", () -> new AxeItem(ToolMaterialList.REDIUM, 7, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> SHOVEL_REDIUM = ITEMS.register("shovel_redium", () -> new ShovelItem(ToolMaterialList.REDIUM, 4, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HOE_REDIUM = ITEMS.register("hoe_redium", () -> new HoeItem(ToolMaterialList.REDIUM,  1.0f, new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HOE_REDIUM = ITEMS.register("hoe_redium", () -> new HoeItem(ToolMaterialList.REDIUM,  -1, 0.0f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> PAXEL_REDIUM = ITEMS.register("paxel_redium", () -> new PaxelRedium(7, -3.0f, ToolMaterialList.REDIUM, null, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> HAMMER_REDIUM = ITEMS.register("hammer_redium", () -> new HammerRedium(ToolMaterialList.REDIUM, 7, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> EXCAVATOR_REDIUM = ITEMS.register("excavator_redium", () -> new ExcavatorRedium(ToolMaterialList.REDIUM, 4, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
@@ -126,7 +125,7 @@ public class ItemInit
 	public static final RegistryObject<Item> PICKAXE_LAPIUM = ITEMS.register("pickaxe_lapium", () -> new PickaxeItem(ToolMaterialList.LAPIUM, 3, -2.7f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> AXE_LAPIUM = ITEMS.register("axe_lapium", () -> new AxeItem(ToolMaterialList.LAPIUM, 7, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> SHOVEL_LAPIUM = ITEMS.register("shovel_lapium", () -> new ShovelItem(ToolMaterialList.LAPIUM, 4, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HOE_LAPIUM = ITEMS.register("hoe_lapium", () -> new HoeItem(ToolMaterialList.LAPIUM, 1.0f, new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HOE_LAPIUM = ITEMS.register("hoe_lapium", () -> new HoeItem(ToolMaterialList.LAPIUM, -1, 0.0f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> PAXEL_LAPIUM = ITEMS.register("paxel_lapium", () -> new PaxelLapium(7, -3.0f, ToolMaterialList.LAPIUM, null, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> HAMMER_LAPIUM = ITEMS.register("hammer_lapium", () -> new HammerLapium(ToolMaterialList.LAPIUM, 7, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> EXCAVATOR_LAPIUM = ITEMS.register("excavator_lapium", () -> new ExcavatorLapium(ToolMaterialList.LAPIUM, 4, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
@@ -136,7 +135,7 @@ public class ItemInit
 	public static final RegistryObject<Item> PICKAXE_GEMIUM = ITEMS.register("pickaxe_gemium", () -> new PickaxeItem(ToolMaterialList.GEMIUM, 3, -2.6f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> AXE_GEMIUM = ITEMS.register("axe_gemium", () -> new AxeItem(ToolMaterialList.GEMIUM, 7, -2.7f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> SHOVEL_GEMIUM = ITEMS.register("shovel_gemium", () -> new ShovelItem(ToolMaterialList.GEMIUM, 4, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HOE_GEMIUM = ITEMS.register("hoe_gemium", () -> new HoeItem(ToolMaterialList.GEMIUM, 1.5f, new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HOE_GEMIUM = ITEMS.register("hoe_gemium", () -> new HoeItem(ToolMaterialList.GEMIUM, -1, 0.5f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> PAXEL_GEMIUM = ITEMS.register("paxel_gemium", () -> new PaxelGemium(7, -2.7f, ToolMaterialList.GEMIUM, null, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> HAMMER_GEMIUM = ITEMS.register("hammer_gemium", () -> new HammerGemium(ToolMaterialList.GEMIUM, 7, -2.7f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> EXCAVATOR_GEMIUM = ITEMS.register("excavator_gemium", () -> new ExcavatorGemium(ToolMaterialList.GEMIUM, 5, -2.7f, new Item.Properties().group(PowderPower.powder_power)));
@@ -147,7 +146,7 @@ public class ItemInit
 	public static final RegistryObject<Item> AXE_TRILIUM = ITEMS.register("axe_trilium", () -> new AxeItem(ToolMaterialList.TRILIUM, 7, -2.7f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TREE_AXE_TRILIUM = ITEMS.register("tree_axe_trilium", () -> new TreeAxeCustom(ToolMaterialList.TRILIUM, 7, -2.7f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> SHOVEL_TRILIUM = ITEMS.register("shovel_trilium", () -> new ShovelItem(ToolMaterialList.TRILIUM, 4, -3.0f, new Item.Properties().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HOE_TRILIUM = ITEMS.register("hoe_trilium", () -> new HoeItem(ToolMaterialList.TRILIUM, 1.5f, new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HOE_TRILIUM = ITEMS.register("hoe_trilium", () -> new HoeItem(ToolMaterialList.TRILIUM, -1, 1.0f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> PAXEL_TRILIUM = ITEMS.register("paxel_trilium", () -> new PaxelTrilium(7, -2.7f, ToolMaterialList.TRILIUM, null, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> HAMMER_TRILIUM = ITEMS.register("hammer_trilium", () -> new HammerTrilium(ToolMaterialList.TRILIUM, 7, -2.7f, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> EXCAVATOR_TRILIUM = ITEMS.register("excavator_trilium", () -> new ExcavatorTrilium(ToolMaterialList.TRILIUM, 5, -2.7f, new Item.Properties().group(PowderPower.powder_power)));
@@ -201,5 +200,5 @@ public class ItemInit
 	public static final RegistryObject<Item> TOKEN_HEALTH = ITEMS.register("token_health", () -> new TokenHealth(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_CURING = ITEMS.register("token_curing", () -> new TokenCuring(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_GREATER_ABSORPTION = ITEMS.register("token_greater_absorption", () -> new TokenGreaterAbsorption(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> TOKEN_DRAGON = ITEMS.register("token_dragon", () -> new TokenDragon(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
+	//public static final RegistryObject<Item> TOKEN_DRAGON = ITEMS.register("token_dragon", () -> new TokenDragon(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 }
