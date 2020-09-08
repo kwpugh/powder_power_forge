@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "powder_power:armor_trilium_body"
+  },
+  "addition": {
+    "item": "powder_power:ingot_quadrilium"
+  },
+  "result": {
+    "item": "powder_power:armor_quadrilium_body"
+  }
+}

@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"ACA",
+		"CBC",
+		"ACA"
+	],
+	
+	"key":
+	{
+		"A": { "item": "powder_power:blend_trilium" },
+		"B": { "item": "powder_power:powder_ghast_tear" },
+		"C": { "item": "minecraft:netherite_scrap" }
+	},
+	
+	"result": { "item": "powder_power:blend_quadrilium",
+	"count": 4
+	 }
+}

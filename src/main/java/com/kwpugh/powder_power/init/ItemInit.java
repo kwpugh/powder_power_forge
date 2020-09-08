@@ -6,6 +6,7 @@ import com.kwpugh.powder_power.items.MotarPestle;
 import com.kwpugh.powder_power.items.WandAlchemist;
 import com.kwpugh.powder_power.items.armor.ArmorGemium;
 import com.kwpugh.powder_power.items.armor.ArmorLapium;
+import com.kwpugh.powder_power.items.armor.ArmorQuadrilium;
 import com.kwpugh.powder_power.items.armor.ArmorRedium;
 import com.kwpugh.powder_power.items.armor.ArmorTrilium;
 import com.kwpugh.powder_power.items.excavator.ExcavatorGemium;
@@ -85,6 +86,7 @@ public class ItemInit
 	public static final RegistryObject<Item> INGOT_LAPIUM = ITEMS.register("ingot_lapium", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> GEM_GEMIUM = ITEMS.register("gem_gemium", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> INGOT_TRILIUM = ITEMS.register("ingot_trilium", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> INGOT_QUADRILIUM = ITEMS.register("ingot_quadrilium", () -> new Item(new Item.Properties().isBurnable().group(PowderPower.powder_power)));
 
 	public static final RegistryObject<Item> POWDER_REDSTONE = ITEMS.register("powder_redstone", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> POWDER_LAPIS = ITEMS.register("powder_lapis", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
@@ -104,6 +106,7 @@ public class ItemInit
 	public static final RegistryObject<Item> BLEND_LAPIUM = ITEMS.register("blend_lapium", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> BLEND_GEMIUM = ITEMS.register("blend_gemium", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> BLEND_TRILIUM = ITEMS.register("blend_trilium", () -> new Item(new Item.Properties().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> BLEND_QUADRILIUM = ITEMS.register("blend_quadrilium", () -> new Item(new Item.Properties().isBurnable().group(PowderPower.powder_power)));
 
 	public static final RegistryObject<Item> BLOCK_REDIUM = ITEMS.register("block_redium", () -> new BlockItem(BlockInit.BLOCK_REDIUM.get(), new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> BLOCK_LAPIUM = ITEMS.register("block_lapium", () -> new BlockItem(BlockInit.BLOCK_LAPIUM.get(), new Item.Properties().group(PowderPower.powder_power)));
@@ -171,6 +174,10 @@ public class ItemInit
 	public static final RegistryObject<Item> ARMOR_TRILIUM_LEGGINGS = ITEMS.register("armor_trilium_leggings", () -> new ArmorTrilium(ArmorMaterialList.TRILIUM, EquipmentSlotType.LEGS, new Item.Properties().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> ARMOR_TRILIUM_BOOTS = ITEMS.register("armor_trilium_boots", () -> new ArmorTrilium(ArmorMaterialList.TRILIUM, EquipmentSlotType.FEET, new Item.Properties().group(PowderPower.powder_power)));
 
+	public static final RegistryObject<Item> ARMOR_QUADRILIUM_HEAD = ITEMS.register("armor_quadrilium_head", () -> new ArmorQuadrilium(ArmorMaterialList.QUADRILIUM, EquipmentSlotType.HEAD, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> ARMOR_QUADRILIUM_BODY = ITEMS.register("armor_quadrilium_body", () -> new ArmorQuadrilium(ArmorMaterialList.QUADRILIUM, EquipmentSlotType.CHEST, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> ARMOR_QUADRILIUM_LEGGINGS = ITEMS.register("armor_quadrilium_leggings", () -> new ArmorQuadrilium(ArmorMaterialList.QUADRILIUM, EquipmentSlotType.LEGS, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> ARMOR_QUADRILIUM_BOOTS = ITEMS.register("armor_quadrilium_boots", () -> new ArmorQuadrilium(ArmorMaterialList.QUADRILIUM, EquipmentSlotType.FEET, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
 
 	public static final RegistryObject<Item> TOKEN_NIGHT_VISION = ITEMS.register("token_night_vision", () -> new TokenNightVision(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_FIRE_RESISTANCE = ITEMS.register("token_fire_resistance", () -> new TokenFireResistance(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
