@@ -159,14 +159,14 @@ public class ItemInit
 	
 	//NEW STUFF - SORT WHEN FINISHED
 	public static final RegistryObject<Item> SWORD_QUADRILIUM = ITEMS.register("sword_quadrilium", () -> new SwordItem(ToolMaterialList.QUADRILIUM, 18, -2.2f, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> PICKAXE_QUADRILIUM = ITEMS.register("pickaxe_quadrilium", () -> new PickaxeItem(ToolMaterialList.QUADRILIUM, 3, -2.6f, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> AXE_QUADRILIUM = ITEMS.register("axe_quadrilium", () -> new AxeItem(ToolMaterialList.QUADRILIUM, 10, -2.7f, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HOE_QUADRILIUM = ITEMS.register("hoe_quadrilium", () -> new HoeItem(ToolMaterialList.QUADRILIUM, -1, 1.0f, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> SHOVEL_QUADRILIUM = ITEMS.register("shovel_quadrilium", () -> new ShovelItem(ToolMaterialList.QUADRILIUM, 4, -3.0f, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> TREE_AXE_QUADRILIUM = ITEMS.register("tree_axe_quadrilium", () -> new TreeAxeCustom(ToolMaterialList.QUADRILIUM, 7, -2.7f, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> PAXEL_QUADRILIUM = ITEMS.register("paxel_quadrilium", () -> new PaxelTrilium(7, -2.7f, ToolMaterialList.QUADRILIUM, null, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HAMMER_QUADRILIUM = ITEMS.register("hammer_quadrilium", () -> new HammerTrilium(ToolMaterialList.QUADRILIUM, 7, -2.7f, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> EXCAVATOR_QUADRILIUM = ITEMS.register("excavator_quadrilium", () -> new ExcavatorTrilium(ToolMaterialList.QUADRILIUM, 5, -2.7f, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> PICKAXE_QUADRILIUM = ITEMS.register("pickaxe_quadrilium", () -> new PickaxeItem(ToolMaterialList.QUADRILIUM, 11, -2.6f, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> AXE_QUADRILIUM = ITEMS.register("axe_quadrilium", () -> new AxeItem(ToolMaterialList.QUADRILIUM, 19, -2.7f, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HOE_QUADRILIUM = ITEMS.register("hoe_quadrilium", () -> new HoeItem(ToolMaterialList.QUADRILIUM, 7, 1.0f, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> SHOVEL_QUADRILIUM = ITEMS.register("shovel_quadrilium", () -> new ShovelItem(ToolMaterialList.QUADRILIUM, 12, -3.0f, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> TREE_AXE_QUADRILIUM = ITEMS.register("tree_axe_quadrilium", () -> new TreeAxeCustom(ToolMaterialList.QUADRILIUM, 15, -2.7f, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> PAXEL_QUADRILIUM = ITEMS.register("paxel_quadrilium", () -> new PaxelTrilium(15, -2.7f, ToolMaterialList.QUADRILIUM, null, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HAMMER_QUADRILIUM = ITEMS.register("hammer_quadrilium", () -> new HammerTrilium(ToolMaterialList.QUADRILIUM, 15, -2.7f, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> EXCAVATOR_QUADRILIUM = ITEMS.register("excavator_quadrilium", () -> new ExcavatorTrilium(ToolMaterialList.QUADRILIUM, 13, -2.7f, new Item.Properties().isBurnable().group(PowderPower.powder_power)));
 
 	
 	
