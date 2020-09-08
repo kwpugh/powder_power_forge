@@ -28,6 +28,9 @@ public enum ToolMaterialList implements IItemTier
 	}),
 	TRILIUM(PowderPowerConfig.trilium_attack_damage.get(), 9.0F, PowderPowerConfig.trilium_durability.get(), PowderPowerConfig.trilium_harvest_level.get(), PowderPowerConfig.trilium_enchantability.get(), () -> {
 		return Ingredient.fromItems(ItemInit.INGOT_TRILIUM.get());
+	}),
+	QUADRILIUM(1.0f, 10.0f, 4200, 5, 22, () -> {
+		return Ingredient.fromItems(ItemInit.INGOT_QUADRILIUM.get());
 	});
 	
 	private float attackDamage, efficiency;

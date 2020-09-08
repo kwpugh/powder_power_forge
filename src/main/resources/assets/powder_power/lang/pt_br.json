@@ -57,13 +57,15 @@
 	
 		
 	"item.powder_power.blend_trilium": "Mistura de Trilio",	
+	"item.powder_power.blend_quadrilium": "Quadrilium Blend",	
 	
 	"item.powder_power.ingot_obsidian": "Barra de Obsidiana",
 	"item.powder_power.ingot_prismarine": "Barra de Prismarino",	
 	"item.powder_power.ingot_redium": "Barra de Redio",	
 	"item.powder_power.ingot_lapium": "Barra de Lapio",	
 	"item.powder_power.gem_gemium": "Barra de Gemio",	
-	"item.powder_power.ingot_trilium": "Barra de Trilio",	
+	"item.powder_power.ingot_trilium": "Barra de Trilio",
+	"item.powder_power.ingot_quadrilium": "Quadrilium Ingot",	
 	
 	
 	"block.powder_power.block_redium": "Bloco de Redio",
@@ -108,6 +110,11 @@
 	"item.powder_power.armor_trilium_body": "Peitoral de Trilio",	
 	"item.powder_power.armor_trilium_leggings": "Calças de Trilio",	
 	"item.powder_power.armor_trilium_boots": "Botas de Trilio",
+	
+	"item.powder_power.armor_quadrilium_head": "Quadrilium Helmet",	
+	"item.powder_power.armor_quadrilium_body": "Quadrilium Chestplate",	
+	"item.powder_power.armor_quadrilium_leggings": "Quadrilium Leggings",	
+	"item.powder_power.armor_quadrilium_boots": "Quadrilium Boots",
 		
 	"item.powder_power.excavator.line1": "Uma pá que quebra blocos em uma área 3x3",
 	"item.powder_power.hammer.line1": "Um martelo que quebra blocos em uma área 3x3",
@@ -158,6 +165,17 @@
 	"item.powder_power.bow_trilium": "Arco de Trilio",
 	"item.powder_power.hammer_trilium": "Martelo de Trilio",
 	"item.powder_power.excavator_trilium": "Excavador de Trilio",
+	
+	
+	"item.powder_power.sword_quadrilium": "Quadrilium Sword",
+	"item.powder_power.pickaxe_quadrilium": "Quadrilium Pickaxe",
+	"item.powder_power.axe_quadrilium": "Quadrilium Axe",
+	"item.powder_power.shovel_quadrilium": "Quadrilium Shovel",
+	"item.powder_power.hoe_quadrilium": "Quadrilium Hoe",
+	"item.powder_power.tree_axe_quadrilium": "Quadrilium Tree Axe",
+	"item.powder_power.paxel_quadrilium": "Quadrilium Paxel",
+	"item.powder_power.hammer_quadrilium": "Quadrilium Hammer",
+	"item.powder_power.excavator_quadrilium": "Quadrilium Excavator",
 	
 	
 	"item.powder_power.token.general1": "Funciona enquanto estiver no inventário do jogador",

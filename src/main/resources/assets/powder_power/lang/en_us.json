@@ -28,7 +28,6 @@
 	"item.powder_power.wand_alchemist.jei.line12": "Enderchest -> Black Shukerbox",
 
 	
-	
 	"item.powder_power.pickaxe_obsidian": "Diamond-Tipped Obsidian Pickaxe",
 	"item.powder_power.pickaxe_prismarine": "Emerald-Tipped Prismarine Pickaxe",
 	"item.powder_power.dagger_prismarine": "Prismarine Dagger",
@@ -59,6 +58,7 @@
 	
 		
 	"item.powder_power.blend_trilium": "Trilium Blend",	
+	"item.powder_power.blend_quadrilium": "Quadrilium Blend",	
 	
 	"item.powder_power.ingot_obsidian": "Obsidian Ingot",
 	"item.powder_power.ingot_prismarine": "Prismarine Ingot",	
@@ -66,6 +66,7 @@
 	"item.powder_power.ingot_lapium": "Lapium Ingot",	
 	"item.powder_power.gem_gemium": "Gemium",	
 	"item.powder_power.ingot_trilium": "Trilium Ingot",	
+	"item.powder_power.ingot_quadrilium": "Quadrilium Ingot",	
 	
 	
 	"block.powder_power.block_redium": "Redium Block",
@@ -110,7 +111,12 @@
 	"item.powder_power.armor_trilium_body": "Trilium Chestplate",	
 	"item.powder_power.armor_trilium_leggings": "Trilium Leggings",	
 	"item.powder_power.armor_trilium_boots": "Trilium Boots",
-		
+
+	"item.powder_power.armor_quadrilium_head": "Quadrilium Helmet",	
+	"item.powder_power.armor_quadrilium_body": "Quadrilium Chestplate",	
+	"item.powder_power.armor_quadrilium_leggings": "Quadrilium Leggings",	
+	"item.powder_power.armor_quadrilium_boots": "Quadrilium Boots",
+			
 	"item.powder_power.excavator.line1": "A shovel that breaks blocks in a 3x3 area",
 	"item.powder_power.hammer.line1": "A hammer that breaks blocks in a 3x3 area",
 	"item.powder_power.paxel.line1": "Combines pickaxe, axe, and shovel",
@@ -162,6 +168,17 @@
 	"item.powder_power.excavator_trilium": "Trilium Excavator",
 	
 	
+	"item.powder_power.sword_quadrilium": "Quadrilium Sword",
+	"item.powder_power.pickaxe_quadrilium": "Quadrilium Pickaxe",
+	"item.powder_power.axe_quadrilium": "Quadrilium Axe",
+	"item.powder_power.shovel_quadrilium": "Quadrilium Shovel",
+	"item.powder_power.hoe_quadrilium": "Quadrilium Hoe",
+	"item.powder_power.tree_axe_quadrilium": "Quadrilium Tree Axe",
+	"item.powder_power.paxel_quadrilium": "Quadrilium Paxel",
+	"item.powder_power.hammer_quadrilium": "Quadrilium Hammer",
+	"item.powder_power.excavator_quadrilium": "Quadrilium Excavator",
+		
+		
 	"item.powder_power.token.general1": "Works while in player inventory",
 	"item.powder_power.token.general2": "Sneak + right-click to toggle on/off",
 	"item.powder_power.token.general3": "Right-click to use",

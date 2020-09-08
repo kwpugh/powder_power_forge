@@ -59,6 +59,7 @@
 	
 		
 	"item.powder_power.blend_trilium": "三素合金混合物",
+	"item.powder_power.blend_quadrilium": "Quadrilium Blend",	
 	
 	"item.powder_power.ingot_obsidian": "黑曜石锭",
 	"item.powder_power.ingot_prismarine": "海晶石锭",
@@ -66,6 +67,7 @@
 	"item.powder_power.ingot_lapium": "蓝晶素锭",
 	"item.powder_power.gem_gemium": "绿晶素宝石",
 	"item.powder_power.ingot_trilium": "三素合金",
+	"item.powder_power.ingot_quadrilium": "Quadrilium Ingot",
 	
 	
 	"block.powder_power.block_redium": "红晶素块",
@@ -110,6 +112,11 @@
 	"item.powder_power.armor_trilium_body": "三素合金胸甲",	
 	"item.powder_power.armor_trilium_leggings": "三素合金护腿",	
 	"item.powder_power.armor_trilium_boots": "三素合金靴子",
+	
+	"item.powder_power.armor_quadrilium_head": "Quadrilium Helmet",	
+	"item.powder_power.armor_quadrilium_body": "Quadrilium Chestplate",	
+	"item.powder_power.armor_quadrilium_leggings": "Quadrilium Leggings",	
+	"item.powder_power.armor_quadrilium_boots": "Quadrilium Boots",
 		
 	"item.powder_power.excavator.line1": "一个可挖掘3x3区域的铲子",
 	"item.powder_power.hammer.line1": "一个可挖掘3x3区域的锤子",
@@ -160,6 +167,17 @@
 	"item.powder_power.bow_trilium": "三素合金弓",
 	"item.powder_power.hammer_trilium": "三素合金锤",
 	"item.powder_power.excavator_trilium": "三素合金开掘铲",
+	
+	
+	"item.powder_power.sword_quadrilium": "Quadrilium Sword",
+	"item.powder_power.pickaxe_quadrilium": "Quadrilium Pickaxe",
+	"item.powder_power.axe_quadrilium": "Quadrilium Axe",
+	"item.powder_power.shovel_quadrilium": "Quadrilium Shovel",
+	"item.powder_power.hoe_quadrilium": "Quadrilium Hoe",
+	"item.powder_power.tree_axe_quadrilium": "Quadrilium Tree Axe",
+	"item.powder_power.paxel_quadrilium": "Quadrilium Paxel",
+	"item.powder_power.hammer_quadrilium": "Quadrilium Hammer",
+	"item.powder_power.excavator_quadrilium": "Quadrilium Excavator",
 	
 	
 	"item.powder_power.token.general1": "在玩家背包内生效",
