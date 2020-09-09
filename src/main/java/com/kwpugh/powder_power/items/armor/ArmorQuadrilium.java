@@ -53,7 +53,7 @@ public class ArmorQuadrilium extends ArmorItem
 		    if(head.getItem() == ItemInit.ARMOR_QUADRILIUM_HEAD.get())
 			{
 				int newfoodlevel = 1;
-				float newsatlevel = 0.5F;
+				float newsatlevel = 0.75F;
 				PlayerSpecialAbilities.giveRegenffect(world, player, stack, newfoodlevel, newsatlevel);			
 			}
 			else
@@ -80,7 +80,7 @@ public class ArmorQuadrilium extends ArmorItem
 		    //Boots
 		    if(feet.getItem() == ItemInit.ARMOR_QUADRILIUM_BOOTS.get())
 			{
-		    	//something
+		    	//something - maybe Speed?
 			}
 			else
 			{

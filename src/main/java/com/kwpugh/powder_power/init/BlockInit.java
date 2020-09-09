@@ -18,4 +18,5 @@ public class BlockInit
 	public static final RegistryObject<Block> BLOCK_LAPIUM = BLOCKS.register("block_lapium", () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F, 3.0F).sound(SoundType.METAL)));
 	public static final RegistryObject<Block> BLOCK_GEMIUM = BLOCKS.register("block_gemium", () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F, 3.0F).sound(SoundType.METAL)));
 	public static final RegistryObject<Block> BLOCK_TRILIUM = BLOCKS.register("block_trilium", () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F, 3.0F).sound(SoundType.METAL)));	
+	public static final RegistryObject<Block> BLOCK_QUADRILIUM = BLOCKS.register("block_quadrilium", () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(3.0F, 3.0F).sound(SoundType.METAL)));	
 }

@@ -26,7 +26,6 @@
 	"item.powder_power.wand_alchemist.jei.line10": "花岗岩 -> 紫珀块",
 	"item.powder_power.wand_alchemist.jei.line11": "金块 -> 末地烛",
 	"item.powder_power.wand_alchemist.jei.line12": "末影箱 -> 黑色潜影盒",
-
 	
 	
 	"item.powder_power.pickaxe_obsidian": "钻石-镶嵌 黑曜石稿",
@@ -82,6 +81,9 @@
 	"block.powder_power.block_trilium": "三素合金块",
 	"item.powder_power.block_trilium": "三素合金块",
 		
+	"block.powder_power.block_quadrilium": "Quadrilium Block",
+	"item.powder_power.block_quadrilium": "Quadrilium Block",
+	
 	"item.powder_power.armor_redium_head": "红晶素头盔",	
 	"item.powder_power.armor_redium_full.line1": "全套效果: 火焰保护/凋零保护",	
 	"item.powder_power.armor_redium_body": "红晶素胸甲",

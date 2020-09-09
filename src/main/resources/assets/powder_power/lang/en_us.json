@@ -80,6 +80,9 @@
 	
 	"block.powder_power.block_trilium": "Trilium Block",
 	"item.powder_power.block_trilium": "Trilium Block",
+	
+	"block.powder_power.block_quadrilium": "Quadrilium Block",
+	"item.powder_power.block_quadrilium": "Quadrilium Block",
 		
 	"item.powder_power.armor_redium_head": "Redium Helmet",	
 	"item.powder_power.armor_redium_full.line1": "Full suit bonus: Fire and Wither protection",	

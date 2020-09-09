@@ -37,7 +37,12 @@ public final class PlayerEquipUtil
     			(head.getItem() == ItemInit.ARMOR_TRILIUM_HEAD.get() && 
     			chest.getItem() == ItemInit.ARMOR_TRILUM_BODY.get() && 
     			legs.getItem() == ItemInit.ARMOR_TRILIUM_LEGGINGS.get() && 
-    			feet.getItem() == ItemInit.ARMOR_TRILIUM_BOOTS.get()))     )
+    			feet.getItem() == ItemInit.ARMOR_TRILIUM_BOOTS.get())  ||
+    			
+    			(head.getItem() == ItemInit.ARMOR_QUADRILIUM_HEAD.get() && 
+    			chest.getItem() == ItemInit.ARMOR_QUADRILIUM_BODY.get() && 
+    			legs.getItem() == ItemInit.ARMOR_QUADRILIUM_LEGGINGS.get() && 
+    			feet.getItem() == ItemInit.ARMOR_QUADRILIUM_BOOTS.get()))     )
       	{
       		return true;  		
       	}
@@ -87,6 +92,11 @@ public final class PlayerEquipUtil
     			chest.getItem() == ItemInit.ARMOR_TRILUM_BODY.get() && 
     			legs.getItem() == ItemInit.ARMOR_TRILIUM_LEGGINGS.get() && 
     			feet.getItem() == ItemInit.ARMOR_TRILIUM_BOOTS.get()) ||
+    			
+    			(head.getItem() == ItemInit.ARMOR_QUADRILIUM_HEAD.get() && 
+    			chest.getItem() == ItemInit.ARMOR_QUADRILIUM_BODY.get() && 
+    			legs.getItem() == ItemInit.ARMOR_QUADRILIUM_LEGGINGS.get() && 
+    			feet.getItem() == ItemInit.ARMOR_QUADRILIUM_BOOTS.get())  ||
     			
     			(offHand.getItem() == ItemInit.TOKEN_NO_FALL.get()	)   )
 	      	{
@@ -141,6 +151,11 @@ public final class PlayerEquipUtil
     			chest.getItem() == ItemInit.ARMOR_TRILUM_BODY.get() && 
     			legs.getItem() == ItemInit.ARMOR_TRILIUM_LEGGINGS.get() && 
     			feet.getItem() == ItemInit.ARMOR_TRILIUM_BOOTS.get()))  ||
+    			
+    			(head.getItem() == ItemInit.ARMOR_QUADRILIUM_HEAD.get() && 
+    			chest.getItem() == ItemInit.ARMOR_QUADRILIUM_BODY.get() && 
+    			legs.getItem() == ItemInit.ARMOR_QUADRILIUM_LEGGINGS.get() && 
+    			feet.getItem() == ItemInit.ARMOR_QUADRILIUM_BOOTS.get())  ||
 		    	
     			(offHand.getItem() == ItemInit.TOKEN_FIRE_RESISTANCE.get()) )
 	      	{

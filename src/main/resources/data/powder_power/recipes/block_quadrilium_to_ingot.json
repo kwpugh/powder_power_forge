@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"   ",
+		" A ",
+		"   "
+	],
+	
+	"key":
+	{
+		"A": { "item": "powder_power:block_quadrilium" }
+	},
+	
+	"result": { "item": "powder_power:ingot_quadrilium",
+	"count": 9
+	 }
+}

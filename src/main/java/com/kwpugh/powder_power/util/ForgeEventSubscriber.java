@@ -72,17 +72,14 @@ public final class ForgeEventSubscriber
         {    
         	if(PlayerEquipUtil.isPlayerGotHasteToken(player))
         	{
-        		if(net.minecraftforge.common.ForgeHooks.canToolHarvestBlock(event.getPlayer().world, pos, stack))
+        		if(block == Blocks.OBSIDIAN)
         		{
-        			if(block == Blocks.OBSIDIAN)
-        			{
-        				event.setNewSpeed(PowderPowerConfig.haste_token_break_speed.get() * 8);
-        			}
-        			else
-        			{
-        				event.setNewSpeed(PowderPowerConfig.haste_token_break_speed.get());
-        			}	
+        			event.setNewSpeed(PowderPowerConfig.haste_token_break_speed.get() * 8);
         		}
+        		else
+        		{
+        			event.setNewSpeed(PowderPowerConfig.haste_token_break_speed.get());
+        		}	
         	}
         }
     }
