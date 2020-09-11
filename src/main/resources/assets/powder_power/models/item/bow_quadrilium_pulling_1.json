@@ -1,0 +1,6 @@
+{
+    "parent": "powder_power:item/bow_quadrilium",
+    "textures": {
+        "layer0": "powder_power:item/bow_quadrilium_pulling_1"
+    }
+}
