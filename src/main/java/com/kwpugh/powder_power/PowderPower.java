@@ -7,6 +7,8 @@ import com.kwpugh.powder_power.groups.GroupPowderPower;
 import com.kwpugh.powder_power.init.BlockInit;
 import com.kwpugh.powder_power.init.ItemInit;
 import com.kwpugh.powder_power.util.Config;
+import com.kwpugh.powder_power.util.CuriosModCheck;
+
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,6 +21,7 @@ import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
+import top.theillusivec4.curios.api.SlotTypeMessage;
 
 @Mod("powder_power")
 public class PowderPower
@@ -56,10 +59,10 @@ public class PowderPower
     {
         InterModComms.sendTo("powder_power", "helloworld", () -> { logger.info("Hello world from PowderPower"); return "Hello world";});
 
-//        if (CuriosModCheck.CURIOS.isLoaded())
-//        {
-//        	InterModComms.sendTo("curios", CuriosAPI.IMC.REGISTER_TYPE, () -> new CurioIMCMessage("belt").setSize(2));
-//        }
+        if (CuriosModCheck.CURIOS.isLoaded())
+        {
+        	InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("belt").size(2).build());
+        }
     }
 
     private void processIMC(final InterModProcessEvent event)

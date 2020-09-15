@@ -10,12 +10,14 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
 
 public final class PlayerEquipUtil
-{
+{	   
     @Nonnull
     //@SuppressWarnings("ConstantConditions")
-    public static <T> T _null() {
+    public static <T> T _null() 
+    {
         return null;
     }
+    
     public static boolean isPlayerGotWaterBreathing(PlayerEntity player)
     { 
     	ItemStack head = player.getItemStackFromSlot(EquipmentSlotType.HEAD);
@@ -60,13 +62,13 @@ public final class PlayerEquipUtil
 		}
 		
 		//Checks Curios slots
-//		if (CuriosModCheck.CURIOS.isLoaded())
-//	    {
-//			if (CuriosUtil.findItem(ItemInit.TOKEN_BREATHING.get(), player) != ItemStack.EMPTY)
-//			{
-//				return true;
-//		    }
-//	    } 
+		if (CuriosModCheck.CURIOS.isLoaded())
+	    {
+			if (CuriosUtil.findItem(ItemInit.TOKEN_BREATHING.get(), player) != ItemStack.EMPTY)
+			{
+				return true;
+		    }
+	    } 
       		
         return false;
     } 
@@ -114,13 +116,13 @@ public final class PlayerEquipUtil
 			}
 			
 			//Checks Curios slots
-//			if (CuriosModCheck.CURIOS.isLoaded())
-//		    {
-//				if (CuriosUtil.findItem(ItemInit.TOKEN_NO_FALL.get(), player) != ItemStack.EMPTY)
-//				{
-//					return true;
-//			    }
-//		    } 
+			if (CuriosModCheck.CURIOS.isLoaded())
+		    {
+				if (CuriosUtil.findItem(ItemInit.TOKEN_NO_FALL.get(), player) != ItemStack.EMPTY)
+				{
+					return true;
+			    }
+		    } 
 			
 	        return false;
     } 
@@ -171,13 +173,13 @@ public final class PlayerEquipUtil
 				}
 			}
 			
-//			if (CuriosModCheck.CURIOS.isLoaded())
-//		    {
-//				if (CuriosUtil.findItem(ItemInit.TOKEN_FIRE_RESISTANCE.get(), player) != ItemStack.EMPTY)
-//				{
-//					return true;
-//			    }
-//		    }
+			if (CuriosModCheck.CURIOS.isLoaded())
+		    {
+				if (CuriosUtil.findItem(ItemInit.TOKEN_FIRE_RESISTANCE.get(), player) != ItemStack.EMPTY)
+				{
+					return true;
+			    }
+		    }
       		
         return false;
     }
@@ -197,13 +199,13 @@ public final class PlayerEquipUtil
 		}
 		
 		//Checks Curios slots
-//		if (CuriosModCheck.CURIOS.isLoaded())
-//	    {
-//			if (CuriosUtil.findItem(ItemInit.TOKEN_HASTE.get(), player) != ItemStack.EMPTY)
-//			{
-//				return true;
-//		    }
-//	    } 
+		if (CuriosModCheck.CURIOS.isLoaded())
+	    {
+			if (CuriosUtil.findItem(ItemInit.TOKEN_HASTE.get(), player) != ItemStack.EMPTY)
+			{
+				return true;
+		    }
+	    } 
 		
         return false;
     } 
@@ -223,13 +225,13 @@ public final class PlayerEquipUtil
 		}
 		
 		//Checks Curios slots
-//		if (CuriosModCheck.CURIOS.isLoaded())
-//	    {
-//			if (CuriosUtil.findItem(ItemInit.TOKEN_EXP.get(), player) != ItemStack.EMPTY)
-//			{
-//				return true;
-//		    }
-//	    } 
+		if (CuriosModCheck.CURIOS.isLoaded())
+	    {
+			if (CuriosUtil.findItem(ItemInit.TOKEN_EXP.get(), player) != ItemStack.EMPTY)
+			{
+				return true;
+		    }
+	    } 
 		
         return false;
     } 
@@ -249,13 +251,13 @@ public final class PlayerEquipUtil
 		}
 		
 		//Checks Curios slots
-//		if (CuriosModCheck.CURIOS.isLoaded())
-//	    {
-//			if (CuriosUtil.findItem(ItemInit.TOKEN_UNSEEN.get(), player) != ItemStack.EMPTY)
-//			{
-//				return true;
-//		    }
-//	    } 
+		if (CuriosModCheck.CURIOS.isLoaded())
+	    {
+			if (CuriosUtil.findItem(ItemInit.TOKEN_UNSEEN.get(), player) != ItemStack.EMPTY)
+			{
+				return true;
+		    }
+	    } 
 		
         return false;
     } 
