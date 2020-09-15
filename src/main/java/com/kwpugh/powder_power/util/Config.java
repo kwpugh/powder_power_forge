@@ -16,7 +16,7 @@ public class Config {
 	
 	static
 	{
-		PowderPowerConfig.init(builder);
+		ConfigPowderPower.init(builder);
 		
 		config = builder.build();
 	}

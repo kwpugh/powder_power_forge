@@ -3,7 +3,7 @@ package com.kwpugh.powder_power.lists;
 import java.util.function.Supplier;
 
 import com.kwpugh.powder_power.init.ItemInit;
-import com.kwpugh.powder_power.util.PowderPowerConfig;
+import com.kwpugh.powder_power.util.ConfigPowderPower;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
@@ -26,10 +26,10 @@ public enum ToolMaterialList implements IItemTier
 	GEMIUM(1.0f, 9.0f, 2200, 4, 20, () -> {
 		return Ingredient.fromItems(ItemInit.GEM_GEMIUM.get());
 	}),
-	TRILIUM(PowderPowerConfig.trilium_attack_damage.get(), 9.0F, PowderPowerConfig.trilium_durability.get(), PowderPowerConfig.trilium_harvest_level.get(), PowderPowerConfig.trilium_enchantability.get(), () -> {
+	TRILIUM(ConfigPowderPower.trilium_attack_damage.get(), 9.0F, ConfigPowderPower.trilium_durability.get(), ConfigPowderPower.trilium_harvest_level.get(), ConfigPowderPower.trilium_enchantability.get(), () -> {
 		return Ingredient.fromItems(ItemInit.INGOT_TRILIUM.get());
 	}),
-	QUADRILIUM(1.0f, 10.0f, 4200, 5, 22, () -> {
+	QUADRILIUM(ConfigPowderPower.quadrilium_attack_damage.get(), 10.0f, ConfigPowderPower.quadrilium_durability.get(), ConfigPowderPower.quadrilium_harvest_level.get(), ConfigPowderPower.quadrilium_enchantability.get(), () -> {
 		return Ingredient.fromItems(ItemInit.INGOT_QUADRILIUM.get());
 	});
 	

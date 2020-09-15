@@ -23,8 +23,8 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 @EventBusSubscriber(modid = PowderPower.modid, bus = EventBusSubscriber.Bus.FORGE )
 public final class ForgeEventSubscriber
 {
-	static int miningExp = PowderPowerConfig.exp_token_mining_value.get();
-	static int killingExp = PowderPowerConfig.exp_token_killing_value.get();
+	static int miningExp = ConfigPowderPower.exp_token_mining_value.get();
+	static int killingExp = ConfigPowderPower.exp_token_killing_value.get();
 	
 	//Protects the player from various forms of damage
     @SubscribeEvent
@@ -74,11 +74,11 @@ public final class ForgeEventSubscriber
         	{
         		if(block == Blocks.OBSIDIAN)
         		{
-        			event.setNewSpeed(PowderPowerConfig.haste_token_break_speed.get() * 8);
+        			event.setNewSpeed(ConfigPowderPower.haste_token_break_speed.get() * 8);
         		}
         		else
         		{
-        			event.setNewSpeed(PowderPowerConfig.haste_token_break_speed.get());
+        			event.setNewSpeed(ConfigPowderPower.haste_token_break_speed.get());
         		}	
         	}
         }
