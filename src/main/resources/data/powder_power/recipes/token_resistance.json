@@ -11,7 +11,7 @@
 	"key":
 	{
 		"A": { "item": "minecraft:shield" },
-		"B": { "item": "powder_power:blend_gemium" }
+		"B": { "item": "powder_power:blend_trilium" }
 	},
 	
 	"result": { "item": "powder_power:token_resistance",

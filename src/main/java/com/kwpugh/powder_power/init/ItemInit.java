@@ -193,33 +193,39 @@ public class ItemInit
 	public static final RegistryObject<Item> ARMOR_QUADRILIUM_LEGGINGS = ITEMS.register("armor_quadrilium_leggings", () -> new ArmorQuadrilium(ArmorMaterialList.QUADRILIUM, EquipmentSlotType.LEGS, new Item.Properties().isImmuneToFire().group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> ARMOR_QUADRILIUM_BOOTS = ITEMS.register("armor_quadrilium_boots", () -> new ArmorQuadrilium(ArmorMaterialList.QUADRILIUM, EquipmentSlotType.FEET, new Item.Properties().isImmuneToFire().group(PowderPower.powder_power)));
 
+	//Redium
 	public static final RegistryObject<Item> TOKEN_NIGHT_VISION = ITEMS.register("token_night_vision", () -> new TokenNightVision(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_FIRE_RESISTANCE = ITEMS.register("token_fire_resistance", () -> new TokenFireResistance(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_SPEED = ITEMS.register("token_speed", () -> new TokenSpeed(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_NO_FALL = ITEMS.register("token_no_fall", () -> new TokenNoFall(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_HEALING = ITEMS.register("token_healing", () -> new TokenHealing(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
+	
+	//Lapium
 	public static final RegistryObject<Item> TOKEN_EXP = ITEMS.register("token_exp", () -> new TokenExp(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
-
 	public static final RegistryObject<Item> TOKEN_TRASH = ITEMS.register("token_trash", () -> new TokenTrash(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_JUMP_BOOST = ITEMS.register("token_jump_boost", () -> new TokenJumpBoost(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_HASTE = ITEMS.register("token_haste", () -> new TokenHaste(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_BREATHING = ITEMS.register("token_breathing", () -> new TokenBreathing(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
+	
+	//Gemium
 	public static final RegistryObject<Item> TOKEN_GOOD_OMEN = ITEMS.register("token_good_omen", () -> new TokenGoodOmen(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_UNSEEN = ITEMS.register("token_unseen", () -> new TokenUnseen(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_GREATER_HEALING = ITEMS.register("token_greater_healing", () -> new TokenGreaterHealing(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
-
 	public static final RegistryObject<Item> TOKEN_SUNSHINE = ITEMS.register("token_sunshine", () -> new TokenSunshine(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_DOLPHIN = ITEMS.register("token_dolphin", () -> new TokenDolphin(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
+	
+	//Trilium
 	public static final RegistryObject<Item> TOKEN_CONDUIT_POWER = ITEMS.register("token_conduit_power", () -> new TokenConduitPower(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_RESISTANCE = ITEMS.register("token_resistance", () -> new TokenResistance(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_STRENGTH = ITEMS.register("token_strength", () -> new TokenStrength(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_ABSORPTION = ITEMS.register("token_absorption", () -> new TokenAbsorption(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
-
 	public static final RegistryObject<Item> TOKEN_AFFLICTION = ITEMS.register("token_affliction", () -> new TokenAffliction(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
+	
+	//Quadrilium
 	public static final RegistryObject<Item> TOKEN_GREATER_RESISTANCE = ITEMS.register("token_greater_resistance", () -> new TokenGreaterResistance(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_GREATER_STRENGTH = ITEMS.register("token_greater_strength", () -> new TokenGreaterStrength(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_HEALTH = ITEMS.register("token_health", () -> new TokenHealth(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_CURING = ITEMS.register("token_curing", () -> new TokenCuring(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
-	public static final RegistryObject<Item> TOKEN_GREATER_ABSORPTION = ITEMS.register("token_greater_absorption", () -> new TokenGreaterAbsorption(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> TOKEN_GREATER_ABSORPTION = ITEMS.register("token_greater_absorption", () -> new TokenGreaterAbsorption(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));	
 	public static final RegistryObject<Item> TOKEN_DRAGON = ITEMS.register("token_dragon", () -> new TokenDragon(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 }

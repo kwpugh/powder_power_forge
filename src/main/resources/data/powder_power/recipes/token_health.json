@@ -11,7 +11,7 @@
 	"key":
 	{
 		"A": { "item": "minecraft:nether_star" },
-		"B": { "item": "powder_power:blend_trilium" }
+		"B": { "item": "powder_power:blend_quadrilium" }
 	},
 	
 	"result": { "item": "powder_power:token_health",
