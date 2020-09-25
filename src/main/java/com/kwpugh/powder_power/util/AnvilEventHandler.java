@@ -62,7 +62,31 @@ public class AnvilEventHandler
 			output.addEnchantment(Enchantments.SHARPNESS, 4);
 			output.addEnchantment(Enchantments.LOOTING, 4);
 			output.setDisplayName(new StringTextComponent("Deadly Diamond Sword"));
-			event.setCost(10);
+			event.setCost(20);
+			event.setOutput(output);
+		}
+		
+		if(left.getItem().equals(Items.DIAMOND_PICKAXE) && right.getItem().equals(ItemInit.BLEND_TRILIUM.get()))
+		{			
+			ItemStack output = new ItemStack(Items.DIAMOND_PICKAXE);
+			output.addEnchantment(Enchantments.FORTUNE, 5);
+			output.addEnchantment(Enchantments.EFFICIENCY, 5);
+			output.setDisplayName(new StringTextComponent("Improved Diamond Pickaxe"));
+			event.setCost(20);
+			event.setOutput(output);
+		}
+		
+		if(left.getItem().equals(Items.NETHERITE_SWORD) && right.getItem().equals(ItemInit.BLEND_QUADRILIUM.get()))
+		{			
+			ItemStack output = new ItemStack(Items.NETHERITE_SWORD);
+			output.addEnchantment(Enchantments.FIRE_ASPECT, 2);
+			output.addEnchantment(Enchantments.SHARPNESS, 9);
+			output.addEnchantment(Enchantments.LOOTING, 5);
+			output.addEnchantment(Enchantments.KNOCKBACK, 2);
+			output.addEnchantment(Enchantments.BANE_OF_ARTHROPODS, 3);
+			output.setDisplayName(new StringTextComponent("Deadly Quadrilirite Sword"));
+			output.getOrCreateTag().putBoolean("Unbreakable", true);
+			event.setCost(30);
 			event.setOutput(output);
 		}
 	}
