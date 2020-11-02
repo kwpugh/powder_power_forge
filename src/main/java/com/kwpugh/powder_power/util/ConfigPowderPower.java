@@ -138,7 +138,7 @@ public class ConfigPowderPower
 		
 		haste_token_break_speed = server
 				.comment("Haste Token block break speed")
-				.defineInRange("token_settings.haste_token_break_speed", 30, 10, 100);	
+				.defineInRange("token_settings.haste_token_break_speed", 7, 1, 20);	
 		
 		exp_token_mining_value = server
 				.comment("Experience Token value for mining ores")
