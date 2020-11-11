@@ -222,6 +222,7 @@
 	"item.powder_power.token_resistance.line2": "Resistance ability active: %s",
 	
 	"item.powder_power.token_greater_resistance": "Greater Attack Resistance Token",
+	"item.powder_power.token_supreme_resistance": "Supreme Attack Resistance Token",
 	
 	"item.powder_power.token_speed": "Speed Token",
 	"item.powder_power.token_speed.line1": "Provides player with extra speed",
@@ -241,6 +242,7 @@
 	"item.powder_power.token_strength.line2": "Strength ability active: %s",
 	
 	"item.powder_power.token_greater_strength": "Greater Strength Token",
+	"item.powder_power.token_supreme_strength": "Supreme Strength Token",
 	
 	"item.powder_power.token_absorption": "Absorption Token",
 	"item.powder_power.token_absorption.line1": "Provides player with extra absorption hearts",

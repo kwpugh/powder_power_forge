@@ -80,7 +80,7 @@ public class ArmorQuadrilium extends ArmorItem
 		    //Boots
 		    if(feet.getItem() == ItemInit.ARMOR_QUADRILIUM_BOOTS.get())
 			{
-		    	//something - maybe Speed?
+		    	//something
 			}
 			else
 			{
