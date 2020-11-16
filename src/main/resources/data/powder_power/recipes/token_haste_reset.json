@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "powder_power:token_haste"
+    }
+  ],
+  "result": {
+    "item": "powder_power:token_haste"
+  }
+}
