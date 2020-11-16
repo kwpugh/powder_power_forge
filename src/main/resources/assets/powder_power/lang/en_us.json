@@ -252,6 +252,8 @@
 	"item.powder_power.token_haste": "Haste Token",
 	"item.powder_power.token_haste.line1": "Provides player with faster breaking speed",
 	"item.powder_power.token_haste.line2": "Works while in player inventory",
+	"item.powder_power.token_haste.line3": "Haste ability active: %s",
+	"item.powder_power.token_haste.line4": "Sneak right-click to toggle on/off",
 	
 	"item.powder_power.token_jump_boost": "Jump Boost Token",
 	"item.powder_power.token_jump_boost.line1": "Provides player with Jump Boost",
