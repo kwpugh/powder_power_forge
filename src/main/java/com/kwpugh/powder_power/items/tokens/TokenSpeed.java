@@ -38,7 +38,7 @@ public class TokenSpeed extends Item
 	
 			if (player.ticksExisted % 180 == 0)
 			{
-				player.addPotionEffect(new EffectInstance(Effects.SPEED, 260, 2, false, false));
+				player.addPotionEffect(new EffectInstance(Effects.SPEED, 600, 2, false, false));
 			}
 		}
 	}	

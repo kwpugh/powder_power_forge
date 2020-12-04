@@ -38,7 +38,7 @@ public class TokenStrength extends Item
 			
 			if (player.ticksExisted % 180 == 0)
 			{
-				player.addPotionEffect(new EffectInstance(Effects.STRENGTH, 260,0, false, false));
+				player.addPotionEffect(new EffectInstance(Effects.STRENGTH, 600,0, false, false));
 			}  		
 		}
 	}	

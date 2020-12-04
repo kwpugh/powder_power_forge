@@ -11,9 +11,11 @@
 	"key":
 	{
 		"A": { "item": "minecraft:bone" },
-		"B": { "item": "minecraft:oak_slab" },
-		"C": { "item": "minecraft:bowl" }	
+		"B": { "tag": "minecraft:wooden_slabs" },
+		"C": { "item": "minecraft:bowl" }
 	},
 	
-	"result": { "item": "powder_power:motar_pestle" }
+	"result": { "item": "powder_power:motar_pestle",
+	"count": 1
+	 }
 }

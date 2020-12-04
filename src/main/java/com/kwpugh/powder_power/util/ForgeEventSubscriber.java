@@ -4,18 +4,15 @@ import com.kwpugh.powder_power.PowderPower;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.OreBlock;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.monster.PhantomEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.math.BlockPos;
-import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingExperienceDropEvent;
 import net.minecraftforge.event.entity.living.LivingSetAttackTargetEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.world.BlockEvent.BreakEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -100,24 +97,54 @@ public final class ForgeEventSubscriber
     		} 
     	}
     }
-    
+   
     //Gives greater XP when mining ores that normally drop XP
     @SubscribeEvent
     public static void onMiningExpDropEvent(BreakEvent event)
     {
-    	if(event.getState().getBlock() instanceof OreBlock)
+    	Block block = event.getState().getBlock();
+    	
+    	if(block == Blocks.REDSTONE_ORE ||
+    			block == Blocks.COAL_ORE ||
+    			block == Blocks.LAPIS_ORE ||
+    			block == Blocks.DIAMOND_ORE ||
+    			block == Blocks.EMERALD_ORE ||
+    			block == Blocks.NETHER_QUARTZ_ORE)
     	{
        		if(event.getPlayer() instanceof PlayerEntity)
     		{
     			PlayerEntity player = (PlayerEntity) event.getPlayer();
 
     			if (PlayerEquipUtil.isPlayerGotExpToken(player))
-    			{   				
-    				event.setExpToDrop(miningExp);
+    			{ 
+    				if(!(EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, player.getHeldItemMainhand()) != 0))
+    				{
+    					event.setExpToDrop(miningExp);
+    				}
+    				
     			}
     		}
-    	}	
+    	}
+    	
     }
+    
+//    //Gives greater XP when mining ores that normally drop XP
+//    @SubscribeEvent
+//    public static void onMiningExpDropEvent(BreakEvent event)
+//    {
+//    	if(event.getState().getBlock() instanceof OreBlock)
+//    	{
+//       		if(event.getPlayer() instanceof PlayerEntity)
+//    		{
+//    			PlayerEntity player = (PlayerEntity) event.getPlayer();
+//
+//    			if (PlayerEquipUtil.isPlayerGotExpToken(player))
+//    			{   				
+//    				event.setExpToDrop(miningExp);
+//    			}
+//    		}
+//    	}	
+//    }
     
     //Allow player to be unseen by mobs
     @SubscribeEvent

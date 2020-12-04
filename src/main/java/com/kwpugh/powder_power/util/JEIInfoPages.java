@@ -48,6 +48,8 @@ public class JEIInfoPages implements IModPlugin
 				"item.powder_power.wand_alchemist.jei.line15",
 				"item.powder_power.wand_alchemist.jei.line16",
 				"item.powder_power.wand_alchemist.jei.line17",
-				"item.powder_power.wand_alchemist.jei.line18");
+				"item.powder_power.wand_alchemist.jei.line18",
+				"item.powder_power.wand_alchemist.jei.line19",
+				"item.powder_power.wand_alchemist.jei.line20");
 	}
 }

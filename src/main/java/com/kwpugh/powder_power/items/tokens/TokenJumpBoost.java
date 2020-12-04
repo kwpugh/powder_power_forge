@@ -39,7 +39,7 @@ public class TokenJumpBoost extends Item
 	
 			if (player.ticksExisted % 180 == 0)
 			{
-				player.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 260, 5, false, false));
+				player.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 600, 5, false, false));
 			} 
 		}
 	}	
