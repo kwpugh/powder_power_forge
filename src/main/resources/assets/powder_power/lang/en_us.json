@@ -261,9 +261,12 @@
 	"item.powder_power.token_jump_boost.line1": "Provides player with Jump Boost",
 	"item.powder_power.token_jump_boost.line2": "Jump Boost ability active: %s",
 	
-	"item.powder_power.token_health": "Health Token",
+	"item.powder_power.token_health": "Greater Health Token",
 	"item.powder_power.token_health.line1": "Provides player with moderate health regen",
-	
+
+	"item.powder_power.token_supreme_health": "Supreme Health Token",
+	"item.powder_power.token_supreme_health.line1": "Provides player with rapid health regen",
+		
 	"item.powder_power.token_breathing": "Breathing Token",
 	"item.powder_power.token_breathing.line1": "Provides player with water breathing",
 	

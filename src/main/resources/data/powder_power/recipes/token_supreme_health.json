@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"BAB",
+		"ABA",
+		"BBB"
+	],
+	
+	"key":
+	{
+		"A": { "item": "powder_power:token_health" },
+		"B": { "item": "powder_power:blend_quadrilium" }
+	},
+	
+	"result": { "item": "powder_power:token_supreme_health",
+	"count": 1
+	 }
+}

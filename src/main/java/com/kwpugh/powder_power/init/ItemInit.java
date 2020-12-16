@@ -45,6 +45,7 @@ import com.kwpugh.powder_power.items.tokens.TokenResistance;
 import com.kwpugh.powder_power.items.tokens.TokenSpeed;
 import com.kwpugh.powder_power.items.tokens.TokenStrength;
 import com.kwpugh.powder_power.items.tokens.TokenSunshine;
+import com.kwpugh.powder_power.items.tokens.TokenSupremeHealth;
 import com.kwpugh.powder_power.items.tokens.TokenSupremeResistance;
 import com.kwpugh.powder_power.items.tokens.TokenSupremeStrength;
 import com.kwpugh.powder_power.items.tokens.TokenTrash;
@@ -233,5 +234,6 @@ public class ItemInit
 	
 	//Supreme Level
 	public static final RegistryObject<Item> TOKEN_SUPREME_RESISTANCE = ITEMS.register("token_supreme_resistance", () -> new TokenSupremeResistance(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
+	public static final RegistryObject<Item> TOKEN_SUPREME_HEALTH = ITEMS.register("token_supreme_health", () -> new TokenSupremeHealth(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 	public static final RegistryObject<Item> TOKEN_SUPREME_STRENGTH = ITEMS.register("token_supreme_strength", () -> new TokenSupremeStrength(new Item.Properties().maxStackSize(1).group(PowderPower.powder_power)));
 }
