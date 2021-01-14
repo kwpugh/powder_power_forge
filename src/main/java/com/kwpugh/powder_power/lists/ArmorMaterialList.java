@@ -14,11 +14,11 @@ import net.minecraft.util.SoundEvent;
 public enum ArmorMaterialList implements IArmorMaterial
 {
 	//Armor order: helmet, leggings, chestplate, boots
-	REDIUM("armor_redium", 38, new int[] {3, 6, 8, 3}, 15, ItemInit.INGOT_REDIUM.get(), "entity.cat.purreow", 2.0f, 0.0f),
-	LAPIUM("armor_lapium", 38, new int[] {3, 6, 8, 3}, 15, ItemInit.INGOT_LAPIUM.get(), "entity.cat.purreow", 2.0f, 0.0f),
-	GEMIUM("armor_gemium", 47, new int[] {4, 7, 9, 4}, 20, ItemInit.GEM_GEMIUM.get(), "entity.elder_guardian.ambient", 2.25f, 0.0f),
-	TRILIUM("armor_trilium", ConfigPowderPower.trilium_armor_durability.get(), new int[] {ConfigPowderPower.trilium_boots_armor.get(), ConfigPowderPower.trilium_leggings_armor.get(), ConfigPowderPower.trilium_chestplate_armor.get(), ConfigPowderPower.trilium_helmet_armor.get()}, ConfigPowderPower.trilium_enchantability.get(), ItemInit.INGOT_TRILIUM.get(), "item.armor.entity.ender_dragon.growl", ConfigPowderPower.trilium_armor_toughness.get(), 0.1F),
-	QUADRILIUM("armor_quadrilium", ConfigPowderPower.quadrilium_armor_durability.get(), new int[] {ConfigPowderPower.quadrilium_boots_armor.get(), ConfigPowderPower.quadrilium_leggings_armor.get(), ConfigPowderPower.quadrilium_chestplate_armor.get(), ConfigPowderPower.quadrilium_helmet_armor.get()}, ConfigPowderPower.quadrilium_enchantability.get(), ItemInit.INGOT_QUADRILIUM.get(), "entity.elder_guardian.ambient", ConfigPowderPower.quadrilium_armor_toughness.get(), 0.2F);
+	REDIUM("armor_redium", 38, new int[] {3, 6, 8, 3}, 15, ItemInit.INGOT_REDIUM.get(), "item.armor.equip_netherite", 2.0f, 0.0f),
+	LAPIUM("armor_lapium", 38, new int[] {3, 6, 8, 3}, 15, ItemInit.INGOT_LAPIUM.get(), "item.armor.equip_netherite", 2.0f, 0.0f),
+	GEMIUM("armor_gemium", 47, new int[] {4, 7, 9, 4}, 20, ItemInit.GEM_GEMIUM.get(), "item.armor.equip_netherite", 2.25f, 0.0f),
+	TRILIUM("armor_trilium", ConfigPowderPower.trilium_armor_durability.get(), new int[] {ConfigPowderPower.trilium_boots_armor.get(), ConfigPowderPower.trilium_leggings_armor.get(), ConfigPowderPower.trilium_chestplate_armor.get(), ConfigPowderPower.trilium_helmet_armor.get()}, ConfigPowderPower.trilium_enchantability.get(), ItemInit.INGOT_TRILIUM.get(), "item.armor.equip_netherite", ConfigPowderPower.trilium_armor_toughness.get(), 0.1F),
+	QUADRILIUM("armor_quadrilium", ConfigPowderPower.quadrilium_armor_durability.get(), new int[] {ConfigPowderPower.quadrilium_boots_armor.get(), ConfigPowderPower.quadrilium_leggings_armor.get(), ConfigPowderPower.quadrilium_chestplate_armor.get(), ConfigPowderPower.quadrilium_helmet_armor.get()}, ConfigPowderPower.quadrilium_enchantability.get(), ItemInit.INGOT_QUADRILIUM.get(), "item.armor.equip_netherite", ConfigPowderPower.quadrilium_armor_toughness.get(), 0.2F);
 	
 	private static final int[] max_damage_array = new int[]{13, 15, 16, 11};
 	private String name, equipSound;
