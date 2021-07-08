@@ -29,7 +29,7 @@ public class CuriosDragonToken
 {
     public static void sendImc() 
     {
-        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("angelring").build());
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("dragontoken").build());
     }
 
     public static ICapabilityProvider initCapabilities()
