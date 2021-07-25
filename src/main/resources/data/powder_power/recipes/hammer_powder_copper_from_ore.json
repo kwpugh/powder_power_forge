@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "powder_power:hammer_alchemist"
+    },
+    {
+      "item": "minecraft:copper_ore"
+    }
+  ],
+  "result": {
+    "item": "powder_power:powder_copper",
+    "count": 2
+  }
+}

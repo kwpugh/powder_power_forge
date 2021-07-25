@@ -4,18 +4,20 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Effects;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.World;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.network.chat.Component;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+
+import net.minecraft.world.item.Item.Properties;
 
 public class TokenCuring extends Item
 {
@@ -24,29 +26,29 @@ public class TokenCuring extends Item
 		super(properties);
 	}
 
-	public void inventoryTick(ItemStack stack, World world, Entity entity, int itemSlot, boolean isSelected)
+	public void inventoryTick(ItemStack stack, Level world, Entity entity, int itemSlot, boolean isSelected)
 	{		
-		if(entity instanceof PlayerEntity)
+		if(entity instanceof Player)
 		{	
-			((PlayerEntity) entity).removeActivePotionEffect(Effects.BLINDNESS);
-			((PlayerEntity) entity).removeActivePotionEffect(Effects.SLOWNESS);
-			((PlayerEntity) entity).removeActivePotionEffect(Effects.MINING_FATIGUE);
-			((PlayerEntity) entity).removeActivePotionEffect(Effects.INSTANT_DAMAGE);
-			((PlayerEntity) entity).removeActivePotionEffect(Effects.NAUSEA);
-			((PlayerEntity) entity).removeActivePotionEffect(Effects.HUNGER);
-			((PlayerEntity) entity).removeActivePotionEffect(Effects.POISON);
-			((PlayerEntity) entity).removeActivePotionEffect(Effects.WITHER);
-			((PlayerEntity) entity).removeActivePotionEffect(Effects.LEVITATION);
-			((PlayerEntity) entity).removeActivePotionEffect(Effects.UNLUCK);
-			((PlayerEntity) entity).removeActivePotionEffect(Effects.WEAKNESS);		
+			((Player) entity).removeEffectNoUpdate(MobEffects.BLINDNESS);
+			((Player) entity).removeEffectNoUpdate(MobEffects.MOVEMENT_SLOWDOWN);
+			((Player) entity).removeEffectNoUpdate(MobEffects.DIG_SLOWDOWN);
+			((Player) entity).removeEffectNoUpdate(MobEffects.HARM);
+			((Player) entity).removeEffectNoUpdate(MobEffects.CONFUSION);
+			((Player) entity).removeEffectNoUpdate(MobEffects.HUNGER);
+			((Player) entity).removeEffectNoUpdate(MobEffects.POISON);
+			((Player) entity).removeEffectNoUpdate(MobEffects.WITHER);
+			((Player) entity).removeEffectNoUpdate(MobEffects.LEVITATION);
+			((Player) entity).removeEffectNoUpdate(MobEffects.UNLUCK);
+			((Player) entity).removeEffectNoUpdate(MobEffects.WEAKNESS);		
 		}
 	}
 	
 	@OnlyIn(Dist.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
-		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.powder_power.token_curing.line1").mergeStyle(TextFormatting.GREEN)));
-		tooltip.add((new TranslationTextComponent("item.powder_power.token.general1").mergeStyle(TextFormatting.AQUA)));	
+		super.appendHoverText(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslatableComponent("item.powder_power.token_curing.line1").withStyle(ChatFormatting.GREEN)));
+		tooltip.add((new TranslatableComponent("item.powder_power.token.general1").withStyle(ChatFormatting.AQUA)));	
 	}
 }

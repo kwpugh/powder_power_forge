@@ -6,22 +6,24 @@ import javax.annotation.Nullable;
 
 import com.kwpugh.powder_power.util.EnableUtil;
 
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.World;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.network.chat.Component;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+
+import net.minecraft.world.item.Item.Properties;
 
 public class TokenSupremeResistance extends Item
 {
@@ -30,39 +32,39 @@ public class TokenSupremeResistance extends Item
 		super(properties);
 	}
 
-	public void inventoryTick(ItemStack stack, World world, Entity entity, int itemSlot, boolean isSelected)
+	public void inventoryTick(ItemStack stack, Level world, Entity entity, int itemSlot, boolean isSelected)
 	{		
-		if(entity instanceof PlayerEntity && !world.isRemote && EnableUtil.isEnabled(stack))
+		if(entity instanceof Player && !world.isClientSide && EnableUtil.isEnabled(stack))
 		{
-			PlayerEntity player = (PlayerEntity)entity;
+			Player player = (Player)entity;
 	
-			if (player.ticksExisted % 180 == 0)
+			if (player.tickCount % 180 == 0)
 			{
-				player.addPotionEffect(new EffectInstance(Effects.RESISTANCE, 600, 2, false, false));
+				player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600, 2, false, false));
 			} 
 		}
 	}	
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand)
+	public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand)
 	{
-		ItemStack stack = player.getHeldItem(hand);
+		ItemStack stack = player.getItemInHand(hand);
 		
-		if(!world.isRemote && player.isSneaking())
+		if(!world.isClientSide && player.isShiftKeyDown())
 		{
 			EnableUtil.changeEnabled(player, hand);
-			player.sendStatusMessage((new TranslationTextComponent("item.powder_power.token_resistance.line2", EnableUtil.isEnabled(stack)).mergeStyle(TextFormatting.BOLD)), true);
-			return new ActionResult<ItemStack>(ActionResultType.SUCCESS, player.getHeldItem(hand));
+			player.displayClientMessage((new TranslatableComponent("item.powder_power.token_resistance.line2", EnableUtil.isEnabled(stack)).withStyle(ChatFormatting.BOLD)), true);
+			return new InteractionResultHolder<ItemStack>(InteractionResult.SUCCESS, player.getItemInHand(hand));
 		}
-		return super.onItemRightClick(world, player, hand);
+		return super.use(world, player, hand);
 	} 
 	
 	@OnlyIn(Dist.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
-		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.powder_power.token_resistance.line1").mergeStyle(TextFormatting.GREEN)));
-		tooltip.add((new TranslationTextComponent("item.powder_power.token_resistance.line2", EnableUtil.isEnabled(stack)).mergeStyle(TextFormatting.RED)));
-		tooltip.add((new TranslationTextComponent("item.powder_power.token.general2").mergeStyle(TextFormatting.AQUA)));
+		super.appendHoverText(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslatableComponent("item.powder_power.token_resistance.line1").withStyle(ChatFormatting.GREEN)));
+		tooltip.add((new TranslatableComponent("item.powder_power.token_resistance.line2", EnableUtil.isEnabled(stack)).withStyle(ChatFormatting.RED)));
+		tooltip.add((new TranslatableComponent("item.powder_power.token.general2").withStyle(ChatFormatting.AQUA)));
 	}
 }

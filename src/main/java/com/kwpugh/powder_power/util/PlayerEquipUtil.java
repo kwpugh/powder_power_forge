@@ -4,10 +4,10 @@ import javax.annotation.Nonnull;
 
 import com.kwpugh.powder_power.init.ItemInit;
 
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ItemStack;
 
 public final class PlayerEquipUtil
 {	   
@@ -18,12 +18,12 @@ public final class PlayerEquipUtil
         return null;
     }
     
-    public static boolean isPlayerGotWaterBreathing(PlayerEntity player)
+    public static boolean isPlayerGotWaterBreathing(Player player)
     { 
-    	ItemStack head = player.getItemStackFromSlot(EquipmentSlotType.HEAD);
-		ItemStack chest = player.getItemStackFromSlot(EquipmentSlotType.CHEST);
-		ItemStack legs = player.getItemStackFromSlot(EquipmentSlotType.LEGS);
-	    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);
+    	ItemStack head = player.getItemBySlot(EquipmentSlot.HEAD);
+		ItemStack chest = player.getItemBySlot(EquipmentSlot.CHEST);
+		ItemStack legs = player.getItemBySlot(EquipmentSlot.LEGS);
+	    ItemStack feet = player.getItemBySlot(EquipmentSlot.FEET);
 		
 	    //Full Set
     	if(		((head.getItem() == ItemInit.ARMOR_LAPIUM_HEAD.get() && 
@@ -49,40 +49,31 @@ public final class PlayerEquipUtil
       		return true;  		
       	}
     	
-    	PlayerInventory inv2 = player.inventory;
+    	Inventory inv2 = player.getInventory();
 		
 		//Checks player main inventory
-		for (int slot = 0; slot < inv2.getSizeInventory(); slot++)
+		for (int slot = 0; slot < inv2.getContainerSize(); slot++)
 		{
-			ItemStack stack = inv2.getStackInSlot(slot);
+			ItemStack stack = inv2.getItem(slot);
 			if (stack.getItem() == ItemInit.TOKEN_BREATHING.get())
 			{	
 				return true;
 			}
 		}
-		
-		//Checks Curios slots
-		if (CuriosModCheck.CURIOS.isLoaded())
-	    {
-			if (CuriosUtil.findItem(ItemInit.TOKEN_BREATHING.get(), player) != ItemStack.EMPTY)
-			{
-				return true;
-		    }
-	    } 
       		
         return false;
     } 
     
-    public static boolean isPlayerGotFallProtection(PlayerEntity player)
+    public static boolean isPlayerGotFallProtection(Player player)
     { 
-    	ItemStack head = player.getItemStackFromSlot(EquipmentSlotType.HEAD);
-		ItemStack chest = player.getItemStackFromSlot(EquipmentSlotType.CHEST);
-		ItemStack legs = player.getItemStackFromSlot(EquipmentSlotType.LEGS);
-	    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);
+    	ItemStack head = player.getItemBySlot(EquipmentSlot.HEAD);
+		ItemStack chest = player.getItemBySlot(EquipmentSlot.CHEST);
+		ItemStack legs = player.getItemBySlot(EquipmentSlot.LEGS);
+	    ItemStack feet = player.getItemBySlot(EquipmentSlot.FEET);
 	    
-	    ItemStack offHand = player.getItemStackFromSlot(EquipmentSlotType.OFFHAND);
+	    ItemStack offHand = player.getItemBySlot(EquipmentSlot.OFFHAND);
 	    
-		PlayerInventory inv2 = player.inventory;
+		Inventory inv2 = player.getInventory();
 			
 	    //Full Set or token
     	if(		(head.getItem() == ItemInit.ARMOR_GEMIUM_HEAD.get() && 
@@ -106,37 +97,28 @@ public final class PlayerEquipUtil
 	      	}
 			
 			//Checks player main inventory
-			for (int slot = 0; slot < inv2.getSizeInventory(); slot++)
+			for (int slot = 0; slot < inv2.getContainerSize(); slot++)
 			{
-				ItemStack stack = inv2.getStackInSlot(slot);
+				ItemStack stack = inv2.getItem(slot);
 				if (stack.getItem() == ItemInit.TOKEN_NO_FALL.get())
 				{	
 					return true;
 				}
 			}
 			
-			//Checks Curios slots
-			if (CuriosModCheck.CURIOS.isLoaded())
-		    {
-				if (CuriosUtil.findItem(ItemInit.TOKEN_NO_FALL.get(), player) != ItemStack.EMPTY)
-				{
-					return true;
-			    }
-		    } 
-			
 	        return false;
     } 
     
-    public static boolean isPlayerGotFireProtection(PlayerEntity player)
+    public static boolean isPlayerGotFireProtection(Player player)
     {
-    	ItemStack head = player.getItemStackFromSlot(EquipmentSlotType.HEAD);
-		ItemStack chest = player.getItemStackFromSlot(EquipmentSlotType.CHEST);
-		ItemStack legs = player.getItemStackFromSlot(EquipmentSlotType.LEGS);
-	    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);
+    	ItemStack head = player.getItemBySlot(EquipmentSlot.HEAD);
+		ItemStack chest = player.getItemBySlot(EquipmentSlot.CHEST);
+		ItemStack legs = player.getItemBySlot(EquipmentSlot.LEGS);
+	    ItemStack feet = player.getItemBySlot(EquipmentSlot.FEET);
 	    
-	    ItemStack offHand = player.getItemStackFromSlot(EquipmentSlotType.OFFHAND);
+	    ItemStack offHand = player.getItemBySlot(EquipmentSlot.OFFHAND);
 
-	    PlayerInventory inv3 = player.inventory;
+	    Inventory inv3 = player.getInventory();
 	    
 	    //Full armor or Token
     	if(		((head.getItem() == ItemInit.ARMOR_REDIUM_HEAD.get() && 
@@ -164,108 +146,73 @@ public final class PlayerEquipUtil
 	      		return true;  		
 	      	}
 		
-			for (int slot = 0; slot < inv3.getSizeInventory(); slot++)
+			for (int slot = 0; slot < inv3.getContainerSize(); slot++)
 			{
-				ItemStack stack = inv3.getStackInSlot(slot);
+				ItemStack stack = inv3.getItem(slot);
 				if (stack.getItem() == ItemInit.TOKEN_FIRE_RESISTANCE.get())
 				{	
 					return true;
 				}
 			}
-			
-			if (CuriosModCheck.CURIOS.isLoaded())
-		    {
-				if (CuriosUtil.findItem(ItemInit.TOKEN_FIRE_RESISTANCE.get(), player) != ItemStack.EMPTY)
-				{
-					return true;
-			    }
-		    }
       		
         return false;
     }
     
-    public static boolean isPlayerGotHasteToken(PlayerEntity player)
+    public static boolean isPlayerGotHasteToken(Player player)
     { 	    
-		PlayerInventory inv2 = player.inventory;
+		Inventory inv2 = player.getInventory();
 		
 		//Checks player main inventory
-		for (int slot = 0; slot < inv2.getSizeInventory(); slot++)
+		for (int slot = 0; slot < inv2.getContainerSize(); slot++)
 		{
-			ItemStack stack = inv2.getStackInSlot(slot);
+			ItemStack stack = inv2.getItem(slot);
 			if (stack.getItem() == ItemInit.TOKEN_HASTE.get())
 			{	
 				return true;
 			}
 		}
 		
-		//Checks Curios slots
-		if (CuriosModCheck.CURIOS.isLoaded())
-	    {
-			if (CuriosUtil.findItem(ItemInit.TOKEN_HASTE.get(), player) != ItemStack.EMPTY)
-			{
-				return true;
-		    }
-	    } 
-		
         return false;
     } 
 
-    public static boolean isPlayerGotExpToken(PlayerEntity player)
+    public static boolean isPlayerGotExpToken(Player player)
     { 	    
-		PlayerInventory inv2 = player.inventory;
+		Inventory inv2 = player.getInventory();
 		
 		//Checks player main inventory
-		for (int slot = 0; slot < inv2.getSizeInventory(); slot++)
+		for (int slot = 0; slot < inv2.getContainerSize(); slot++)
 		{
-			ItemStack stack = inv2.getStackInSlot(slot);
+			ItemStack stack = inv2.getItem(slot);
 			if (stack.getItem() == ItemInit.TOKEN_EXP.get())
 			{	
 				return true;
 			}
 		}
 		
-		//Checks Curios slots
-		if (CuriosModCheck.CURIOS.isLoaded())
-	    {
-			if (CuriosUtil.findItem(ItemInit.TOKEN_EXP.get(), player) != ItemStack.EMPTY)
-			{
-				return true;
-		    }
-	    } 
-		
         return false;
     } 
     
-    public static boolean isPlayerGotUnseenToken(PlayerEntity player)
+    public static boolean isPlayerGotUnseenToken(Player player)
     { 	    
-		PlayerInventory inv2 = player.inventory;
+		Inventory inv2 = player.getInventory();
 		
 		//Checks player main inventory
-		for (int slot = 0; slot < inv2.getSizeInventory(); slot++)
+		for (int slot = 0; slot < inv2.getContainerSize(); slot++)
 		{
-			ItemStack stack = inv2.getStackInSlot(slot);
+			ItemStack stack = inv2.getItem(slot);
 			if (stack.getItem() == ItemInit.TOKEN_UNSEEN.get())
 			{	
 				return true;
 			}
 		}
 		
-		//Checks Curios slots
-		if (CuriosModCheck.CURIOS.isLoaded())
-	    {
-			if (CuriosUtil.findItem(ItemInit.TOKEN_UNSEEN.get(), player) != ItemStack.EMPTY)
-			{
-				return true;
-		    }
-	    } 
-		
         return false;
     } 
  
-    public static boolean isPlayerGotUnseenTokenInHand(PlayerEntity player)
+    public static boolean isPlayerGotUnseenTokenInHand(Player player)
     { 	    
-    	ItemStack mainHand = player.getHeldItemMainhand();
-    	ItemStack offHand = player.getHeldItemOffhand();
+    	ItemStack mainHand = player.getMainHandItem();
+    	ItemStack offHand = player.getOffhandItem();
     	
     	if(mainHand.getItem() == ItemInit.TOKEN_UNSEEN.get() && offHand.isEmpty())
       	{

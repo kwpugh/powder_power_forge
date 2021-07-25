@@ -2,14 +2,14 @@ package com.kwpugh.powder_power.util;
 
 import com.kwpugh.powder_power.PowderPower;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.monster.PhantomEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.DamageSource;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.monster.Phantom;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingExperienceDropEvent;
 import net.minecraftforge.event.entity.living.LivingSetAttackTargetEvent;
@@ -27,9 +27,9 @@ public final class ForgeEventSubscriber
     @SubscribeEvent
     public static void onLivingHurtEvent(LivingAttackEvent event)
     {
-        if (event.getEntityLiving() instanceof PlayerEntity)
+        if (event.getEntityLiving() instanceof Player)
         {
-            PlayerEntity player = (PlayerEntity) event.getEntityLiving();
+            Player player = (Player) event.getEntityLiving();
 
             //Fall Damage
             if ((event.getSource() == DamageSource.FALL) &&
@@ -85,9 +85,9 @@ public final class ForgeEventSubscriber
     @SubscribeEvent
     public static void onKillingExpDropEvent(LivingExperienceDropEvent event)
     {
-    	if (event.getAttackingPlayer() instanceof PlayerEntity && event.getEntityLiving()instanceof MobEntity)
+    	if (event.getAttackingPlayer() instanceof Player && event.getEntityLiving()instanceof Mob)
     	{
-    		PlayerEntity player = (PlayerEntity) event.getAttackingPlayer();
+    		Player player = (Player) event.getAttackingPlayer();
     		
      		if (PlayerEquipUtil.isPlayerGotExpToken(player))
     		{
@@ -111,13 +111,13 @@ public final class ForgeEventSubscriber
     			block == Blocks.EMERALD_ORE ||
     			block == Blocks.NETHER_QUARTZ_ORE)
     	{
-       		if(event.getPlayer() instanceof PlayerEntity)
+       		if(event.getPlayer() instanceof Player)
     		{
-    			PlayerEntity player = (PlayerEntity) event.getPlayer();
+    			Player player = (Player) event.getPlayer();
 
     			if (PlayerEquipUtil.isPlayerGotExpToken(player))
     			{ 
-    				if(!(EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, player.getHeldItemMainhand()) != 0))
+    				if(!(EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, player.getMainHandItem()) != 0))
     				{
     					event.setExpToDrop(miningExp);
     				}
@@ -150,21 +150,21 @@ public final class ForgeEventSubscriber
     @SubscribeEvent
     public static void onLivingSetAttackTarget(LivingSetAttackTargetEvent event)
     {		
-    	if (event.getTarget() instanceof PlayerEntity && event.getEntityLiving()instanceof MobEntity)
+    	if (event.getTarget() instanceof Player && event.getEntityLiving()instanceof Mob)
         {		
-        	PlayerEntity player = (PlayerEntity) event.getTarget();
-    		MobEntity attacker = (MobEntity) event.getEntityLiving();
+        	Player player = (Player) event.getTarget();
+    		Mob attacker = (Mob) event.getEntityLiving();
     		
     		//Phantom won't target player if in inventory
-    		if (PlayerEquipUtil.isPlayerGotUnseenToken(player) && attacker instanceof PhantomEntity)
+    		if (PlayerEquipUtil.isPlayerGotUnseenToken(player) && attacker instanceof Phantom)
     		{
-    			attacker.setAttackTarget(null);
+    			attacker.setTarget(null);
     		}
     		
     		//No mobs will target if in main hand and off hand is empty
     		if(PlayerEquipUtil.isPlayerGotUnseenTokenInHand(player))
     		{
-    			attacker.setAttackTarget(null);
+    			attacker.setTarget(null);
     		}
         }
     }

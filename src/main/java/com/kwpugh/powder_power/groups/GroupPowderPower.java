@@ -2,10 +2,10 @@ package com.kwpugh.powder_power.groups;
 
 import com.kwpugh.powder_power.init.ItemInit;
 
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 
-public class GroupPowderPower extends ItemGroup
+public class GroupPowderPower extends CreativeModeTab
 {
 	public GroupPowderPower() 
 	{
@@ -13,7 +13,7 @@ public class GroupPowderPower extends ItemGroup
 	}
 
 	@Override
-	public ItemStack createIcon() 
+	public ItemStack makeIcon() 
 	{
 		return new ItemStack(ItemInit.BLEND_TRILIUM.get());
 	}	

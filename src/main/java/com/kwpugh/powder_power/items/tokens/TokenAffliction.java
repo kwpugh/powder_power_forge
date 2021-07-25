@@ -4,31 +4,33 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.boss.WitherEntity;
-import net.minecraft.entity.boss.dragon.EnderDragonEntity;
-import net.minecraft.entity.merchant.villager.VillagerEntity;
-import net.minecraft.entity.merchant.villager.WanderingTraderEntity;
-import net.minecraft.entity.monster.ElderGuardianEntity;
-import net.minecraft.entity.monster.EvokerEntity;
-import net.minecraft.entity.monster.GuardianEntity;
-import net.minecraft.entity.monster.VexEntity;
-import net.minecraft.entity.monster.VindicatorEntity;
-import net.minecraft.entity.passive.AnimalEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.World;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.boss.wither.WitherBoss;
+import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
+import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.entity.npc.WanderingTrader;
+import net.minecraft.world.entity.monster.ElderGuardian;
+import net.minecraft.world.entity.monster.Evoker;
+import net.minecraft.world.entity.monster.Guardian;
+import net.minecraft.world.entity.monster.Vex;
+import net.minecraft.world.entity.monster.Vindicator;
+import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.network.chat.Component;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+
+import net.minecraft.world.item.Item.Properties;
 
 public class TokenAffliction extends Item
 {
@@ -38,61 +40,61 @@ public class TokenAffliction extends Item
 		super(properties);
 	}
 	
-	public void inventoryTick(ItemStack stack, World world, Entity entity, int itemSlot, boolean isSelected)
+	public void inventoryTick(ItemStack stack, Level world, Entity entity, int itemSlot, boolean isSelected)
 	{		
-		if(entity instanceof PlayerEntity && !world.isRemote)
+		if(entity instanceof Player && !world.isClientSide)
 		{
-			PlayerEntity player = (PlayerEntity)entity;
+			Player player = (Player)entity;
 
-			if(!world.isRemote)
+			if(!world.isClientSide)
 			{
-				double x = player.getPosX();
-				double y = player.getPosY();
-				double z = player.getPosZ();
+				double x = player.getX();
+				double y = player.getY();
+				double z = player.getZ();
 	
 				double d0 = 8.0D;
 				double d1 = 5.0D;
 	
-				MobEntity hostileMob = scanForHostileMobs(world, x, y, z, d0, d1);
+				Mob hostileMob = scanForHostileMobs(world, x, y, z, d0, d1);
 
 				if(hostileMob != null)
 				{					
-					hostileMob.addPotionEffect(new EffectInstance(Effects.NAUSEA, 3600, 0, false, false));
-					hostileMob.addPotionEffect(new EffectInstance(Effects.POISON, 3600, 0, false, false));
-					hostileMob.addPotionEffect(new EffectInstance(Effects.SLOWNESS, 3600, 0, false, false));
-					hostileMob.addPotionEffect(new EffectInstance(Effects.BLINDNESS, 3600, 0, false, false));
-					hostileMob.addPotionEffect(new EffectInstance(Effects.WITHER, 3600, 0, false, false));
-					hostileMob.addPotionEffect(new EffectInstance(Effects.WEAKNESS, 3600, 0, false, false));
+					hostileMob.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 3600, 0, false, false));
+					hostileMob.addEffect(new MobEffectInstance(MobEffects.POISON, 3600, 0, false, false));
+					hostileMob.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3600, 0, false, false));
+					hostileMob.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 3600, 0, false, false));
+					hostileMob.addEffect(new MobEffectInstance(MobEffects.WITHER, 3600, 0, false, false));
+					hostileMob.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 3600, 0, false, false));
 					
 				}					
 			}				
 		}
 	}
 		   
-	private MobEntity scanForHostileMobs(World world, double xpos, double ypos, double zpos, double d0, double d1)
+	private Mob scanForHostileMobs(Level world, double xpos, double ypos, double zpos, double d0, double d1)
 	{
-		List<MobEntity> list = world.<MobEntity>getEntitiesWithinAABB(MobEntity.class, new AxisAlignedBB
+		List<Mob> list = world.<Mob>getEntitiesOfClass(Mob.class, new AABB
 				((double) xpos - d0,
 				 (double) ypos - d1,
 				 (double) zpos - d0,
 				 (double) xpos + d0, ypos + d1,
 				 (double) zpos + d0));
 	
-		MobEntity closestMob = null;
+		Mob closestMob = null;
 	
-		for (MobEntity entitymob : list)
+		for (Mob entitymob : list)
 		{
 			// Exclude these mobs
-			if (entitymob instanceof AnimalEntity ||
-					entitymob instanceof VillagerEntity ||
-					entitymob instanceof WanderingTraderEntity ||
-					entitymob instanceof ElderGuardianEntity ||
-					entitymob instanceof EvokerEntity ||
-					entitymob instanceof GuardianEntity ||
-					entitymob instanceof VexEntity ||
-					entitymob instanceof VindicatorEntity ||
-					entitymob instanceof WitherEntity ||
-					entitymob instanceof EnderDragonEntity)
+			if (entitymob instanceof Animal ||
+					entitymob instanceof Villager ||
+					entitymob instanceof WanderingTrader ||
+					entitymob instanceof ElderGuardian ||
+					entitymob instanceof Evoker ||
+					entitymob instanceof Guardian ||
+					entitymob instanceof Vex ||
+					entitymob instanceof Vindicator ||
+					entitymob instanceof WitherBoss ||
+					entitymob instanceof EnderDragon)
 			{
 				continue;
 			}
@@ -106,10 +108,10 @@ public class TokenAffliction extends Item
 	}
 
 	@OnlyIn(Dist.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
-		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.powder_power.token_affliction.line1").mergeStyle(TextFormatting.GREEN)));
-		tooltip.add((new TranslationTextComponent("item.powder_power.token.general1").mergeStyle(TextFormatting.AQUA)));
+		super.appendHoverText(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslatableComponent("item.powder_power.token_affliction.line1").withStyle(ChatFormatting.GREEN)));
+		tooltip.add((new TranslatableComponent("item.powder_power.token.general1").withStyle(ChatFormatting.AQUA)));
 	} 
 }

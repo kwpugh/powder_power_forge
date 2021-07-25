@@ -1,9 +1,9 @@
 package com.kwpugh.powder_power.util;
 
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.util.Hand;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.InteractionHand;
 
 public class EnableUtil
 {
@@ -12,16 +12,16 @@ public class EnableUtil
         return stack.hasTag() && stack.getTag().getBoolean("IsEnabled");
     }
 
-    public static void changeEnabled(PlayerEntity player, Hand hand)
+    public static void changeEnabled(Player player, InteractionHand hand)
     {
-        changeEnabled(player.getHeldItem(hand));
+        changeEnabled(player.getItemInHand(hand));
     }
 
     public static void changeEnabled(ItemStack stack)
     {
         if(!stack.hasTag())
         {
-            stack.setTag(new CompoundNBT());
+            stack.setTag(new CompoundTag());
         }
         boolean isEnabled = isEnabled(stack);
         stack.getTag().putBoolean("IsEnabled", !isEnabled);

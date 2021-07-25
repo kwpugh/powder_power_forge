@@ -6,15 +6,17 @@ import javax.annotation.Nullable;
 
 import com.kwpugh.powder_power.init.ItemInit;
 
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.World;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.network.chat.Component;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+
+import net.minecraft.world.item.Item.Properties;
 
 public class WandAlchemist extends Item
 {
@@ -33,9 +35,9 @@ public class WandAlchemist extends Item
     public ItemStack getContainerItem(ItemStack stackIn)
     {	
     	ItemStack stack = stackIn.copy();
-    	stack.setDamage(getDamage(stack) + 1);
+    	stack.setDamageValue(getDamage(stack) + 1);
 
-    	if(stack.getDamage() >= stack.getMaxDamage())
+    	if(stack.getDamageValue() >= stack.getMaxDamage())
     	{
     		stack.shrink(1);
     	}
@@ -44,16 +46,16 @@ public class WandAlchemist extends Item
     }
 
 	@Override
-	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+	public boolean isValidRepairItem(ItemStack toRepair, ItemStack repair)
 	{
 		return repair.getItem() == ItemInit.GEM_GEMIUM.get();
 	}
 	
 	@OnlyIn(Dist.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
-		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.powder_power.wand_alchemist.line1").mergeStyle(TextFormatting.GREEN)));
-		tooltip.add((new TranslationTextComponent("item.powder_power.wand_alchemist.line2").mergeStyle(TextFormatting.AQUA)));
+		super.appendHoverText(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslatableComponent("item.powder_power.wand_alchemist.line1").withStyle(ChatFormatting.GREEN)));
+		tooltip.add((new TranslatableComponent("item.powder_power.wand_alchemist.line2").withStyle(ChatFormatting.AQUA)));
 	}
 }

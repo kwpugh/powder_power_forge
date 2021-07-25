@@ -6,23 +6,25 @@ import javax.annotation.Nullable;
 
 import com.kwpugh.powder_power.init.ItemInit;
 
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.World;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+
+import net.minecraft.world.item.Item.Properties;
 
 public class TokenHealing extends Item
 {
@@ -32,45 +34,45 @@ public class TokenHealing extends Item
 		super(properties);
 	}
 
-	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand)
+	public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand)
 	{	
-		ItemStack stack = player.getHeldItem(hand);
+		ItemStack stack = player.getItemInHand(hand);
 		
-		if (!world.isRemote)
+		if (!world.isClientSide)
 		{
 	        player.setHealth(player.getMaxHealth());
-	        player.getFoodStats().setFoodLevel(20);
+	        player.getFoodData().setFoodLevel(20);
 
-	        player.sendStatusMessage((new TranslationTextComponent("item.powder_power.token_healing.line2").mergeStyle(TextFormatting.BOLD)), true);
+	        player.displayClientMessage((new TranslatableComponent("item.powder_power.token_healing.line2").withStyle(ChatFormatting.BOLD)), true);
 	        
-	        double chance = random.nextDouble();
+	        double chance = world.random.nextDouble();
 	    	
 	        if(chance <= .05)
 	        {
 		        ItemStack gift = null;
 		        gift = new ItemStack(ItemInit.SWORD_REDIUM.get());
 		        gift.setCount(1);
-		        gift.addEnchantment(Enchantments.SHARPNESS, 5);
-		        gift.addEnchantment(Enchantments.SWEEPING, 5);
-		        gift.addEnchantment(Enchantments.LOOTING, 5);
-		        gift.setDisplayName(new StringTextComponent("Redium Vengeance"));
+		        gift.enchant(Enchantments.SHARPNESS, 5);
+		        gift.enchant(Enchantments.SWEEPING_EDGE, 5);
+		        gift.enchant(Enchantments.MOB_LOOTING, 5);
+		        gift.setHoverName(new TextComponent("Redium Vengeance"));
 		        
-		        BlockPos playerPos = player.getPosition();
-				player.world.addEntity(new ItemEntity(player.world, playerPos.getX(), playerPos.getY(), playerPos.getZ(), gift));	        	
+		        BlockPos playerPos = player.blockPosition();
+				player.level.addFreshEntity(new ItemEntity(player.level, playerPos.getX(), playerPos.getY(), playerPos.getZ(), gift));	        	
 	        }
 	        
-	        if (!player.abilities.isCreativeMode) {
+	        if (!player.getAbilities().instabuild) {
 	           stack.shrink(1);
 	        }
 		}
         
-        return new ActionResult<ItemStack>(ActionResultType.SUCCESS, stack);
+        return new InteractionResultHolder<ItemStack>(InteractionResult.SUCCESS, stack);
 	}
 	
 	@OnlyIn(Dist.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
-		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.powder_power.token_healing.line1").mergeStyle(TextFormatting.GREEN)));	
+		super.appendHoverText(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslatableComponent("item.powder_power.token_healing.line1").withStyle(ChatFormatting.GREEN)));	
 	}
 }

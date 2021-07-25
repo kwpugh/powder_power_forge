@@ -4,20 +4,22 @@ import java.util.Set;
 
 import com.kwpugh.powder_power.init.ItemInit;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ItemStack;
+
+import net.minecraft.world.item.Item.Properties;
 
 public class PaxelGemium extends PaxelBase
 {
-	public PaxelGemium(float attackDamageIn, float attackSpeedIn, IItemTier tier, Set<Block> effectiveBlocksIn,
+	public PaxelGemium(float attackDamageIn, float attackSpeedIn, Tier tier, Set<Block> effectiveBlocksIn,
 			Properties builder)
 	{
 		super(attackDamageIn, attackSpeedIn, tier, EFFECTIVE_ON, builder);	
 	}
 
 	@Override
-	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+	public boolean isValidRepairItem(ItemStack toRepair, ItemStack repair)
 	{
 		return repair.getItem() == ItemInit.GEM_GEMIUM.get();
 	}
