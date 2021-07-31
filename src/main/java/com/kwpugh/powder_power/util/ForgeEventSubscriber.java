@@ -2,6 +2,7 @@ package com.kwpugh.powder_power.util;
 
 import com.kwpugh.powder_power.PowderPower;
 
+import com.kwpugh.powder_power.config.ConfigPowderPower;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
@@ -20,8 +21,8 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 @EventBusSubscriber(modid = PowderPower.modid, bus = EventBusSubscriber.Bus.FORGE )
 public final class ForgeEventSubscriber
 {
-	static int miningExp = ConfigPowderPower.exp_token_mining_value.get();
-	static int killingExp = ConfigPowderPower.exp_token_killing_value.get();
+	static int miningExp = ConfigPowderPower.EXP_TOKEN_MINING_VALUE.get();
+	static int killingExp = ConfigPowderPower.EXP_TOKEN_KILLING_VALUE.get();
 	
 	//Protects the player from various forms of damage
     @SubscribeEvent
@@ -55,31 +56,7 @@ public final class ForgeEventSubscriber
             }
         } 
     }
-    
-//    //Increases the players block breaking speed
-//    @SubscribeEvent
-//    public static void breakingBlockSpeed(PlayerEvent.BreakSpeed event)
-//    {
-//        PlayerEntity player = event.getPlayer();
-//        ItemStack stack = player.getHeldItemMainhand(); 
-//        BlockPos pos = event.getPos();
-//        Block block = event.getState().getBlock();
-//        
-//        if (player != null && !(player instanceof FakePlayer) && !player.isCreative())
-//        {    
-//        	if(PlayerEquipUtil.isPlayerGotHasteToken(player))
-//        	{
-//        		if(block == Blocks.OBSIDIAN)
-//        		{
-//        			event.setNewSpeed(ConfigPowderPower.haste_token_break_speed.get() * 8);
-//        		}
-//        		else
-//        		{
-//        			event.setNewSpeed(ConfigPowderPower.haste_token_break_speed.get());
-//        		}	
-//        	}
-//        }
-//    }
+
     
     //Gives greater XP when killing mobs that normally drop XP on death
     @SubscribeEvent
@@ -127,24 +104,7 @@ public final class ForgeEventSubscriber
     	}
     	
     }
-    
-//    //Gives greater XP when mining ores that normally drop XP
-//    @SubscribeEvent
-//    public static void onMiningExpDropEvent(BreakEvent event)
-//    {
-//    	if(event.getState().getBlock() instanceof OreBlock)
-//    	{
-//       		if(event.getPlayer() instanceof PlayerEntity)
-//    		{
-//    			PlayerEntity player = (PlayerEntity) event.getPlayer();
-//
-//    			if (PlayerEquipUtil.isPlayerGotExpToken(player))
-//    			{   				
-//    				event.setExpToDrop(miningExp);
-//    			}
-//    		}
-//    	}	
-//    }
+
     
     //Allow player to be unseen by mobs
     @SubscribeEvent

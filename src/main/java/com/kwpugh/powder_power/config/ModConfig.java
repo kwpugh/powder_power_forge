@@ -1,4 +1,4 @@
-package com.kwpugh.powder_power.util;
+package com.kwpugh.powder_power.config;
 
 import java.io.File;
 
@@ -10,7 +10,8 @@ import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber
-public class Config {
+public class ModConfig
+{
 	private static final ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
 	public static final ForgeConfigSpec config;
 	
