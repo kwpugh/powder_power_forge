@@ -4,6 +4,7 @@ import java.util.Set;
 
 import com.kwpugh.powder_power.init.ItemInit;
 
+import com.kwpugh.powder_power.init.TagInit;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.ItemStack;
@@ -15,7 +16,7 @@ public class PaxelTrilium extends PaxelBase
 	public PaxelTrilium(float attackDamageIn, float attackSpeedIn, Tier tier, Set<Block> effectiveBlocksIn,
 			Properties builder)
 	{
-		super(attackDamageIn, attackSpeedIn, tier, EFFECTIVE_ON, builder);	
+		super(attackDamageIn, attackSpeedIn, tier, TagInit.PAXEL_MINEABLE, builder);
 	}
 
 	@Override
