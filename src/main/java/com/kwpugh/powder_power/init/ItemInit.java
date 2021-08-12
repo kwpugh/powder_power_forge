@@ -1,9 +1,9 @@
 package com.kwpugh.powder_power.init;
 
 import com.kwpugh.powder_power.PowderPower;
-import com.kwpugh.powder_power.items.HammerAlchemist;
-import com.kwpugh.powder_power.items.MotarPestle;
-import com.kwpugh.powder_power.items.WandAlchemist;
+import com.kwpugh.powder_power.items.crafting.HammerAlchemist;
+import com.kwpugh.powder_power.items.crafting.MotarPestle;
+import com.kwpugh.powder_power.items.crafting.WandAlchemist;
 import com.kwpugh.powder_power.items.armor.ArmorGemium;
 import com.kwpugh.powder_power.items.armor.ArmorLapium;
 import com.kwpugh.powder_power.items.armor.ArmorQuadrilium;

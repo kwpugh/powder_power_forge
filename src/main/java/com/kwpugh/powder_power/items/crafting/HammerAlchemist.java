@@ -1,4 +1,4 @@
-package com.kwpugh.powder_power.items;
+package com.kwpugh.powder_power.items.crafting;
 
 import java.util.List;
 
@@ -17,12 +17,18 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import net.minecraft.world.item.Item.Properties;
 
-public class MotarPestle extends Item
+public class HammerAlchemist extends Item
 {
-	public MotarPestle(Properties properties)
+	public HammerAlchemist(Properties properties)
 	{
 		super(properties);
 	}
+	
+	@Override
+    public boolean hasContainerItem(ItemStack stack)
+    {
+        return true;
+    }
 
     @Override
     public ItemStack getContainerItem(ItemStack stackIn)
@@ -36,25 +42,19 @@ public class MotarPestle extends Item
     	}
     	
         return stack;
-    }	
-    
-    @Override
-    public boolean hasContainerItem(ItemStack stack)
-    {
-        return true;
     }
-    
+
 	@Override
 	public boolean isValidRepairItem(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == Items.OAK_SLAB;
+		return repair.getItem() == Items.DIAMOND;
 	}
-    
+
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
 		super.appendHoverText(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslatableComponent("item.powder_power.motar_pestle.line1").withStyle(ChatFormatting.GREEN)));
-		tooltip.add((new TranslatableComponent("item.powder_power.motar_pestle.line2").withStyle(ChatFormatting.AQUA)));
+		tooltip.add((new TranslatableComponent("item.powder_power.hammer_alchemist.line1").withStyle(ChatFormatting.GREEN)));
+		tooltip.add((new TranslatableComponent("item.powder_power.hammer_alchemist.line2").withStyle(ChatFormatting.AQUA)));
 	}
 }
