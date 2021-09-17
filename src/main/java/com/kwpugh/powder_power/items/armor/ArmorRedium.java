@@ -51,9 +51,7 @@ public class ArmorRedium extends ArmorItem
 		    //Helmet
 		    if(head.getItem() == ItemInit.ARMOR_REDIUM_HEAD.get())
 			{
-				int newfoodlevel = 0;
-				float newsatlevel = 0.1F;
-				PlayerSpecialAbilities.giveRegenffect(world, player, stack, newfoodlevel, newsatlevel);			
+				PlayerSpecialAbilities.giveRegenffect(world, player, stack, 0, 0.1F);
 			}
 			else
 			{
@@ -63,7 +61,7 @@ public class ArmorRedium extends ArmorItem
 		    //Chestplate
 		    if(chest.getItem() == ItemInit.ARMOR_REDIUM_BODY.get())
 			{
-		    	//something?
+		    	//PlayerSpecialAbilities.giveHealthEffect(world, player, stack);
 			}
 		   
 		    //Leggings

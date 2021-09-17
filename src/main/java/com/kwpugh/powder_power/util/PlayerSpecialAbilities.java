@@ -14,7 +14,8 @@ public class PlayerSpecialAbilities
 	//Set player health to max on tick update
 	public static void giveHealthEffect(Level world, Player player, ItemStack itemstack)
 	{
-    	player.setHealth(20);
+    	//player.setHealth(20);
+		player.setHealth(player.getHealth() + 1);
 		return;
 	}
 	

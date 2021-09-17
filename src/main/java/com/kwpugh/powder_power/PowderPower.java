@@ -58,7 +58,7 @@ public class PowderPower
 
     private void processIMC(final InterModProcessEvent event)
     {
-    	logger.info("PowderPower IMC {}", event.getIMCStream().
+    	logger.info("PowderPower IMC setup {}", event.getIMCStream().
                 map(m->m.getMessageSupplier().get()).
                 collect(Collectors.toList()));
     }
