@@ -139,16 +139,16 @@ public class ItemInit
 	public static final RegistryObject<Item> HAMMER_GEMIUM = ITEMS.register("hammer_gemium", () -> new HammerGemium(GEMIUM_TOOL_MATERIAL, 7, -2.7f, new Item.Properties().tab(PowderPower.powder_power)));
 	public static final RegistryObject<Item> EXCAVATOR_GEMIUM = ITEMS.register("excavator_gemium", () -> new ExcavatorGemium(GEMIUM_TOOL_MATERIAL, 5, -2.7f, new Item.Properties().tab(PowderPower.powder_power)));
 
-	public static final RegistryObject<Item> SWORD_TRILIUM = ITEMS.register("sword_trilium", () -> new SwordItem(TRILIUM_TOOL_MATERIAL, 0, -2.2f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> SWORD_TRILIUM = ITEMS.register("sword_trilium", () -> new SwordItem(TRILIUM_TOOL_MATERIAL, 8, -2.2f, new Item.Properties().tab(PowderPower.powder_power)));
 	public static final RegistryObject<Item> BOW_TRILIUM = ITEMS.register("bow_trilium", () -> new BowBase(new Item.Properties().stacksTo(1).durability(triliumDurability).tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> PICKAXE_TRILIUM = ITEMS.register("pickaxe_trilium", () -> new PickaxeItem(TRILIUM_TOOL_MATERIAL, -3, -2.5f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> AXE_TRILIUM = ITEMS.register("axe_trilium", () -> new AxeItem(TRILIUM_TOOL_MATERIAL, 1, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> TREE_AXE_TRILIUM = ITEMS.register("tree_axe_trilium", () -> new TreeAxeCustom(TRILIUM_TOOL_MATERIAL, 1, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> SHOVEL_TRILIUM = ITEMS.register("shovel_trilium", () -> new ShovelItem(TRILIUM_TOOL_MATERIAL, -2, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HOE_TRILIUM = ITEMS.register("hoe_trilium", () -> new HoeItem(TRILIUM_TOOL_MATERIAL, -9, 1.0f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> PAXEL_TRILIUM = ITEMS.register("paxel_trilium", () -> new PaxelTrilium(1, -2.6f, TRILIUM_TOOL_MATERIAL, null, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HAMMER_TRILIUM = ITEMS.register("hammer_trilium", () -> new HammerTrilium(TRILIUM_TOOL_MATERIAL, 0, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> EXCAVATOR_TRILIUM = ITEMS.register("excavator_trilium", () -> new ExcavatorTrilium(TRILIUM_TOOL_MATERIAL, -3, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> PICKAXE_TRILIUM = ITEMS.register("pickaxe_trilium", () -> new PickaxeItem(TRILIUM_TOOL_MATERIAL, 6, -2.5f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> AXE_TRILIUM = ITEMS.register("axe_trilium", () -> new AxeItem(TRILIUM_TOOL_MATERIAL, 9, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> TREE_AXE_TRILIUM = ITEMS.register("tree_axe_trilium", () -> new TreeAxeCustom(TRILIUM_TOOL_MATERIAL, 9, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> SHOVEL_TRILIUM = ITEMS.register("shovel_trilium", () -> new ShovelItem(TRILIUM_TOOL_MATERIAL, 6, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HOE_TRILIUM = ITEMS.register("hoe_trilium", () -> new HoeItem(TRILIUM_TOOL_MATERIAL, -1, 1.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> PAXEL_TRILIUM = ITEMS.register("paxel_trilium", () -> new PaxelTrilium(9, -2.6f, TRILIUM_TOOL_MATERIAL, null, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HAMMER_TRILIUM = ITEMS.register("hammer_trilium", () -> new HammerTrilium(TRILIUM_TOOL_MATERIAL, 6, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> EXCAVATOR_TRILIUM = ITEMS.register("excavator_trilium", () -> new ExcavatorTrilium(TRILIUM_TOOL_MATERIAL, 6, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
 
 	public static final RegistryObject<Item> SWORD_QUADRILIUM = ITEMS.register("sword_quadrilium", () -> new SwordItem(QUADRILIUM_TOOL_MATERIAL, 10, -2.1f, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
 	public static final RegistryObject<Item> BOW_QUADRILIUM = ITEMS.register("bow_quadrilium", () -> new BowBase(new Item.Properties().stacksTo(1).durability(quadriliumDurability).tab(PowderPower.powder_power)));
