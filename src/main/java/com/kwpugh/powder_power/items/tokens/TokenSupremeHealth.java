@@ -42,5 +42,6 @@ public class TokenSupremeHealth extends Item
 	{
 		super.appendHoverText(stack, worldIn, tooltip, flagIn);
 		tooltip.add((new TranslatableComponent("item.powder_power.token_supreme_health.line1").withStyle(ChatFormatting.GREEN)));
+		tooltip.add((new TranslatableComponent("item.powder_power.token.general1").withStyle(ChatFormatting.AQUA)));
 	}
 }

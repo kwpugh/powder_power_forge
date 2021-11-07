@@ -41,8 +41,9 @@ public final class ForgeEventSubscriber
             
             //Fire & Lava
             if (((event.getSource() == DamageSource.IN_FIRE) ||
-            		(event.getSource() == DamageSource.ON_FIRE) || 
-            		(event.getSource() == DamageSource.LAVA)) && 
+            		(event.getSource() == DamageSource.ON_FIRE) ||
+					(event.getSource() == DamageSource.HOT_FLOOR) ||
+					(event.getSource() == DamageSource.LAVA)) &&
             		PlayerEquipUtil.isPlayerGotFireProtection(player))
             {
                 if (event.isCancelable()) event.setCanceled(true);
