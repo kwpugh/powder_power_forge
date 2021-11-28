@@ -87,7 +87,5 @@ public class PowderPowerClient
         });
 
         ItemProperties.register(ItemInit.BOW_QUADRILIUM.get(), new ResourceLocation("pulling"), (itemStack, world, livingEntity, seed) -> livingEntity != null && livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack ? 1.0F : 0.0F);
-
-    	
     }
 }
