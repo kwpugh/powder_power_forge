@@ -30,7 +30,7 @@ import com.kwpugh.powder_power.lists.*;
 import com.kwpugh.powder_power.config.ConfigPowderPower;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
-import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 

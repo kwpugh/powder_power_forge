@@ -3,7 +3,7 @@ package com.kwpugh.powder_power;
 import java.util.stream.Collectors;
 
 import com.kwpugh.powder_power.config.ModConfig;
-import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
+import net.minecraftforge.event.server.ServerStartingEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import com.kwpugh.powder_power.groups.GroupPowderPower;
@@ -64,7 +64,7 @@ public class PowderPower
     }
 
     @SubscribeEvent
-    public void onServerStarting(FMLServerStartingEvent event)
+    public void onServerStarting(ServerStartingEvent event)
     {
     	logger.info("PowderPower server setup");
     }
