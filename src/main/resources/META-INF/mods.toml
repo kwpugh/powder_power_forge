@@ -9,7 +9,7 @@ license="MIT"
 
 [[mods]] #mandatory
 modId="powder_power" #mandatory
-version="3.5.1" #mandatory
+version="3.5.2" #mandatory
 displayName="Powder Power" #mandatory
 description='''
 Powder alchemy comes to Minecraft
@@ -28,6 +28,6 @@ Powder alchemy comes to Minecraft
 [[dependencies.powder_power]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18]"
+    versionRange="[1.18,]"
     ordering="NONE"
     side="BOTH"
