@@ -1,14 +1,11 @@
 package com.kwpugh.powder_power.init;
 
 import com.kwpugh.powder_power.PowderPower;
+import com.kwpugh.powder_power.config.ConfigPowderPower;
+import com.kwpugh.powder_power.items.armor.*;
 import com.kwpugh.powder_power.items.crafting.HammerAlchemist;
 import com.kwpugh.powder_power.items.crafting.MotarPestle;
 import com.kwpugh.powder_power.items.crafting.WandAlchemist;
-import com.kwpugh.powder_power.items.armor.ArmorGemium;
-import com.kwpugh.powder_power.items.armor.ArmorLapium;
-import com.kwpugh.powder_power.items.armor.ArmorQuadrilium;
-import com.kwpugh.powder_power.items.armor.ArmorRedium;
-import com.kwpugh.powder_power.items.armor.ArmorTrilium;
 import com.kwpugh.powder_power.items.excavator.ExcavatorGemium;
 import com.kwpugh.powder_power.items.excavator.ExcavatorLapium;
 import com.kwpugh.powder_power.items.excavator.ExcavatorRedium;
@@ -24,28 +21,17 @@ import com.kwpugh.powder_power.items.paxels.PaxelTrilium;
 import com.kwpugh.powder_power.items.tokens.*;
 import com.kwpugh.powder_power.items.toolbaseclasses.BowBase;
 import com.kwpugh.powder_power.items.toolbaseclasses.SwordRedium;
-import com.kwpugh.powder_power.items.toolbaseclasses.TreeAxeCustom;
+import com.kwpugh.powder_power.items.toolbaseclasses.TreeAxeBase;
 import com.kwpugh.powder_power.lists.*;
-
-import com.kwpugh.powder_power.config.ConfigPowderPower;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
-import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class ItemInit
 {
-	// Tool stats can be adjusted in config
-	public static final Tier PRISMARINE_TOOL_MATERIAL = new PrismarineToolMaterial();
-	public static final Tier OBSIDIAN_TOOL_MATERIAL = new ObsidianToolMaterial();
-	public static final Tier REDIUM_TOOL_MATERIAL = new RediumToolMaterial();
-	public static final Tier LAPIUM_TOOL_MATERIAL = new LapiumToolMaterial();
-	public static final Tier GEMIUM_TOOL_MATERIAL = new GemiumToolMaterial();
-	public static final Tier TRILIUM_TOOL_MATERIAL = new TriliumToolMaterial();
-	public static final Tier QUADRILIUM_TOOL_MATERIAL = new QuadriliumToolMaterial();
-
-	// USed for bows only
+	// Used for bows only
 	public static final int rediumDurability = ConfigPowderPower.REDIUM_TOOL_DURABILITY.get();
 	public static final int lapiumDurability = ConfigPowderPower.LAPIUM_TOOL_DURABILITY.get();
 	public static final int gemiumDurability = ConfigPowderPower.GEMIUM_TOOL_DURABILITY.get();
@@ -67,12 +53,12 @@ public class ItemInit
 	public static final RegistryObject<Item> WAND_CORE = ITEMS.register("wand_core", () -> new Item(new Item.Properties().tab(PowderPower.powder_power)));
 	public static final RegistryObject<Item> WAND_ALCHEMIST = ITEMS.register("wand_alchemist", () -> new WandAlchemist(new Item.Properties().durability(2200).tab(PowderPower.powder_power)));
 
-	public static final RegistryObject<Item> PICKAXE_OBSIDIAN = ITEMS.register("pickaxe_obsidian", () -> new PickaxeItem(OBSIDIAN_TOOL_MATERIAL, 3, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> PICKAXE_PRISMARINE = ITEMS.register("pickaxe_prismarine", () -> new PickaxeItem(PRISMARINE_TOOL_MATERIAL, 3, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> DAGGER_PRISMARINE = ITEMS.register("dagger_prismarine", () -> new SwordItem(PRISMARINE_TOOL_MATERIAL, 4, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HATCHET_OBSIDIAN = ITEMS.register("hatchet_obsidian", () -> new AxeItem(OBSIDIAN_TOOL_MATERIAL, 6, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> SHOVEL_OBSIDIAN = ITEMS.register("shovel_obsidian", () -> new ShovelItem(OBSIDIAN_TOOL_MATERIAL, 2, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> SHOVEL_PRISMARINE = ITEMS.register("shovel_prismarine", () -> new ShovelItem(PRISMARINE_TOOL_MATERIAL, 2, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> PICKAXE_OBSIDIAN = ITEMS.register("pickaxe_obsidian", () -> new PickaxeItem(ToolMaterialTiers.OBSIDIAN, 3, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> PICKAXE_PRISMARINE = ITEMS.register("pickaxe_prismarine", () -> new PickaxeItem(ToolMaterialTiers.PRISMARINE, 3, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> DAGGER_PRISMARINE = ITEMS.register("dagger_prismarine", () -> new SwordItem(ToolMaterialTiers.PRISMARINE, 4, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HATCHET_OBSIDIAN = ITEMS.register("hatchet_obsidian", () -> new AxeItem(ToolMaterialTiers.OBSIDIAN, 6, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> SHOVEL_OBSIDIAN = ITEMS.register("shovel_obsidian", () -> new ShovelItem(ToolMaterialTiers.OBSIDIAN, 2, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> SHOVEL_PRISMARINE = ITEMS.register("shovel_prismarine", () -> new ShovelItem(ToolMaterialTiers.PRISMARINE, 2, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
 
 	public static final RegistryObject<Item> INGOT_OBSIDIAN = ITEMS.register("ingot_obsidian", () -> new Item(new Item.Properties().tab(PowderPower.powder_power)));
 	public static final RegistryObject<Item> INGOT_PRISMARINE = ITEMS.register("ingot_prismarine", () -> new Item(new Item.Properties().tab(PowderPower.powder_power)));
@@ -109,57 +95,57 @@ public class ItemInit
 	public static final RegistryObject<Item> BLOCK_TRILIUM = ITEMS.register("block_trilium", () -> new BlockItem(BlockInit.BLOCK_TRILIUM.get(), new Item.Properties().tab(PowderPower.powder_power)));
 	public static final RegistryObject<Item> BLOCK_QUADRILIUM = ITEMS.register("block_quadrilium", () -> new BlockItem(BlockInit.BLOCK_QUADRILIUM.get(), new Item.Properties().tab(PowderPower.powder_power)));
 
-	public static final RegistryObject<Item> SWORD_REDIUM = ITEMS.register("sword_redium", () -> new SwordRedium(REDIUM_TOOL_MATERIAL,  6, -2.3f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> SWORD_REDIUM = ITEMS.register("sword_redium", () -> new SwordRedium(ToolMaterialTiers.REDIUM,  6, -2.3f, new Item.Properties().tab(PowderPower.powder_power)));
 	public static final RegistryObject<Item> BOW_REDIUM = ITEMS.register("bow_redium", () -> new BowBase(new Item.Properties().stacksTo(1).durability(rediumDurability).tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> PICKAXE_REDIUM = ITEMS.register("pickaxe_redium", () -> new PickaxeItem(REDIUM_TOOL_MATERIAL, 4, -2.7f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> AXE_REDIUM = ITEMS.register("axe_redium", () -> new AxeItem(REDIUM_TOOL_MATERIAL, 7, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> SHOVEL_REDIUM = ITEMS.register("shovel_redium", () -> new ShovelItem(REDIUM_TOOL_MATERIAL, 4, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HOE_REDIUM = ITEMS.register("hoe_redium", () -> new HoeItem(REDIUM_TOOL_MATERIAL,  -1, 0.0f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> PAXEL_REDIUM = ITEMS.register("paxel_redium", () -> new PaxelRedium(7, -3.0f, REDIUM_TOOL_MATERIAL, null, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HAMMER_REDIUM = ITEMS.register("hammer_redium", () -> new HammerRedium(REDIUM_TOOL_MATERIAL, 7, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> EXCAVATOR_REDIUM = ITEMS.register("excavator_redium", () -> new ExcavatorRedium(REDIUM_TOOL_MATERIAL, 4, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> PICKAXE_REDIUM = ITEMS.register("pickaxe_redium", () -> new PickaxeItem(ToolMaterialTiers.REDIUM, 4, -2.7f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> AXE_REDIUM = ITEMS.register("axe_redium", () -> new AxeItem(ToolMaterialTiers.REDIUM, 7, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> SHOVEL_REDIUM = ITEMS.register("shovel_redium", () -> new ShovelItem(ToolMaterialTiers.REDIUM, 4, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HOE_REDIUM = ITEMS.register("hoe_redium", () -> new HoeItem(ToolMaterialTiers.REDIUM,  -1, 0.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> PAXEL_REDIUM = ITEMS.register("paxel_redium", () -> new PaxelRedium(7, -3.0f, ToolMaterialTiers.REDIUM, null, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HAMMER_REDIUM = ITEMS.register("hammer_redium", () -> new HammerRedium(ToolMaterialTiers.REDIUM, 7, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> EXCAVATOR_REDIUM = ITEMS.register("excavator_redium", () -> new ExcavatorRedium(ToolMaterialTiers.REDIUM, 4, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
 
-	public static final RegistryObject<Item> SWORD_LAPIUM = ITEMS.register("sword_lapium", () -> new SwordItem(LAPIUM_TOOL_MATERIAL, 6, -2.3f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> SWORD_LAPIUM = ITEMS.register("sword_lapium", () -> new SwordItem(ToolMaterialTiers.LAPIUM, 6, -2.3f, new Item.Properties().tab(PowderPower.powder_power)));
 	public static final RegistryObject<Item> BOW_LAPIUM = ITEMS.register("bow_lapium", () -> new BowBase(new Item.Properties().stacksTo(1).durability(lapiumDurability).tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> PICKAXE_LAPIUM = ITEMS.register("pickaxe_lapium", () -> new PickaxeItem(LAPIUM_TOOL_MATERIAL, 4, -2.7f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> AXE_LAPIUM = ITEMS.register("axe_lapium", () -> new AxeItem(LAPIUM_TOOL_MATERIAL, 7, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> SHOVEL_LAPIUM = ITEMS.register("shovel_lapium", () -> new ShovelItem(LAPIUM_TOOL_MATERIAL, 4, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HOE_LAPIUM = ITEMS.register("hoe_lapium", () -> new HoeItem(LAPIUM_TOOL_MATERIAL, -1, 0.0f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> PAXEL_LAPIUM = ITEMS.register("paxel_lapium", () -> new PaxelLapium(7, -3.0f, LAPIUM_TOOL_MATERIAL, null, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HAMMER_LAPIUM = ITEMS.register("hammer_lapium", () -> new HammerLapium(LAPIUM_TOOL_MATERIAL, 7, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> EXCAVATOR_LAPIUM = ITEMS.register("excavator_lapium", () -> new ExcavatorLapium(LAPIUM_TOOL_MATERIAL, 4, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> PICKAXE_LAPIUM = ITEMS.register("pickaxe_lapium", () -> new PickaxeItem(ToolMaterialTiers.LAPIUM, 4, -2.7f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> AXE_LAPIUM = ITEMS.register("axe_lapium", () -> new AxeItem(ToolMaterialTiers.LAPIUM, 7, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> SHOVEL_LAPIUM = ITEMS.register("shovel_lapium", () -> new ShovelItem(ToolMaterialTiers.LAPIUM, 4, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HOE_LAPIUM = ITEMS.register("hoe_lapium", () -> new HoeItem(ToolMaterialTiers.LAPIUM, -1, 0.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> PAXEL_LAPIUM = ITEMS.register("paxel_lapium", () -> new PaxelLapium(7, -3.0f, ToolMaterialTiers.LAPIUM, null, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HAMMER_LAPIUM = ITEMS.register("hammer_lapium", () -> new HammerLapium(ToolMaterialTiers.LAPIUM, 7, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> EXCAVATOR_LAPIUM = ITEMS.register("excavator_lapium", () -> new ExcavatorLapium(ToolMaterialTiers.LAPIUM, 4, -3.0f, new Item.Properties().tab(PowderPower.powder_power)));
 
-	public static final RegistryObject<Item> SWORD_GEMIUM = ITEMS.register("sword_gemium", () -> new SwordItem(GEMIUM_TOOL_MATERIAL, 7, -2.2f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> SWORD_GEMIUM = ITEMS.register("sword_gemium", () -> new SwordItem(ToolMaterialTiers.GEMIUM, 7, -2.2f, new Item.Properties().tab(PowderPower.powder_power)));
 	public static final RegistryObject<Item> BOW_GEMIUM = ITEMS.register("bow_gemium", () -> new BowBase(new Item.Properties().stacksTo(1).durability(gemiumDurability).tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> PICKAXE_GEMIUM = ITEMS.register("pickaxe_gemium", () -> new PickaxeItem(GEMIUM_TOOL_MATERIAL, 5, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> AXE_GEMIUM = ITEMS.register("axe_gemium", () -> new AxeItem(GEMIUM_TOOL_MATERIAL, 8, -2.7f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> SHOVEL_GEMIUM = ITEMS.register("shovel_gemium", () -> new ShovelItem(GEMIUM_TOOL_MATERIAL, 5, -2.7f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HOE_GEMIUM = ITEMS.register("hoe_gemium", () -> new HoeItem(GEMIUM_TOOL_MATERIAL, -1, 0.5f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> PAXEL_GEMIUM = ITEMS.register("paxel_gemium", () -> new PaxelGemium(8, -2.7f, GEMIUM_TOOL_MATERIAL, null, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HAMMER_GEMIUM = ITEMS.register("hammer_gemium", () -> new HammerGemium(GEMIUM_TOOL_MATERIAL, 7, -2.7f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> EXCAVATOR_GEMIUM = ITEMS.register("excavator_gemium", () -> new ExcavatorGemium(GEMIUM_TOOL_MATERIAL, 5, -2.7f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> PICKAXE_GEMIUM = ITEMS.register("pickaxe_gemium", () -> new PickaxeItem(ToolMaterialTiers.GEMIUM, 5, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> AXE_GEMIUM = ITEMS.register("axe_gemium", () -> new AxeItem(ToolMaterialTiers.GEMIUM, 8, -2.7f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> SHOVEL_GEMIUM = ITEMS.register("shovel_gemium", () -> new ShovelItem(ToolMaterialTiers.GEMIUM, 5, -2.7f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HOE_GEMIUM = ITEMS.register("hoe_gemium", () -> new HoeItem(ToolMaterialTiers.GEMIUM, -1, 0.5f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> PAXEL_GEMIUM = ITEMS.register("paxel_gemium", () -> new PaxelGemium(8, -2.7f, ToolMaterialTiers.GEMIUM, null, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HAMMER_GEMIUM = ITEMS.register("hammer_gemium", () -> new HammerGemium(ToolMaterialTiers.GEMIUM, 7, -2.7f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> EXCAVATOR_GEMIUM = ITEMS.register("excavator_gemium", () -> new ExcavatorGemium(ToolMaterialTiers.GEMIUM, 5, -2.7f, new Item.Properties().tab(PowderPower.powder_power)));
 
-	public static final RegistryObject<Item> SWORD_TRILIUM = ITEMS.register("sword_trilium", () -> new SwordItem(TRILIUM_TOOL_MATERIAL, 8, -2.2f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> SWORD_TRILIUM = ITEMS.register("sword_trilium", () -> new SwordItem(ToolMaterialTiers.TRILIUM, 8, -2.2f, new Item.Properties().tab(PowderPower.powder_power)));
 	public static final RegistryObject<Item> BOW_TRILIUM = ITEMS.register("bow_trilium", () -> new BowBase(new Item.Properties().stacksTo(1).durability(triliumDurability).tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> PICKAXE_TRILIUM = ITEMS.register("pickaxe_trilium", () -> new PickaxeItem(TRILIUM_TOOL_MATERIAL, 6, -2.5f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> AXE_TRILIUM = ITEMS.register("axe_trilium", () -> new AxeItem(TRILIUM_TOOL_MATERIAL, 9, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> TREE_AXE_TRILIUM = ITEMS.register("tree_axe_trilium", () -> new TreeAxeCustom(TRILIUM_TOOL_MATERIAL, 9, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> SHOVEL_TRILIUM = ITEMS.register("shovel_trilium", () -> new ShovelItem(TRILIUM_TOOL_MATERIAL, 6, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HOE_TRILIUM = ITEMS.register("hoe_trilium", () -> new HoeItem(TRILIUM_TOOL_MATERIAL, -1, 1.0f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> PAXEL_TRILIUM = ITEMS.register("paxel_trilium", () -> new PaxelTrilium(9, -2.6f, TRILIUM_TOOL_MATERIAL, null, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HAMMER_TRILIUM = ITEMS.register("hammer_trilium", () -> new HammerTrilium(TRILIUM_TOOL_MATERIAL, 6, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> EXCAVATOR_TRILIUM = ITEMS.register("excavator_trilium", () -> new ExcavatorTrilium(TRILIUM_TOOL_MATERIAL, 6, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> PICKAXE_TRILIUM = ITEMS.register("pickaxe_trilium", () -> new PickaxeItem(ToolMaterialTiers.TRILIUM, 6, -2.5f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> AXE_TRILIUM = ITEMS.register("axe_trilium", () -> new AxeItem(ToolMaterialTiers.TRILIUM, 9, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> TREE_AXE_TRILIUM = ITEMS.register("tree_axe_trilium", () -> new TreeAxeBase(ToolMaterialTiers.TRILIUM, 9, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> SHOVEL_TRILIUM = ITEMS.register("shovel_trilium", () -> new ShovelItem(ToolMaterialTiers.TRILIUM, 6, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HOE_TRILIUM = ITEMS.register("hoe_trilium", () -> new HoeItem(ToolMaterialTiers.TRILIUM, -1, 1.0f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> PAXEL_TRILIUM = ITEMS.register("paxel_trilium", () -> new PaxelTrilium(9, -2.6f, ToolMaterialTiers.TRILIUM, null, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HAMMER_TRILIUM = ITEMS.register("hammer_trilium", () -> new HammerTrilium(ToolMaterialTiers.TRILIUM, 6, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> EXCAVATOR_TRILIUM = ITEMS.register("excavator_trilium", () -> new ExcavatorTrilium(ToolMaterialTiers.TRILIUM, 6, -2.6f, new Item.Properties().tab(PowderPower.powder_power)));
 
-	public static final RegistryObject<Item> SWORD_QUADRILIUM = ITEMS.register("sword_quadrilium", () -> new SwordItem(QUADRILIUM_TOOL_MATERIAL, 10, -2.1f, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> SWORD_QUADRILIUM = ITEMS.register("sword_quadrilium", () -> new SwordItem(ToolMaterialTiers.QUADRILIUM, 10, -2.1f, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
 	public static final RegistryObject<Item> BOW_QUADRILIUM = ITEMS.register("bow_quadrilium", () -> new BowBase(new Item.Properties().stacksTo(1).durability(quadriliumDurability).tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> PICKAXE_QUADRILIUM = ITEMS.register("pickaxe_quadrilium", () -> new PickaxeItem(QUADRILIUM_TOOL_MATERIAL, 6, -2.4f, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> AXE_QUADRILIUM = ITEMS.register("axe_quadrilium", () -> new AxeItem(QUADRILIUM_TOOL_MATERIAL, 11, -2.5f, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> TREE_AXE_QUADRILIUM = ITEMS.register("tree_axe_quadrilium", () -> new TreeAxeCustom(QUADRILIUM_TOOL_MATERIAL, 11, -2.5f, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> SHOVEL_QUADRILIUM = ITEMS.register("shovel_quadrilium", () -> new ShovelItem(QUADRILIUM_TOOL_MATERIAL, 7, -2.5f, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HOE_QUADRILIUM = ITEMS.register("hoe_quadrilium", () -> new HoeItem(QUADRILIUM_TOOL_MATERIAL, -1, 2.0f, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> PAXEL_QUADRILIUM = ITEMS.register("paxel_quadrilium", () -> new PaxelTrilium(7, -2.3f, QUADRILIUM_TOOL_MATERIAL, null, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> HAMMER_QUADRILIUM = ITEMS.register("hammer_quadrilium", () -> new HammerTrilium(QUADRILIUM_TOOL_MATERIAL, 8, -2.5f, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
-	public static final RegistryObject<Item> EXCAVATOR_QUADRILIUM = ITEMS.register("excavator_quadrilium", () -> new ExcavatorTrilium(QUADRILIUM_TOOL_MATERIAL, 6, -2.5f, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> PICKAXE_QUADRILIUM = ITEMS.register("pickaxe_quadrilium", () -> new PickaxeItem(ToolMaterialTiers.QUADRILIUM, 6, -2.4f, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> AXE_QUADRILIUM = ITEMS.register("axe_quadrilium", () -> new AxeItem(ToolMaterialTiers.QUADRILIUM, 11, -2.5f, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> TREE_AXE_QUADRILIUM = ITEMS.register("tree_axe_quadrilium", () -> new TreeAxeBase(ToolMaterialTiers.QUADRILIUM, 11, -2.5f, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> SHOVEL_QUADRILIUM = ITEMS.register("shovel_quadrilium", () -> new ShovelItem(ToolMaterialTiers.QUADRILIUM, 7, -2.5f, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HOE_QUADRILIUM = ITEMS.register("hoe_quadrilium", () -> new HoeItem(ToolMaterialTiers.QUADRILIUM, -1, 2.0f, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> PAXEL_QUADRILIUM = ITEMS.register("paxel_quadrilium", () -> new PaxelTrilium(7, -2.3f, ToolMaterialTiers.QUADRILIUM, null, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> HAMMER_QUADRILIUM = ITEMS.register("hammer_quadrilium", () -> new HammerTrilium(ToolMaterialTiers.QUADRILIUM, 8, -2.5f, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
+	public static final RegistryObject<Item> EXCAVATOR_QUADRILIUM = ITEMS.register("excavator_quadrilium", () -> new ExcavatorTrilium(ToolMaterialTiers.QUADRILIUM, 6, -2.5f, new Item.Properties().fireResistant().tab(PowderPower.powder_power)));
 	
 	
 	public static final RegistryObject<Item> ARMOR_REDIUM_HEAD = ITEMS.register("armor_redium_head", () -> new ArmorRedium(REDIUM_ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Properties().tab(PowderPower.powder_power)));

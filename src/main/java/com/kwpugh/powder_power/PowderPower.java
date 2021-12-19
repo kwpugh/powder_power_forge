@@ -1,17 +1,12 @@
 package com.kwpugh.powder_power;
 
-import java.util.stream.Collectors;
-
 import com.kwpugh.powder_power.config.ModConfig;
-import net.minecraftforge.event.server.ServerStartingEvent;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import com.kwpugh.powder_power.groups.GroupPowderPower;
 import com.kwpugh.powder_power.init.BlockInit;
 import com.kwpugh.powder_power.init.ItemInit;
-
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -21,6 +16,10 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.stream.Collectors;
 
 @Mod("powder_power")
 public class PowderPower

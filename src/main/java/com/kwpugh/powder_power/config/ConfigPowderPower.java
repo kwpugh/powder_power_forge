@@ -7,43 +7,36 @@ public class ConfigPowderPower
 	public static ForgeConfigSpec.IntValue PRISMARINE_TOOL_DURABILITY;
 	public static ForgeConfigSpec.DoubleValue PRISMARINE_TOOL_EFFICIENCY;
 	public static ForgeConfigSpec.DoubleValue PRISMARINE_TOOL_ATTACK;
-	public static ForgeConfigSpec.IntValue PRISMARINE_TOOL_MINING_LEVEL;
 	public static ForgeConfigSpec.IntValue PRISMARINE_TOOL_ENCHANTABILITY;
 
 	public static ForgeConfigSpec.IntValue OBSIDIAN_TOOL_DURABILITY;
 	public static ForgeConfigSpec.DoubleValue OBSIDIAN_TOOL_EFFICIENCY;
 	public static ForgeConfigSpec.DoubleValue OBSIDIAN_TOOL_ATTACK;
-	public static ForgeConfigSpec.IntValue OBSIDIAN_TOOL_MINING_LEVEL;
 	public static ForgeConfigSpec.IntValue OBSIDIAN_TOOL_ENCHANTABILITY;
 
 	public static ForgeConfigSpec.IntValue REDIUM_TOOL_DURABILITY;
 	public static ForgeConfigSpec.DoubleValue REDIUM_TOOL_EFFICIENCY;
 	public static ForgeConfigSpec.DoubleValue REDIUM_TOOL_ATTACK;
-	public static ForgeConfigSpec.IntValue REDIUM_TOOL_MINING_LEVEL;
 	public static ForgeConfigSpec.IntValue REDIUM_TOOL_ENCHANTABILITY;
 
 	public static ForgeConfigSpec.IntValue LAPIUM_TOOL_DURABILITY;
 	public static ForgeConfigSpec.DoubleValue LAPIUM_TOOL_EFFICIENCY;
 	public static ForgeConfigSpec.DoubleValue LAPIUM_TOOL_ATTACK;
-	public static ForgeConfigSpec.IntValue LAPIUM_TOOL_MINING_LEVEL;
 	public static ForgeConfigSpec.IntValue LAPIUM_TOOL_ENCHANTABILITY;
 
 	public static ForgeConfigSpec.IntValue GEMIUM_TOOL_DURABILITY;
 	public static ForgeConfigSpec.DoubleValue GEMIUM_TOOL_EFFICIENCY;
 	public static ForgeConfigSpec.DoubleValue GEMIUM_TOOL_ATTACK;
-	public static ForgeConfigSpec.IntValue GEMIUM_TOOL_MINING_LEVEL;
 	public static ForgeConfigSpec.IntValue GEMIUM_TOOL_ENCHANTABILITY;
 
 	public static ForgeConfigSpec.IntValue TRILIUM_TOOL_DURABILITY;
 	public static ForgeConfigSpec.DoubleValue TRILIUM_TOOL_EFFICIENCY;
 	public static ForgeConfigSpec.DoubleValue TRILIUM_TOOL_ATTACK;
-	public static ForgeConfigSpec.IntValue TRILIUM_TOOL_MINING_LEVEL;
 	public static ForgeConfigSpec.IntValue TRILIUM_TOOL_ENCHANTABILITY;
 
 	public static ForgeConfigSpec.IntValue QUADRILIUM_TOOL_DURABILITY;
 	public static ForgeConfigSpec.DoubleValue QUADRILIUM_TOOL_EFFICIENCY;
 	public static ForgeConfigSpec.DoubleValue QUADRILIUM_TOOL_ATTACK;
-	public static ForgeConfigSpec.IntValue QUADRILIUM_TOOL_MINING_LEVEL;
 	public static ForgeConfigSpec.IntValue QUADRILIUM_TOOL_ENCHANTABILITY;
 
 	public static ForgeConfigSpec.IntValue REDIUM_ARMOR_DURABILITY_MULTIPLIER;
@@ -83,7 +76,6 @@ public class ConfigPowderPower
 		PRISMARINE_TOOL_DURABILITY = SERVER.comment("Prismarine Tool Durability [1-3000, default: 725]").defineInRange("prismarineToolDurability", 725, 1, 3000);
 		PRISMARINE_TOOL_EFFICIENCY = SERVER.comment("Prismarine Tool efficiency [1.0-7.0, default: 3.0]").defineInRange("prismarineToolEfficiency", 3.0, 0.0, 7.0);
 		PRISMARINE_TOOL_ATTACK = SERVER.comment("Prismarine attack damage [1-40, default: 1.0]").defineInRange("prismarineAttackDamage", 1.0, 0.0, 40.0);
-		PRISMARINE_TOOL_MINING_LEVEL = SERVER.comment("Prismarine tool mining level [1-6, default: 3]").defineInRange("prismarineMiningLevel", 3, 1, 6);
 		PRISMARINE_TOOL_ENCHANTABILITY = SERVER.comment("Prismarine tool enchantability [1-30, default: 8]").defineInRange("prismarineEnchantability", 8, 1, 30);
 
 		SERVER.pop();
@@ -94,7 +86,6 @@ public class ConfigPowderPower
 		OBSIDIAN_TOOL_DURABILITY = SERVER.comment("Obsidian Tool Durability [1-3000, default: 825]").defineInRange("obsidianToolDurability", 825, 1, 3000);
 		OBSIDIAN_TOOL_EFFICIENCY = SERVER.comment("Obsidian Tool efficiency [1.0-7.0, default: 3.0]").defineInRange("obsidianToolEfficiency", 3.0, 0.0, 7.0);
 		OBSIDIAN_TOOL_ATTACK = SERVER.comment("Obsidian attack damage [1-40, default: 1.0]").defineInRange("obsidianAttackDamage", 1.0, 0.0, 40.0);
-		OBSIDIAN_TOOL_MINING_LEVEL = SERVER.comment("Obsidian tool mining level [1-6, default: 3]").defineInRange("obsidianMiningLevel", 3, 1, 6);
 		OBSIDIAN_TOOL_ENCHANTABILITY = SERVER.comment("Obsidian tool enchantability [1-30, default: 8]").defineInRange("obsidianEnchantability", 8, 1, 30);
 
 		SERVER.pop();
@@ -105,7 +96,6 @@ public class ConfigPowderPower
 		REDIUM_TOOL_DURABILITY = SERVER.comment("Redium Tool Durability [1-3000, default: 1800]").defineInRange("rediumToolDurability", 1800, 1, 3000);
 		REDIUM_TOOL_EFFICIENCY = SERVER.comment("Redium Tool efficiency [1.0-10.0, default: 8.0]").defineInRange("rediumToolEfficiency", 8.0, 0.0, 10.0);
 		REDIUM_TOOL_ATTACK = SERVER.comment("Redium attack damage [1-40, default: 1.0]").defineInRange("rediumAttackDamage", 1.0, 0.0, 40.0);
-		REDIUM_TOOL_MINING_LEVEL = SERVER.comment("Redium tool mining level [1-6, default: 3]").defineInRange("rediumMiningLevel", 3, 1, 6);
 		REDIUM_TOOL_ENCHANTABILITY = SERVER.comment("Redium tool enchantability [1-30, default: 15]").defineInRange("rediumEnchantability", 15, 1, 30);
 
 		SERVER.pop();
@@ -116,7 +106,6 @@ public class ConfigPowderPower
 		LAPIUM_TOOL_DURABILITY = SERVER.comment("Lapium Tool Durability [1-3000, default: 1800]").defineInRange("lapiumToolDurability", 1800, 1, 3000);
 		LAPIUM_TOOL_EFFICIENCY = SERVER.comment("Lapium Tool efficiency [1.0-10.0, default: 8.0]").defineInRange("lapiumToolEfficiency", 8.0, 0.0, 10.0);
 		LAPIUM_TOOL_ATTACK = SERVER.comment("Lapium attack damage [1-40, default: 1.0]").defineInRange("lapiumAttackDamage", 1.0, 0.0, 40.0);
-		LAPIUM_TOOL_MINING_LEVEL = SERVER.comment("Lapium tool mining level [1-6, default: 3]").defineInRange("lapiumMiningLevel", 3, 1, 6);
 		LAPIUM_TOOL_ENCHANTABILITY = SERVER.comment("Lapium tool enchantability [1-30, default: 15]").defineInRange("lapiumEnchantability", 15, 1, 30);
 
 		SERVER.pop();
@@ -127,7 +116,6 @@ public class ConfigPowderPower
 		GEMIUM_TOOL_DURABILITY = SERVER.comment("Gemium Tool Durability [1-3000, default: 2200]").defineInRange("gemiumToolDurability", 2200, 1, 3000);
 		GEMIUM_TOOL_EFFICIENCY = SERVER.comment("Gemium Tool efficiency [1.0-10.0, default: 9.0]").defineInRange("gemiumToolEfficiency", 9.0, 0.0, 10.0);
 		GEMIUM_TOOL_ATTACK = SERVER.comment("Gemium attack damage [1-40, default: 1.0]").defineInRange("gemiumAttackDamage", 1.0, 0.0, 40.0);
-		GEMIUM_TOOL_MINING_LEVEL = SERVER.comment("Gemium tool mining level [1-6, default: 4]").defineInRange("gemiumMiningLevel", 4, 1, 6);
 		GEMIUM_TOOL_ENCHANTABILITY = SERVER.comment("Gemium tool enchantability [1-30, default: 20]").defineInRange("gemiumEnchantability", 20, 1, 30);
 
 		SERVER.pop();
@@ -138,7 +126,6 @@ public class ConfigPowderPower
 		TRILIUM_TOOL_DURABILITY = SERVER.comment("Trilium Tool Durability [1-5000, default: 3600]").defineInRange("triliumToolDurability", 3600, 1, 5000);
 		TRILIUM_TOOL_EFFICIENCY = SERVER.comment("Trilium Tool efficiency [1.0-10.0, default: 9.0]").defineInRange("triliumToolEfficiency", 9.0, 0.0, 10.0);
 		TRILIUM_TOOL_ATTACK = SERVER.comment("Trilium attack damage [1-40, default: 1.0]").defineInRange("triliumAttackDamage", 1.0, 0.0, 40.0);
-		TRILIUM_TOOL_MINING_LEVEL = SERVER.comment("Trilium tool mining level [1-6, default: 5]").defineInRange("triliumMiningLevel", 5, 1, 6);
 		TRILIUM_TOOL_ENCHANTABILITY = SERVER.comment("Trilium tool enchantability [1-30, default: 20]").defineInRange("triliumEnchantability", 20, 1, 30);
 
 		SERVER.pop();
@@ -149,7 +136,6 @@ public class ConfigPowderPower
 		QUADRILIUM_TOOL_DURABILITY = SERVER.comment("Quadrilium Tool Durability [1-5000, default: 4200]").defineInRange("quadriliumToolDurability", 4200, 1, 5000);
 		QUADRILIUM_TOOL_EFFICIENCY = SERVER.comment("Quadrilium Tool efficiency [1.0-10.0, default: 9.0]").defineInRange("quadriliumToolEfficiency", 9.0, 0.0, 10.0);
 		QUADRILIUM_TOOL_ATTACK = SERVER.comment("Quadrilium attack damage [1-40, default: 1.0]").defineInRange("quadriliumAttackDamage", 1.0, 0.0, 40.0);
-		QUADRILIUM_TOOL_MINING_LEVEL = SERVER.comment("Quadrilium tool mining level [1-6, default: 5]").defineInRange("quadriliumMiningLevel", 5, 1, 6);
 		QUADRILIUM_TOOL_ENCHANTABILITY = SERVER.comment("Quadrilium tool enchantability [1-30, default: 25]").defineInRange("quadriliumEnchantability", 25, 1, 30);
 
 		SERVER.pop();

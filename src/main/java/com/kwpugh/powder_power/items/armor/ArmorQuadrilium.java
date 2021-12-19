@@ -35,7 +35,6 @@ public class ArmorQuadrilium extends ArmorItem
 			player.removeEffectNoUpdate(MobEffects.POISON);
 			player.removeEffectNoUpdate(MobEffects.WITHER);
 			player.removeEffectNoUpdate(MobEffects.LEVITATION);
-
 			PlayerSpecialAbilities.giveRegenffect(world, player, stack, 1, 0.75F);
 			PlayerSpecialAbilities.giveDolphinEffect(world, player, stack);
 		}

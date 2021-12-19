@@ -4,6 +4,7 @@ import com.kwpugh.powder_power.init.ItemInit;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 import javax.annotation.Nonnull;
@@ -237,4 +238,23 @@ public final class PlayerEquipUtil
 		
         return false;
     }
+
+	// Generalized check for itemstack in inventory
+	public static boolean hasItemInInventory(Player player, Item item)
+	{
+		Inventory inv = player.getInventory();
+		int size = inv.getContainerSize();
+
+		//Is the item in the player inventory?
+		for (int slot = 0; slot < size; slot++)
+		{
+			ItemStack stack = inv.getItem(slot);
+			if (stack.getItem() == item)
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
 } 
