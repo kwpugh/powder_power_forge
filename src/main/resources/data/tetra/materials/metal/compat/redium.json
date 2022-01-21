@@ -1,0 +1,30 @@
+{
+  "key": "redium",
+  "category": "metal",
+  "primary": 8,
+  "secondary": 5.4,
+  "tertiary": 5,
+  "durability": 1800,
+  "integrityCost": 1,
+  "integrityGain": 7,
+  "magicCapacity": 110,
+  "toolLevel": "minecraft:netherite",
+  "toolEfficiency": 10,
+  "tints": {
+    "glyph": "e791ed",
+    "texture": "e679ed"
+  },
+  "textures": [
+    "metal",
+    "default"
+  ],
+  "material": {
+    "tag": "forge:ingots/redium"
+  },
+  "improvements": {
+    "bleeding": 3
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:iron"
+  }
+}
