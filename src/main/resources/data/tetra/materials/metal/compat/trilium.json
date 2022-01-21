@@ -1,0 +1,30 @@
+{
+  "key": "trilium",
+  "category": "metal",
+  "primary": 10,
+  "secondary": 7.2,
+  "tertiary": 6,
+  "durability": 3600,
+  "integrityCost": 1,
+  "integrityGain": 9,
+  "magicCapacity": 130,
+  "toolLevel": "minecraft:netherite",
+  "toolEfficiency": 10,
+  "tints": {
+    "glyph": "d69fed",
+    "texture": "ce7df0"
+  },
+  "textures": [
+    "metal",
+    "default"
+  ],
+  "material": {
+    "tag": "forge:ingots/trilium"
+  },
+  "improvements": {
+    "unbreaking": 3
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:iron"
+  }
+}

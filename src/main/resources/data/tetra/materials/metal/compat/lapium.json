@@ -1,0 +1,30 @@
+{
+  "key": "lapium",
+  "category": "metal",
+  "primary": 8,
+  "secondary": 5.4,
+  "tertiary": 5,
+  "durability": 1800,
+  "integrityCost": 1,
+  "integrityGain": 7,
+  "magicCapacity": 110,
+  "toolLevel": "minecraft:netherite",
+  "toolEfficiency": 10,
+  "tints": {
+    "glyph": "b092f0",
+    "texture": "9971f0"
+  },
+  "textures": [
+    "metal",
+    "default"
+  ],
+  "material": {
+    "tag": "forge:ingots/lapium"
+  },
+  "improvements": {
+    "backstab": 3
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:iron"
+  }
+}

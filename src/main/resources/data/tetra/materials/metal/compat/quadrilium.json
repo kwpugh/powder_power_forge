@@ -1,0 +1,30 @@
+{
+  "key": "quadrilium",
+  "category": "metal",
+  "primary": 12,
+  "secondary": 8.8,
+  "tertiary": 7,
+  "durability": 4200,
+  "integrityCost": 1,
+  "integrityGain": 10,
+  "magicCapacity": 1450,
+  "toolLevel": "minecraft:netherite",
+  "toolEfficiency": 10,
+  "tints": {
+    "glyph": "6d1d8f",
+    "texture": "670491"
+  },
+  "textures": [
+    "metal",
+    "default"
+  ],
+  "material": {
+    "tag": "forge:ingots/quadrilium"
+  },
+  "improvements": {
+    "criticalStrike": 2
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:iron"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "key": "gemium",
+  "category": "gem",
+  "primary": 9,
+  "secondary": 6.2,
+  "tertiary": 4,
+  "durability": 2200,
+  "integrityCost": 1,
+  "integrityGain": 8,
+  "magicCapacity": 120,
+  "toolLevel": "minecraft:netherite",
+  "toolEfficiency": 10,
+  "tints": {
+    "glyph": "59ebcb",
+    "texture": "2fedc4"
+  },
+  "textures": [
+    "shiny",
+    "crude"
+  ],
+  "material": {
+    "tag": "forge:ingots/gemium"
+  },
+  "improvements": {
+    "enderReverb": 2
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:iron"
+  }
+}

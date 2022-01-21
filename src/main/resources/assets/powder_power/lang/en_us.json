@@ -286,7 +286,26 @@
 	"item.powder_power.token_good_omen.line1": "Dispels the taint of Bad Omen",
 
 	"item.powder_power.token_affliction": "Affliction Token",
-	"item.powder_power.token_affliction.line1": "Inflicts great harm on to your foes",				
-				
+	"item.powder_power.token_affliction.line1": "Inflicts great harm on to your foes",
+
+	"tetra.material.prismarine": "Prismarine",
+	"tetra.material.prismarine.prefix": "Prismarine",
+	"tetra.material.redium": "Redium",
+	"tetra.material.redium.prefix": "Redium",
+	"tetra.material.lapium": "Lapium",
+	"tetra.material.lapium.prefix": "Lapium",
+	"tetra.material.gemium": "Gemium",
+	"tetra.material.gemium.prefix": "Gemium",
+	"tetra.material.trilium": "Trilium",
+	"tetra.material.trilium.prefix": "Trilium",
+	"tetra.material.quadrilium": "Quadrilium",
+	"tetra.material.quadrilium.prefix": "Quadrilium",
+
+	"tetra.improvement.bleeding.name": "Bleeding",
+	"tetra.improvement.backstab.name": "Backstab",
+	"tetra.improvement.enderReverb.name": "Ender Reverb",
+	"tetra.improvement.unbreaking.name": "Unbreaking",
+	"tetra.improvement.criticalStrike.name": "Critical Strike",
+
 	"itemGroup.powder_power": "Powder Power"
 }

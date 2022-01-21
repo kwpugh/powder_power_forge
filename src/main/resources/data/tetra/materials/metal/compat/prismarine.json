@@ -1,0 +1,27 @@
+{
+  "key": "prismarine",
+  "category": "gem",
+  "primary": 7,
+  "secondary": 4.4,
+  "tertiary": 3,
+  "durability": 725,
+  "integrityCost": 1,
+  "integrityGain": 4,
+  "magicCapacity": 61,
+  "toolLevel": "minecraft:diamond",
+  "toolEfficiency": 6,
+  "tints": {
+    "glyph": "22a185",
+    "texture": "0ba382"
+  },
+  "textures": [
+    "shiny",
+    "crude"
+  ],
+  "material": {
+    "tag": "forge:ingots/prismarine"
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:wood"
+  }
+}
