@@ -21,8 +21,8 @@
   "material": {
     "tag": "forge:ingots/gemium"
   },
-  "improvements": {
-    "enderReverb": 2
+  "effects": {
+    "stabilizing": 6
   },
   "requiredTools": {
     "hammer_dig": "minecraft:iron"

@@ -21,8 +21,8 @@
   "material": {
     "tag": "forge:ingots/quadrilium"
   },
-  "improvements": {
-    "criticalStrike": 2
+  "effects": {
+    "stabilizing": 10
   },
   "requiredTools": {
     "hammer_dig": "minecraft:iron"

@@ -21,8 +21,8 @@
   "material": {
     "tag": "forge:ingots/trilium"
   },
-  "improvements": {
-    "unbreaking": 3
+  "effects": {
+    "stabilizing": 8
   },
   "requiredTools": {
     "hammer_dig": "minecraft:iron"

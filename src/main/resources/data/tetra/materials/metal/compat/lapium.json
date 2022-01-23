@@ -21,10 +21,10 @@
   "material": {
     "tag": "forge:ingots/lapium"
   },
-  "improvements": {
-    "backstab": 3
+  "effects": {
+    "stabilizing": 4
   },
   "requiredTools": {
-    "hammer_dig": "minecraft:iron"
+    "hammer_dig": "minecraft:gold"
   }
 }

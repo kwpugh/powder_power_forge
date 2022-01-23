@@ -300,20 +300,6 @@
 	"tetra.material.trilium.prefix": "Trilium",
 	"tetra.material.quadrilium": "Quadrilium",
 	"tetra.material.quadrilium.prefix": "Quadrilium",
-
-	"tetra.improvement.bleeding.name": "Bleeding",
-	"tetra.improvement.backstab.name": "Backstab",
-	"tetra.improvement.enderReverb.name": "Ender Reverb",
-	"tetra.improvement.unbreaking.name": "Unbreaking",
-	"tetra.improvement.criticalStrike.name": "Critical Strike",
-	"tetra.improvement.sweeping.name": "Sweeping",
-
-	"tetra.improvement.bleeding.description": "Hitting entities has a 30%% chance to cause them to bleed for 2 seconds, not effective against undead",
-	"tetra.improvement.backstab.description": "Hitting entities from behind cause critical hits that deal bonus damage",
-	"tetra.improvement.enderReverb.description": "Using the item angers nearby endermen and nearby ender teleportation has a chance to also teleport the wielder",
-	"tetra.improvement.unbreaking.description": "Has a chance to not take durability damage on use",
-	"tetra.improvement.criticalStrike.description": "Has a chance to critically hit when hitting entities or breaking blocks.",
-	"tetra.improvement.sweeping.description": "Attacking an entity also hits all adjacent enemies within range",
-
+	
 	"itemGroup.powder_power": "Powder Power"
 }
