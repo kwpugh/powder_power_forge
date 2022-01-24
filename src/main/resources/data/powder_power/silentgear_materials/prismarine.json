@@ -1,0 +1,51 @@
+{
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/prismarine"
+      }
+    }
+  ],
+  "availability": {
+    "tier": 3,
+    "visible": true,
+    "gear_blacklist": []
+  },
+  "crafting_items": {
+    "main": {
+      "tag": "forge:ingots/prismarine"
+    }
+  },
+  "name": {
+    "text": "Prismarine"
+  },
+  "stats": {
+    "main": {
+      "durability": 725.0,
+      "armor_durability": 14.0,
+      "enchantability": 8.0,
+      "harvest_level": 3.0,
+      "harvest_speed": 8.0,
+      "melee_damage": 2.0,
+      "magic_damage": 3.0,
+      "attack_speed": 0.5,
+      "armor": 12.0,
+      "armor_toughness": 0.0,
+      "magic_armor": 6.0,
+      "ranged_damage": 1.0,
+      "ranged_speed": 0.5,
+      "rarity": 30.0,
+      "silentgems:chargeability": 1.4
+    }
+  },
+  "traits": {
+    "main": [
+      {
+        "name": "silentgear:aquatic",
+        "level": 1
+      }
+    ]
+  }
+}

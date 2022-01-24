@@ -1,0 +1,51 @@
+{
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/redium"
+      }
+    }
+  ],
+  "availability": {
+    "tier": 3,
+    "visible": true,
+    "gear_blacklist": []
+  },
+  "crafting_items": {
+    "main": {
+      "tag": "forge:ingots/redium"
+    }
+  },
+  "name": {
+    "text": "Redium"
+  },
+  "stats": {
+    "main": {
+      "durability": 1800.0,
+      "armor_durability": 38.0,
+      "enchantability": 15.0,
+      "harvest_level": 3.0,
+      "harvest_speed": 8.0,
+      "melee_damage": 4.0,
+      "magic_damage": 3.0,
+      "attack_speed": 0.0,
+      "armor": 20.0,
+      "armor_toughness": 2.0,
+      "magic_armor": 6.0,
+      "ranged_damage": 1.0,
+      "ranged_speed": 0.5,
+      "rarity": 30.0,
+      "silentgems:chargeability": 1.4
+    }
+  },
+  "traits": {
+    "main": [
+      {
+        "name": "silentgear:brilliant",
+        "level": 1
+      }
+    ]
+  }
+}

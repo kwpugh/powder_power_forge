@@ -1,0 +1,51 @@
+{
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/trilium"
+      }
+    }
+  ],
+  "availability": {
+    "tier": 3,
+    "visible": true,
+    "gear_blacklist": []
+  },
+  "crafting_items": {
+    "main": {
+      "tag": "forge:ingots/trilium"
+    }
+  },
+  "name": {
+    "text": "Trilium"
+  },
+  "stats": {
+    "main": {
+      "durability": 3600.0,
+      "armor_durability": 56.0,
+      "enchantability": 25.0,
+      "harvest_level": 4.0,
+      "harvest_speed": 8.0,
+      "melee_damage": 6.0,
+      "magic_damage": 3.0,
+      "attack_speed": 0.0,
+      "armor": 24.0,
+      "armor_toughness": 3.0,
+      "magic_armor": 6.0,
+      "ranged_damage": 1.0,
+      "ranged_speed": 0.5,
+      "rarity": 30.0,
+      "silentgems:chargeability": 1.4
+    }
+  },
+  "traits": {
+    "main": [
+      {
+        "name": "silentgear:mighty",
+        "level": 1
+      }
+    ]
+  }
+}
