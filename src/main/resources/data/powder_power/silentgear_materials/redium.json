@@ -29,9 +29,25 @@
       "harvest_level": 3.0,
       "harvest_speed": 8.0,
       "melee_damage": 4.0,
+      "melee_damage/sword": 0.0,
+      "melee_damage/pickaxe": 0.0,
+      "melee_damage/axe": 0.0,
+      "melee_damage/paxel": 0.0,
+      "melee_damage/shovel": 0.0,
+      "melee_damage/mattock": 0.0,
+      "melee_damage/hammer": 0.0,
+      "melee_damage/excavator": 0.0,
       "magic_damage": 3.0,
       "attack_speed": 0.0,
-      "armor": 20.0,
+      "attack_speed/sword": 0.0,
+      "attack_speed/pickaxe": 0.1,
+      "attack_speed/mattock": 0.0,
+      "attack_speed/hammer": 0.2,
+      "armor": 23.0,
+      "armor/helmet": 3.0,
+      "armor/chestplate": 8.0,
+      "armor/leggings": 6.0,
+      "armor/boots": 3.0,
       "armor_toughness": 2.0,
       "magic_armor": 6.0,
       "ranged_damage": 1.0,
@@ -43,7 +59,7 @@
   "traits": {
     "main": [
       {
-        "name": "silentgear:brilliant",
+        "name": "silentgear:flame_ward",
         "level": 1
       }
     ]
