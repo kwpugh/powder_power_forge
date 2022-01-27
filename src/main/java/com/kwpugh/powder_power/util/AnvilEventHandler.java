@@ -29,7 +29,7 @@ public class AnvilEventHandler
 		{			
 			ItemStack output = new ItemStack(ItemInit.PICKAXE_OBSIDIAN.get());
 			output.enchant(Enchantments.SILK_TOUCH, 1);
-			output.enchant(Enchantments.BLOCK_EFFICIENCY, 3);
+			output.enchant(Enchantments.BLOCK_EFFICIENCY, 1);
 			output.setHoverName(new TextComponent("Improved Obsidian Pickaxe"));
 			event.setCost(10);
 			event.setOutput(output);
@@ -38,8 +38,8 @@ public class AnvilEventHandler
 		if(left.getItem().equals(ItemInit.PICKAXE_PRISMARINE.get()) && right.getItem().equals(ItemInit.BLEND_LAPIUM.get()))
 		{			
 			ItemStack output = new ItemStack(ItemInit.PICKAXE_PRISMARINE.get());
-			output.enchant(Enchantments.BLOCK_FORTUNE, 3);
-			output.enchant(Enchantments.BLOCK_EFFICIENCY, 3);
+			output.enchant(Enchantments.BLOCK_FORTUNE, 1);
+			output.enchant(Enchantments.BLOCK_EFFICIENCY, 1);
 			output.setHoverName(new TextComponent("Improved Prismarine Pickaxe"));
 			event.setCost(10);
 			event.setOutput(output);
@@ -48,8 +48,8 @@ public class AnvilEventHandler
 		if(left.getItem().equals(ItemInit.DAGGER_PRISMARINE.get()) && right.getItem().equals(ItemInit.BLEND_LAPIUM.get()))
 		{			
 			ItemStack output = new ItemStack(ItemInit.DAGGER_PRISMARINE.get());
-			output.enchant(Enchantments.SHARPNESS, 3);
-			output.enchant(Enchantments.MOB_LOOTING, 3);
+			output.enchant(Enchantments.SHARPNESS, 1);
+			output.enchant(Enchantments.MOB_LOOTING, 1);
 			output.setHoverName(new TextComponent("Deadly Prismarine Dagger"));
 			event.setCost(10);
 			event.setOutput(output);
@@ -59,8 +59,8 @@ public class AnvilEventHandler
 		{			
 			ItemStack output = new ItemStack(Items.DIAMOND_SWORD);
 			output.enchant(Enchantments.FIRE_ASPECT, 1);
-			output.enchant(Enchantments.SHARPNESS, 4);
-			output.enchant(Enchantments.MOB_LOOTING, 4);
+			output.enchant(Enchantments.SHARPNESS, 1);
+			output.enchant(Enchantments.MOB_LOOTING, 1);
 			output.setHoverName(new TextComponent("Deadly Diamond Sword"));
 			event.setCost(20);
 			event.setOutput(output);
@@ -69,8 +69,8 @@ public class AnvilEventHandler
 		if(left.getItem().equals(Items.DIAMOND_PICKAXE) && right.getItem().equals(ItemInit.BLEND_TRILIUM.get()))
 		{			
 			ItemStack output = new ItemStack(Items.DIAMOND_PICKAXE);
-			output.enchant(Enchantments.BLOCK_FORTUNE, 5);
-			output.enchant(Enchantments.BLOCK_EFFICIENCY, 5);
+			output.enchant(Enchantments.BLOCK_FORTUNE, 2);
+			output.enchant(Enchantments.BLOCK_EFFICIENCY, 2);
 			output.setHoverName(new TextComponent("Improved Diamond Pickaxe"));
 			event.setCost(20);
 			event.setOutput(output);
@@ -79,11 +79,11 @@ public class AnvilEventHandler
 		if(left.getItem().equals(Items.NETHERITE_SWORD) && right.getItem().equals(ItemInit.BLEND_QUADRILIUM.get()))
 		{			
 			ItemStack output = new ItemStack(Items.NETHERITE_SWORD);
-			output.enchant(Enchantments.FIRE_ASPECT, 2);
-			output.enchant(Enchantments.SHARPNESS, 9);
-			output.enchant(Enchantments.MOB_LOOTING, 5);
-			output.enchant(Enchantments.KNOCKBACK, 2);
-			output.enchant(Enchantments.BANE_OF_ARTHROPODS, 3);
+			output.enchant(Enchantments.FIRE_ASPECT, 1);
+			output.enchant(Enchantments.SHARPNESS, 3);
+			output.enchant(Enchantments.MOB_LOOTING, 3);
+			output.enchant(Enchantments.KNOCKBACK, 1);
+			output.enchant(Enchantments.BANE_OF_ARTHROPODS, 1);
 			output.setHoverName(new TextComponent("Deadly Quadrilirite Sword"));
 			output.getOrCreateTag().putBoolean("Unbreakable", true);
 			event.setCost(30);

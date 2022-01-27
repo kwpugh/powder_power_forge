@@ -28,7 +28,7 @@
       "enchantability": 30.0,
       "harvest_level": 4.0,
       "harvest_speed": 8.0,
-      "melee_damage": 7.0,
+      "melee_damage": 4.0,
       "melee_damage/sword": 0.0,
       "melee_damage/pickaxe": 0.0,
       "melee_damage/axe": 0.0,

@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'idea'
 apply plugin: 'maven-publish'
 
-version = '3.5.8'
+version = '3.5.9'
 group = 'com.kwpugh.powder_power' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'PowderPower-Forge-1.18.1'
 
@@ -123,6 +123,19 @@ repositories {
     //     dir 'libs'
     // }
 
+    //JEI
+    maven {
+        // location of the maven that hosts JEI files
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+    maven {
+        // location of a maven mirror for JEI files, as a fallback
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
+
+    // Curios
     maven {
         url = "https://maven.theillusivec4.top/"
     }
@@ -153,6 +166,11 @@ dependencies {
     runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.18.1-5.0.6.0")
     compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.18.1-5.0.6.0:api")
 
+    // compile against the JEI API but do not include it at runtime
+    compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
+    // at runtime, use the full JEI jar
+    runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
+    
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
