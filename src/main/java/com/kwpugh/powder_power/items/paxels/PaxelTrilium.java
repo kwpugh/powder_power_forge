@@ -1,19 +1,15 @@
 package com.kwpugh.powder_power.items.paxels;
 
-import java.util.Set;
-
 import com.kwpugh.powder_power.init.ItemInit;
-
 import com.kwpugh.powder_power.init.TagInit;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.item.Tier;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.ItemStack;
-
-import net.minecraft.world.item.Item.Properties;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.level.block.Block;
 
 public class PaxelTrilium extends PaxelBase
 {
-	public PaxelTrilium(float attackDamageIn, float attackSpeedIn, Tier tier, Set<Block> effectiveBlocksIn,
+	public PaxelTrilium(float attackDamageIn, float attackSpeedIn, Tier tier, TagKey<Block> mineable,
 			Properties builder)
 	{
 		super(attackDamageIn, attackSpeedIn, tier, TagInit.PAXEL_MINEABLE, builder);

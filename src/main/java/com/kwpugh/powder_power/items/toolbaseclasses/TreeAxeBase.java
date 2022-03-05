@@ -96,18 +96,18 @@ public class TreeAxeBase extends AxeItem
 
         int leaves = 0;
 
-        for (int i = 0; i < candidates.size(); i++)
+        for(int i = 0; i < candidates.size(); i++)
         {
             if (logs.size() > 200) return false; 
 
             BlockPos candidate = candidates.get(i);
-            Block block = world.getBlockState(candidate).getBlock();
+            BlockState state = world.getBlockState(candidate);
 
-            if (BlockTags.LEAVES.contains(block))
+            if(state.is(BlockTags.LEAVES))
             {
                 leaves++;
             }
-            else if (logs.size() == 0 || BlockTags.LOGS.contains(block))
+            else if (logs.size() == 0 || state.is(BlockTags.LOGS))
             {
                 logs.add(candidate);
 
@@ -202,7 +202,7 @@ public class TreeAxeBase extends AxeItem
 
         boolean validHarvest = !checkHarvestLevel || player.getMainHandItem().isCorrectToolForDrops(state);
         boolean isEffective = effectiveOn.contains(state.getBlock()) || effectiveMaterials.contains(state.getMaterial());
-        boolean witherImmune = BlockTags.WITHER_IMMUNE.contains(state.getBlock());
+        boolean witherImmune = state.is(BlockTags.WITHER_IMMUNE);
 
         if (validHarvest && isEffective && !witherImmune)
         {
