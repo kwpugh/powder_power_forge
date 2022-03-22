@@ -1,6 +1,7 @@
 package com.kwpugh.powder_power.items.armor;
 
 
+import com.kwpugh.powder_power.config.ConfigPowderPower;
 import com.kwpugh.powder_power.init.ItemInit;
 import com.kwpugh.powder_power.util.PlayerEquipUtil;
 import com.kwpugh.powder_power.util.PlayerSpecialAbilities;
@@ -32,11 +33,25 @@ public class ArmorQuadrilium extends ArmorItem
 	{
 		if(PlayerEquipUtil.hasQuadriliumArmor(player))
 		{
-			player.removeEffectNoUpdate(MobEffects.POISON);
-			player.removeEffectNoUpdate(MobEffects.WITHER);
-			player.removeEffectNoUpdate(MobEffects.LEVITATION);
-			PlayerSpecialAbilities.giveRegenffect(world, player, stack, 1, 0.75F);
-			PlayerSpecialAbilities.giveDolphinEffect(world, player, stack);
+			if(ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_POISON_PROTECT.get())
+			{
+				player.removeEffectNoUpdate(MobEffects.POISON);
+			}
+
+			if(ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_WITHER_PROTECT.get())
+			{
+				player.removeEffectNoUpdate(MobEffects.WITHER);
+			}
+
+			if(ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_HEALTH_REGEN.get())
+			{
+				PlayerSpecialAbilities.giveRegenffect(world, player, stack, 1, 0.75F);
+			}
+
+			if(ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_DOLPHIN.get())
+			{
+				PlayerSpecialAbilities.giveDolphinEffect(world, player, stack);
+			}
 		}
 	}
 
@@ -56,9 +71,51 @@ public class ArmorQuadrilium extends ArmorItem
 	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
 		super.appendHoverText(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslatableComponent("item.powder_power.armor_trilium_full.line1").withStyle(ChatFormatting.GREEN)));	
-		tooltip.add((new TranslatableComponent("item.powder_power.armor_trilium_full.line2").withStyle(ChatFormatting.GREEN)));	
-		tooltip.add((new TranslatableComponent("item.powder_power.armor_trilium_full.line3").withStyle(ChatFormatting.GREEN)));	
-		
+
+		if(ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_WATER_BREATHING.get() ||
+				ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_FIRE_PROTECT.get() ||
+				ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_WITHER_PROTECT.get() ||
+				ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_POISON_PROTECT.get() ||
+				ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_NO_FALL_DAMAGE.get() ||
+				ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_HEALTH_REGEN.get() ||
+				ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_DOLPHIN.get())
+		{
+			tooltip.add((new TranslatableComponent("item.powder_power.armor_quadrilium_full.line1").withStyle(ChatFormatting.GOLD)));
+		}
+
+		if(ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_WATER_BREATHING.get())
+		{
+			tooltip.add((new TranslatableComponent("item.powder_power.armor_quadrilium_full.line2").withStyle(ChatFormatting.GREEN)));
+		}
+
+		if(ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_FIRE_PROTECT.get())
+		{
+			tooltip.add((new TranslatableComponent("item.powder_power.armor_quadrilium_full.line3").withStyle(ChatFormatting.GREEN)));
+		}
+
+		if(ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_WITHER_PROTECT.get())
+		{
+			tooltip.add((new TranslatableComponent("item.powder_power.armor_quadrilium_full.line4").withStyle(ChatFormatting.GREEN)));
+		}
+
+		if(ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_POISON_PROTECT.get())
+		{
+			tooltip.add((new TranslatableComponent("item.powder_power.armor_quadrilium_full.line5").withStyle(ChatFormatting.GREEN)));
+		}
+
+		if(ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_NO_FALL_DAMAGE.get())
+		{
+			tooltip.add((new TranslatableComponent("item.powder_power.armor_quadrilium_full.line6").withStyle(ChatFormatting.GREEN)));
+		}
+
+		if(ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_HEALTH_REGEN.get())
+		{
+			tooltip.add((new TranslatableComponent("item.powder_power.armor_quadrilium_full.line7").withStyle(ChatFormatting.GREEN)));
+		}
+
+		if(ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_DOLPHIN.get())
+		{
+			tooltip.add((new TranslatableComponent("item.powder_power.armor_quadrilium_full.line8").withStyle(ChatFormatting.GREEN)));
+		}
 	}
 }

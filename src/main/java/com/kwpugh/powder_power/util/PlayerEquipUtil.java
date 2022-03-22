@@ -1,5 +1,6 @@
 package com.kwpugh.powder_power.util;
 
+import com.kwpugh.powder_power.config.ConfigPowderPower;
 import com.kwpugh.powder_power.init.ItemInit;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Inventory;
@@ -110,7 +111,22 @@ public final class PlayerEquipUtil
 
     public static boolean isPlayerGotWaterBreathing(Player player)
     {
-	    if(hasLapiumArmor(player) || hasGemiumArmor(player) || hasTriliumArmor(player) || hasQuadriliumArmor(player))
+	    if(hasLapiumArmor(player) && ConfigPowderPower.LAPIUM_ARMOR_ENABLE_WATER_BREATHING.get())
+		{
+			return  true;
+		}
+
+		if(hasGemiumArmor(player) && ConfigPowderPower.GEMIUM_ARMOR_ENABLE_WATER_BREATHING.get())
+		{
+			return  true;
+		}
+
+		if(hasTriliumArmor(player) && ConfigPowderPower.TRILIUM_ARMOR_ENABLE_WATER_BREATHING.get())
+		{
+			return  true;
+		}
+
+		if(hasQuadriliumArmor(player) && ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_WATER_BREATHING.get())
 		{
 			return  true;
 		}
@@ -134,7 +150,17 @@ public final class PlayerEquipUtil
     {
 		Inventory inv2 = player.getInventory();
 
-		if(hasGemiumArmor(player) || hasTriliumArmor(player) || hasQuadriliumArmor(player))
+		if(hasGemiumArmor(player) && ConfigPowderPower.GEMIUM_ARMOR_ENABLE_NO_FALL_DAMAGE.get())
+		{
+			return true;
+		}
+
+		if(hasTriliumArmor(player) && ConfigPowderPower.TRILIUM_ARMOR_ENABLE_NO_FALL_DAMAGE.get())
+		{
+			return true;
+		}
+
+		if(hasQuadriliumArmor(player) && ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_NO_FALL_DAMAGE.get())
 		{
 			return true;
 		}
@@ -156,8 +182,22 @@ public final class PlayerEquipUtil
     {
 		Inventory inv3 = player.getInventory();
 
-    	if(PlayerEquipUtil.hasRediumArmor(player) || PlayerEquipUtil.hasGemiumArmor(player) ||
-		PlayerEquipUtil.hasTriliumArmor(player) || PlayerEquipUtil.hasQuadriliumArmor(player))
+		if(PlayerEquipUtil.hasRediumArmor(player) && ConfigPowderPower.REDIUM_ARMOR_ENABLE_FIRE_PROTECT.get())
+		{
+			return  true;
+		}
+
+		if(PlayerEquipUtil.hasGemiumArmor(player) || ConfigPowderPower.GEMIUM_ARMOR_ENABLE_FIRE_PROTECT.get())
+		{
+			return  true;
+		}
+
+		if(PlayerEquipUtil.hasTriliumArmor(player) && ConfigPowderPower.TRILIUM_ARMOR_ENABLE_NO_FALL_DAMAGE.get())
+		{
+			return  true;
+		}
+
+    	if(PlayerEquipUtil.hasQuadriliumArmor(player) && ConfigPowderPower.QUADRILIUM_ARMOR_ENABLE_FIRE_PROTECT.get())
 		{
 			return  true;
 		}

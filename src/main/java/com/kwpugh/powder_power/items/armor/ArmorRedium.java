@@ -1,5 +1,6 @@
 package com.kwpugh.powder_power.items.armor;
 
+import com.kwpugh.powder_power.config.ConfigPowderPower;
 import com.kwpugh.powder_power.init.ItemInit;
 import com.kwpugh.powder_power.util.PlayerEquipUtil;
 import com.kwpugh.powder_power.util.PlayerSpecialAbilities;
@@ -31,8 +32,15 @@ public class ArmorRedium extends ArmorItem
 	{
 		if(PlayerEquipUtil.hasRediumArmor(player))
 		{
-			player.removeEffectNoUpdate(MobEffects.WITHER);
-			PlayerSpecialAbilities.giveRegenffect(world, player, stack, 0, 0.1F);
+			if(ConfigPowderPower.REDIUM_ARMOR_ENABLE_WITHER_PROTECT.get())
+			{
+				player.removeEffectNoUpdate(MobEffects.WITHER);
+			}
+
+			if(ConfigPowderPower.REDIUM_ARMOR_ENABLE_HEALTH_REGEN.get())
+			{
+				PlayerSpecialAbilities.giveRegenffect(world, player, stack, 0, 0.1F);
+			}
 		}
 	}
 
@@ -52,6 +60,27 @@ public class ArmorRedium extends ArmorItem
 	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
 		super.appendHoverText(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslatableComponent("item.powder_power.armor_redium_full.line1").withStyle(ChatFormatting.GREEN)));	
+
+		if(ConfigPowderPower.REDIUM_ARMOR_ENABLE_FIRE_PROTECT.get() ||
+				ConfigPowderPower.REDIUM_ARMOR_ENABLE_FIRE_PROTECT.get() ||
+				ConfigPowderPower.REDIUM_ARMOR_ENABLE_WITHER_PROTECT.get())
+		{
+			tooltip.add((new TranslatableComponent("item.powder_power.armor_redium_full.line1").withStyle(ChatFormatting.GOLD)));
+		}
+
+		if(ConfigPowderPower.REDIUM_ARMOR_ENABLE_FIRE_PROTECT.get())
+		{
+			tooltip.add((new TranslatableComponent("item.powder_power.armor_redium_full.line2").withStyle(ChatFormatting.GREEN)));
+		}
+
+		if(ConfigPowderPower.REDIUM_ARMOR_ENABLE_WITHER_PROTECT.get())
+		{
+			tooltip.add((new TranslatableComponent("item.powder_power.armor_redium_full.line3").withStyle(ChatFormatting.GREEN)));
+		}
+
+		if(ConfigPowderPower.REDIUM_ARMOR_ENABLE_HEALTH_REGEN.get())
+		{
+			tooltip.add((new TranslatableComponent("item.powder_power.armor_redium_full.line4").withStyle(ChatFormatting.GREEN)));
+		}
 	}
 }

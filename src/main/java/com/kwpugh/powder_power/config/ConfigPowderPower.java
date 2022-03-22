@@ -68,7 +68,37 @@ public class ConfigPowderPower
 	public static ForgeConfigSpec.IntValue EXP_TOKEN_MINING_VALUE;
 	public static ForgeConfigSpec.IntValue EXP_TOKEN_KILLING_VALUE;
 
-	
+	public static ForgeConfigSpec.BooleanValue REDIUM_ARMOR_ENABLE_WITHER_PROTECT;
+	public static ForgeConfigSpec.BooleanValue REDIUM_ARMOR_ENABLE_FIRE_PROTECT;
+	public static ForgeConfigSpec.BooleanValue REDIUM_ARMOR_ENABLE_HEALTH_REGEN;
+
+	public static ForgeConfigSpec.BooleanValue LAPIUM_ARMOR_ENABLE_POISON_PROTECT;
+	public static ForgeConfigSpec.BooleanValue LAPIUM_ARMOR_ENABLE_WATER_BREATHING;
+	public static ForgeConfigSpec.BooleanValue LAPIUM_ARMOR_ENABLE_HEALTH_REGEN;
+
+	public static ForgeConfigSpec.BooleanValue GEMIUM_ARMOR_ENABLE_WITHER_PROTECT;
+	public static ForgeConfigSpec.BooleanValue GEMIUM_ARMOR_ENABLE_FIRE_PROTECT;
+	public static ForgeConfigSpec.BooleanValue GEMIUM_ARMOR_ENABLE_POISON_PROTECT;
+	public static ForgeConfigSpec.BooleanValue GEMIUM_ARMOR_ENABLE_WATER_BREATHING;
+	public static ForgeConfigSpec.BooleanValue GEMIUM_ARMOR_ENABLE_NO_FALL_DAMAGE;
+	public static ForgeConfigSpec.BooleanValue GEMIUM_ARMOR_ENABLE_HEALTH_REGEN;
+
+	public static ForgeConfigSpec.BooleanValue TRILIUM_ARMOR_ENABLE_WITHER_PROTECT;
+	public static ForgeConfigSpec.BooleanValue TRILIUM_ARMOR_ENABLE_FIRE_PROTECT;
+	public static ForgeConfigSpec.BooleanValue TRILIUM_ARMOR_ENABLE_POISON_PROTECT;
+	public static ForgeConfigSpec.BooleanValue TRILIUM_ARMOR_ENABLE_WATER_BREATHING;
+	public static ForgeConfigSpec.BooleanValue TRILIUM_ARMOR_ENABLE_NO_FALL_DAMAGE;
+	public static ForgeConfigSpec.BooleanValue TRILIUM_ARMOR_ENABLE_HEALTH_REGEN;
+	public static ForgeConfigSpec.BooleanValue TRILIUM_ARMOR_ENABLE_DOLPHIN;
+
+	public static ForgeConfigSpec.BooleanValue QUADRILIUM_ARMOR_ENABLE_WITHER_PROTECT;
+	public static ForgeConfigSpec.BooleanValue QUADRILIUM_ARMOR_ENABLE_FIRE_PROTECT;
+	public static ForgeConfigSpec.BooleanValue QUADRILIUM_ARMOR_ENABLE_POISON_PROTECT;
+	public static ForgeConfigSpec.BooleanValue QUADRILIUM_ARMOR_ENABLE_WATER_BREATHING;
+	public static ForgeConfigSpec.BooleanValue QUADRILIUM_ARMOR_ENABLE_NO_FALL_DAMAGE;
+	public static ForgeConfigSpec.BooleanValue QUADRILIUM_ARMOR_ENABLE_HEALTH_REGEN;
+	public static ForgeConfigSpec.BooleanValue QUADRILIUM_ARMOR_ENABLE_DOLPHIN;
+
 	public static void init(ForgeConfigSpec.Builder SERVER)
 	{
 		SERVER.comment("Prismarine Tool Material").push("prismarine_tool_material");
@@ -151,12 +181,30 @@ public class ConfigPowderPower
 		SERVER.pop();
 
 
+		SERVER.comment("Redium Armor Effects").push("redium_armor_effects");
+
+		REDIUM_ARMOR_ENABLE_WITHER_PROTECT = SERVER.comment("Enable redium armor wither protection [true/false]").define("rediumArmorEnableWitherProtect", false);
+		REDIUM_ARMOR_ENABLE_FIRE_PROTECT = SERVER.comment("Enable redium armor fire protection [true/false]").define("rediumArmorEnableFireProtect", true);
+		REDIUM_ARMOR_ENABLE_HEALTH_REGEN = SERVER.comment("Enable redium armor health regen [true/false]").define("rediumArmorEnableHealthRegen", false);
+
+		SERVER.pop();
+
+
 		SERVER.comment("Lapium Armor Material").push("lapium_armor_material");
 
 		LAPIUM_ARMOR_DURABILITY_MULTIPLIER = SERVER.comment("Lapium armor durability multiplier [1-50, default: 38]").defineInRange("lapiumArmorDurabilityMultiplier", 38, 1, 50);
 		LAPIUM_ARMOR_ENCHANTABILITY = SERVER.comment("Lapium armor enchantability [1-31, default: 15]").defineInRange("lapiumArmorEnchantability", 15, 1, 31);
 		LAPIUM_ARMOR_TOUGHNESS = SERVER.comment("Lapium armor toughness [0.0-4.0, default: 2.0]").defineInRange("lapiumArmorToughness", 2.0, 0.0, 4.0);
 		LAPIUM_ARMOR_KNOCKBACK_RESISTANCE = SERVER.comment("Lapium armor knockback resistance [0.0-4.0, default: 0.0]").defineInRange("lapiumArmorKnockbackResistance", 0.0, 0.0, 4.0);
+
+		SERVER.pop();
+
+
+		SERVER.comment("Lapium Armor Effects").push("lapium_armor_effects");
+
+		LAPIUM_ARMOR_ENABLE_POISON_PROTECT = SERVER.comment("Enable lapium armor poison protection [true/false]").define("lapiumArmorEnablePoisonProtect", false);
+		LAPIUM_ARMOR_ENABLE_WATER_BREATHING = SERVER.comment("Enable lapium armor water breathing [true/false]").define("lapiumArmorEnableWaterBreathing", true);
+		LAPIUM_ARMOR_ENABLE_HEALTH_REGEN = SERVER.comment("Enable lapium armor health regen [true/false]").define("lapiumArmorEnableHealthRegen", false);
 
 		SERVER.pop();
 
@@ -171,6 +219,18 @@ public class ConfigPowderPower
 		SERVER.pop();
 
 
+		SERVER.comment("Gemium Armor Effects").push("gemium_armor_effects");
+
+		GEMIUM_ARMOR_ENABLE_WITHER_PROTECT = SERVER.comment("Enable gemium armor wither protection [true/false]").define("gemiumArmorEnableWitherProtect", false);
+		GEMIUM_ARMOR_ENABLE_FIRE_PROTECT = SERVER.comment("Enable gemium armor fire protection [true/false]").define("gemiumArmorEnableFireProtect", true);
+		GEMIUM_ARMOR_ENABLE_POISON_PROTECT = SERVER.comment("Enable gemium armor poison protection [true/false]").define("gemiumArmorEnablePoisonProtect", false);
+		GEMIUM_ARMOR_ENABLE_WATER_BREATHING = SERVER.comment("Enable gemium armor water breathing [true/false]").define("gemiumArmorEnableWaterBreathing", true);
+		GEMIUM_ARMOR_ENABLE_HEALTH_REGEN = SERVER.comment("Enable gemium armor health regen [true/false]").define("gemiumArmorEnableHealthRegen", false);
+		GEMIUM_ARMOR_ENABLE_NO_FALL_DAMAGE = SERVER.comment("Enable gemium armor no fall damage [true/false]").define("gemiumArmorEnableNoFallDamage", false);
+
+		SERVER.pop();
+
+
 		SERVER.comment("Trilium Armor Material").push("trilium_armor_material");
 
 		TRILIUM_ARMOR_DURABILITY_MULTIPLIER = SERVER.comment("Trilium armor durability multiplier [1-75, default: 56]").defineInRange("triliumArmorDurabilityMultiplier", 56, 1, 75);
@@ -181,12 +241,38 @@ public class ConfigPowderPower
 		SERVER.pop();
 
 
+		SERVER.comment("Trilium Armor Effects").push("trilium_armor_effects");
+
+		TRILIUM_ARMOR_ENABLE_WITHER_PROTECT = SERVER.comment("Enable trilium armor wither protection [true/false]").define("triliumArmorEnableWitherProtect", false);
+		TRILIUM_ARMOR_ENABLE_FIRE_PROTECT = SERVER.comment("Enable trilium armor fire protection [true/false]").define("triliumArmorEnableFireProtect", true);
+		TRILIUM_ARMOR_ENABLE_POISON_PROTECT = SERVER.comment("Enable trilium armor poison protection [true/false]").define("triliumArmorEnablePoisonProtect", false);
+		TRILIUM_ARMOR_ENABLE_WATER_BREATHING = SERVER.comment("Enable trilium armor water breathing [true/false]").define("triliumArmorEnableWaterBreathing", true);
+		TRILIUM_ARMOR_ENABLE_HEALTH_REGEN = SERVER.comment("Enable trilium armor health regen [true/false]").define("triliumArmorEnableHealthRegen", false);
+		TRILIUM_ARMOR_ENABLE_NO_FALL_DAMAGE = SERVER.comment("Enable trilium armor no fall damage [true/false]").define("triliumArmorEnableNoFallDamage", true);
+		TRILIUM_ARMOR_ENABLE_DOLPHIN = SERVER.comment("Enable trilium armor dolphins grace [true/false]").define("triliumArmorEnableDolphin", false);
+
+		SERVER.pop();
+
+
 		SERVER.comment("Quadrilium Armor Material").push("quadrilium_armor_material");
 
 		QUADRILIUM_ARMOR_DURABILITY_MULTIPLIER = SERVER.comment("Quadrilium armor durability multiplier [1-75, default: 64]").defineInRange("quadriliumArmorDurabilityMultiplier", 64, 1, 75);
 		QUADRILIUM_ARMOR_ENCHANTABILITY = SERVER.comment("Quadrilium armor enchantability [1-31, default: 30]").defineInRange("quadriliumArmorEnchantability", 30, 1, 31);
 		QUADRILIUM_ARMOR_TOUGHNESS = SERVER.comment("Quadrilium armor toughness [0.0-4.0, default: 4.0]").defineInRange("quadriliumArmorToughness", 4.0, 0.0, 4.0);
 		QUADRILIUM_ARMOR_KNOCKBACK_RESISTANCE = SERVER.comment("Quadrilium armor knockback resistance [0.0-4.0, default: 0.2]").defineInRange("quadriliumArmorKnockbackResistance", 0.2, 0.0, 4.0);
+
+		SERVER.pop();
+
+
+		SERVER.comment("Quadrilium Armor Effects").push("quadrilium_armor_effects");
+
+		QUADRILIUM_ARMOR_ENABLE_WITHER_PROTECT = SERVER.comment("Enable quadrilium armor wither protection [true/false]").define("quadriliumArmorEnableWitherProtect", false);
+		QUADRILIUM_ARMOR_ENABLE_FIRE_PROTECT = SERVER.comment("Enable quadrilium armor fire protection [true/false]").define("quadriliumArmorEnableFireProtect", true);
+		QUADRILIUM_ARMOR_ENABLE_POISON_PROTECT = SERVER.comment("Enable quadrilium armor poison protection [true/false]").define("quadriliumArmorEnablePoisonProtect", false);
+		QUADRILIUM_ARMOR_ENABLE_WATER_BREATHING = SERVER.comment("Enable quadrilium armor water breathing [true/false]").define("quadriliumArmorEnableWaterBreathing", true);
+		QUADRILIUM_ARMOR_ENABLE_HEALTH_REGEN = SERVER.comment("Enable quadrilium armor health regen [true/false]").define("quadriliumArmorEnableHealthRegen", false);
+		QUADRILIUM_ARMOR_ENABLE_NO_FALL_DAMAGE = SERVER.comment("Enable quadrilium armor no fall damage [true/false]").define("quadriliumArmorEnableNoFallDamage", true);
+		QUADRILIUM_ARMOR_ENABLE_DOLPHIN = SERVER.comment("Enable quadrilium armor dolphins grace [true/false]").define("quadriliumArmorEnableDolphin", true);
 
 		SERVER.pop();
 

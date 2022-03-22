@@ -1,5 +1,6 @@
 package com.kwpugh.powder_power.items.armor;
 
+import com.kwpugh.powder_power.config.ConfigPowderPower;
 import com.kwpugh.powder_power.init.ItemInit;
 import com.kwpugh.powder_power.util.PlayerEquipUtil;
 import com.kwpugh.powder_power.util.PlayerSpecialAbilities;
@@ -31,8 +32,15 @@ public class ArmorLapium extends ArmorItem
 	{
 		if(PlayerEquipUtil.hasLapiumArmor(player))
 		{
-			player.removeEffectNoUpdate(MobEffects.POISON);
-			PlayerSpecialAbilities.giveRegenffect(world, player, stack, 0, 0.1F);
+			if(ConfigPowderPower.LAPIUM_ARMOR_ENABLE_POISON_PROTECT.get())
+			{
+				player.removeEffectNoUpdate(MobEffects.POISON);
+			}
+
+			if(ConfigPowderPower.LAPIUM_ARMOR_ENABLE_HEALTH_REGEN.get())
+			{
+				PlayerSpecialAbilities.giveRegenffect(world, player, stack, 0, 0.1F);
+			}
 		}
 	}
 
@@ -52,6 +60,27 @@ public class ArmorLapium extends ArmorItem
 	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
 		super.appendHoverText(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslatableComponent("item.powder_power.armor_lapium_full.line1").withStyle(ChatFormatting.GREEN)));	
+
+		if(ConfigPowderPower.LAPIUM_ARMOR_ENABLE_POISON_PROTECT.get() ||
+			ConfigPowderPower.LAPIUM_ARMOR_ENABLE_WATER_BREATHING.get() ||
+			ConfigPowderPower.LAPIUM_ARMOR_ENABLE_HEALTH_REGEN.get())
+		{
+			tooltip.add((new TranslatableComponent("item.powder_power.armor_lapium_full.line1").withStyle(ChatFormatting.GOLD)));
+		}
+
+		if(ConfigPowderPower.LAPIUM_ARMOR_ENABLE_WATER_BREATHING.get())
+		{
+			tooltip.add((new TranslatableComponent("item.powder_power.armor_lapium_full.line2").withStyle(ChatFormatting.GREEN)));
+		}
+
+		if(ConfigPowderPower.LAPIUM_ARMOR_ENABLE_POISON_PROTECT.get())
+		{
+			tooltip.add((new TranslatableComponent("item.powder_power.armor_lapium_full.line3").withStyle(ChatFormatting.GREEN)));
+		}
+
+		if(ConfigPowderPower.LAPIUM_ARMOR_ENABLE_HEALTH_REGEN.get())
+		{
+			tooltip.add((new TranslatableComponent("item.powder_power.armor_lapium_full.line4").withStyle(ChatFormatting.GREEN)));
+		}
 	}
 }
