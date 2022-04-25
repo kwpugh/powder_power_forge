@@ -1,6 +1,6 @@
 modLoader="javafml" #mandatory
 
-loaderVersion="[40,)" #mandatory (36 is current forge version)
+loaderVersion="[40,)" #mandatory (40 is current forge version)
 
 credits="Thanks to Udemy for great Java courses." #optional
 
@@ -9,7 +9,7 @@ license="MIT"
 
 [[mods]] #mandatory
 modId="powder_power" #mandatory
-version="3.5.16" #mandatory
+version="3.5.17" #mandatory
 displayName="Powder Power" #mandatory
 description='''
 Powder alchemy comes to Minecraft
