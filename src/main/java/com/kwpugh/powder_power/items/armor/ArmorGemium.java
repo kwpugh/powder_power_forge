@@ -6,7 +6,6 @@ import com.kwpugh.powder_power.util.PlayerEquipUtil;
 import com.kwpugh.powder_power.util.PlayerSpecialAbilities;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
@@ -73,37 +72,37 @@ public class ArmorGemium extends ArmorItem
 			ConfigPowderPower.GEMIUM_ARMOR_ENABLE_NO_FALL_DAMAGE.get() ||
 			ConfigPowderPower.GEMIUM_ARMOR_ENABLE_HEALTH_REGEN.get())
 		{
-			tooltip.add((new TranslatableComponent("item.powder_power.armor_gemium_full.line1").withStyle(ChatFormatting.GOLD)));
+			tooltip.add((Component.translatable("item.powder_power.armor_gemium_full.line1").withStyle(ChatFormatting.GOLD)));
 		}
 
 		if(ConfigPowderPower.GEMIUM_ARMOR_ENABLE_WATER_BREATHING.get())
 		{
-			tooltip.add((new TranslatableComponent("item.powder_power.armor_gemium_full.line2").withStyle(ChatFormatting.GREEN)));
+			tooltip.add((Component.translatable("item.powder_power.armor_gemium_full.line2").withStyle(ChatFormatting.GREEN)));
 		}
 
 		if(ConfigPowderPower.GEMIUM_ARMOR_ENABLE_FIRE_PROTECT.get())
 		{
-			tooltip.add((new TranslatableComponent("item.powder_power.armor_gemium_full.line3").withStyle(ChatFormatting.GREEN)));
+			tooltip.add((Component.translatable("item.powder_power.armor_gemium_full.line3").withStyle(ChatFormatting.GREEN)));
 		}
 
 		if(ConfigPowderPower.GEMIUM_ARMOR_ENABLE_WITHER_PROTECT.get())
 		{
-			tooltip.add((new TranslatableComponent("item.powder_power.armor_gemium_full.line4").withStyle(ChatFormatting.GREEN)));
+			tooltip.add((Component.translatable("item.powder_power.armor_gemium_full.line4").withStyle(ChatFormatting.GREEN)));
 		}
 
 		if(ConfigPowderPower.GEMIUM_ARMOR_ENABLE_POISON_PROTECT.get())
 		{
-			tooltip.add((new TranslatableComponent("item.powder_power.armor_gemium_full.line5").withStyle(ChatFormatting.GREEN)));
+			tooltip.add((Component.translatable("item.powder_power.armor_gemium_full.line5").withStyle(ChatFormatting.GREEN)));
 		}
 
 		if(ConfigPowderPower.GEMIUM_ARMOR_ENABLE_NO_FALL_DAMAGE.get())
 		{
-			tooltip.add((new TranslatableComponent("item.powder_power.armor_gemium_full.line6").withStyle(ChatFormatting.GREEN)));
+			tooltip.add((Component.translatable("item.powder_power.armor_gemium_full.line6").withStyle(ChatFormatting.GREEN)));
 		}
 
 		if(ConfigPowderPower.GEMIUM_ARMOR_ENABLE_HEALTH_REGEN.get())
 		{
-			tooltip.add((new TranslatableComponent("item.powder_power.armor_gemium_full.line7").withStyle(ChatFormatting.GREEN)));
+			tooltip.add((Component.translatable("item.powder_power.armor_gemium_full.line7").withStyle(ChatFormatting.GREEN)));
 		}
 	}
 }

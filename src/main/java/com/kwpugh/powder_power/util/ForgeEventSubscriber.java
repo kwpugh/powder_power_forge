@@ -1,20 +1,19 @@
 package com.kwpugh.powder_power.util;
 
 import com.kwpugh.powder_power.PowderPower;
-
 import com.kwpugh.powder_power.config.ConfigPowderPower;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.monster.Phantom;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingExperienceDropEvent;
 import net.minecraftforge.event.entity.living.LivingSetAttackTargetEvent;
-import net.minecraftforge.event.world.BlockEvent.BreakEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
@@ -28,9 +27,9 @@ public final class ForgeEventSubscriber
     @SubscribeEvent
     public static void onLivingHurtEvent(LivingAttackEvent event)
     {
-        if (event.getEntityLiving() instanceof Player)
+        if (event.getEntity() instanceof Player)
         {
-            Player player = (Player) event.getEntityLiving();
+            Player player = (Player) event.getEntity();
 
             //Fall Damage
             if ((event.getSource() == DamageSource.FALL) &&
@@ -63,7 +62,7 @@ public final class ForgeEventSubscriber
     @SubscribeEvent
     public static void onKillingExpDropEvent(LivingExperienceDropEvent event)
     {
-    	if (event.getAttackingPlayer() instanceof Player && event.getEntityLiving()instanceof Mob)
+    	if (event.getAttackingPlayer() instanceof Player && event.getEntity()instanceof Mob)
     	{
     		Player player = (Player) event.getAttackingPlayer();
     		
@@ -78,7 +77,7 @@ public final class ForgeEventSubscriber
    
     //Gives greater XP when mining ores that normally drop XP
     @SubscribeEvent
-    public static void onMiningExpDropEvent(BreakEvent event)
+    public static void onMiningExpDropEvent(BlockEvent.BreakEvent event)
     {
     	Block block = event.getState().getBlock();
     	
@@ -111,10 +110,10 @@ public final class ForgeEventSubscriber
     @SubscribeEvent
     public static void onLivingSetAttackTarget(LivingSetAttackTargetEvent event)
     {		
-    	if (event.getTarget() instanceof Player && event.getEntityLiving()instanceof Mob)
+    	if (event.getTarget() instanceof Player && event.getEntity()instanceof Mob)
         {		
         	Player player = (Player) event.getTarget();
-    		Mob attacker = (Mob) event.getEntityLiving();
+    		Mob attacker = (Mob) event.getEntity();
     		
     		//Phantom won't target player if in inventory
     		if (PlayerEquipUtil.isPlayerGotUnseenToken(player) && attacker instanceof Phantom)

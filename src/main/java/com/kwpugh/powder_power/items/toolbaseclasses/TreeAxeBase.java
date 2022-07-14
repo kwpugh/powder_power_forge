@@ -1,47 +1,42 @@
 package com.kwpugh.powder_power.items.toolbaseclasses;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
-
-import javax.annotation.Nullable;
-
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.util.Mth;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-import net.minecraft.network.chat.Component;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.world.level.Level;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-import net.minecraft.world.item.Item.Properties;
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
 /*
  * Adapted from several sources
@@ -72,7 +67,7 @@ public class TreeAxeBase extends AxeItem
     @Override
     public boolean mineBlock(ItemStack stack, Level world, BlockState state, BlockPos pos, LivingEntity entityLiving)
     {
-        stack.hurt(3, random, null);
+        stack.hurt(3, world.getRandom(), null);
 
         if (entityLiving instanceof Player)
         {
@@ -139,7 +134,7 @@ public class TreeAxeBase extends AxeItem
                 int i = 0;
 
                 @SubscribeEvent
-                public void onTick(TickEvent.WorldTickEvent event)
+                public void onTick(TickEvent.LevelTickEvent event)
                 {
                     if (delay-- > 0) return;
                     delay = LOG_BREAK_DELAY;
@@ -209,7 +204,7 @@ public class TreeAxeBase extends AxeItem
             world.destroyBlock(pos, false);
             Block.dropResources(state, world, pos, null, player, player.getMainHandItem());
 
-            int exp = state.getExpDrop(world, pos, fortuneLevel, silkLevel);
+            int exp = state.getExpDrop(world, world.getRandom(), pos, fortuneLevel, silkLevel);
             if (exp > 0)
             {
             	state.getBlock().popExperience((ServerLevel) world, pos, exp);
@@ -237,6 +232,6 @@ public class TreeAxeBase extends AxeItem
 	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
 		super.appendHoverText(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslatableComponent("item.powder_power.tree_axe_trilium.line1").withStyle(ChatFormatting.GREEN)));			
+		tooltip.add((Component.translatable("item.powder_power.tree_axe_trilium.line1").withStyle(ChatFormatting.GREEN)));
 	}
 } 

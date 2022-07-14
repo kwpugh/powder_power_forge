@@ -1,29 +1,24 @@
 package com.kwpugh.powder_power.items.tokens;
-import java.util.List;
-
-import javax.annotation.Nullable;
 
 import com.kwpugh.powder_power.init.ItemInit;
-
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import net.minecraft.world.item.Item.Properties;
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class TokenGreaterHealing extends Item
 {
@@ -44,7 +39,7 @@ public class TokenGreaterHealing extends Item
 	        player.clearFire();
 	        player.removeAllEffects();
 
-	        player.displayClientMessage((new TranslatableComponent("item.powder_power.token_healing.line2").withStyle(ChatFormatting.BOLD)), true);
+	        player.displayClientMessage((Component.translatable("item.powder_power.token_healing.line2").withStyle(ChatFormatting.BOLD)), true);
 	        
 	        double chance = world.random.nextDouble();
 	    	
@@ -56,7 +51,7 @@ public class TokenGreaterHealing extends Item
 		        gift.enchant(Enchantments.SHARPNESS, 10);
 		        gift.enchant(Enchantments.SWEEPING_EDGE, 10);
 		        gift.enchant(Enchantments.MOB_LOOTING, 10);
-		        gift.setHoverName(new TextComponent("Gemium Vengeance"));
+		        gift.setHoverName(Component.translatable("Gemium Vengeance"));
 		        
 		        BlockPos playerPos = player.blockPosition();
 				player.level.addFreshEntity(new ItemEntity(player.level, playerPos.getX(), playerPos.getY(), playerPos.getZ(), gift));	        	
@@ -74,6 +69,6 @@ public class TokenGreaterHealing extends Item
 	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
 		super.appendHoverText(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslatableComponent("item.powder_power.token_healing.line1").withStyle(ChatFormatting.GREEN)));	
+		tooltip.add((Component.translatable("item.powder_power.token_healing.line1").withStyle(ChatFormatting.GREEN)));
 	}
 }

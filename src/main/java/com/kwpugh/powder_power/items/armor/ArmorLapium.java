@@ -6,7 +6,6 @@ import com.kwpugh.powder_power.util.PlayerEquipUtil;
 import com.kwpugh.powder_power.util.PlayerSpecialAbilities;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
@@ -65,22 +64,22 @@ public class ArmorLapium extends ArmorItem
 			ConfigPowderPower.LAPIUM_ARMOR_ENABLE_WATER_BREATHING.get() ||
 			ConfigPowderPower.LAPIUM_ARMOR_ENABLE_HEALTH_REGEN.get())
 		{
-			tooltip.add((new TranslatableComponent("item.powder_power.armor_lapium_full.line1").withStyle(ChatFormatting.GOLD)));
+			tooltip.add((Component.translatable("item.powder_power.armor_lapium_full.line1").withStyle(ChatFormatting.GOLD)));
 		}
 
 		if(ConfigPowderPower.LAPIUM_ARMOR_ENABLE_WATER_BREATHING.get())
 		{
-			tooltip.add((new TranslatableComponent("item.powder_power.armor_lapium_full.line2").withStyle(ChatFormatting.GREEN)));
+			tooltip.add((Component.translatable("item.powder_power.armor_lapium_full.line2").withStyle(ChatFormatting.GREEN)));
 		}
 
 		if(ConfigPowderPower.LAPIUM_ARMOR_ENABLE_POISON_PROTECT.get())
 		{
-			tooltip.add((new TranslatableComponent("item.powder_power.armor_lapium_full.line3").withStyle(ChatFormatting.GREEN)));
+			tooltip.add((Component.translatable("item.powder_power.armor_lapium_full.line3").withStyle(ChatFormatting.GREEN)));
 		}
 
 		if(ConfigPowderPower.LAPIUM_ARMOR_ENABLE_HEALTH_REGEN.get())
 		{
-			tooltip.add((new TranslatableComponent("item.powder_power.armor_lapium_full.line4").withStyle(ChatFormatting.GREEN)));
+			tooltip.add((Component.translatable("item.powder_power.armor_lapium_full.line4").withStyle(ChatFormatting.GREEN)));
 		}
 	}
 }
