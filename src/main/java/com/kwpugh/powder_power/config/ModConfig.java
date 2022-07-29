@@ -17,6 +17,8 @@ public class ModConfig
 	
 	static
 	{
+		com.electronwill.nightconfig.core.Config.setInsertionOrderPreserved(true);
+
 		ConfigPowderPower.init(builder);
 		
 		config = builder.build();
