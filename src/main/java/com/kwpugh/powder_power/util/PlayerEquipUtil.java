@@ -187,7 +187,7 @@ public final class PlayerEquipUtil
 			return  true;
 		}
 
-		if(PlayerEquipUtil.hasGemiumArmor(player) || ConfigPowderPower.GEMIUM_ARMOR_ENABLE_FIRE_PROTECT.get())
+		if(PlayerEquipUtil.hasGemiumArmor(player) && ConfigPowderPower.GEMIUM_ARMOR_ENABLE_FIRE_PROTECT.get())
 		{
 			return  true;
 		}

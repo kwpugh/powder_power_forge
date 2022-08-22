@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'idea'
 apply plugin: 'maven-publish'
 
-version = '3.6.4'
+version = '3.6.5'
 group = 'com.kwpugh.powder_power' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'PowderPower-Forge-1.19.2'
 

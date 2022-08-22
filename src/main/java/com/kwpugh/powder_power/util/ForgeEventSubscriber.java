@@ -27,26 +27,26 @@ public final class ForgeEventSubscriber
     @SubscribeEvent
     public static void onLivingHurtEvent(LivingAttackEvent event)
     {
-        if (event.getEntity() instanceof Player)
+        if (event.getEntity() instanceof Player player)
         {
-            Player player = (Player) event.getEntity();
-
-            //Fall Damage
+			//Fall Damage
             if ((event.getSource() == DamageSource.FALL) &&
                 PlayerEquipUtil.isPlayerGotFallProtection(player))
             {
                 if (event.isCancelable()) event.setCanceled(true);
-            } 
-            
+            }
+
             //Fire & Lava
-            if (((event.getSource() == DamageSource.IN_FIRE) ||
+            if ((event.getSource() == DamageSource.IN_FIRE) ||
             		(event.getSource() == DamageSource.ON_FIRE) ||
 					(event.getSource() == DamageSource.HOT_FLOOR) ||
-					(event.getSource() == DamageSource.LAVA)) &&
-            		PlayerEquipUtil.isPlayerGotFireProtection(player))
-            {
-                if (event.isCancelable()) event.setCanceled(true);
-            }
+					(event.getSource() == DamageSource.LAVA))
+			{
+				if(PlayerEquipUtil.isPlayerGotFireProtection(player))
+				{
+					if (event.isCancelable()) event.setCanceled(true);
+				}
+			}
             
             //Drowning
             if ((event.getSource() == DamageSource.DROWN) &&
@@ -104,7 +104,6 @@ public final class ForgeEventSubscriber
     	}
     	
     }
-
     
     //Allow player to be unseen by mobs
     @SubscribeEvent
