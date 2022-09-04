@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "powder_power:block_gemium",
     "powder_power:block_trilium",
     "powder_power:block_quadrilium"
   ]

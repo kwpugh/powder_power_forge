@@ -4,6 +4,7 @@ import com.kwpugh.powder_power.config.ModConfig;
 import com.kwpugh.powder_power.groups.GroupPowderPower;
 import com.kwpugh.powder_power.init.BlockInit;
 import com.kwpugh.powder_power.init.ItemInit;
+import com.kwpugh.powder_power.lists.ToolMaterialTiers;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;

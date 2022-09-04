@@ -1,4 +1,4 @@
-package com.kwpugh.powder_power.util;
+package com.kwpugh.powder_power.util.handlers;
 
 import com.kwpugh.powder_power.PowderPower;
 import com.kwpugh.powder_power.init.ItemInit;

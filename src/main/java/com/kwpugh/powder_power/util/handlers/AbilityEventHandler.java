@@ -1,7 +1,8 @@
-package com.kwpugh.powder_power.util;
+package com.kwpugh.powder_power.util.handlers;
 
 import com.kwpugh.powder_power.PowderPower;
 import com.kwpugh.powder_power.config.ConfigPowderPower;
+import com.kwpugh.powder_power.util.PlayerEquipUtil;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.monster.Phantom;
@@ -18,7 +19,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
 @EventBusSubscriber(modid = PowderPower.modid, bus = EventBusSubscriber.Bus.FORGE )
-public final class ForgeEventSubscriber
+public final class AbilityEventHandler
 {
 	static int miningExp = ConfigPowderPower.EXP_TOKEN_MINING_VALUE.get();
 	static int killingExp = ConfigPowderPower.EXP_TOKEN_KILLING_VALUE.get();

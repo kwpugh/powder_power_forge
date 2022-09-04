@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "powder_power:block_redium",
-    "powder_power:block_lapium",
-    "powder_power:block_gemium"
+    "powder_power:block_lapium"
   ]
 }

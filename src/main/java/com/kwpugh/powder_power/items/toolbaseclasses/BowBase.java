@@ -124,10 +124,7 @@ public class BowBase extends BowItem
 	      return UseAnim.BOW;
 	   }
 
-	   /**
-	    * Called to trigger the item's "innate" right click behavior. To handle when this item is used on a Block, see
-	    * {@link #onItemUse}.
-	    */
+
 	   public InteractionResultHolder<ItemStack> use(Level worldIn, Player playerIn, InteractionHand handIn) {
 	      ItemStack itemstack = playerIn.getItemInHand(handIn);
 	      boolean flag = !playerIn.getProjectile(itemstack).isEmpty();

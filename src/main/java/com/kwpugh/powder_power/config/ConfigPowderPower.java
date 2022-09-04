@@ -99,6 +99,8 @@ public class ConfigPowderPower
 	public static ForgeConfigSpec.BooleanValue QUADRILIUM_ARMOR_ENABLE_HEALTH_REGEN;
 	public static ForgeConfigSpec.BooleanValue QUADRILIUM_ARMOR_ENABLE_DOLPHIN;
 
+	public static ForgeConfigSpec.DoubleValue BOW_ZOOM;
+
 	public static void init(ForgeConfigSpec.Builder SERVER)
 	{
 		SERVER.comment("Prismarine Tool Material").push("prismarine_tool_material");
@@ -283,5 +285,11 @@ public class ConfigPowderPower
 		EXP_TOKEN_KILLING_VALUE = SERVER.comment("Experience Token value for killing mobs").defineInRange("token_settings.exp_token_killing_value", 4, 0, 100);
 
 		SERVER.pop();
+
+
+		SERVER.comment("Bow Zoom Value").push("bow_zoom");
+		BOW_ZOOM = SERVER.comment("Bow zoom valuee [0.0-1.0, default: .65]").defineInRange("bow_zoom_value", .65, 0.1,  0.9);
+		SERVER.pop();
+
 	}
 }
