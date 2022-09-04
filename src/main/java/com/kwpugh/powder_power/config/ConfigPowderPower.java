@@ -288,7 +288,7 @@ public class ConfigPowderPower
 
 
 		SERVER.comment("Bow Zoom Value").push("bow_zoom");
-		BOW_ZOOM = SERVER.comment("Bow zoom valuee [0.0-1.0, default: .65]").defineInRange("bow_zoom_value", .65, 0.1,  0.9);
+		BOW_ZOOM = SERVER.comment("Bow zoom valuee [0.0-1.0, default: .45]").defineInRange("bow_zoom_value", .45, 0.1,  0.9);
 		SERVER.pop();
 
 	}
