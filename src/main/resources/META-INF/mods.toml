@@ -9,7 +9,7 @@ license="MIT"
 
 [[mods]] #mandatory
 modId="powder_power" #mandatory
-version="3.6.8" #mandatory
+version="3.6.9" #mandatory
 displayName="Powder Power" #mandatory
 description='''
 Powder alchemy comes to Minecraft

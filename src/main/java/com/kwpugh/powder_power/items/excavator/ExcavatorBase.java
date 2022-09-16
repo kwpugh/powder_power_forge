@@ -53,7 +53,8 @@ public class ExcavatorBase extends ShovelItem
         {
         	ExcavatorUtil.attemptBreakNeighbors(world, pos, (Player) entity, EFFECTIVE_ON, EFFECTIVE_MATERIALS);
         }
-        return super.mineBlock(stack, world, state, pos, entity);
+
+        return true;
     }
 	
 	@Override
