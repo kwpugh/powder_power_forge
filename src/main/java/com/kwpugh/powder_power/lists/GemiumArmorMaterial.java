@@ -11,18 +11,22 @@ import net.minecraft.sounds.SoundEvent;
 
 public class GemiumArmorMaterial implements ArmorMaterial
 {
-    private static int durabilityMultiplier = ConfigPowderPower.GEMIUM_ARMOR_DURABILITY_MULTIPLIER.get();
-    private static int enchantability = ConfigPowderPower.GEMIUM_ARMOR_ENCHANTABILITY.get();
-    private static double toughness = ConfigPowderPower.GEMIUM_ARMOR_TOUGHNESS.get();
-    private static double knochback = ConfigPowderPower.GEMIUM_ARMOR_KNOCKBACK_RESISTANCE.get();
+    private static int gemiumDurabilityMultiplier = ConfigPowderPower.GEMIUM_ARMOR_DURABILITY_MULTIPLIER.get();
+    private static int gemiumEnchantability = ConfigPowderPower.GEMIUM_ARMOR_ENCHANTABILITY.get();
+    private static double gemiumToughness = ConfigPowderPower.GEMIUM_ARMOR_TOUGHNESS.get();
+    private static double gemiumKnockback = ConfigPowderPower.GEMIUM_ARMOR_KNOCKBACK_RESISTANCE.get();
+    private static int gemiumHead = ConfigPowderPower.GEMIUM_ARMOR_PROTECTION_HEAD.get();
+    private static int gemiumBody = ConfigPowderPower.GEMIUM_ARMOR_PROTECTION_BODY.get();
+    private static int gemiumLegs = ConfigPowderPower.GEMIUM_ARMOR_PROTECTION_LEGGINGS.get();
+    private static int gemiumFeet = ConfigPowderPower.GEMIUM_ARMOR_PROTECTION_FEET.get();
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{4, 7, 9, 4};
+    private static final int[] PROTECTION_AMOUNT = new int[]{gemiumHead, gemiumLegs, gemiumBody, gemiumFeet};
 
     @Override
     public int getDurabilityForSlot(EquipmentSlot slot)
     {
-        return BASE_DURABILITY[slot.getIndex()] * durabilityMultiplier;
+        return BASE_DURABILITY[slot.getIndex()] * gemiumDurabilityMultiplier;
     }
 
     @Override
@@ -34,7 +38,7 @@ public class GemiumArmorMaterial implements ArmorMaterial
     @Override
     public int getEnchantmentValue()
     {
-        return enchantability;
+        return gemiumEnchantability;
     }
 
     @Override
@@ -58,12 +62,12 @@ public class GemiumArmorMaterial implements ArmorMaterial
     @Override
     public float getToughness()
     {
-        return (float) toughness;
+        return (float) gemiumToughness;
     }
 
     @Override
     public float getKnockbackResistance()
     {
-        return (float) knochback;
+        return (float) gemiumKnockback;
     }
 }

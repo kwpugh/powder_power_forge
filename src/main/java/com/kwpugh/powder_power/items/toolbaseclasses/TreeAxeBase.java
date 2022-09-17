@@ -79,7 +79,7 @@ public class TreeAxeBase extends AxeItem
             }
         }
 
-        return true;
+        return super.mineBlock(stack, world, state, pos, entityLiving);
     }
 
     private boolean attemptFellTree(Level world, BlockPos pos, Player player)

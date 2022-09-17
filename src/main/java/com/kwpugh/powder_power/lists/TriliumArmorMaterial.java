@@ -11,18 +11,22 @@ import net.minecraft.sounds.SoundEvent;
 
 public class TriliumArmorMaterial implements ArmorMaterial
 {
-    private static int durabilityMultiplier = ConfigPowderPower.TRILIUM_ARMOR_DURABILITY_MULTIPLIER.get();
-    private static int enchantability = ConfigPowderPower.TRILIUM_ARMOR_ENCHANTABILITY.get();
-    private static double toughness = ConfigPowderPower.TRILIUM_ARMOR_TOUGHNESS.get();
-    private static double knochback = ConfigPowderPower.TRILIUM_ARMOR_KNOCKBACK_RESISTANCE.get();
+    private static int triliumDurabilityMultiplier = ConfigPowderPower.TRILIUM_ARMOR_DURABILITY_MULTIPLIER.get();
+    private static int triliumEnchantability = ConfigPowderPower.TRILIUM_ARMOR_ENCHANTABILITY.get();
+    private static double triliumToughness = ConfigPowderPower.TRILIUM_ARMOR_TOUGHNESS.get();
+    private static double triliumKnockback = ConfigPowderPower.TRILIUM_ARMOR_KNOCKBACK_RESISTANCE.get();
+    private static int triliumHead = ConfigPowderPower.TRILIUM_ARMOR_PROTECTION_HEAD.get();
+    private static int triliumBody = ConfigPowderPower.TRILIUM_ARMOR_PROTECTION_BODY.get();
+    private static int triliumLegs = ConfigPowderPower.TRILIUM_ARMOR_PROTECTION_LEGGINGS.get();
+    private static int triliumFeet = ConfigPowderPower.TRILIUM_ARMOR_PROTECTION_FEET.get();
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{5, 8, 10, 5};
+    private static final int[] PROTECTION_AMOUNT = new int[]{triliumHead, triliumLegs, triliumBody, triliumFeet};
 
     @Override
     public int getDurabilityForSlot(EquipmentSlot slot)
     {
-        return BASE_DURABILITY[slot.getIndex()] * durabilityMultiplier;
+        return BASE_DURABILITY[slot.getIndex()] * triliumDurabilityMultiplier;
     }
 
     @Override
@@ -34,7 +38,7 @@ public class TriliumArmorMaterial implements ArmorMaterial
     @Override
     public int getEnchantmentValue()
     {
-        return enchantability;
+        return triliumEnchantability;
     }
 
     @Override
@@ -58,12 +62,12 @@ public class TriliumArmorMaterial implements ArmorMaterial
     @Override
     public float getToughness()
     {
-        return (float) toughness;
+        return (float) triliumToughness;
     }
 
     @Override
     public float getKnockbackResistance()
     {
-        return (float) knochback;
+        return (float) triliumKnockback;
     }
 }

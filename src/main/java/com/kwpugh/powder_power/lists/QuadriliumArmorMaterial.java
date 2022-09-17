@@ -11,18 +11,22 @@ import net.minecraft.sounds.SoundEvent;
 
 public class QuadriliumArmorMaterial implements ArmorMaterial
 {
-    private static int durabilityMultiplier = ConfigPowderPower.QUADRILIUM_ARMOR_DURABILITY_MULTIPLIER.get();
-    private static int enchantability = ConfigPowderPower.QUADRILIUM_ARMOR_ENCHANTABILITY.get();
-    private static double toughness = ConfigPowderPower.QUADRILIUM_ARMOR_TOUGHNESS.get();
-    private static double knochback = ConfigPowderPower.QUADRILIUM_ARMOR_KNOCKBACK_RESISTANCE.get();
+    private static int quadriliumDurabilityMultiplier = ConfigPowderPower.QUADRILIUM_ARMOR_DURABILITY_MULTIPLIER.get();
+    private static int quadriliumEnchantability = ConfigPowderPower.QUADRILIUM_ARMOR_ENCHANTABILITY.get();
+    private static double quadriliumToughness = ConfigPowderPower.QUADRILIUM_ARMOR_TOUGHNESS.get();
+    private static double quadriliumKnockback = ConfigPowderPower.QUADRILIUM_ARMOR_KNOCKBACK_RESISTANCE.get();
+    private static int quadriliumHead = ConfigPowderPower.QUADRILIUM_ARMOR_PROTECTION_HEAD.get();
+    private static int quadriliumBody = ConfigPowderPower.QUADRILIUM_ARMOR_PROTECTION_BODY.get();
+    private static int quadriliumLegs = ConfigPowderPower.QUADRILIUM_ARMOR_PROTECTION_LEGGINGS.get();
+    private static int quadriliumFeet = ConfigPowderPower.QUADRILIUM_ARMOR_PROTECTION_FEET.get();
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{6, 9, 11, 6};
+    private static final int[] PROTECTION_AMOUNT = new int[]{quadriliumHead, quadriliumLegs, quadriliumBody, quadriliumFeet};
 
     @Override
     public int getDurabilityForSlot(EquipmentSlot slot)
     {
-        return BASE_DURABILITY[slot.getIndex()] * durabilityMultiplier;
+        return BASE_DURABILITY[slot.getIndex()] * quadriliumDurabilityMultiplier;
     }
 
     @Override
@@ -34,7 +38,7 @@ public class QuadriliumArmorMaterial implements ArmorMaterial
     @Override
     public int getEnchantmentValue()
     {
-        return enchantability;
+        return quadriliumEnchantability;
     }
 
     @Override
@@ -58,12 +62,12 @@ public class QuadriliumArmorMaterial implements ArmorMaterial
     @Override
     public float getToughness()
     {
-        return (float) toughness;
+        return (float) quadriliumToughness;
     }
 
     @Override
     public float getKnockbackResistance()
     {
-        return (float) knochback;
+        return (float) quadriliumKnockback;
     }
 }

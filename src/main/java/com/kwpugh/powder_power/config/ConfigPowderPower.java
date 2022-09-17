@@ -43,26 +43,46 @@ public class ConfigPowderPower
 	public static ForgeConfigSpec.IntValue REDIUM_ARMOR_ENCHANTABILITY;
 	public static ForgeConfigSpec.DoubleValue REDIUM_ARMOR_TOUGHNESS;
 	public static ForgeConfigSpec.DoubleValue REDIUM_ARMOR_KNOCKBACK_RESISTANCE;
+	public static ForgeConfigSpec.IntValue REDIUM_ARMOR_PROTECTION_HEAD;
+	public static ForgeConfigSpec.IntValue REDIUM_ARMOR_PROTECTION_BODY;
+	public static ForgeConfigSpec.IntValue REDIUM_ARMOR_PROTECTION_LEGGINGS;
+	public static ForgeConfigSpec.IntValue REDIUM_ARMOR_PROTECTION_FEET;
 
 	public static ForgeConfigSpec.IntValue LAPIUM_ARMOR_DURABILITY_MULTIPLIER;
 	public static ForgeConfigSpec.IntValue LAPIUM_ARMOR_ENCHANTABILITY;
 	public static ForgeConfigSpec.DoubleValue LAPIUM_ARMOR_TOUGHNESS;
 	public static ForgeConfigSpec.DoubleValue LAPIUM_ARMOR_KNOCKBACK_RESISTANCE;
+	public static ForgeConfigSpec.IntValue LAPIUM_ARMOR_PROTECTION_HEAD;
+	public static ForgeConfigSpec.IntValue LAPIUM_ARMOR_PROTECTION_BODY;
+	public static ForgeConfigSpec.IntValue LAPIUM_ARMOR_PROTECTION_LEGGINGS;
+	public static ForgeConfigSpec.IntValue LAPIUM_ARMOR_PROTECTION_FEET;
 
 	public static ForgeConfigSpec.IntValue GEMIUM_ARMOR_DURABILITY_MULTIPLIER;
 	public static ForgeConfigSpec.IntValue GEMIUM_ARMOR_ENCHANTABILITY;
 	public static ForgeConfigSpec.DoubleValue GEMIUM_ARMOR_TOUGHNESS;
 	public static ForgeConfigSpec.DoubleValue GEMIUM_ARMOR_KNOCKBACK_RESISTANCE;
+	public static ForgeConfigSpec.IntValue GEMIUM_ARMOR_PROTECTION_HEAD;
+	public static ForgeConfigSpec.IntValue GEMIUM_ARMOR_PROTECTION_BODY;
+	public static ForgeConfigSpec.IntValue GEMIUM_ARMOR_PROTECTION_LEGGINGS;
+	public static ForgeConfigSpec.IntValue GEMIUM_ARMOR_PROTECTION_FEET;
 
 	public static ForgeConfigSpec.IntValue TRILIUM_ARMOR_DURABILITY_MULTIPLIER;
 	public static ForgeConfigSpec.IntValue TRILIUM_ARMOR_ENCHANTABILITY;
 	public static ForgeConfigSpec.DoubleValue TRILIUM_ARMOR_TOUGHNESS;
 	public static ForgeConfigSpec.DoubleValue TRILIUM_ARMOR_KNOCKBACK_RESISTANCE;
+	public static ForgeConfigSpec.IntValue TRILIUM_ARMOR_PROTECTION_HEAD;
+	public static ForgeConfigSpec.IntValue TRILIUM_ARMOR_PROTECTION_BODY;
+	public static ForgeConfigSpec.IntValue TRILIUM_ARMOR_PROTECTION_LEGGINGS;
+	public static ForgeConfigSpec.IntValue TRILIUM_ARMOR_PROTECTION_FEET;
 
 	public static ForgeConfigSpec.IntValue QUADRILIUM_ARMOR_DURABILITY_MULTIPLIER;
 	public static ForgeConfigSpec.IntValue QUADRILIUM_ARMOR_ENCHANTABILITY;
 	public static ForgeConfigSpec.DoubleValue QUADRILIUM_ARMOR_TOUGHNESS;
 	public static ForgeConfigSpec.DoubleValue QUADRILIUM_ARMOR_KNOCKBACK_RESISTANCE;
+	public static ForgeConfigSpec.IntValue QUADRILIUM_ARMOR_PROTECTION_HEAD;
+	public static ForgeConfigSpec.IntValue QUADRILIUM_ARMOR_PROTECTION_BODY;
+	public static ForgeConfigSpec.IntValue QUADRILIUM_ARMOR_PROTECTION_LEGGINGS;
+	public static ForgeConfigSpec.IntValue QUADRILIUM_ARMOR_PROTECTION_FEET;
 
 	public static ForgeConfigSpec.IntValue HASTE_TOKEN_BREAK_SPEED;
 	public static ForgeConfigSpec.IntValue EXP_TOKEN_MINING_VALUE;
@@ -179,6 +199,10 @@ public class ConfigPowderPower
 		REDIUM_ARMOR_ENCHANTABILITY = SERVER.comment("Redium armor enchantability [1-31, default: 15]").defineInRange("rediumArmorEnchantability", 15, 1, 31);
 		REDIUM_ARMOR_TOUGHNESS = SERVER.comment("Redium armor toughness [0.0-4.0, default: 2.0]").defineInRange("rediumArmorToughness", 2.0, 0.0, 4.0);
 		REDIUM_ARMOR_KNOCKBACK_RESISTANCE = SERVER.comment("Redium armor knockback resistance [0.0-4.0, default: 0.0]").defineInRange("rediumArmorKnockbackResistance", 0.0, 0.0, 4.0);
+		REDIUM_ARMOR_PROTECTION_HEAD = SERVER.comment("Redium armor protection head [1-50, default: 3]").defineInRange("rediumArmorProtectionHead", 3, 1, 50);
+		REDIUM_ARMOR_PROTECTION_BODY = SERVER.comment("Redium armor protection body [1-50, default: 8]").defineInRange("rediumArmorProtectionBody", 8, 1, 50);
+		REDIUM_ARMOR_PROTECTION_LEGGINGS = SERVER.comment("Redium armor protection leggings [1-50, default: 6]").defineInRange("rediumArmorProtectionLeggings", 6, 1, 50);
+		REDIUM_ARMOR_PROTECTION_FEET = SERVER.comment("Redium armor protection feet [1-50, default: 3]").defineInRange("rediumArmorProtectionFeet", 3, 1, 50);
 
 		SERVER.pop();
 
@@ -198,6 +222,10 @@ public class ConfigPowderPower
 		LAPIUM_ARMOR_ENCHANTABILITY = SERVER.comment("Lapium armor enchantability [1-31, default: 15]").defineInRange("lapiumArmorEnchantability", 15, 1, 31);
 		LAPIUM_ARMOR_TOUGHNESS = SERVER.comment("Lapium armor toughness [0.0-4.0, default: 2.0]").defineInRange("lapiumArmorToughness", 2.0, 0.0, 4.0);
 		LAPIUM_ARMOR_KNOCKBACK_RESISTANCE = SERVER.comment("Lapium armor knockback resistance [0.0-4.0, default: 0.0]").defineInRange("lapiumArmorKnockbackResistance", 0.0, 0.0, 4.0);
+		LAPIUM_ARMOR_PROTECTION_HEAD = SERVER.comment("Lapium armor protection head [1-50, default: 3]").defineInRange("lapiumArmorProtectionHead", 3, 1, 50);
+		LAPIUM_ARMOR_PROTECTION_BODY = SERVER.comment("Redium armor protection body [1-50, default: 8]").defineInRange("lapiumArmorProtectionBody", 8, 1, 50);
+		LAPIUM_ARMOR_PROTECTION_LEGGINGS = SERVER.comment("Redium armor protection leggings [1-50, default: 6]").defineInRange("lapiumArmorProtectionLeggings", 6, 1, 50);
+		LAPIUM_ARMOR_PROTECTION_FEET = SERVER.comment("Redium armor protection feet [1-50, default: 3]").defineInRange("lapiumArmorProtectionFeet", 3, 1, 50);
 
 		SERVER.pop();
 
@@ -217,6 +245,10 @@ public class ConfigPowderPower
 		GEMIUM_ARMOR_ENCHANTABILITY = SERVER.comment("Gemium armor enchantability [1-31, default: 20]").defineInRange("gemiumArmorEnchantability", 20, 1, 31);
 		GEMIUM_ARMOR_TOUGHNESS = SERVER.comment("Gemium armor toughness [0.0-4.0, default: 2.25]").defineInRange("gemiumArmorToughness", 2.25, 0.0, 4.0);
 		GEMIUM_ARMOR_KNOCKBACK_RESISTANCE = SERVER.comment("Gemium armor knockback resistance [0.0-4.0, default: 0.0]").defineInRange("gemiumArmorKnockbackResistance", 0.0, 0.0, 4.0);
+		GEMIUM_ARMOR_PROTECTION_HEAD = SERVER.comment("Gemium armor protection head [1-50, default: 4]").defineInRange("gemiumArmorProtectionHead", 4, 1, 50);
+		GEMIUM_ARMOR_PROTECTION_BODY = SERVER.comment("Gemium armor protection body [1-50, default: 9]").defineInRange("gemiumArmorProtectionBody", 9, 1, 50);
+		GEMIUM_ARMOR_PROTECTION_LEGGINGS = SERVER.comment("Gemium armor protection leggings [1-50, default: 7]").defineInRange("gemiumArmorProtectionLeggings", 7, 1, 50);
+		GEMIUM_ARMOR_PROTECTION_FEET = SERVER.comment("Gemium armor protection feet [1-50, default: 4]").defineInRange("gemiumArmorProtectionFeet", 4, 1, 50);
 
 		SERVER.pop();
 
@@ -239,6 +271,10 @@ public class ConfigPowderPower
 		TRILIUM_ARMOR_ENCHANTABILITY = SERVER.comment("Trilium armor enchantability [1-31, default: 25]").defineInRange("triliumArmorEnchantability", 25, 1, 31);
 		TRILIUM_ARMOR_TOUGHNESS = SERVER.comment("Trilium armor toughness [0.0-4.0, default: 3.0]").defineInRange("triliumArmorToughness", 3.0, 0.0, 4.0);
 		TRILIUM_ARMOR_KNOCKBACK_RESISTANCE = SERVER.comment("Trilium armor knockback resistance [0.0-4.0, default: 0.1]").defineInRange("triliumArmorKnockbackResistance", 0.1, 0.0, 4.0);
+		TRILIUM_ARMOR_PROTECTION_HEAD = SERVER.comment("Trilium armor protection head [1-50, default: 5]").defineInRange("triliumArmorProtectionHead", 5, 1, 50);
+		TRILIUM_ARMOR_PROTECTION_BODY = SERVER.comment("Trilium armor protection body [1-50, default: 10]").defineInRange("triliumArmorProtectionBody", 10, 1, 50);
+		TRILIUM_ARMOR_PROTECTION_LEGGINGS = SERVER.comment("Trilium armor protection leggings [1-50, default: 8]").defineInRange("triliumArmorProtectionLeggings", 8, 1, 50);
+		TRILIUM_ARMOR_PROTECTION_FEET = SERVER.comment("Trilium armor protection feet [1-50, default: 5]").defineInRange("triliumArmorProtectionFeet", 5, 1, 50);
 
 		SERVER.pop();
 
@@ -262,6 +298,10 @@ public class ConfigPowderPower
 		QUADRILIUM_ARMOR_ENCHANTABILITY = SERVER.comment("Quadrilium armor enchantability [1-31, default: 30]").defineInRange("quadriliumArmorEnchantability", 30, 1, 31);
 		QUADRILIUM_ARMOR_TOUGHNESS = SERVER.comment("Quadrilium armor toughness [0.0-4.0, default: 4.0]").defineInRange("quadriliumArmorToughness", 4.0, 0.0, 4.0);
 		QUADRILIUM_ARMOR_KNOCKBACK_RESISTANCE = SERVER.comment("Quadrilium armor knockback resistance [0.0-4.0, default: 0.2]").defineInRange("quadriliumArmorKnockbackResistance", 0.2, 0.0, 4.0);
+		QUADRILIUM_ARMOR_PROTECTION_HEAD = SERVER.comment("Quadrilium armor protection head [1-50, default: 6]").defineInRange("quadriliumArmorProtectionHead", 6, 1, 50);
+		QUADRILIUM_ARMOR_PROTECTION_BODY = SERVER.comment("Quadrilium armor protection body [1-50, default: 11]").defineInRange("quadriliumArmorProtectionBody", 11, 1, 50);
+		QUADRILIUM_ARMOR_PROTECTION_LEGGINGS = SERVER.comment("Quadrilium armor protection leggings [1-50, default: 9]").defineInRange("quadriliumArmorProtectionLeggings", 9, 1, 50);
+		QUADRILIUM_ARMOR_PROTECTION_FEET = SERVER.comment("Quadrilium armor protection feet [1-50, default: 6]").defineInRange("quadriliumArmorProtectionFeet", 6, 1, 50);
 
 		SERVER.pop();
 

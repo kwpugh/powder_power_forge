@@ -11,18 +11,22 @@ import net.minecraft.sounds.SoundEvent;
 
 public class LapiumArmorMaterial implements ArmorMaterial
 {
-    private static int durabilityMultiplier = ConfigPowderPower.LAPIUM_ARMOR_DURABILITY_MULTIPLIER.get();
-    private static int enchantability = ConfigPowderPower.LAPIUM_ARMOR_ENCHANTABILITY.get();
-    private static double toughness = ConfigPowderPower.LAPIUM_ARMOR_TOUGHNESS.get();
-    private static double knochback = ConfigPowderPower.LAPIUM_ARMOR_KNOCKBACK_RESISTANCE.get();
+    private static int lapiumDurabilityMultiplier = ConfigPowderPower.LAPIUM_ARMOR_DURABILITY_MULTIPLIER.get();
+    private static int lapiumEnchantability = ConfigPowderPower.LAPIUM_ARMOR_ENCHANTABILITY.get();
+    private static double lapiumToughness = ConfigPowderPower.LAPIUM_ARMOR_TOUGHNESS.get();
+    private static double lapiumKnockback = ConfigPowderPower.LAPIUM_ARMOR_KNOCKBACK_RESISTANCE.get();
+    private static int lapiumHead = ConfigPowderPower.LAPIUM_ARMOR_PROTECTION_HEAD.get();
+    private static int lapiumBody = ConfigPowderPower.LAPIUM_ARMOR_PROTECTION_BODY.get();
+    private static int lapiumLegs = ConfigPowderPower.LAPIUM_ARMOR_PROTECTION_LEGGINGS.get();
+    private static int lapiumFeet = ConfigPowderPower.LAPIUM_ARMOR_PROTECTION_FEET.get();
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{3, 6, 8, 3};
+    private static final int[] PROTECTION_AMOUNT = new int[]{lapiumHead, lapiumLegs, lapiumBody, lapiumFeet};
 
     @Override
     public int getDurabilityForSlot(EquipmentSlot slot)
     {
-        return BASE_DURABILITY[slot.getIndex()] * durabilityMultiplier;
+        return BASE_DURABILITY[slot.getIndex()] * lapiumDurabilityMultiplier;
     }
 
     @Override
@@ -34,7 +38,7 @@ public class LapiumArmorMaterial implements ArmorMaterial
     @Override
     public int getEnchantmentValue()
     {
-        return enchantability;
+        return lapiumEnchantability;
     }
 
     @Override
@@ -58,12 +62,12 @@ public class LapiumArmorMaterial implements ArmorMaterial
     @Override
     public float getToughness()
     {
-        return (float) toughness;
+        return (float) lapiumToughness;
     }
 
     @Override
     public float getKnockbackResistance()
     {
-        return (float) knochback;
+        return (float) lapiumKnockback;
     }
 }
