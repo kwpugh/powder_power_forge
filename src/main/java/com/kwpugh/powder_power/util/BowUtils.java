@@ -2,7 +2,9 @@ package com.kwpugh.powder_power.util;
 
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.BowItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.client.event.ComputeFovModifierEvent;
 
 import java.util.function.Predicate;
@@ -19,7 +21,7 @@ public final class BowUtils
 
         Item item = stack.getItem();
         int ticks = event.getPlayer().getTicksUsingItem();
-        if (item instanceof BowItem)
+        if (item instanceof BowItem && PlayerEquipUtil.hasArrowInInventory(event.getPlayer()))
         {
             float zoom = 1.0F;
             if (predicate.test(item))

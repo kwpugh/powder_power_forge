@@ -5,6 +5,8 @@ import com.kwpugh.powder_power.init.ItemInit;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.PlayerEnderChestContainer;
+import net.minecraft.world.item.ArrowItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
@@ -131,16 +133,9 @@ public final class PlayerEquipUtil
 			return  true;
 		}
 
-    	Inventory inv2 = player.getInventory();
-		
-		//Checks player main inventory
-		for (int slot = 0; slot < inv2.getContainerSize(); slot++)
+		if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.TOKEN_BREATHING.get()))
 		{
-			ItemStack stack = inv2.getItem(slot);
-			if (stack.getItem() == ItemInit.TOKEN_BREATHING.get())
-			{	
-				return true;
-			}
+			return true;
 		}
       		
         return false;
@@ -164,15 +159,10 @@ public final class PlayerEquipUtil
 		{
 			return true;
 		}
-			
-		//Checks player main inventory
-		for (int slot = 0; slot < inv2.getContainerSize(); slot++)
+
+		if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.TOKEN_NO_FALL.get()))
 		{
-			ItemStack stack = inv2.getItem(slot);
-			if (stack.getItem() == ItemInit.TOKEN_NO_FALL.get())
-			{
-				return true;
-			}
+			return true;
 		}
 
 		return false;
@@ -202,65 +192,39 @@ public final class PlayerEquipUtil
 			return  true;
 		}
 
-		//Checks player main inventory
-		for (int slot = 0; slot < inv3.getContainerSize(); slot++)
+		if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.TOKEN_FIRE_RESISTANCE.get()))
 		{
-			ItemStack stack = inv3.getItem(slot);
-			if (stack.getItem() == ItemInit.TOKEN_FIRE_RESISTANCE.get())
-			{
-				return true;
-			}
+			return true;
 		}
       		
         return false;
     }
     
     public static boolean isPlayerGotHasteToken(Player player)
-    { 	    
-		Inventory inv2 = player.getInventory();
-		
-		//Checks player main inventory
-		for (int slot = 0; slot < inv2.getContainerSize(); slot++)
+    {
+		if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.TOKEN_HASTE.get()))
 		{
-			ItemStack stack = inv2.getItem(slot);
-			if (stack.getItem() == ItemInit.TOKEN_HASTE.get())
-			{	
-				return true;
-			}
+			return true;
 		}
 		
         return false;
     } 
 
     public static boolean isPlayerGotExpToken(Player player)
-    { 	    
-		Inventory inv2 = player.getInventory();
-		
-		//Checks player main inventory
-		for (int slot = 0; slot < inv2.getContainerSize(); slot++)
+    {
+		if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.TOKEN_EXP.get()))
 		{
-			ItemStack stack = inv2.getItem(slot);
-			if (stack.getItem() == ItemInit.TOKEN_EXP.get())
-			{	
-				return true;
-			}
+			return true;
 		}
 		
         return false;
     } 
     
     public static boolean isPlayerGotUnseenToken(Player player)
-    { 	    
-		Inventory inv2 = player.getInventory();
-		
-		//Checks player main inventory
-		for (int slot = 0; slot < inv2.getContainerSize(); slot++)
+    {
+		if(PlayerEquipUtil.hasItemInInventory(player, ItemInit.TOKEN_UNSEEN.get()))
 		{
-			ItemStack stack = inv2.getItem(slot);
-			if (stack.getItem() == ItemInit.TOKEN_UNSEEN.get())
-			{	
-				return true;
-			}
+			return true;
 		}
 		
         return false;
@@ -279,14 +243,25 @@ public final class PlayerEquipUtil
         return false;
     }
 
-	// Generalized check for itemstack in inventory
+	public static boolean hasArrowInInventory(Player player)
+	{
+		Inventory inv = player.getInventory();
+		for (int slot = 0; slot < inv.getContainerSize(); slot++)
+		{
+			ItemStack stack = inv.getItem(slot);
+			if (stack.getItem() instanceof ArrowItem)
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+
 	public static boolean hasItemInInventory(Player player, Item item)
 	{
 		Inventory inv = player.getInventory();
-		int size = inv.getContainerSize();
-
-		//Is the item in the player inventory?
-		for (int slot = 0; slot < size; slot++)
+		for (int slot = 0; slot < inv.getContainerSize(); slot++)
 		{
 			ItemStack stack = inv.getItem(slot);
 			if (stack.getItem() == item)
@@ -296,5 +271,50 @@ public final class PlayerEquipUtil
 		}
 
 		return false;
+	}
+
+	public static ItemStack getItemInInventory(Player player, Item item)
+	{
+		Inventory inv = player.getInventory();
+		for (int slot = 0; slot < inv.getContainerSize(); slot++)
+		{
+			ItemStack stack = inv.getItem(slot);
+			if (stack.getItem() == item)
+			{
+				return stack;
+			}
+		}
+
+		return ItemStack.EMPTY;
+	}
+
+	public static boolean hasItemInEnderchest(Player player, Item item)
+	{
+		PlayerEnderChestContainer end_inv = player.getEnderChestInventory();
+		for (int slot = 0; slot < end_inv.getContainerSize(); slot++)
+		{
+			ItemStack stack = end_inv.getItem(slot);
+			if (stack.getItem() == item)
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	public static ItemStack getItemInEnderchest(Player player, Item item)
+	{
+		PlayerEnderChestContainer end_inv = player.getEnderChestInventory();
+		for (int slot = 0; slot < end_inv.getContainerSize(); slot++)
+		{
+			ItemStack stack = end_inv.getItem(slot);
+			if (stack.getItem() == item)
+			{
+				return stack;
+			}
+		}
+
+		return ItemStack.EMPTY;
 	}
 } 
