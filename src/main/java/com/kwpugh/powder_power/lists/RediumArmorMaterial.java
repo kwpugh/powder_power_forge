@@ -3,11 +3,11 @@ package com.kwpugh.powder_power.lists;
 import com.kwpugh.powder_power.PowderPower;
 import com.kwpugh.powder_power.config.ConfigPowderPower;
 import com.kwpugh.powder_power.init.ItemInit;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvent;
 
 public class RediumArmorMaterial implements ArmorMaterial
 {
@@ -44,7 +44,7 @@ public class RediumArmorMaterial implements ArmorMaterial
     @Override
     public SoundEvent getEquipSound()
     {
-        return new SoundEvent(new ResourceLocation("item.armor.equip_netherite"));
+        return SoundEvents.ARMOR_EQUIP_NETHERITE;
     }
 
     @Override
